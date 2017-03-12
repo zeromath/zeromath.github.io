@@ -5,7 +5,7 @@
     <entry>
       <title><![CDATA[[Mac]在Emacs中安装AucTex]]></title>
       <url>%2F2017%2F03%2F12%2Fmac-emacs-aucTex%2F</url>
-      <content type="text"><![CDATA[首先必要文件 安装Emacs：直接搜索Emacs即可，或者到这里下载即可。 安装MacTex 安装AucTex：打开Emacs，输入 1M-x list-packages 确认，然后直接搜索AucTex这个包，按i标记，按x执行，就安装完成了 安装 cdlatex 为了能够识别TeX 添加下列两个到PATH变量中this 12/Library/TeX/texbin/usr/local/bin 图形界面的Emacs是不会加载bash的PATH的，所以要添加如下代码到.emacs3 12(setenv “PATH”(concat (getenv “PATH”) “:/Library/TeX/texbin:/usr/local/bin”)) AucTex 预览出错，错误提示为 1PDF2DSC sentinel: Wrong type argument: arrayp, nil 在.emacs中加入why 1(setq preview-gs-command &quot;/usr/local/bin/gs&quot;)]]></content>
+      <content type="text"><![CDATA[首先必要文件 安装Emacs：直接搜索Emacs即可，或者到这里下载即可。 安装MacTex 安装AucTex：打开Emacs，输入1M-x list-packages 确认，然后直接搜索AucTex这个包，按i标记，按x执行，就安装完成了 安装 cdlatex：复制cdlatex.el到”/Applications/Emacs.app/Contents/Resources/site-lisp”，然后打开.emacs加入以下代码 12345(add-hook &apos;LaTeX-mode-hook &apos;LaTeX-math-mode)(add-to-list &apos;load-path &quot;/Applications/Emacs.app/Contents/Resources/site-lisp/&quot;)(add-hook &apos;LaTeX-mode-hook &apos;turn-on-cdlatex)(autoload &apos;cdlatex-mode &quot;cdlatex&quot; &quot;CDLaTeX Mode&quot; t)(autoload &apos;turn-on-cdlatex &quot;cdlatex&quot; &quot;CDLaTeX Mode&quot; nil) 开始使用基本快捷键 Complie: 1C-c C-c Preview Section: 1C-c C-p s Undo Preview: 1C-c C-p C-c s 问题解答Q1: TeX不能识别 Solution: 根据这里的描述，我们需要添加下列两个到PATH变量中 12/Library/TeX/texbin/usr/local/bin 但是图形界面的Emacs是不会全部加载bash的PATH的，所以直接在bash中修改PATH变量并没有用处，我们还需要添加如下代码到.emacs 12(setenv “PATH”(concat (getenv “PATH”) “:/Library/TeX/texbin:/usr/local/bin”)) Q2: AucTex 预览出错，错误提示为 1PDF2DSC sentinel: Wrong type argument: arrayp, nil Solution: 在.emacs中加入 1(setq preview-gs-command &quot;/usr/local/bin/gs&quot;) 重新启动Emacs]]></content>
     </entry>
 
     
