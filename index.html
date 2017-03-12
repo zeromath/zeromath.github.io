@@ -300,6 +300,306 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2017/03/12/mac-emacs-aucTex/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhan Jiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello, Math">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/12/mac-emacs-aucTex/" itemprop="url">
+                  [Mac]在Emacs中安装AucTex
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-12T00:44:00-05:00">
+                2017-03-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/12/mac-emacs-aucTex/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/12/mac-emacs-aucTex/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="首先"><a href="#首先" class="headerlink" title="首先"></a>首先</h1><h1 id="必要文件"><a href="#必要文件" class="headerlink" title="必要文件"></a>必要文件</h1><ol>
+<li>安装Emacs：直接搜索Emacs即可，或者到<a href="https://www.gnu.org/software/emacs/" target="_blank" rel="external">这里</a>下载即可。</li>
+<li>安装MacTex</li>
+<li>安装AucTex：打开Emacs，输入</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">M-x list-packages</div></pre></td></tr></table></figure>
+<p>确认，然后直接搜索AucTex这个包，按i标记，按x执行，就安装完成了</p>
+<ol>
+<li>安装 cdlatex</li>
+</ol>
+<p>为了能够识别TeX</p>
+<p>添加下列两个到PATH变量中<a href="[http://walsvid.github.io/2016/05/14/latex-mac/]">this</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/Library/TeX/texbin</div><div class="line">/usr/local/bin</div></pre></td></tr></table></figure>
+<p>图形界面的Emacs是不会加载bash的PATH的，所以要添加如下代码到.emacs<a href="[http://gatherlight.info/?p=32]">3</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">(setenv “PATH”</div><div class="line">(concat (getenv “PATH”) “:/Library/TeX/texbin:/usr/local/bin”))</div></pre></td></tr></table></figure>
+<p>AucTex 预览出错，错误提示为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PDF2DSC sentinel: Wrong type argument: arrayp, nil</div></pre></td></tr></table></figure>
+<p>在.emacs中加入<a href="[http://emacs.stackexchange.com/questions/7936/auctex-preview-pdf2dsc-sentinel-error]">why</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(setq preview-gs-command &quot;/usr/local/bin/gs&quot;)</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2017/03/11/hexo-gitHub-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhan Jiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello, Math">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/11/hexo-gitHub-blog/" itemprop="url">
+                  [Hexo]在GitHub上建Blog
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-11T23:57:47-05:00">
+                2017-03-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/11/hexo-gitHub-blog/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/11/hexo-gitHub-blog/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="需要的插件"><a href="#需要的插件" class="headerlink" title="需要的插件"></a>需要的插件</h1><ol>
+<li>安装<a href="https://git-scm.com/downloads" target="_blank" rel="external">Git</a></li>
+<li>安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
+<li>安装[Hexo]：输入下列命令</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<h1 id="建立博客"><a href="#建立博客" class="headerlink" title="建立博客"></a>建立博客</h1><h2 id="安装文件"><a href="#安装文件" class="headerlink" title="安装文件"></a>安装文件</h2><p>创建一个你喜欢的文件夹，比如Blog，这就是你博客的大本营了，在该文件夹根目录下运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure>
+<p>等待命令完成，你会发现文件夹里多了好多东西，我们先来试运行一下，以此输入命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>然后打开浏览器，访问<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>，你就会见到你的博客了</p>
+<h2 id="修改博客的基本属性"><a href="#修改博客的基本属性" class="headerlink" title="修改博客的基本属性"></a>修改博客的基本属性</h2><p>打开根目录下的_config.yml，修改各种参数信息</p>
+<p><strong>所有参数的冒号后面都要加上一个空格</strong></p>
+<h2 id="发表文章"><a href="#发表文章" class="headerlink" title="发表文章"></a>发表文章</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new &quot;你的文章标题&quot;</div></pre></td></tr></table></figure>
+<p>系统会提示创建了”…/source/_post/你的文章标题.md”。这个MD文件就是我们的文章的主体了，打开这个目录，你会发现里面已经有了”hello-world.md”这个文件。这就是刚刚在浏览器里看到的那个唯一的一篇博文。要删除一篇文章，就直接将对应的MD文件删除即可</p>
+<h1 id="发布上网"><a href="#发布上网" class="headerlink" title="发布上网"></a>发布上网</h1><h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><p>首先你要注册一个<a href="https://github.com" target="_blank" rel="external">GitHub</a>账号，我们发布的原理是GitHub提供一个叫GitHub Page的网页，它对应的网址是”username.github.io”。而它对应的仓库是”usename.github.io”。所以你的用户名非常重要，注册的时候请谨慎选取</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="添加部署信息"><a href="#添加部署信息" class="headerlink" title="添加部署信息"></a>添加部署信息</h3><p>打开_config.yml，找到</p>
+<h3 id="添加SSH-KEY"><a href="#添加SSH-KEY" class="headerlink" title="添加SSH KEY"></a>添加SSH KEY</h3><h3 id="安装部署器"><a href="#安装部署器" class="headerlink" title="安装部署器"></a>安装部署器</h3><p>运行如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p><em>参考链接</em></p>
+<ol>
+<li><a href="https://zhangslob.github.io/2017/02/28/%E6%95%99%E4%BD%A0%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8CHexo-Github/" target="_blank" rel="external">教你免费搭建个人博客，Hexo&amp;Github</a></li>
+<li><a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Hexo官方文档 - 部署</a></li>
+<li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="external">手把手教你使用Hexo + Github Pages搭建个人独立博客</a></li>
+<li><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/" target="_blank" rel="external">GitHub Help - SSH</a></li>
+<li><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">Next 主题</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2017/03/09/remarks-on-completion-of-rings/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -641,7 +941,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>

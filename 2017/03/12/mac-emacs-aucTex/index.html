@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Completion," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -87,19 +87,52 @@
 
 
 
-<meta name="description" content="Definition of CompletionGiven a ring $R$, not necessarily Noetherian, we could always define its completion $\hat{R}^I$ with respect to an ideal $I\subset R$.
-Cauchy SequencesOne way to define this is">
+<meta name="description" content="首先必要文件
+安装Emacs：直接搜索Emacs即可，或者到这里下载即可。
+安装MacTex
+安装AucTex：打开Emacs，输入
+
+1M-x list-packages
+确认，然后直接搜索AucTex这个包，按i标记，按x执行，就安装完成了
+
+安装 cdlatex
+
+为了能够识别TeX
+添加下列两个到PATH变量中this
+12/Library/TeX/texbin/usr/local/bin">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Remarks on Completion of Rings">
-<meta property="og:url" content="http://zeromath.github.io/2017/03/09/remarks-on-completion-of-rings/index.html">
+<meta property="og:title" content="[Mac]在Emacs中安装AucTex">
+<meta property="og:url" content="http://zeromath.github.io/2017/03/12/mac-emacs-aucTex/index.html">
 <meta property="og:site_name" content="Hello, Math">
-<meta property="og:description" content="Definition of CompletionGiven a ring $R$, not necessarily Noetherian, we could always define its completion $\hat{R}^I$ with respect to an ideal $I\subset R$.
-Cauchy SequencesOne way to define this is">
-<meta property="og:updated_time" content="2017-03-10T05:26:33.000Z">
+<meta property="og:description" content="首先必要文件
+安装Emacs：直接搜索Emacs即可，或者到这里下载即可。
+安装MacTex
+安装AucTex：打开Emacs，输入
+
+1M-x list-packages
+确认，然后直接搜索AucTex这个包，按i标记，按x执行，就安装完成了
+
+安装 cdlatex
+
+为了能够识别TeX
+添加下列两个到PATH变量中this
+12/Library/TeX/texbin/usr/local/bin">
+<meta property="og:updated_time" content="2017-03-12T05:56:14.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Remarks on Completion of Rings">
-<meta name="twitter:description" content="Definition of CompletionGiven a ring $R$, not necessarily Noetherian, we could always define its completion $\hat{R}^I$ with respect to an ideal $I\subset R$.
-Cauchy SequencesOne way to define this is">
+<meta name="twitter:title" content="[Mac]在Emacs中安装AucTex">
+<meta name="twitter:description" content="首先必要文件
+安装Emacs：直接搜索Emacs即可，或者到这里下载即可。
+安装MacTex
+安装AucTex：打开Emacs，输入
+
+1M-x list-packages
+确认，然后直接搜索AucTex这个包，按i标记，按x执行，就安装完成了
+
+安装 cdlatex
+
+为了能够识别TeX
+添加下列两个到PATH变量中this
+12/Library/TeX/texbin/usr/local/bin">
 
 
 
@@ -127,13 +160,13 @@ Cauchy SequencesOne way to define this is">
 
 
 
-  <link rel="canonical" href="http://zeromath.github.io/2017/03/09/remarks-on-completion-of-rings/"/>
+  <link rel="canonical" href="http://zeromath.github.io/2017/03/12/mac-emacs-aucTex/"/>
 
 
 
 
 
-  <title> Remarks on Completion of Rings | Hello, Math </title>
+  <title> [Mac]在Emacs中安装AucTex | Hello, Math </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -305,7 +338,7 @@ Cauchy SequencesOne way to define this is">
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2017/03/09/remarks-on-completion-of-rings/">
+    <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2017/03/12/mac-emacs-aucTex/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhan Jiang">
@@ -326,7 +359,7 @@ Cauchy SequencesOne way to define this is">
             
             
               
-                Remarks on Completion of Rings
+                [Mac]在Emacs中安装AucTex
               
             
           </h1>
@@ -341,8 +374,8 @@ Cauchy SequencesOne way to define this is">
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-09T16:50:08-05:00">
-                2017-03-09
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-12T00:44:00-05:00">
+                2017-03-12
               </time>
             
 
@@ -360,8 +393,8 @@ Cauchy SequencesOne way to define this is">
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/09/remarks-on-completion-of-rings/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/09/remarks-on-completion-of-rings/" itemprop="commentCount"></span>
+                <a href="/2017/03/12/mac-emacs-aucTex/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/12/mac-emacs-aucTex/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -387,20 +420,25 @@ Cauchy SequencesOne way to define this is">
       
 
       
-        <h1 id="Definition-of-Completion"><a href="#Definition-of-Completion" class="headerlink" title="Definition of Completion"></a>Definition of Completion</h1><p>Given a ring $R$, not necessarily Noetherian, we could always define its completion $\hat{R}^I$ with respect to an ideal $I\subset R$.</p>
-<h2 id="Cauchy-Sequences"><a href="#Cauchy-Sequences" class="headerlink" title="Cauchy Sequences"></a>Cauchy Sequences</h2><p>One way to define this is using <strong>Cauchy sequence</strong>: A sequence $(r_1,r_2,\cdots,r_n,\cdots)$ is a Cauchy sequence if<br>$$<br>\forall n \ \ \exists N \ \text{  such that   } \forall i,j\geq N, r_i-r_j\in I^n<br>$$<br>while a <strong>null sequence</strong> $(r_1,r_2,\cdots,r_n,\cdots)$ is a sequence converges to $0$, that is,<br>$$<br>\forall n \ \ \exists N \ \text{  such that   } \forall i\geq N, r_i\in I^n<br>$$ </p>
-<p>The completion $\hat{R}^I$ is defined to be the ring of all Cauchy sequences modulo the ideal generated by null sequences.</p>
-<h2 id="Inverse-Limit"><a href="#Inverse-Limit" class="headerlink" title="Inverse Limit"></a>Inverse Limit</h2><p>The completion $\hat{R}^I$ could also be defined as an inverse limit of the system<br>$$<br>R/I\leftarrow R/I^2\leftarrow \cdots \leftarrow R/I^n\leftarrow<br>$$</p>
-<h1 id="Completion-amp-Localization"><a href="#Completion-amp-Localization" class="headerlink" title="Completion &amp; Localization"></a>Completion &amp; Localization</h1><h2 id="Maximal-ideals-of-hat-R-I"><a href="#Maximal-ideals-of-hat-R-I" class="headerlink" title="Maximal ideals of $\hat{R}^I$"></a>Maximal ideals of $\hat{R}^I$</h2><p>We have following theorem</p>
-<div class="theorem shadow"> <strong>Theorem</strong><br><em>The kernel of the natural map $\hat{R}^I\rightarrow R/I$ is contained in the Jacobson ideal of $\hat{R}^I$.</em><br></div>
-
-<p><strong>Proof</strong><br>We use the inverse limit construction. So each element $r$ in $\hat{R}^I$ is denoted by a sequence where $(r_1,r_2,…,r_i,…)$ such that $r_i\in R/I^i$ maps to $r_j\in R/I^j$ for any $i&gt;j$.</p>
-<p>If $r\in \hat{R}^I$ is in the kernel, then $r={0,r_2,…,r_i,…}$ where each $r_k$ is an element in $I/I^k$. Let $v=(v_1,v_2,…,v_i,…)$ be a sequence such that $v_{i}=1-r_i+r_i^2-\cdots+(-1)^i r_i^i$. Then the image of $v_n$ in $R/I^{n-1}$ is $v_{n-1}$. So $v\in\hat{R}^I$ and we have $(1+r)v=1$. So the kernel is contained in the Jacobson ideal. $\blacksquare$</p>
-<p>A direct corollary from this theorem is that we have 1-1 correspondence between maximal ideals of $\hat{R}^I$ and maximal ideals of $R/I$. In particular, if $R/I$ is quasilocal (local but not necessarily Noetherian), then $\hat{R}^I$ is quasilocal.</p>
-<h2 id="Completion-Commutes-with-Localization"><a href="#Completion-Commutes-with-Localization" class="headerlink" title="Completion Commutes with Localization"></a>Completion Commutes with Localization</h2><p>If $I=Q$ is a maximal ideal of $R$, then $\hat{R}^Q$ is a quasilocal ring. If we localize $R$ at $Q$ and then take its completion, we also get a quasilocal ring $\hat{R_Q}^Q$. In fact, these two rings are isomorphic to each other as we have following lemma</p>
-<div class="theorem shadow"> <strong>Lemma</strong><br><em>If $Q$ is a maximal ideal of $R$, then $R_Q/Q^nR_Q\simeq R/Q^n$</em><br></div>
-
-<p><strong>Proof</strong><br>The only prime ideals in $R/Q^n$ is $Q$ as $Q^n$ is $Q$-primary. So $R/Q^n$ is a quasilocal ring. Therefore the image $R-Q$ is invertible in $R/Q^n$. So we have the desired inverse for the natural map $R/Q^n\rightarrow R_Q/Q^nR_Q$. $\blacksquare$</p>
+        <h1 id="首先"><a href="#首先" class="headerlink" title="首先"></a>首先</h1><h1 id="必要文件"><a href="#必要文件" class="headerlink" title="必要文件"></a>必要文件</h1><ol>
+<li>安装Emacs：直接搜索Emacs即可，或者到<a href="https://www.gnu.org/software/emacs/" target="_blank" rel="external">这里</a>下载即可。</li>
+<li>安装MacTex</li>
+<li>安装AucTex：打开Emacs，输入</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">M-x list-packages</div></pre></td></tr></table></figure>
+<p>确认，然后直接搜索AucTex这个包，按i标记，按x执行，就安装完成了</p>
+<ol>
+<li>安装 cdlatex</li>
+</ol>
+<p>为了能够识别TeX</p>
+<p>添加下列两个到PATH变量中<a href="[http://walsvid.github.io/2016/05/14/latex-mac/]">this</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/Library/TeX/texbin</div><div class="line">/usr/local/bin</div></pre></td></tr></table></figure>
+<p>图形界面的Emacs是不会加载bash的PATH的，所以要添加如下代码到.emacs<a href="[http://gatherlight.info/?p=32]">3</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">(setenv “PATH”</div><div class="line">(concat (getenv “PATH”) “:/Library/TeX/texbin:/usr/local/bin”))</div></pre></td></tr></table></figure>
+<p>AucTex 预览出错，错误提示为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PDF2DSC sentinel: Wrong type argument: arrayp, nil</div></pre></td></tr></table></figure>
+<p>在.emacs中加入<a href="[http://emacs.stackexchange.com/questions/7936/auctex-preview-pdf2dsc-sentinel-error]">why</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(setq preview-gs-command &quot;/usr/local/bin/gs&quot;)</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -422,12 +460,6 @@ Cauchy SequencesOne way to define this is">
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Completion/" rel="tag"># Completion</a>
-          
-        </div>
-      
 
       
         
@@ -437,8 +469,8 @@ Cauchy SequencesOne way to define this is">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/07/vanishing-of-sections/" rel="next" title="Vanishing of Sections">
-                <i class="fa fa-chevron-left"></i> Vanishing of Sections
+              <a href="/2017/03/11/hexo-gitHub-blog/" rel="next" title="[Hexo]在GitHub上建Blog">
+                <i class="fa fa-chevron-left"></i> [Hexo]在GitHub上建Blog
               </a>
             
           </div>
@@ -446,10 +478,6 @@ Cauchy SequencesOne way to define this is">
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/11/hexo-gitHub-blog/" rel="prev" title="[Hexo]在GitHub上建Blog">
-                [Hexo]在GitHub上建Blog <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -576,7 +604,7 @@ Cauchy SequencesOne way to define this is">
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Definition-of-Completion"><span class="nav-number">1.</span> <span class="nav-text">Definition of Completion</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Cauchy-Sequences"><span class="nav-number">1.1.</span> <span class="nav-text">Cauchy Sequences</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Inverse-Limit"><span class="nav-number">1.2.</span> <span class="nav-text">Inverse Limit</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Completion-amp-Localization"><span class="nav-number">2.</span> <span class="nav-text">Completion & Localization</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Maximal-ideals-of-hat-R-I"><span class="nav-number">2.1.</span> <span class="nav-text">Maximal ideals of $\hat{R}^I$</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Completion-Commutes-with-Localization"><span class="nav-number">2.2.</span> <span class="nav-text">Completion Commutes with Localization</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#首先"><span class="nav-number">1.</span> <span class="nav-text">首先</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#必要文件"><span class="nav-number">2.</span> <span class="nav-text">必要文件</span></a></li></ol></div>
             
 
           </div>
@@ -707,9 +735,9 @@ Cauchy SequencesOne way to define this is">
 
     <script type="text/javascript">
       var disqus_shortname = 'HelloMath';
-      var disqus_identifier = '2017/03/09/remarks-on-completion-of-rings/';
+      var disqus_identifier = '2017/03/12/mac-emacs-aucTex/';
 
-      var disqus_title = "Remarks on Completion of Rings";
+      var disqus_title = "[Mac]在Emacs中安装AucTex";
 
 
       function run_disqus_script(disqus_script) {
