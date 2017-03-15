@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Emacs," />
 
 
 
@@ -87,43 +87,154 @@
 
 
 
-<meta name="description" content="需要的插件
-安装Git
-安装Node.js
-安装[Hexo]：输入下列命令
+<meta name="description" content="缓冲区
 
-1$ npm install -g hexo-cli
-建立博客安装文件创建一个你喜欢的文件夹，比如Blog，这就是你博客的大本营了，在该文件夹根目录下运行
-1$ hexo init
-等待命令完成，你会发现文件夹里多了好多东西，我们先来试运行一下，以此输入命令
-12$ hexo generate$ hexo server">
+
+作用
+命令
+函数名
+
+
+
+
+保存当前缓冲区
+C - x C - s
+save-buffer
+
+
+保存所有缓冲区
+C - x s
+save-some-buffers
+
+
+列出所有缓冲区
+C - x C - b
+list-buffers
+
+
+切换缓冲区
+C - x b
+
+
+
+杀死缓冲区
+C - x k
+kill-buffer
+
+
+
+文件编辑命令移动插入点
+
+
+作用
+命令
+函数名
+
+
+
+
+缓">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[Hexo]在GitHub上建Blog">
-<meta property="og:url" content="http://zeromath.github.io/2017/03/11/hexo-gitHub-blog/index.html">
+<meta property="og:title" content="Emacs学习笔记">
+<meta property="og:url" content="http://zeromath.github.io/2017/03/15/emacs-learning/index.html">
 <meta property="og:site_name" content="Hello, Math">
-<meta property="og:description" content="需要的插件
-安装Git
-安装Node.js
-安装[Hexo]：输入下列命令
+<meta property="og:description" content="缓冲区
 
-1$ npm install -g hexo-cli
-建立博客安装文件创建一个你喜欢的文件夹，比如Blog，这就是你博客的大本营了，在该文件夹根目录下运行
-1$ hexo init
-等待命令完成，你会发现文件夹里多了好多东西，我们先来试运行一下，以此输入命令
-12$ hexo generate$ hexo server">
-<meta property="og:updated_time" content="2017-03-12T05:31:46.000Z">
+
+作用
+命令
+函数名
+
+
+
+
+保存当前缓冲区
+C - x C - s
+save-buffer
+
+
+保存所有缓冲区
+C - x s
+save-some-buffers
+
+
+列出所有缓冲区
+C - x C - b
+list-buffers
+
+
+切换缓冲区
+C - x b
+
+
+
+杀死缓冲区
+C - x k
+kill-buffer
+
+
+
+文件编辑命令移动插入点
+
+
+作用
+命令
+函数名
+
+
+
+
+缓">
+<meta property="og:updated_time" content="2017-03-15T21:20:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[Hexo]在GitHub上建Blog">
-<meta name="twitter:description" content="需要的插件
-安装Git
-安装Node.js
-安装[Hexo]：输入下列命令
+<meta name="twitter:title" content="Emacs学习笔记">
+<meta name="twitter:description" content="缓冲区
 
-1$ npm install -g hexo-cli
-建立博客安装文件创建一个你喜欢的文件夹，比如Blog，这就是你博客的大本营了，在该文件夹根目录下运行
-1$ hexo init
-等待命令完成，你会发现文件夹里多了好多东西，我们先来试运行一下，以此输入命令
-12$ hexo generate$ hexo server">
+
+作用
+命令
+函数名
+
+
+
+
+保存当前缓冲区
+C - x C - s
+save-buffer
+
+
+保存所有缓冲区
+C - x s
+save-some-buffers
+
+
+列出所有缓冲区
+C - x C - b
+list-buffers
+
+
+切换缓冲区
+C - x b
+
+
+
+杀死缓冲区
+C - x k
+kill-buffer
+
+
+
+文件编辑命令移动插入点
+
+
+作用
+命令
+函数名
+
+
+
+
+缓">
 
 
 
@@ -151,13 +262,13 @@
 
 
 
-  <link rel="canonical" href="http://zeromath.github.io/2017/03/11/hexo-gitHub-blog/"/>
+  <link rel="canonical" href="http://zeromath.github.io/2017/03/15/emacs-learning/"/>
 
 
 
 
 
-  <title> [Hexo]在GitHub上建Blog | Hello, Math </title>
+  <title> Emacs学习笔记 | Hello, Math </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -329,7 +440,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2017/03/11/hexo-gitHub-blog/">
+    <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2017/03/15/emacs-learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhan Jiang">
@@ -350,7 +461,7 @@
             
             
               
-                [Hexo]在GitHub上建Blog
+                Emacs学习笔记
               
             
           </h1>
@@ -365,8 +476,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-11T23:57:47-05:00">
-                2017-03-11
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-15T12:39:18-04:00">
+                2017-03-15
               </time>
             
 
@@ -384,8 +495,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/11/hexo-gitHub-blog/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/11/hexo-gitHub-blog/" itemprop="commentCount"></span>
+                <a href="/2017/03/15/emacs-learning/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/15/emacs-learning/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -411,32 +522,257 @@
       
 
       
-        <h1 id="需要的插件"><a href="#需要的插件" class="headerlink" title="需要的插件"></a>需要的插件</h1><ol>
-<li>安装<a href="https://git-scm.com/downloads" target="_blank" rel="external">Git</a></li>
-<li>安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
-<li>安装[Hexo]：输入下列命令</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
-<h1 id="建立博客"><a href="#建立博客" class="headerlink" title="建立博客"></a>建立博客</h1><h2 id="安装文件"><a href="#安装文件" class="headerlink" title="安装文件"></a>安装文件</h2><p>创建一个你喜欢的文件夹，比如Blog，这就是你博客的大本营了，在该文件夹根目录下运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure>
-<p>等待命令完成，你会发现文件夹里多了好多东西，我们先来试运行一下，以此输入命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>然后打开浏览器，访问<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>，你就会见到你的博客了</p>
-<h2 id="修改博客的基本属性"><a href="#修改博客的基本属性" class="headerlink" title="修改博客的基本属性"></a>修改博客的基本属性</h2><p>打开根目录下的_config.yml，修改各种参数信息</p>
-<p><strong>所有参数的冒号后面都要加上一个空格</strong></p>
-<h2 id="发表文章"><a href="#发表文章" class="headerlink" title="发表文章"></a>发表文章</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new &quot;你的文章标题&quot;</div></pre></td></tr></table></figure>
-<p>系统会提示创建了”…/source/_post/你的文章标题.md”。这个MD文件就是我们的文章的主体了，打开这个目录，你会发现里面已经有了”hello-world.md”这个文件。这就是刚刚在浏览器里看到的那个唯一的一篇博文。要删除一篇文章，就直接将对应的MD文件删除即可</p>
-<h1 id="发布上网"><a href="#发布上网" class="headerlink" title="发布上网"></a>发布上网</h1><h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><p>首先你要注册一个<a href="https://github.com" target="_blank" rel="external">GitHub</a>账号，我们发布的原理是GitHub提供一个叫GitHub Page的网页，它对应的网址是”username.github.io”。而它对应的仓库是”usename.github.io”。所以你的用户名非常重要，注册的时候请谨慎选取</p>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="添加部署信息"><a href="#添加部署信息" class="headerlink" title="添加部署信息"></a>添加部署信息</h3><p>打开_config.yml，找到</p>
-<h3 id="添加SSH-KEY"><a href="#添加SSH-KEY" class="headerlink" title="添加SSH KEY"></a>添加SSH KEY</h3><h3 id="安装部署器"><a href="#安装部署器" class="headerlink" title="安装部署器"></a>安装部署器</h3><p>运行如下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<p><em>参考链接</em></p>
-<ol>
-<li><a href="https://zhangslob.github.io/2017/02/28/%E6%95%99%E4%BD%A0%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8CHexo-Github/" target="_blank" rel="external">教你免费搭建个人博客，Hexo&amp;Github</a></li>
-<li><a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Hexo官方文档 - 部署</a></li>
-<li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="external">手把手教你使用Hexo + Github Pages搭建个人独立博客</a></li>
-<li><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/" target="_blank" rel="external">GitHub Help - SSH</a></li>
-<li><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">Next 主题</a></li>
+        <h1 id="缓冲区"><a href="#缓冲区" class="headerlink" title="缓冲区"></a>缓冲区</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">函数名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">保存当前缓冲区</td>
+<td style="text-align:center"><code>C - x C - s</code></td>
+<td style="text-align:center">save-buffer</td>
+</tr>
+<tr>
+<td style="text-align:center">保存所有缓冲区</td>
+<td style="text-align:center"><code>C - x s</code></td>
+<td style="text-align:center">save-some-buffers</td>
+</tr>
+<tr>
+<td style="text-align:center">列出所有缓冲区</td>
+<td style="text-align:center"><code>C - x C - b</code></td>
+<td style="text-align:center">list-buffers</td>
+</tr>
+<tr>
+<td style="text-align:center">切换缓冲区</td>
+<td style="text-align:center"><code>C - x b</code></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">杀死缓冲区</td>
+<td style="text-align:center"><code>C - x k</code></td>
+<td style="text-align:center">kill-buffer</td>
+</tr>
+</tbody>
+</table>
+<h1 id="文件编辑命令"><a href="#文件编辑命令" class="headerlink" title="文件编辑命令"></a>文件编辑命令</h1><h2 id="移动插入点"><a href="#移动插入点" class="headerlink" title="移动插入点"></a>移动插入点</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">函数名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">缓冲区开始</td>
+<td style="text-align:center">Home</td>
+<td style="text-align:center">beginning-of-buffer</td>
+</tr>
+<tr>
+<td style="text-align:center">缓冲区末尾</td>
+<td style="text-align:center">End</td>
+<td style="text-align:center">end-of-buffer</td>
+</tr>
+<tr>
+<td style="text-align:center">上一屏</td>
+<td style="text-align:center"><code>C - v</code></td>
+<td style="text-align:center">scroll-up</td>
+</tr>
+<tr>
+<td style="text-align:center">下一屏</td>
+<td style="text-align:center"><code>M - v</code></td>
+<td style="text-align:center">scroll-down</td>
+</tr>
+<tr>
+<td style="text-align:center">段落开头</td>
+<td style="text-align:center"><code>C - {</code></td>
+<td style="text-align:center">beginning-of-paragraph</td>
+</tr>
+<tr>
+<td style="text-align:center">段落结尾</td>
+<td style="text-align:center"><code>C - }</code></td>
+<td style="text-align:center">end-of-paragraph</td>
+</tr>
+<tr>
+<td style="text-align:center">行开头</td>
+<td style="text-align:center"><code>C - a</code></td>
+<td style="text-align:center">beginning-of-line</td>
+</tr>
+<tr>
+<td style="text-align:center">行结尾</td>
+<td style="text-align:center"><code>C - e</code></td>
+<td style="text-align:center">end-of-line</td>
+</tr>
+<tr>
+<td style="text-align:center">句子开头</td>
+<td style="text-align:center"><code>M - a</code></td>
+<td style="text-align:center">beginning-of-sentence</td>
+</tr>
+<tr>
+<td style="text-align:center">句子结尾</td>
+<td style="text-align:center"><code>M-e</code></td>
+<td style="text-align:center">end=of-sentence</td>
+</tr>
+<tr>
+<td style="text-align:center">上一行</td>
+<td style="text-align:center"><code>C - p</code></td>
+<td style="text-align:center">previous-line</td>
+</tr>
+<tr>
+<td style="text-align:center">下一行</td>
+<td style="text-align:center"><code>C - n</code></td>
+<td style="text-align:center">next-line</td>
+</tr>
+<tr>
+<td style="text-align:center">上一个单词</td>
+<td style="text-align:center"><code>M - b</code></td>
+<td style="text-align:center">backward-word</td>
+</tr>
+<tr>
+<td style="text-align:center">下一个单词</td>
+<td style="text-align:center"><code>M - f</code></td>
+<td style="text-align:center">forward-word</td>
+</tr>
+<tr>
+<td style="text-align:center">上一个字符</td>
+<td style="text-align:center"><code>C - b</code></td>
+<td style="text-align:center">back-char</td>
+</tr>
+<tr>
+<td style="text-align:center">下一个字符</td>
+<td style="text-align:center"><code>C - f</code></td>
+<td style="text-align:center">forward-char</td>
+</tr>
+</tbody>
+</table>
+<h2 id="引用插入、删除、撤销和重复"><a href="#引用插入、删除、撤销和重复" class="headerlink" title="引用插入、删除、撤销和重复"></a>引用插入、删除、撤销和重复</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">引用插入</td>
+<td style="text-align:center"><code>C - q 字符值</code></td>
+<td style="text-align:center">quote-insert</td>
+</tr>
+<tr>
+<td style="text-align:center">删除一个字符</td>
+<td style="text-align:center"><code>C - d</code></td>
+<td style="text-align:center">delete-char</td>
+</tr>
+<tr>
+<td style="text-align:center">删除一个单词</td>
+<td style="text-align:center"><code>M - d</code></td>
+<td style="text-align:center">kill-word</td>
+</tr>
+<tr>
+<td style="text-align:center">撤销</td>
+<td style="text-align:center"><code>C - _</code> or <code>C - /</code></td>
+<td style="text-align:center">undo</td>
+</tr>
+<tr>
+<td style="text-align:center">重复</td>
+<td style="text-align:center"><code>C - u 次数 命令</code></td>
+<td style="text-align:center">universal-argument</td>
+</tr>
+</tbody>
+</table>
+<h2 id="标记和复制"><a href="#标记和复制" class="headerlink" title="标记和复制"></a>标记和复制</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">标记</td>
+<td style="text-align:center"><code>C - Space</code></td>
+<td style="text-align:center">set-mark-command</td>
+</tr>
+<tr>
+<td style="text-align:center">删除一行</td>
+<td style="text-align:center"><code>C - k</code></td>
+<td style="text-align:center">kill-line</td>
+</tr>
+<tr>
+<td style="text-align:center">删除区块</td>
+<td style="text-align:center"><code>C - w</code></td>
+<td style="text-align:center">kill-region</td>
+</tr>
+<tr>
+<td style="text-align:center">复制区块</td>
+<td style="text-align:center"><code>M - w</code></td>
+<td style="text-align:center">kill-ring-save</td>
+</tr>
+<tr>
+<td style="text-align:center">粘贴</td>
+<td style="text-align:center"><code>C - y</code></td>
+<td style="text-align:center">yank</td>
+</tr>
+</tbody>
+</table>
+<h2 id="字符修改"><a href="#字符修改" class="headerlink" title="字符修改"></a>字符修改</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">光标处单词首字母大写</td>
+<td style="text-align:center"><code>M - c</code></td>
+</tr>
+<tr>
+<td style="text-align:center">光标处单词全部字母大写</td>
+<td style="text-align:center"><code>M - u</code></td>
+</tr>
+<tr>
+<td style="text-align:center">光标处单词全部字母小写</td>
+<td style="text-align:center"><code>M - i</code></td>
+</tr>
+<tr>
+<td style="text-align:center">交换光标处和之前的字符</td>
+<td style="text-align:center"><code>C - t</code></td>
+</tr>
+<tr>
+<td style="text-align:center">交换光标处和之前的单词</td>
+<td style="text-align:center"><code>M - t</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">从光标处往后搜索</td>
+<td style="text-align:center"><code>C - s</code></td>
+</tr>
+<tr>
+<td style="text-align:center">从光标处往前搜索</td>
+<td style="text-align:center"><code>C - r</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li><a href="https://www.ibm.com/developerworks/cn/education/aix/emacs1/" target="_blank" rel="external">Emacs 编辑环境，第 1 部分: 学习 Emacs 的基础知识</a></li>
 </ol>
 
       
@@ -459,6 +795,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Emacs/" rel="tag"># Emacs</a>
+          
+        </div>
+      
 
       
         
@@ -468,8 +810,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/09/remarks-on-completion-of-rings/" rel="next" title="Remarks on Completion of Rings">
-                <i class="fa fa-chevron-left"></i> Remarks on Completion of Rings
+              <a href="/2017/03/12/mac-emacs-aucTex/" rel="next" title="[Mac]在Emacs中安装AucTex">
+                <i class="fa fa-chevron-left"></i> [Mac]在Emacs中安装AucTex
               </a>
             
           </div>
@@ -477,10 +819,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/12/mac-emacs-aucTex/" rel="prev" title="[Mac]在Emacs中安装AucTex">
-                [Mac]在Emacs中安装AucTex <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -607,7 +945,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#需要的插件"><span class="nav-number">1.</span> <span class="nav-text">需要的插件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#建立博客"><span class="nav-number">2.</span> <span class="nav-text">建立博客</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装文件"><span class="nav-number">2.1.</span> <span class="nav-text">安装文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#修改博客的基本属性"><span class="nav-number">2.2.</span> <span class="nav-text">修改博客的基本属性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#发表文章"><span class="nav-number">2.3.</span> <span class="nav-text">发表文章</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#发布上网"><span class="nav-number">3.</span> <span class="nav-text">发布上网</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Github"><span class="nav-number">3.1.</span> <span class="nav-text">Github</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#部署"><span class="nav-number">3.2.</span> <span class="nav-text">部署</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加部署信息"><span class="nav-number">3.2.1.</span> <span class="nav-text">添加部署信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#添加SSH-KEY"><span class="nav-number">3.2.2.</span> <span class="nav-text">添加SSH KEY</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装部署器"><span class="nav-number">3.2.3.</span> <span class="nav-text">安装部署器</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#缓冲区"><span class="nav-number">1.</span> <span class="nav-text">缓冲区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件编辑命令"><span class="nav-number">2.</span> <span class="nav-text">文件编辑命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#移动插入点"><span class="nav-number">2.1.</span> <span class="nav-text">移动插入点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用插入、删除、撤销和重复"><span class="nav-number">2.2.</span> <span class="nav-text">引用插入、删除、撤销和重复</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标记和复制"><span class="nav-number">2.3.</span> <span class="nav-text">标记和复制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符修改"><span class="nav-number">2.4.</span> <span class="nav-text">字符修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搜索"><span class="nav-number">2.5.</span> <span class="nav-text">搜索</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料"><span class="nav-number">2.6.</span> <span class="nav-text">参考资料</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -738,9 +1076,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'HelloMath';
-      var disqus_identifier = '2017/03/11/hexo-gitHub-blog/';
+      var disqus_identifier = '2017/03/15/emacs-learning/';
 
-      var disqus_title = "[Hexo]在GitHub上建Blog";
+      var disqus_title = "Emacs学习笔记";
 
 
       function run_disqus_script(disqus_script) {

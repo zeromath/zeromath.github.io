@@ -300,6 +300,385 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2017/03/15/emacs-learning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhan Jiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hello, Math">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/15/emacs-learning/" itemprop="url">
+                  Emacs学习笔记
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-15T12:39:18-04:00">
+                2017-03-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/15/emacs-learning/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/15/emacs-learning/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="缓冲区"><a href="#缓冲区" class="headerlink" title="缓冲区"></a>缓冲区</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">函数名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">保存当前缓冲区</td>
+<td style="text-align:center"><code>C - x C - s</code></td>
+<td style="text-align:center">save-buffer</td>
+</tr>
+<tr>
+<td style="text-align:center">保存所有缓冲区</td>
+<td style="text-align:center"><code>C - x s</code></td>
+<td style="text-align:center">save-some-buffers</td>
+</tr>
+<tr>
+<td style="text-align:center">列出所有缓冲区</td>
+<td style="text-align:center"><code>C - x C - b</code></td>
+<td style="text-align:center">list-buffers</td>
+</tr>
+<tr>
+<td style="text-align:center">切换缓冲区</td>
+<td style="text-align:center"><code>C - x b</code></td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">杀死缓冲区</td>
+<td style="text-align:center"><code>C - x k</code></td>
+<td style="text-align:center">kill-buffer</td>
+</tr>
+</tbody>
+</table>
+<h1 id="文件编辑命令"><a href="#文件编辑命令" class="headerlink" title="文件编辑命令"></a>文件编辑命令</h1><h2 id="移动插入点"><a href="#移动插入点" class="headerlink" title="移动插入点"></a>移动插入点</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">函数名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">缓冲区开始</td>
+<td style="text-align:center">Home</td>
+<td style="text-align:center">beginning-of-buffer</td>
+</tr>
+<tr>
+<td style="text-align:center">缓冲区末尾</td>
+<td style="text-align:center">End</td>
+<td style="text-align:center">end-of-buffer</td>
+</tr>
+<tr>
+<td style="text-align:center">上一屏</td>
+<td style="text-align:center"><code>C - v</code></td>
+<td style="text-align:center">scroll-up</td>
+</tr>
+<tr>
+<td style="text-align:center">下一屏</td>
+<td style="text-align:center"><code>M - v</code></td>
+<td style="text-align:center">scroll-down</td>
+</tr>
+<tr>
+<td style="text-align:center">段落开头</td>
+<td style="text-align:center"><code>C - {</code></td>
+<td style="text-align:center">beginning-of-paragraph</td>
+</tr>
+<tr>
+<td style="text-align:center">段落结尾</td>
+<td style="text-align:center"><code>C - }</code></td>
+<td style="text-align:center">end-of-paragraph</td>
+</tr>
+<tr>
+<td style="text-align:center">行开头</td>
+<td style="text-align:center"><code>C - a</code></td>
+<td style="text-align:center">beginning-of-line</td>
+</tr>
+<tr>
+<td style="text-align:center">行结尾</td>
+<td style="text-align:center"><code>C - e</code></td>
+<td style="text-align:center">end-of-line</td>
+</tr>
+<tr>
+<td style="text-align:center">句子开头</td>
+<td style="text-align:center"><code>M - a</code></td>
+<td style="text-align:center">beginning-of-sentence</td>
+</tr>
+<tr>
+<td style="text-align:center">句子结尾</td>
+<td style="text-align:center"><code>M-e</code></td>
+<td style="text-align:center">end=of-sentence</td>
+</tr>
+<tr>
+<td style="text-align:center">上一行</td>
+<td style="text-align:center"><code>C - p</code></td>
+<td style="text-align:center">previous-line</td>
+</tr>
+<tr>
+<td style="text-align:center">下一行</td>
+<td style="text-align:center"><code>C - n</code></td>
+<td style="text-align:center">next-line</td>
+</tr>
+<tr>
+<td style="text-align:center">上一个单词</td>
+<td style="text-align:center"><code>M - b</code></td>
+<td style="text-align:center">backward-word</td>
+</tr>
+<tr>
+<td style="text-align:center">下一个单词</td>
+<td style="text-align:center"><code>M - f</code></td>
+<td style="text-align:center">forward-word</td>
+</tr>
+<tr>
+<td style="text-align:center">上一个字符</td>
+<td style="text-align:center"><code>C - b</code></td>
+<td style="text-align:center">back-char</td>
+</tr>
+<tr>
+<td style="text-align:center">下一个字符</td>
+<td style="text-align:center"><code>C - f</code></td>
+<td style="text-align:center">forward-char</td>
+</tr>
+</tbody>
+</table>
+<h2 id="引用插入、删除、撤销和重复"><a href="#引用插入、删除、撤销和重复" class="headerlink" title="引用插入、删除、撤销和重复"></a>引用插入、删除、撤销和重复</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">引用插入</td>
+<td style="text-align:center"><code>C - q 字符值</code></td>
+<td style="text-align:center">quote-insert</td>
+</tr>
+<tr>
+<td style="text-align:center">删除一个字符</td>
+<td style="text-align:center"><code>C - d</code></td>
+<td style="text-align:center">delete-char</td>
+</tr>
+<tr>
+<td style="text-align:center">删除一个单词</td>
+<td style="text-align:center"><code>M - d</code></td>
+<td style="text-align:center">kill-word</td>
+</tr>
+<tr>
+<td style="text-align:center">撤销</td>
+<td style="text-align:center"><code>C - _</code> or <code>C - /</code></td>
+<td style="text-align:center">undo</td>
+</tr>
+<tr>
+<td style="text-align:center">重复</td>
+<td style="text-align:center"><code>C - u 次数 命令</code></td>
+<td style="text-align:center">universal-argument</td>
+</tr>
+</tbody>
+</table>
+<h2 id="标记和复制"><a href="#标记和复制" class="headerlink" title="标记和复制"></a>标记和复制</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">标记</td>
+<td style="text-align:center"><code>C - Space</code></td>
+<td style="text-align:center">set-mark-command</td>
+</tr>
+<tr>
+<td style="text-align:center">删除一行</td>
+<td style="text-align:center"><code>C - k</code></td>
+<td style="text-align:center">kill-line</td>
+</tr>
+<tr>
+<td style="text-align:center">删除区块</td>
+<td style="text-align:center"><code>C - w</code></td>
+<td style="text-align:center">kill-region</td>
+</tr>
+<tr>
+<td style="text-align:center">复制区块</td>
+<td style="text-align:center"><code>M - w</code></td>
+<td style="text-align:center">kill-ring-save</td>
+</tr>
+<tr>
+<td style="text-align:center">粘贴</td>
+<td style="text-align:center"><code>C - y</code></td>
+<td style="text-align:center">yank</td>
+</tr>
+</tbody>
+</table>
+<h2 id="字符修改"><a href="#字符修改" class="headerlink" title="字符修改"></a>字符修改</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">光标处单词首字母大写</td>
+<td style="text-align:center"><code>M - c</code></td>
+</tr>
+<tr>
+<td style="text-align:center">光标处单词全部字母大写</td>
+<td style="text-align:center"><code>M - u</code></td>
+</tr>
+<tr>
+<td style="text-align:center">光标处单词全部字母小写</td>
+<td style="text-align:center"><code>M - i</code></td>
+</tr>
+<tr>
+<td style="text-align:center">交换光标处和之前的字符</td>
+<td style="text-align:center"><code>C - t</code></td>
+</tr>
+<tr>
+<td style="text-align:center">交换光标处和之前的单词</td>
+<td style="text-align:center"><code>M - t</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">从光标处往后搜索</td>
+<td style="text-align:center"><code>C - s</code></td>
+</tr>
+<tr>
+<td style="text-align:center">从光标处往前搜索</td>
+<td style="text-align:center"><code>C - r</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li><a href="https://www.ibm.com/developerworks/cn/education/aix/emacs1/" target="_blank" rel="external">Emacs 编辑环境，第 1 部分: 学习 Emacs 的基础知识</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2017/03/12/mac-emacs-aucTex/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -389,7 +768,7 @@
           
             <h1 id="首先"><a href="#首先" class="headerlink" title="首先"></a>首先</h1><h1 id="必要文件"><a href="#必要文件" class="headerlink" title="必要文件"></a>必要文件</h1><ol>
 <li>安装Emacs：直接搜索Emacs即可，或者到<a href="https://www.gnu.org/software/emacs/" target="_blank" rel="external">这里</a>下载即可。</li>
-<li>安装MacTex</li>
+<li>安装MacTex：到这里下载</li>
 <li>安装AucTex：打开Emacs，输入<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">M-x list-packages</div></pre></td></tr></table></figure>
 </li>
 </ol>
@@ -411,13 +790,13 @@
 </ol>
 <h1 id="问题解答"><a href="#问题解答" class="headerlink" title="问题解答"></a>问题解答</h1><p><em>Q1:</em> TeX不能识别</p>
 <p><em>Solution:</em></p>
-<p>根据<a href="[http://walsvid.github.io/2016/05/14/latex-mac/]">这里</a>的描述，我们需要添加下列两个到PATH变量中</p>
+<p>根据<a href="http://walsvid.github.io/2016/05/14/latex-mac/" target="_blank" rel="external">这里</a>的描述，我们需要添加下列两个到PATH变量中</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/Library/TeX/texbin</div><div class="line">/usr/local/bin</div></pre></td></tr></table></figure>
-<p>但是图形界面的Emacs是不会全部加载bash的PATH的，所以直接在bash中修改PATH变量并没有用处，我们<a href="[http://gatherlight.info/?p=32]">还需要</a>添加如下代码到.emacs</p>
+<p>但是图形界面的Emacs是不会全部加载bash的PATH的，所以直接在bash中修改PATH变量并没有用处，我们<a href="http://gatherlight.info/?p=32" target="_blank" rel="external">还需要</a>添加如下代码到.emacs</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">(setenv “PATH”</div><div class="line">(concat (getenv “PATH”) “:/Library/TeX/texbin:/usr/local/bin”))</div></pre></td></tr></table></figure>
 <p><em>Q2:</em> AucTex 预览出错，错误提示为</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PDF2DSC sentinel: Wrong type argument: arrayp, nil</div></pre></td></tr></table></figure>
-<p><em><a href="[http://emacs.stackexchange.com/questions/7936/auctex-preview-pdf2dsc-sentinel-error]">Solution</a>:</em> 在.emacs中加入</p>
+<p><em><a href="http://emacs.stackexchange.com/questions/7936/auctex-preview-pdf2dsc-sentinel-error" target="_blank" rel="external">Solution</a>:</em> 在.emacs中加入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(setq preview-gs-command &quot;/usr/local/bin/gs&quot;)</div></pre></td></tr></table></figure>
 <p>重新启动Emacs</p>
 
@@ -955,7 +1334,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -968,7 +1347,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">tags</span>
               
             </div>

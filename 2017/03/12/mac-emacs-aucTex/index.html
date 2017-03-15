@@ -89,38 +89,38 @@
 
 <meta name="description" content="首先必要文件
 安装Emacs：直接搜索Emacs即可，或者到这里下载即可。
-安装MacTex
+安装MacTex：到这里下载
 安装AucTex：打开Emacs，输入1M-x list-packages
 
 
 确认，然后直接搜索AucTex这个包，按i标记，按x执行，就安装完成了
 
-安装 cdlatex：复制cdlatex.el到”/Applications/Emacs.app/Contents/Resources/site-lis">
+安装 cdlatex：复制cdlatex.el到”/Applications/Emacs.app/Contents/Resources/si">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Mac]在Emacs中安装AucTex">
 <meta property="og:url" content="http://zeromath.github.io/2017/03/12/mac-emacs-aucTex/index.html">
 <meta property="og:site_name" content="Hello, Math">
 <meta property="og:description" content="首先必要文件
 安装Emacs：直接搜索Emacs即可，或者到这里下载即可。
-安装MacTex
+安装MacTex：到这里下载
 安装AucTex：打开Emacs，输入1M-x list-packages
 
 
 确认，然后直接搜索AucTex这个包，按i标记，按x执行，就安装完成了
 
-安装 cdlatex：复制cdlatex.el到”/Applications/Emacs.app/Contents/Resources/site-lis">
-<meta property="og:updated_time" content="2017-03-12T16:35:08.000Z">
+安装 cdlatex：复制cdlatex.el到”/Applications/Emacs.app/Contents/Resources/si">
+<meta property="og:updated_time" content="2017-03-14T18:33:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[Mac]在Emacs中安装AucTex">
 <meta name="twitter:description" content="首先必要文件
 安装Emacs：直接搜索Emacs即可，或者到这里下载即可。
-安装MacTex
+安装MacTex：到这里下载
 安装AucTex：打开Emacs，输入1M-x list-packages
 
 
 确认，然后直接搜索AucTex这个包，按i标记，按x执行，就安装完成了
 
-安装 cdlatex：复制cdlatex.el到”/Applications/Emacs.app/Contents/Resources/site-lis">
+安装 cdlatex：复制cdlatex.el到”/Applications/Emacs.app/Contents/Resources/si">
 
 
 
@@ -410,7 +410,7 @@
       
         <h1 id="首先"><a href="#首先" class="headerlink" title="首先"></a>首先</h1><h1 id="必要文件"><a href="#必要文件" class="headerlink" title="必要文件"></a>必要文件</h1><ol>
 <li>安装Emacs：直接搜索Emacs即可，或者到<a href="https://www.gnu.org/software/emacs/" target="_blank" rel="external">这里</a>下载即可。</li>
-<li>安装MacTex</li>
+<li>安装MacTex：到这里下载</li>
 <li>安装AucTex：打开Emacs，输入<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">M-x list-packages</div></pre></td></tr></table></figure>
 </li>
 </ol>
@@ -432,13 +432,13 @@
 </ol>
 <h1 id="问题解答"><a href="#问题解答" class="headerlink" title="问题解答"></a>问题解答</h1><p><em>Q1:</em> TeX不能识别</p>
 <p><em>Solution:</em></p>
-<p>根据<a href="[http://walsvid.github.io/2016/05/14/latex-mac/]">这里</a>的描述，我们需要添加下列两个到PATH变量中</p>
+<p>根据<a href="http://walsvid.github.io/2016/05/14/latex-mac/" target="_blank" rel="external">这里</a>的描述，我们需要添加下列两个到PATH变量中</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/Library/TeX/texbin</div><div class="line">/usr/local/bin</div></pre></td></tr></table></figure>
-<p>但是图形界面的Emacs是不会全部加载bash的PATH的，所以直接在bash中修改PATH变量并没有用处，我们<a href="[http://gatherlight.info/?p=32]">还需要</a>添加如下代码到.emacs</p>
+<p>但是图形界面的Emacs是不会全部加载bash的PATH的，所以直接在bash中修改PATH变量并没有用处，我们<a href="http://gatherlight.info/?p=32" target="_blank" rel="external">还需要</a>添加如下代码到.emacs</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">(setenv “PATH”</div><div class="line">(concat (getenv “PATH”) “:/Library/TeX/texbin:/usr/local/bin”))</div></pre></td></tr></table></figure>
 <p><em>Q2:</em> AucTex 预览出错，错误提示为</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PDF2DSC sentinel: Wrong type argument: arrayp, nil</div></pre></td></tr></table></figure>
-<p><em><a href="[http://emacs.stackexchange.com/questions/7936/auctex-preview-pdf2dsc-sentinel-error]">Solution</a>:</em> 在.emacs中加入</p>
+<p><em><a href="http://emacs.stackexchange.com/questions/7936/auctex-preview-pdf2dsc-sentinel-error" target="_blank" rel="external">Solution</a>:</em> 在.emacs中加入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(setq preview-gs-command &quot;/usr/local/bin/gs&quot;)</div></pre></td></tr></table></figure>
 <p>重新启动Emacs</p>
 
@@ -480,6 +480,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/15/emacs-learning/" rel="prev" title="Emacs学习笔记">
+                Emacs学习笔记 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -558,7 +562,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -571,7 +575,7 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">tags</span>
               
             </div>
