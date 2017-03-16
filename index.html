@@ -398,28 +398,51 @@
 <tbody>
 <tr>
 <td style="text-align:center">保存当前缓冲区</td>
-<td style="text-align:center"><code>C - x C - s</code></td>
+<td style="text-align:center"><code>C-x C-s</code></td>
 <td style="text-align:center">save-buffer</td>
 </tr>
 <tr>
 <td style="text-align:center">保存所有缓冲区</td>
-<td style="text-align:center"><code>C - x s</code></td>
+<td style="text-align:center"><code>C-x s</code></td>
 <td style="text-align:center">save-some-buffers</td>
 </tr>
 <tr>
 <td style="text-align:center">列出所有缓冲区</td>
-<td style="text-align:center"><code>C - x C - b</code></td>
+<td style="text-align:center"><code>C-x C-b</code></td>
 <td style="text-align:center">list-buffers</td>
 </tr>
 <tr>
 <td style="text-align:center">切换缓冲区</td>
-<td style="text-align:center"><code>C - x b</code></td>
+<td style="text-align:center"><code>C-x b</code></td>
 <td style="text-align:center"></td>
 </tr>
 <tr>
 <td style="text-align:center">杀死缓冲区</td>
-<td style="text-align:center"><code>C - x k</code></td>
+<td style="text-align:center"><code>C-x k</code></td>
 <td style="text-align:center">kill-buffer</td>
+</tr>
+</tbody>
+</table>
+<h1 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">函数名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">打开文件</td>
+<td style="text-align:center"><code>C-x C-f</code></td>
+</tr>
+<tr>
+<td style="text-align:center">只读方式打开</td>
+<td style="text-align:center"><code>C-x C-r</code></td>
+</tr>
+<tr>
+<td style="text-align:center">读入另外一个文件代替当前buffer的文件</td>
+<td style="text-align:center"><code>C-x C-v</code></td>
 </tr>
 </tbody>
 </table>
@@ -434,47 +457,52 @@
 <tbody>
 <tr>
 <td style="text-align:center">缓冲区开始</td>
-<td style="text-align:center">Home</td>
+<td style="text-align:center"><code>M-&gt;</code></td>
 <td style="text-align:center">beginning-of-buffer</td>
 </tr>
 <tr>
 <td style="text-align:center">缓冲区末尾</td>
-<td style="text-align:center">End</td>
+<td style="text-align:center"><code>M-&lt;</code></td>
 <td style="text-align:center">end-of-buffer</td>
 </tr>
 <tr>
 <td style="text-align:center">上一屏</td>
-<td style="text-align:center"><code>C - v</code></td>
+<td style="text-align:center"><code>C-v</code></td>
 <td style="text-align:center">scroll-up</td>
 </tr>
 <tr>
 <td style="text-align:center">下一屏</td>
-<td style="text-align:center"><code>M - v</code></td>
+<td style="text-align:center"><code>M-v</code></td>
 <td style="text-align:center">scroll-down</td>
 </tr>
 <tr>
 <td style="text-align:center">段落开头</td>
-<td style="text-align:center"><code>C - {</code></td>
+<td style="text-align:center"><code>C-{</code></td>
 <td style="text-align:center">beginning-of-paragraph</td>
 </tr>
 <tr>
 <td style="text-align:center">段落结尾</td>
-<td style="text-align:center"><code>C - }</code></td>
+<td style="text-align:center"><code>C-}</code></td>
 <td style="text-align:center">end-of-paragraph</td>
 </tr>
 <tr>
+<td style="text-align:center">到指定行</td>
+<td style="text-align:center"><code>M-g g</code></td>
+<td style="text-align:center">goto-line</td>
+</tr>
+<tr>
 <td style="text-align:center">行开头</td>
-<td style="text-align:center"><code>C - a</code></td>
+<td style="text-align:center"><code>C-a</code></td>
 <td style="text-align:center">beginning-of-line</td>
 </tr>
 <tr>
 <td style="text-align:center">行结尾</td>
-<td style="text-align:center"><code>C - e</code></td>
+<td style="text-align:center"><code>C-e</code></td>
 <td style="text-align:center">end-of-line</td>
 </tr>
 <tr>
 <td style="text-align:center">句子开头</td>
-<td style="text-align:center"><code>M - a</code></td>
+<td style="text-align:center"><code>M-a</code></td>
 <td style="text-align:center">beginning-of-sentence</td>
 </tr>
 <tr>
@@ -484,32 +512,32 @@
 </tr>
 <tr>
 <td style="text-align:center">上一行</td>
-<td style="text-align:center"><code>C - p</code></td>
+<td style="text-align:center"><code>C-p</code></td>
 <td style="text-align:center">previous-line</td>
 </tr>
 <tr>
 <td style="text-align:center">下一行</td>
-<td style="text-align:center"><code>C - n</code></td>
+<td style="text-align:center"><code>C-n</code></td>
 <td style="text-align:center">next-line</td>
 </tr>
 <tr>
 <td style="text-align:center">上一个单词</td>
-<td style="text-align:center"><code>M - b</code></td>
+<td style="text-align:center"><code>M-b</code></td>
 <td style="text-align:center">backward-word</td>
 </tr>
 <tr>
 <td style="text-align:center">下一个单词</td>
-<td style="text-align:center"><code>M - f</code></td>
+<td style="text-align:center"><code>M-f</code></td>
 <td style="text-align:center">forward-word</td>
 </tr>
 <tr>
 <td style="text-align:center">上一个字符</td>
-<td style="text-align:center"><code>C - b</code></td>
+<td style="text-align:center"><code>C-b</code></td>
 <td style="text-align:center">back-char</td>
 </tr>
 <tr>
 <td style="text-align:center">下一个字符</td>
-<td style="text-align:center"><code>C - f</code></td>
+<td style="text-align:center"><code>C-f</code></td>
 <td style="text-align:center">forward-char</td>
 </tr>
 </tbody>
@@ -525,27 +553,27 @@
 <tbody>
 <tr>
 <td style="text-align:center">引用插入</td>
-<td style="text-align:center"><code>C - q 字符值</code></td>
+<td style="text-align:center"><code>C-q &lt;字符值&gt;</code></td>
 <td style="text-align:center">quote-insert</td>
 </tr>
 <tr>
 <td style="text-align:center">删除一个字符</td>
-<td style="text-align:center"><code>C - d</code></td>
+<td style="text-align:center"><code>C-d</code></td>
 <td style="text-align:center">delete-char</td>
 </tr>
 <tr>
 <td style="text-align:center">删除一个单词</td>
-<td style="text-align:center"><code>M - d</code></td>
+<td style="text-align:center"><code>M-d</code></td>
 <td style="text-align:center">kill-word</td>
 </tr>
 <tr>
 <td style="text-align:center">撤销</td>
-<td style="text-align:center"><code>C - _</code> or <code>C - /</code></td>
+<td style="text-align:center"><code>C-_</code> or <code>C-/</code></td>
 <td style="text-align:center">undo</td>
 </tr>
 <tr>
 <td style="text-align:center">重复</td>
-<td style="text-align:center"><code>C - u 次数 命令</code></td>
+<td style="text-align:center"><code>C-u &lt;次数&gt; &lt;命令&gt;</code></td>
 <td style="text-align:center">universal-argument</td>
 </tr>
 </tbody>
@@ -560,29 +588,100 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align:center">标记</td>
-<td style="text-align:center"><code>C - Space</code></td>
-<td style="text-align:center">set-mark-command</td>
-</tr>
-<tr>
 <td style="text-align:center">删除一行</td>
-<td style="text-align:center"><code>C - k</code></td>
+<td style="text-align:center"><code>C-k</code></td>
 <td style="text-align:center">kill-line</td>
 </tr>
 <tr>
+<td style="text-align:center">设定标记</td>
+<td style="text-align:center"><code>C-Space</code> or <code>C-@</code></td>
+<td style="text-align:center">set-mark-command</td>
+</tr>
+<tr>
+<td style="text-align:center">全选</td>
+<td style="text-align:center"><code>C-x h</code></td>
+<td style="text-align:center">mark-whole-buffer</td>
+</tr>
+<tr>
+<td style="text-align:center">选取一页</td>
+<td style="text-align:center"><code>C-x C-p</code></td>
+<td style="text-align:center">mark-page</td>
+</tr>
+<tr>
+<td style="text-align:center">选取一段</td>
+<td style="text-align:center"><code>M-h</code></td>
+<td style="text-align:center">mark-paragraph</td>
+</tr>
+<tr>
+<td style="text-align:center">选取一个单词</td>
+<td style="text-align:center"><code>M-@</code></td>
+<td style="text-align:center">mark-word</td>
+</tr>
+<tr>
+<td style="text-align:center">选取一页</td>
+<td style="text-align:center"><code>C-x C-p</code></td>
+<td style="text-align:center">mark-page</td>
+</tr>
+<tr>
+<td style="text-align:center">交换标记和光标位置</td>
+<td style="text-align:center"><code>C-x C-x</code></td>
+<td style="text-align:center">exchange-point-and-mark</td>
+</tr>
+<tr>
+<td style="text-align:center">将区域中字母改为大写</td>
+<td style="text-align:center"><code>C-x C-u</code></td>
+<td style="text-align:center">upcase-region</td>
+</tr>
+<tr>
 <td style="text-align:center">删除区块</td>
-<td style="text-align:center"><code>C - w</code></td>
+<td style="text-align:center"><code>C-w</code></td>
 <td style="text-align:center">kill-region</td>
 </tr>
 <tr>
 <td style="text-align:center">复制区块</td>
-<td style="text-align:center"><code>M - w</code></td>
+<td style="text-align:center"><code>M-w</code></td>
 <td style="text-align:center">kill-ring-save</td>
 </tr>
 <tr>
 <td style="text-align:center">粘贴</td>
-<td style="text-align:center"><code>C - y</code></td>
+<td style="text-align:center"><code>C-y</code></td>
 <td style="text-align:center">yank</td>
+</tr>
+</tbody>
+</table>
+<h2 id="快速复制"><a href="#快速复制" class="headerlink" title="快速复制"></a>快速复制</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">将区域中内容加入到一个buffer中</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">append-to-buffer</td>
+</tr>
+<tr>
+<td style="text-align:center">将区域中内容加入到一个buffer中，不过加入位置在该buffer的光标前</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">prepend-to-buffer</td>
+</tr>
+<tr>
+<td style="text-align:center">将区域中内容加入到一个buffer中，删除该buffer原有内容</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">copy-to-buffer</td>
+</tr>
+<tr>
+<td style="text-align:center">在该位置插入指定的buffer中所有内容</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">insert-buffer</td>
+</tr>
+<tr>
+<td style="text-align:center">将区域中内容复制到一个文件中</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">append-to-file</td>
 </tr>
 </tbody>
 </table>
@@ -597,23 +696,27 @@
 <tbody>
 <tr>
 <td style="text-align:center">光标处单词首字母大写</td>
-<td style="text-align:center"><code>M - c</code></td>
+<td style="text-align:center"><code>M-c</code></td>
 </tr>
 <tr>
 <td style="text-align:center">光标处单词全部字母大写</td>
-<td style="text-align:center"><code>M - u</code></td>
+<td style="text-align:center"><code>M-u</code></td>
 </tr>
 <tr>
 <td style="text-align:center">光标处单词全部字母小写</td>
-<td style="text-align:center"><code>M - i</code></td>
+<td style="text-align:center"><code>M-l</code></td>
+</tr>
+<tr>
+<td style="text-align:center">补全</td>
+<td style="text-align:center"><code>M-/</code></td>
 </tr>
 <tr>
 <td style="text-align:center">交换光标处和之前的字符</td>
-<td style="text-align:center"><code>C - t</code></td>
+<td style="text-align:center"><code>C-t</code></td>
 </tr>
 <tr>
 <td style="text-align:center">交换光标处和之前的单词</td>
-<td style="text-align:center"><code>M - t</code></td>
+<td style="text-align:center"><code>M-t</code></td>
 </tr>
 </tbody>
 </table>
@@ -628,16 +731,73 @@
 <tbody>
 <tr>
 <td style="text-align:center">从光标处往后搜索</td>
-<td style="text-align:center"><code>C - s</code></td>
+<td style="text-align:center"><code>C-s</code></td>
 </tr>
 <tr>
 <td style="text-align:center">从光标处往前搜索</td>
-<td style="text-align:center"><code>C - r</code></td>
+<td style="text-align:center"><code>C-r</code></td>
+</tr>
+<tr>
+<td style="text-align:center">(向下)光标位置的单词作为查找字符串</td>
+<td style="text-align:center"><code>C-s C-w</code></td>
+</tr>
+<tr>
+<td style="text-align:center">(向下)光标位置到行尾作为查找字符串</td>
+<td style="text-align:center"><code>C-r C-y</code></td>
+</tr>
+<tr>
+<td style="text-align:center">非递增查找</td>
+<td style="text-align:center"><code>C-s RET &lt;查找字符串&gt; RET</code></td>
+</tr>
+<tr>
+<td style="text-align:center">不受换行、空格、标点影响</td>
+<td style="text-align:center"><code>C-s RET C-w</code></td>
+</tr>
+<tr>
+<td style="text-align:center">正则式向下查找</td>
+<td style="text-align:center"><code>C-M-s</code></td>
+</tr>
+</tbody>
+</table>
+<p><em>用向上查找命令就将上面命令的<code>s</code>替换为<code>r</code></em></p>
+<h1 id="宏模式"><a href="#宏模式" class="headerlink" title="宏模式"></a>宏模式</h1><table>
+<thead>
+<tr>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">命令</th>
+<th style="text-align:center">函数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">开始一个宏的定义</td>
+<td style="text-align:center"><code>C-x (</code></td>
+</tr>
+<tr>
+<td style="text-align:center">结束一个宏的定义</td>
+<td style="text-align:center"><code>C-x )</code></td>
+</tr>
+<tr>
+<td style="text-align:center">执行宏</td>
+<td style="text-align:center"><code>C-x e</code></td>
+</tr>
+<tr>
+<td style="text-align:center">给最后一个宏命名</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">name-last-kbd-macro</td>
+</tr>
+<tr>
+<td style="text-align:center">在当前文件中插入一个已定义并命名过的宏</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">insert-kbd-macro</td>
 </tr>
 </tbody>
 </table>
 <h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
 <li><a href="https://www.ibm.com/developerworks/cn/education/aix/emacs1/" target="_blank" rel="external">Emacs 编辑环境，第 1 部分: 学习 Emacs 的基础知识</a></li>
+<li><a href="http://www.math.pku.edu.cn/teachers/qiuzy/progtech/scheme/emacs-commands.txt" target="_blank" rel="external">这里列出了EMACS 的一些常用命令</a></li>
+<li><a href="http://www.cnblogs.com/robertzml/archive/2010/02/15/1668592.html" target="_blank" rel="external">学习Emacs系列教程（五）：编辑（2）—— 标记</a></li>
+<li><a href="http://www.cnblogs.com/robertzml/archive/2010/02/19/1669204.html" target="_blank" rel="external">学习Emacs系列教程（六）：编辑（3）</a></li>
 </ol>
 
           
