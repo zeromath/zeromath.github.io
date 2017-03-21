@@ -323,7 +323,7 @@
               
                 
                 <a class="post-title-link" href="/2017/03/21/hexo-github2/" itemprop="url">
-                  hexo-github-blog2
+                  [Hexo]在GitHub上建Blog(2)
                 </a>
               
             
@@ -409,17 +409,47 @@
       
         
           
-            <h2 id="修改博客的基本属性"><a href="#修改博客的基本属性" class="headerlink" title="修改博客的基本属性"></a>修改博客的基本属性</h2><p>打开根目录下的_config.yml，修改各种参数信息</p>
+            <p>上次我们介绍了如何建立博客、撰写文章，这次我们来聊聊如何修改博客的一些基本属性</p>
+<h1 id="博客的设定"><a href="#博客的设定" class="headerlink" title="博客的设定"></a>博客的设定</h1><h2 id="修改博客的基本属性"><a href="#修改博客的基本属性" class="headerlink" title="修改博客的基本属性"></a>修改博客的基本属性</h2><p>打开<code>&lt;你的博客目录&gt;</code>目录下的<code>_config.yml</code>，这里我们可以修改各种参数信息：</p>
+<p>比如<code>Site</code>字段是设置站点信息的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># Site</div><div class="line">title: Hexo</div><div class="line">subtitle:</div><div class="line">description:</div><div class="line">author: John Doe</div><div class="line">language:</div><div class="line">timezone:</div></pre></td></tr></table></figure>
+<p>其中：</p>
+<ul>
+<li><code>title</code>就是博客的名称</li>
+<li><code>author</code>就是博客作者</li>
+</ul>
+<p>我们可以改成我们想要的，比如说</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># Site</div><div class="line">title: Test Blog</div><div class="line">subtitle:</div><div class="line">description:</div><div class="line">author: Zero</div><div class="line">language:</div><div class="line">timezone:</div></pre></td></tr></table></figure>
 <p><em>Remark: 所有参数的冒号后面都要加上一个空格</em></p>
-<h1 id="发布上网"><a href="#发布上网" class="headerlink" title="发布上网"></a>发布上网</h1><h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><p>首先你要注册一个<a href="https://github.com" target="_blank" rel="external">GitHub</a>账号，我们发布的原理是GitHub提供一个叫GitHub Page的网页，它对应的网址是”username.github.io”。而它对应的仓库是”usename.github.io”。所以你的用户名非常重要，注册的时候请谨慎选取</p>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="添加部署信息"><a href="#添加部署信息" class="headerlink" title="添加部署信息"></a>添加部署信息</h3><p>打开_config.yml，找到</p>
-<h3 id="添加SSH-KEY"><a href="#添加SSH-KEY" class="headerlink" title="添加SSH KEY"></a>添加SSH KEY</h3><h3 id="安装部署器"><a href="#安装部署器" class="headerlink" title="安装部署器"></a>安装部署器</h3><p>运行如下命令</p>
+<p>重新把网站发布，就变成了如下的样子</p>
+<p><img src="/2017/03/21/hexo-github2/BLOG-site.png" alt="BLOG-site"></p>
+<h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><p>这里我要推荐一个非常简洁耐用的主题 <a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">Next</a>。安装方式如下：</p>
+<p>运行命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
+<p>打开<code>_config.yml</code>文件，定位到<code>Themes</code>字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">## Themes: https://hexo.io/themes/</div><div class="line">theme: landscape</div></pre></td></tr></table></figure>
+<p>把其中的<code>landscape</code>改成<code>next</code>即可！</p>
+<h1 id="发布上网"><a href="#发布上网" class="headerlink" title="发布上网"></a>发布上网</h1><h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><p>首先你要注册一个<a href="https://github.com" target="_blank" rel="external">GitHub</a>账号，我们发布的原理是GitHub提供一个叫GitHub Page的网页，它对应的网址是<code>https://&lt;user_name&gt;.github.io</code>。而它对应的仓库是<code>&lt;user_name&gt;.github.io</code>。所以你的用户名非常重要，注册的时候请谨慎选取</p>
+<p>比如我的GitHub账号就是zeromath，所以对应的主页就是<a href="https://zeromath.github.com" target="_blank" rel="external">https://zeromath.github.com</a>.</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="添加部署信息"><a href="#添加部署信息" class="headerlink" title="添加部署信息"></a>添加部署信息</h3><p>打开_config.yml，找到<code>Deployment</code>字段</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type:</div></pre></td></tr></table></figure>
+<p>在<code>type</code>中填入<code>git</code>，然后在<code>repo</code>里写入<strong>你的仓库地址</strong>，最后<code>branch</code>里写上<code>master</code>。最后效果如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:&lt;user_name&gt;/&lt;user_name&gt;.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<h3 id="添加SSH-KEY"><a href="#添加SSH-KEY" class="headerlink" title="添加SSH KEY"></a>添加SSH KEY</h3><p>为了不用每次push都输入密码，我们采用SSH的方式进行push，这就需要将你的SSH KEY添加到GitHub的信任列表里</p>
+<p>打开终端，运行如下命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;</div></pre></td></tr></table></figure>
+<p>然后一路<code>Enter</code>即可，不用管其他参数。完成后打开<code>~/.ssh/id_rsa.pub</code>文件，将里面的所有内容拷贝出来</p>
+<p>打开<code>https://github.com/settings/keys</code>（你可能需要登陆），点击右上角的<code>New SSH key</code>按钮。把刚才拷贝出来的内容拷贝到<code>Key</code>里，然后<code>Title</code>就写上你的电脑名称即可。</p>
+<p><img src="/2017/03/21/hexo-github2/SSH-key.png" alt=""></p>
+<h3 id="部署上网"><a href="#部署上网" class="headerlink" title="部署上网"></a>部署上网</h3><p>首先我们要安装一个<code>git</code>部署器，运行如下命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>然后就可以愉快的一键部署了！输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure>
+<p>然后你的网站就刷刷刷的传到GitHub上啦！打开<code>https://&lt;user_name&gt;.github.io</code>    就可以看到你的网站了。</p>
+<p><em>Remark: 有时候部署完了还需要等一会儿GitHub的网页才能更新</em></p>
 <hr>
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
-<li><a href="https://zhangslob.github.io/2017/02/28/%E6%95%99%E4%BD%A0%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8CHexo-Github/" target="_blank" rel="external">教你免费搭建个人博客，Hexo&amp;Github</a></li>
 <li><a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Hexo官方文档 - 部署</a></li>
-<li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="external">手把手教你使用Hexo + Github Pages搭建个人独立博客</a></li>
 <li><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/" target="_blank" rel="external">GitHub Help - SSH</a></li>
 <li><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">Next 主题</a></li>
 </ol>
@@ -1328,10 +1358,7 @@
 <hr>
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
 <li><a href="https://zhangslob.github.io/2017/02/28/%E6%95%99%E4%BD%A0%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8CHexo-Github/" target="_blank" rel="external">教你免费搭建个人博客，Hexo&amp;Github</a></li>
-<li><a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Hexo官方文档 - 部署</a></li>
 <li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="external">手把手教你使用Hexo + Github Pages搭建个人独立博客</a></li>
-<li><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/" target="_blank" rel="external">GitHub Help - SSH</a></li>
-<li><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">Next 主题</a></li>
 </ol>
 
           
