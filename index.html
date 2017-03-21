@@ -1185,7 +1185,7 @@
               
                 
                 <a class="post-title-link" href="/2017/03/11/hexo-github-blog/" itemprop="url">
-                  [Hexo]在GitHub上建Blog
+                  [Hexo]在GitHub上建Blog(1)
                 </a>
               
             
@@ -1292,7 +1292,7 @@
 <p><img src="/2017/03/11/hexo-github-blog/INFO-server.png" alt="INFO-server"><br>打开浏览器，访问<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>，就会见到你的博客了</p>
 <p><img src="/2017/03/11/hexo-github-blog/BLOG-index.png" alt="BLOG-index"></p>
 <p><em>Remark: 在Terminal下按下<code>Ctrl+C</code>就可以取消本地服务器了</em></p>
-<h1 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h1><h2 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h2><p>刚刚我们已经看到了博客中有一篇叫 Hello World 的文章了。这篇文章具体在哪里呢？打开<code>&lt;你的博客目录&gt;/source/_post/</code>，你会发现虾米有一个”hello-world.md”文件，它就是网站上的文章对应的Markdown文件。</p>
+<h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><h2 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h2><p>刚刚我们已经看到了博客中有一篇叫 Hello World 的文章了。这篇文章具体在哪里呢？打开<code>&lt;你的博客目录&gt;/source/_post/</code>，你会发现虾米有一个”hello-world.md”文件，它就是网站上的文章对应的Markdown文件。</p>
 <p>Hexo 的所有文章都是通过Markdown书写的，我们也来写一篇自己的文章好了！</p>
 <p>打开Terminal，输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new &lt;&quot;你的文章标题&quot;&gt;</div></pre></td></tr></table></figure>
@@ -1315,7 +1315,7 @@
 <p><img src="/2017/03/11/hexo-github-blog/FILE-markdown.png" alt="FILE-markdown"></p>
 <p><em>请忽略最上面几行的奇怪行为</em></p>
 <p>然后保存MD文件即可。</p>
-<h2 id="发布到网站"><a href="#发布到网站" class="headerlink" title="发布到网站"></a>发布到网站</h2><p>文章写好了，要怎么发布呢？</p>
+<h1 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h1><h2 id="发布到网站"><a href="#发布到网站" class="headerlink" title="发布到网站"></a>发布到网站</h2><p>文章写好了，要怎么发布呢？</p>
 <p>Terminal定位到<code>&lt;你的博客目录&gt;</code>，然后依次输入以下命令</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo generate</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 <p>第一步<code>hexo clean</code>是把之前产生的文件清除掉，然后接下来两个命令就是依次产生新的文件并启动server。再次打开<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>，我们发现我们的文章已经被po上“网”了！</p>
