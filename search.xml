@@ -4,7 +4,7 @@
     
     <entry>
       <title><![CDATA[hexo-github-blog2]]></title>
-      <url>%2F2017%2F03%2F21%2Fhexo-github-blog2%2F</url>
+      <url>%2F2017%2F03%2F21%2Fhexo-github2%2F</url>
       <content type="text"><![CDATA[修改博客的基本属性打开根目录下的_config.yml，修改各种参数信息 Remark: 所有参数的冒号后面都要加上一个空格 发布上网Github首先你要注册一个GitHub账号，我们发布的原理是GitHub提供一个叫GitHub Page的网页，它对应的网址是”username.github.io”。而它对应的仓库是”usename.github.io”。所以你的用户名非常重要，注册的时候请谨慎选取 部署添加部署信息打开_config.yml，找到 添加SSH KEY安装部署器运行如下命令 1$ npm install hexo-deployer-git --save 参考链接 教你免费搭建个人博客，Hexo&amp;Github Hexo官方文档 - 部署 手把手教你使用Hexo + Github Pages搭建个人独立博客 GitHub Help - SSH Next 主题]]></content>
     </entry>
 
@@ -25,7 +25,7 @@
     
     <entry>
       <title><![CDATA[[Hexo]在GitHub上建Blog(1)]]></title>
-      <url>%2F2017%2F03%2F11%2Fhexo-github-blog%2F</url>
+      <url>%2F2017%2F03%2F11%2Fhexo-github%2F</url>
       <content type="text"><![CDATA[在此整理了一下Hexo博客建立的方法，以下代码演示是基于Mac平台。Windows平台大同小异。 当然最全面的资料是在Hexo官网。这里只是做一个小小的总结： Here We Go！ 博客初建立需要的插件 安装Git 安装Node.js 安装Hexo： 打开终端，输入下列命令 1$ npm install -g hexo-cli 安装文件创建一个你喜欢的文件夹，比如 ~/Documents/Blog，这就是你博客的大本营了。定位到该文件夹下，在根目录下运行 1$ hexo init 当你看到 就表示命令已完成。你会发现文件夹里多了好多东西，但是博客在哪里呢？ 我们来试运行一下，输入命令 12$ hexo generate$ hexo server 提示 打开浏览器，访问http://localhost:4000，就会见到你的博客了 Remark: 在Terminal下按下Ctrl+C就可以取消本地服务器了 第一篇博客创建新文章刚刚我们已经看到了博客中有一篇叫 Hello World 的文章了。这篇文章具体在哪里呢？打开&lt;你的博客目录&gt;/source/_post/，你会发现虾米有一个”hello-world.md”文件，它就是网站上的文章对应的Markdown文件。 Hexo 的所有文章都是通过Markdown书写的，我们也来写一篇自己的文章好了！ 打开Terminal，输入 1$ hexo new &lt;&quot;你的文章标题&quot;&gt; 比如我们要写一篇测试文章，于是输入 1$ hexo new &quot;My first test blog&quot; 系统会提示 1INFO Created: &lt;你的博客目录&gt;/source/_posts/My-first-test-blog.md 重新打开&lt;你的博客目录&gt;/source/_posts/目录，你会发现里面已经有了一个新的MD文件。这就是我们刚刚创建的新文章。 编写文章用任意编辑器（我一般用MacDown或者Emacs）打开”My-first-test-blog.md”，你会发现里面已经写好了一点东西了： 12345---title: My first test blogdate: 2017-03-21 14:48:40tags:--- 其中： title是你最终的文章标题 date就是文章创建的时间，这个可以不用管 tags则是文章的标签，如何加Tags我们以后再讲 在最下面另起一行，你就可以开始写文章了！ 比如你可以写如下文章： 请忽略最上面几行的奇怪行为 然后保存MD文件即可。 发布文章发布到网站文章写好了，要怎么发布呢？ Terminal定位到&lt;你的博客目录&gt;，然后依次输入以下命令 123$ hexo clean$ hexo generate$ hexo server 第一步hexo clean是把之前产生的文件清除掉，然后接下来两个命令就是依次产生新的文件并启动server。再次打开http://localhost:4000，我们发现我们的文章已经被po上“网”了！ 删除文章现在有没有觉得那个Hello World很扎眼，我们肯定想要删除它。重新回到&lt;你的博客目录&gt;/source/_posts/目录，找到hello-world.md文件，直接将其删除即可。 有人就要问了，为什么删除了我的浏览器里还是有呢？ 因为我们还没有更新我们的网站，再次在Terminal下运行 123$ hexo clean$ hexo generate$ hexo server 再刷新网页，是不是就没有了？ 参考链接 教你免费搭建个人博客，Hexo&amp;Github Hexo官方文档 - 部署 手把手教你使用Hexo + Github Pages搭建个人独立博客 GitHub Help - SSH Next 主题]]></content>
     </entry>
 
