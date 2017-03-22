@@ -88,11 +88,11 @@
 
 
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hello, Math">
+<meta property="og:title" content="Division By Zero">
 <meta property="og:url" content="http://zeromath.github.io/index.html">
-<meta property="og:site_name" content="Hello, Math">
+<meta property="og:site_name" content="Division By Zero">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello, Math">
+<meta name="twitter:title" content="Division By Zero">
 
 
 
@@ -126,7 +126,7 @@
 
 
 
-  <title> Hello, Math </title>
+  <title> Division By Zero </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -173,7 +173,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hello, Math</span>
+        <span class="site-title">Division By Zero</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -319,7 +319,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello, Math">
+      <meta itemprop="name" content="Division By Zero">
     </span>
 
     
@@ -418,35 +418,18 @@
 
       
         
-          
-            <p>这一次，我们要让我们的博客变得更加丰富多彩，首先就是给博客文章插各种各样漂亮的图片</p>
-<h1 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h1><p>首先我们要启用资源文件夹，打开<span style="background-color:red;color:white">站点配置文件</span> ，找到<code>Writing</code>字段：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"># Writing</div><div class="line">new_post_name: :title.md # File name of new posts</div><div class="line">default_layout: post</div><div class="line">titlecase: false # Transform title into titlecase</div><div class="line">external_link: true # Open external links in new tab</div><div class="line">filename_case: 0</div><div class="line">render_drafts: false</div><div class="line">post_asset_folder: false</div><div class="line">relative_link: false</div><div class="line">future: true</div><div class="line">highlight:</div><div class="line">  enable: true</div><div class="line">  line_number: true</div><div class="line">  auto_detect: false</div><div class="line">  tab_replace:</div></pre></td></tr></table></figure>
-<p>其中有一个参数叫做<code>post_asset_folder</code>，将它改为<code>true</code>。这样每次我们用<code>hexo new &lt;&quot;new post&quot;&gt;</code>的时候，它就会在<code>_post</code>文件夹下自动创建一个同名文件夹，所有和这篇博文相关的东西（比如图片）都可以放到哪里去，比如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new test</div></pre></td></tr></table></figure>
-<p>然后<code>_post</code>文件夹下就会出现同名的文件和文件夹</p>
-<p><img src="/2017/03/22/hexo-github4/FILE-image.png" alt="FILE-image"></p>
-<p>然后我们拷贝一张测试图片（<code>test-image.png</code>）到<code>test</code>文件夹里</p>
-<p><img src="/2017/03/22/hexo-github4/FILE-testimage.png" alt="FILE-testimage"><br>接着在<code>test.md</code>中写入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![](test/test-image.png)</div></pre></td></tr></table></figure>
-<p>效果如图</p>
-<p><img src="/2017/03/22/hexo-github4/FILE-markdown.png" alt="FILE-markdown"></p>
-<h1 id="使用CSS"><a href="#使用CSS" class="headerlink" title="使用CSS"></a>使用CSS</h1><p>因为Markdown本身是基于HTML的，所以我们只需要直接使用即可</p>
-<h2 id="内联使用"><a href="#内联使用" class="headerlink" title="内联使用"></a>内联使用</h2><p>比如 <span style="background-color:red;color:white">我是红底白字</span> 就是通过以下代码直接生成</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;span style=&quot;background-color:red;color:white&quot;&gt;我是红底白字&lt;/span&gt;</div></pre></td></tr></table></figure>
-<h2 id="外部使用"><a href="#外部使用" class="headerlink" title="外部使用"></a>外部使用</h2><p>Next主题会自动加载如下文件夹下的所有CSS</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;your_site&gt;/themes/next/source/css/</div></pre></td></tr></table></figure>
-<p>我们可以修改其中的<code>main.styl</code>文件，加入以下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// My Css</div><div class="line">// --------------------------------------------------</div><div class="line">@import &quot;_mycss/mycss&quot;;</div></pre></td></tr></table></figure>
-<p>然后创建<code>mycss</code>文件夹，在里面创建<code>mycss.css</code>。这个CSS<br>文件将会被自动加载。</p>
-<hr>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
-<li><a href="https://hexo.io/zh-cn/docs/asset-folders.html" target="_blank" rel="external">Hexo官方文档 - 资源文件夹</a></li>
-<li><a href="http://www.jianshu.com/p/c2ba9533088a" target="_blank" rel="external">hexo博客图片问题</a></li>
-<li><a href="https://segmentfault.com/a/1190000003846777" target="_blank" rel="external">Hexo博客主题NexT使用自定义的CSS样式</a></li>
-</ol>
-
-          
+          <p>这一次，我们要让我们的博客变得更加丰富多彩，首先就是给博客文章插各种各样漂亮的图片。主要包括</p>
+<ul>
+<li>如何添加图片</li>
+<li>添加CSS支持</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/22/hexo-github4/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -494,7 +477,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello, Math">
+      <meta itemprop="name" content="Division By Zero">
     </span>
 
     
@@ -593,59 +576,21 @@
 
       
         
-          
-            <p>我们的博客已经基本成型了，这里主要是一些细节性的工作，注意到下文中我们会频繁修改两个配置文件，一个是<span style="background-color:red;color:white">站点配置文件</span> ，其路径为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;your_site&gt;/_config.yml</div></pre></td></tr></table></figure>
-<p>另一个是<span style="background-color:blue;color:white">主题配置文件</span>，其路径为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;your_site&gt;/themes/next/_config.yml</div></pre></td></tr></table></figure>
-<h1 id="Next主题"><a href="#Next主题" class="headerlink" title="Next主题"></a>Next主题</h1><p>为什么上文我要推荐Next主题呢，因为里面已经集成了很多插件我们可以直接使用，比如</p>
-<h2 id="添加评论支持"><a href="#添加评论支持" class="headerlink" title="添加评论支持"></a>添加评论支持</h2><p>一个好的博客怎么可以没有评论区，我们可以用<a href="https://disqus.com" target="_blank" rel="external">Disqus</a>提供的评论服务，到Disqus官网注册账号，然后取得<code>disqus_shortname</code>。打开<span style="background-color:blue;color:white">主题配置文件</span>，添加如下代码到任意行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">disqus_shortname: &lt;your_disqus_shortname&gt;</div></pre></td></tr></table></figure>
-<h2 id="添加Google统计"><a href="#添加Google统计" class="headerlink" title="添加Google统计"></a>添加Google统计</h2><p>一个好的博客怎么可以没有统计，我们可以用Google提供的统计工具<a href="https://analytics.google.com/" target="_blank" rel="external">Google Analytics</a>，注册账号，然后取得Google追踪ID（Google追踪ID总是以<code>UA</code>开头）。打开<span style="background-color:blue;color:white">主题配置文件</span>，修改<code>google_analytics</code>字段</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">google_analytics: UA&lt;%%%%%%%%&gt;</div></pre></td></tr></table></figure>
-<h2 id="添加搜索服务"><a href="#添加搜索服务" class="headerlink" title="添加搜索服务"></a>添加搜索服务</h2><p>一个好的博客怎么可以没有搜索服务：</p>
-<p>首先安装<code>hexo-generator-searchdb</code>，在站点根目录下运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-generator-searchdb --save</div></pre></td></tr></table></figure>
-<p>然后编辑<span style="background-color:red;color:white">站点配置文件</span> ，添加以下内容到任意区域</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">search:</div><div class="line">  path: search.xml</div><div class="line">  field: post</div><div class="line">  format: html</div><div class="line">  limit: 10000</div></pre></td></tr></table></figure>
-<p>最后编辑<span style="background-color:blue;color:white">主题配置文件</span>，修改<code>Local search</code>字段：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># Local search</div><div class="line">local_search:</div><div class="line">  enable: true</div></pre></td></tr></table></figure>
-<h2 id="添加数学公式支持"><a href="#添加数学公式支持" class="headerlink" title="添加数学公式支持"></a>添加数学公式支持</h2><p>一个好的博客怎么可以不是数学相关的！开启MathJax支持异常简单，修改<span class="theme">主题配置文件</span>中的<code>MathJax Support</code>字段即可</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># MathJax Support</div><div class="line">mathjax: true</div></pre></td></tr></table></figure>
-<h1 id="Tags-amp-Categories"><a href="#Tags-amp-Categories" class="headerlink" title="Tags &amp; Categories"></a>Tags &amp; Categories</h1><h2 id="添加Tags"><a href="#添加Tags" class="headerlink" title="添加Tags"></a>添加Tags</h2><p>假如你只有一个标签，只需要在文章的最顶部的<code>tags</code>标签下加上你要加的<code>tag</code>即可:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: %%%%%%%</div><div class="line">date: %%%%%%%</div><div class="line">tags: &lt;Your_tag&gt;</div><div class="line">---</div></pre></td></tr></table></figure>
-<p>假如你有多于一个标签，你可以用两种方式：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">tags:</div><div class="line">- tag1</div><div class="line">- tag2</div></pre></td></tr></table></figure>
-<p>或者</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tags: [tag1, tag2]</div></pre></td></tr></table></figure>
-<h2 id="添加Tags页面"><a href="#添加Tags页面" class="headerlink" title="添加Tags页面"></a>添加Tags页面</h2><p>当你给你的文章加上Tags之后，你会发现博客上的Tags链接并不能用。点击之后会提示无法找到页面，这是因为我们还没有创建Tags页面。</p>
-<p>打开终端输入以下代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new page tags</div></pre></td></tr></table></figure>
-<p>然后在<code>&lt;your_site&gt;/sources/tags/</code>下找到<code>index.md</code>，打开它，在<code>date</code>下面加入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">type: &quot;tags&quot;</div><div class="line">comment: false #关闭标签页面的评论区域</div></pre></td></tr></table></figure>
-<p>效果如图</p>
-<p><img src="/2017/03/21/hexo-github3/FILE-tags.png" alt="FILE-tags"></p>
-<p>最后打开<span style="background-color:blue;color:white">主题配置文件</span>，找到<code>menu</code>字段，添加<code>tags</code>标签</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: /</div><div class="line">  archives: /archives</div><div class="line">  ...</div><div class="line">  tags: /tags</div></pre></td></tr></table></figure>
-<h2 id="添加Categories"><a href="#添加Categories" class="headerlink" title="添加Categories"></a>添加Categories</h2><p>在博文的最上方，tags标签下新起一行，假如categories标签，如下所示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: %%%%%%%</div><div class="line">date: %%%%%%%</div><div class="line">tags:</div><div class="line">categories: &lt;Your_category&gt;</div><div class="line">---</div></pre></td></tr></table></figure>
-<h2 id="添加Categories页面"><a href="#添加Categories页面" class="headerlink" title="添加Categories页面"></a>添加Categories页面</h2><p>同样的我们还没有创建Categories页面。</p>
-<p>打开终端输入以下代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new page categories</div></pre></td></tr></table></figure>
-<p>然后在<code>&lt;your_site&gt;/sources/categories/</code>下找到<code>index.md</code>，打开它，在<code>date</code>下面加入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">type: &quot;categories&quot;</div><div class="line">comment: false #关闭标签页面的评论区域</div></pre></td></tr></table></figure>
-<p>效果如图</p>
-<p><img src="/2017/03/21/hexo-github3/FILE-cat.png" alt="FILE-cat"></p>
-<p>最后打开<span style="background-color:blue;color:white">主题配置文件</span>，找到<code>menu</code>字段，添加<code>categories</code>标签</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">menu:</div><div class="line">  home: /</div><div class="line">  archives: /archives</div><div class="line">  ...</div><div class="line">  categories: /categories</div></pre></td></tr></table></figure>
-<hr>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
-<li><a href="https://github.com/hexojs/hexo/issues/320" target="_blank" rel="external">多个 Tags 怎么分割？</a></li>
-<li><a href="http://ijiaober.github.io/2014/08/05/hexo/hexo-04/" target="_blank" rel="external">Hexo使用攻略：（四）Hexo的分类和标签设置</a></li>
-<li><a href="http://theme-next.iissnan.com" target="_blank" rel="external">Next主题</a></li>
-</ol>
-
-          
+          <p>我们的博客已经基本成型了，这里主要是一些细节性的工作。包括</p>
+<ul>
+<li>添加评论支持</li>
+<li>添加Google统计</li>
+<li>添加搜索服务</li>
+<li>添加数学公式支持</li>
+<li>使用Tags和Categories</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/21/hexo-github3/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -693,7 +638,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello, Math">
+      <meta itemprop="name" content="Division By Zero">
     </span>
 
     
@@ -792,53 +737,19 @@
 
       
         
-          
-            <p>上次我们介绍了如何建立博客、撰写文章，这次我们来聊聊如何修改博客的一些基本属性</p>
-<h1 id="博客的设定"><a href="#博客的设定" class="headerlink" title="博客的设定"></a>博客的设定</h1><h2 id="修改博客的基本属性"><a href="#修改博客的基本属性" class="headerlink" title="修改博客的基本属性"></a>修改博客的基本属性</h2><p>打开<code>&lt;你的博客目录&gt;</code>目录下的<code>_config.yml</code>，这里我们可以修改各种参数信息：</p>
-<p>比如<code>Site</code>字段是设置站点信息的</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># Site</div><div class="line">title: Hexo</div><div class="line">subtitle:</div><div class="line">description:</div><div class="line">author: John Doe</div><div class="line">language:</div><div class="line">timezone:</div></pre></td></tr></table></figure>
-<p>其中：</p>
+          <p>上次我们介绍了如何建立博客、撰写文章，这次我们来聊聊如何修改博客的一些基本属性。本期主要包括：</p>
 <ul>
-<li><code>title</code>就是博客的名称</li>
-<li><code>author</code>就是博客作者</li>
+<li>修改博客的信息</li>
+<li>修改主题样式</li>
+<li>发布到GitHub</li>
 </ul>
-<p>我们可以改成我们想要的，比如说</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"># Site</div><div class="line">title: Test Blog</div><div class="line">subtitle:</div><div class="line">description:</div><div class="line">author: Zero</div><div class="line">language:</div><div class="line">timezone:</div></pre></td></tr></table></figure>
-<p><em>Remark: 所有参数的冒号后面都要加上一个空格</em></p>
-<p>重新把网站发布，就变成了如下的样子</p>
-<p><img src="/2017/03/21/hexo-github2/BLOG-site.png" alt="BLOG-site"></p>
-<h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><p>这里我要推荐一个非常简洁耐用的主题 <a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">Next</a>。安装方式如下：</p>
-<p>运行命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</div></pre></td></tr></table></figure>
-<p>打开<code>_config.yml</code>文件，定位到<code>Themes</code>字段</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">## Themes: https://hexo.io/themes/</div><div class="line">theme: landscape</div></pre></td></tr></table></figure>
-<p>把其中的<code>landscape</code>改成<code>next</code>即可！</p>
-<h1 id="发布上网"><a href="#发布上网" class="headerlink" title="发布上网"></a>发布上网</h1><h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><p>首先你要注册一个<a href="https://github.com" target="_blank" rel="external">GitHub</a>账号，我们发布的原理是GitHub提供一个叫GitHub Page的网页，它对应的网址是<code>https://&lt;user_name&gt;.github.io</code>。而它对应的仓库是<code>&lt;user_name&gt;.github.io</code>。所以你的用户名非常重要，注册的时候请谨慎选取</p>
-<p>比如我的GitHub账号就是zeromath，所以对应的主页就是<a href="https://zeromath.github.com" target="_blank" rel="external">https://zeromath.github.com</a>.</p>
-<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="添加部署信息"><a href="#添加部署信息" class="headerlink" title="添加部署信息"></a>添加部署信息</h3><p>打开_config.yml，找到<code>Deployment</code>字段</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type:</div></pre></td></tr></table></figure>
-<p>在<code>type</code>中填入<code>git</code>，然后在<code>repo</code>里写入<strong>你的仓库地址</strong>，最后<code>branch</code>里写上<code>master</code>。最后效果如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Deployment</div><div class="line">## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: git@github.com:&lt;user_name&gt;/&lt;user_name&gt;.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-<h3 id="添加SSH-KEY"><a href="#添加SSH-KEY" class="headerlink" title="添加SSH KEY"></a>添加SSH KEY</h3><p>为了不用每次push都输入密码，我们采用SSH的方式进行push，这就需要将你的SSH KEY添加到GitHub的信任列表里</p>
-<p>打开终端，运行如下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;</div></pre></td></tr></table></figure>
-<p>然后一路<code>Enter</code>即可，不用管其他参数。完成后打开<code>~/.ssh/id_rsa.pub</code>文件，将里面的所有内容拷贝出来</p>
-<p>打开<code>https://github.com/settings/keys</code>（你可能需要登陆），点击右上角的<code>New SSH key</code>按钮。把刚才拷贝出来的内容拷贝到<code>Key</code>里，然后<code>Title</code>就写上你的电脑名称即可。</p>
-<p><img src="/2017/03/21/hexo-github2/SSH-key.png" alt=""></p>
-<h3 id="部署上网"><a href="#部署上网" class="headerlink" title="部署上网"></a>部署上网</h3><p>首先我们要安装一个<code>git</code>部署器，运行如下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
-<p>然后就可以愉快的一键部署了！输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo deploy</div></pre></td></tr></table></figure>
-<p>然后你的网站就刷刷刷的传到GitHub上啦！打开<code>https://&lt;user_name&gt;.github.io</code>    就可以看到你的网站了。</p>
-<p><em>Remark: 有时候部署完了还需要等一会儿GitHub的网页才能更新</em></p>
-<hr>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
-<li><a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Hexo官方文档 - 部署</a></li>
-<li><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/" target="_blank" rel="external">GitHub Help - SSH</a></li>
-<li><a href="http://theme-next.iissnan.com/getting-started.html" target="_blank" rel="external">Next 主题</a></li>
-</ol>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/21/hexo-github2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -886,7 +797,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello, Math">
+      <meta itemprop="name" content="Division By Zero">
     </span>
 
     
@@ -985,421 +896,14 @@
 
       
         
-          
-            <h1 id="缓冲区"><a href="#缓冲区" class="headerlink" title="缓冲区"></a>缓冲区</h1><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数名</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">保存当前缓冲区</td>
-<td style="text-align:center"><code>C-x C-s</code></td>
-<td style="text-align:center">save-buffer</td>
-</tr>
-<tr>
-<td style="text-align:center">保存所有缓冲区</td>
-<td style="text-align:center"><code>C-x s</code></td>
-<td style="text-align:center">save-some-buffers</td>
-</tr>
-<tr>
-<td style="text-align:center">列出所有缓冲区</td>
-<td style="text-align:center"><code>C-x C-b</code></td>
-<td style="text-align:center">list-buffers</td>
-</tr>
-<tr>
-<td style="text-align:center">切换缓冲区</td>
-<td style="text-align:center"><code>C-x b</code></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">杀死缓冲区</td>
-<td style="text-align:center"><code>C-x k</code></td>
-<td style="text-align:center">kill-buffer</td>
-</tr>
-</tbody>
-</table>
-<h1 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h1><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数名</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">打开文件</td>
-<td style="text-align:center"><code>C-x C-f</code></td>
-</tr>
-<tr>
-<td style="text-align:center">只读方式打开</td>
-<td style="text-align:center"><code>C-x C-r</code></td>
-</tr>
-<tr>
-<td style="text-align:center">读入另外一个文件代替当前buffer的文件</td>
-<td style="text-align:center"><code>C-x C-v</code></td>
-</tr>
-</tbody>
-</table>
-<h1 id="文件编辑命令"><a href="#文件编辑命令" class="headerlink" title="文件编辑命令"></a>文件编辑命令</h1><h2 id="移动插入点"><a href="#移动插入点" class="headerlink" title="移动插入点"></a>移动插入点</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数名</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">缓冲区开始</td>
-<td style="text-align:center"><code>M-&gt;</code></td>
-<td style="text-align:center">beginning-of-buffer</td>
-</tr>
-<tr>
-<td style="text-align:center">缓冲区末尾</td>
-<td style="text-align:center"><code>M-&lt;</code></td>
-<td style="text-align:center">end-of-buffer</td>
-</tr>
-<tr>
-<td style="text-align:center">上一屏</td>
-<td style="text-align:center"><code>C-v</code></td>
-<td style="text-align:center">scroll-up</td>
-</tr>
-<tr>
-<td style="text-align:center">下一屏</td>
-<td style="text-align:center"><code>M-v</code></td>
-<td style="text-align:center">scroll-down</td>
-</tr>
-<tr>
-<td style="text-align:center">段落开头</td>
-<td style="text-align:center"><code>C-{</code></td>
-<td style="text-align:center">beginning-of-paragraph</td>
-</tr>
-<tr>
-<td style="text-align:center">段落结尾</td>
-<td style="text-align:center"><code>C-}</code></td>
-<td style="text-align:center">end-of-paragraph</td>
-</tr>
-<tr>
-<td style="text-align:center">到指定行</td>
-<td style="text-align:center"><code>M-g g</code></td>
-<td style="text-align:center">goto-line</td>
-</tr>
-<tr>
-<td style="text-align:center">行开头</td>
-<td style="text-align:center"><code>C-a</code></td>
-<td style="text-align:center">beginning-of-line</td>
-</tr>
-<tr>
-<td style="text-align:center">行结尾</td>
-<td style="text-align:center"><code>C-e</code></td>
-<td style="text-align:center">end-of-line</td>
-</tr>
-<tr>
-<td style="text-align:center">句子开头</td>
-<td style="text-align:center"><code>M-a</code></td>
-<td style="text-align:center">beginning-of-sentence</td>
-</tr>
-<tr>
-<td style="text-align:center">句子结尾</td>
-<td style="text-align:center"><code>M-e</code></td>
-<td style="text-align:center">end=of-sentence</td>
-</tr>
-<tr>
-<td style="text-align:center">上一行</td>
-<td style="text-align:center"><code>C-p</code></td>
-<td style="text-align:center">previous-line</td>
-</tr>
-<tr>
-<td style="text-align:center">下一行</td>
-<td style="text-align:center"><code>C-n</code></td>
-<td style="text-align:center">next-line</td>
-</tr>
-<tr>
-<td style="text-align:center">上一个单词</td>
-<td style="text-align:center"><code>M-b</code></td>
-<td style="text-align:center">backward-word</td>
-</tr>
-<tr>
-<td style="text-align:center">下一个单词</td>
-<td style="text-align:center"><code>M-f</code></td>
-<td style="text-align:center">forward-word</td>
-</tr>
-<tr>
-<td style="text-align:center">上一个字符</td>
-<td style="text-align:center"><code>C-b</code></td>
-<td style="text-align:center">back-char</td>
-</tr>
-<tr>
-<td style="text-align:center">下一个字符</td>
-<td style="text-align:center"><code>C-f</code></td>
-<td style="text-align:center">forward-char</td>
-</tr>
-</tbody>
-</table>
-<h2 id="引用插入、删除、撤销和重复"><a href="#引用插入、删除、撤销和重复" class="headerlink" title="引用插入、删除、撤销和重复"></a>引用插入、删除、撤销和重复</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">引用插入</td>
-<td style="text-align:center"><code>C-q &lt;字符值&gt;</code></td>
-<td style="text-align:center">quote-insert</td>
-</tr>
-<tr>
-<td style="text-align:center">删除一个字符</td>
-<td style="text-align:center"><code>C-d</code></td>
-<td style="text-align:center">delete-char</td>
-</tr>
-<tr>
-<td style="text-align:center">删除一个单词</td>
-<td style="text-align:center"><code>M-d</code></td>
-<td style="text-align:center">kill-word</td>
-</tr>
-<tr>
-<td style="text-align:center">撤销</td>
-<td style="text-align:center"><code>C-_</code> or <code>C-/</code></td>
-<td style="text-align:center">undo</td>
-</tr>
-<tr>
-<td style="text-align:center">重复</td>
-<td style="text-align:center"><code>C-u &lt;次数&gt; &lt;命令&gt;</code></td>
-<td style="text-align:center">universal-argument</td>
-</tr>
-</tbody>
-</table>
-<h2 id="标记和复制"><a href="#标记和复制" class="headerlink" title="标记和复制"></a>标记和复制</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">删除一行</td>
-<td style="text-align:center"><code>C-k</code></td>
-<td style="text-align:center">kill-line</td>
-</tr>
-<tr>
-<td style="text-align:center">设定标记</td>
-<td style="text-align:center"><code>C-Space</code> or <code>C-@</code></td>
-<td style="text-align:center">set-mark-command</td>
-</tr>
-<tr>
-<td style="text-align:center">全选</td>
-<td style="text-align:center"><code>C-x h</code></td>
-<td style="text-align:center">mark-whole-buffer</td>
-</tr>
-<tr>
-<td style="text-align:center">选取一页</td>
-<td style="text-align:center"><code>C-x C-p</code></td>
-<td style="text-align:center">mark-page</td>
-</tr>
-<tr>
-<td style="text-align:center">选取一段</td>
-<td style="text-align:center"><code>M-h</code></td>
-<td style="text-align:center">mark-paragraph</td>
-</tr>
-<tr>
-<td style="text-align:center">选取一个单词</td>
-<td style="text-align:center"><code>M-@</code></td>
-<td style="text-align:center">mark-word</td>
-</tr>
-<tr>
-<td style="text-align:center">选取一页</td>
-<td style="text-align:center"><code>C-x C-p</code></td>
-<td style="text-align:center">mark-page</td>
-</tr>
-<tr>
-<td style="text-align:center">交换标记和光标位置</td>
-<td style="text-align:center"><code>C-x C-x</code></td>
-<td style="text-align:center">exchange-point-and-mark</td>
-</tr>
-<tr>
-<td style="text-align:center">将区域中字母改为大写</td>
-<td style="text-align:center"><code>C-x C-u</code></td>
-<td style="text-align:center">upcase-region</td>
-</tr>
-<tr>
-<td style="text-align:center">删除区块</td>
-<td style="text-align:center"><code>C-w</code></td>
-<td style="text-align:center">kill-region</td>
-</tr>
-<tr>
-<td style="text-align:center">复制区块</td>
-<td style="text-align:center"><code>M-w</code></td>
-<td style="text-align:center">kill-ring-save</td>
-</tr>
-<tr>
-<td style="text-align:center">粘贴</td>
-<td style="text-align:center"><code>C-y</code></td>
-<td style="text-align:center">yank</td>
-</tr>
-</tbody>
-</table>
-<h2 id="快速复制"><a href="#快速复制" class="headerlink" title="快速复制"></a>快速复制</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">将区域中内容加入到一个buffer中</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">append-to-buffer</td>
-</tr>
-<tr>
-<td style="text-align:center">将区域中内容加入到一个buffer中，不过加入位置在该buffer的光标前</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">prepend-to-buffer</td>
-</tr>
-<tr>
-<td style="text-align:center">将区域中内容加入到一个buffer中，删除该buffer原有内容</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">copy-to-buffer</td>
-</tr>
-<tr>
-<td style="text-align:center">在该位置插入指定的buffer中所有内容</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">insert-buffer</td>
-</tr>
-<tr>
-<td style="text-align:center">将区域中内容复制到一个文件中</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">append-to-file</td>
-</tr>
-</tbody>
-</table>
-<h2 id="字符修改"><a href="#字符修改" class="headerlink" title="字符修改"></a>字符修改</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">光标处单词首字母大写</td>
-<td style="text-align:center"><code>M-c</code></td>
-</tr>
-<tr>
-<td style="text-align:center">光标处单词全部字母大写</td>
-<td style="text-align:center"><code>M-u</code></td>
-</tr>
-<tr>
-<td style="text-align:center">光标处单词全部字母小写</td>
-<td style="text-align:center"><code>M-l</code></td>
-</tr>
-<tr>
-<td style="text-align:center">补全</td>
-<td style="text-align:center"><code>M-/</code></td>
-</tr>
-<tr>
-<td style="text-align:center">交换光标处和之前的字符</td>
-<td style="text-align:center"><code>C-t</code></td>
-</tr>
-<tr>
-<td style="text-align:center">交换光标处和之前的单词</td>
-<td style="text-align:center"><code>M-t</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">从光标处往后搜索</td>
-<td style="text-align:center"><code>C-s</code></td>
-</tr>
-<tr>
-<td style="text-align:center">从光标处往前搜索</td>
-<td style="text-align:center"><code>C-r</code></td>
-</tr>
-<tr>
-<td style="text-align:center">(向下)光标位置的单词作为查找字符串</td>
-<td style="text-align:center"><code>C-s C-w</code></td>
-</tr>
-<tr>
-<td style="text-align:center">(向下)光标位置到行尾作为查找字符串</td>
-<td style="text-align:center"><code>C-r C-y</code></td>
-</tr>
-<tr>
-<td style="text-align:center">非递增查找</td>
-<td style="text-align:center"><code>C-s RET &lt;查找字符串&gt; RET</code></td>
-</tr>
-<tr>
-<td style="text-align:center">不受换行、空格、标点影响</td>
-<td style="text-align:center"><code>C-s RET C-w</code></td>
-</tr>
-<tr>
-<td style="text-align:center">正则式向下查找</td>
-<td style="text-align:center"><code>C-M-s</code></td>
-</tr>
-</tbody>
-</table>
-<p><em>用向上查找命令就将上面命令的<code>s</code>替换为<code>r</code></em></p>
-<h1 id="宏模式"><a href="#宏模式" class="headerlink" title="宏模式"></a>宏模式</h1><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">开始一个宏的定义</td>
-<td style="text-align:center"><code>C-x (</code></td>
-</tr>
-<tr>
-<td style="text-align:center">结束一个宏的定义</td>
-<td style="text-align:center"><code>C-x )</code></td>
-</tr>
-<tr>
-<td style="text-align:center">执行宏</td>
-<td style="text-align:center"><code>C-x e</code></td>
-</tr>
-<tr>
-<td style="text-align:center">给最后一个宏命名</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">name-last-kbd-macro</td>
-</tr>
-<tr>
-<td style="text-align:center">在当前文件中插入一个已定义并命名过的宏</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">insert-kbd-macro</td>
-</tr>
-</tbody>
-</table>
-<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
-<li><a href="https://www.ibm.com/developerworks/cn/education/aix/emacs1/" target="_blank" rel="external">Emacs 编辑环境，第 1 部分: 学习 Emacs 的基础知识</a></li>
-<li><a href="http://www.math.pku.edu.cn/teachers/qiuzy/progtech/scheme/emacs-commands.txt" target="_blank" rel="external">这里列出了EMACS 的一些常用命令</a></li>
-<li><a href="http://www.cnblogs.com/robertzml/archive/2010/02/15/1668592.html" target="_blank" rel="external">学习Emacs系列教程（五）：编辑（2）—— 标记</a></li>
-<li><a href="http://www.cnblogs.com/robertzml/archive/2010/02/19/1669204.html" target="_blank" rel="external">学习Emacs系列教程（六）：编辑（3）</a></li>
-</ol>
-
-          
+          <p>主要列出了一些Emacs常用的命令以备查用</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/15/emacs-learning/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1447,7 +951,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello, Math">
+      <meta itemprop="name" content="Division By Zero">
     </span>
 
     
@@ -1546,42 +1050,14 @@
 
       
         
-          
-            <h1 id="首先"><a href="#首先" class="headerlink" title="首先"></a>首先</h1><h1 id="必要文件"><a href="#必要文件" class="headerlink" title="必要文件"></a>必要文件</h1><ol>
-<li>安装Emacs：直接搜索Emacs即可，或者到<a href="https://www.gnu.org/software/emacs/" target="_blank" rel="external">这里</a>下载即可。</li>
-<li>安装MacTex：到这里下载</li>
-<li>安装AucTex：打开Emacs，输入<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">M-x list-packages</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>确认，然后直接搜索AucTex这个包，按i标记，按x执行，就安装完成了</p>
-<ol>
-<li>安装 cdlatex：复制cdlatex.el到”/Applications/Emacs.app/Contents/Resources/site-lisp”，然后打开.emacs加入以下代码</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(add-hook &apos;LaTeX-mode-hook &apos;LaTeX-math-mode)</div><div class="line">(add-to-list &apos;load-path &quot;/Applications/Emacs.app/Contents/Resources/site-lisp/&quot;)</div><div class="line">(add-hook &apos;LaTeX-mode-hook &apos;turn-on-cdlatex)</div><div class="line">(autoload &apos;cdlatex-mode &quot;cdlatex&quot; &quot;CDLaTeX Mode&quot; t)</div><div class="line">(autoload &apos;turn-on-cdlatex &quot;cdlatex&quot; &quot;CDLaTeX Mode&quot; nil)</div></pre></td></tr></table></figure>
-<h1 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h1><h2 id="基本快捷键"><a href="#基本快捷键" class="headerlink" title="基本快捷键"></a>基本快捷键</h2><ol>
-<li><p>Complie: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C-c C-c</div></pre></td></tr></table></figure>
-</li>
-<li><p>Preview Section: </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C-c C-p s</div></pre></td></tr></table></figure>
-</li>
-<li><p>Undo Preview:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">C-c C-p C-c s</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<h1 id="问题解答"><a href="#问题解答" class="headerlink" title="问题解答"></a>问题解答</h1><p><em>Q1:</em> TeX不能识别</p>
-<p><em>Solution:</em></p>
-<p>根据<a href="http://walsvid.github.io/2016/05/14/latex-mac/" target="_blank" rel="external">这里</a>的描述，我们需要添加下列两个到PATH变量中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/Library/TeX/texbin</div><div class="line">/usr/local/bin</div></pre></td></tr></table></figure>
-<p>但是图形界面的Emacs是不会全部加载bash的PATH的，所以直接在bash中修改PATH变量并没有用处，我们<a href="http://gatherlight.info/?p=32" target="_blank" rel="external">还需要</a>添加如下代码到.emacs</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">(setenv “PATH”</div><div class="line">(concat (getenv “PATH”) “:/Library/TeX/texbin:/usr/local/bin”))</div></pre></td></tr></table></figure>
-<p><em>Q2:</em> AucTex 预览出错，错误提示为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PDF2DSC sentinel: Wrong type argument: arrayp, nil</div></pre></td></tr></table></figure>
-<p><em><a href="http://emacs.stackexchange.com/questions/7936/auctex-preview-pdf2dsc-sentinel-error" target="_blank" rel="external">Solution</a>:</em> 在.emacs中加入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(setq preview-gs-command &quot;/usr/local/bin/gs&quot;)</div></pre></td></tr></table></figure>
-<p>重新启动Emacs</p>
-
-          
+          <p>这里总结一下在Emacs中安装AucTex和CDLaTeX插件的方式。</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/12/mac-emacs-auctex/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1629,7 +1105,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello, Math">
+      <meta itemprop="name" content="Division By Zero">
     </span>
 
     
@@ -1728,68 +1204,14 @@
 
       
         
-          
-            <p>在此整理了一下Hexo博客建立的方法，以下代码演示是基于Mac平台。Windows平台大同小异。 当然最全面的资料是在<a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">Hexo官网</a>。这里只是做一个小小的总结：</p>
-<p>Here We Go！</p>
-<h1 id="博客初建立"><a href="#博客初建立" class="headerlink" title="博客初建立"></a>博客初建立</h1><h2 id="需要的插件"><a href="#需要的插件" class="headerlink" title="需要的插件"></a>需要的插件</h2><ol>
-<li>安装<a href="https://git-scm.com/downloads" target="_blank" rel="external">Git</a></li>
-<li>安装<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
-<li><p>安装Hexo：</p>
-<p> 打开终端，输入下列命令</p>
-</li>
-</ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
-<h2 id="安装文件"><a href="#安装文件" class="headerlink" title="安装文件"></a>安装文件</h2><p>创建一个你喜欢的文件夹，比如 <code>~/Documents/Blog</code>，这就是你博客的大本营了。定位到该文件夹下，在根目录下运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure>
-<p>当你看到</p>
-<p><img src="/2017/03/11/hexo-github/INFO-init.png" alt="INFO-init"></p>
-<p>就表示命令已完成。你会发现文件夹里多了好多东西，但是博客在哪里呢？</p>
-<p>我们来试运行一下，输入命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>提示</p>
-<p><img src="/2017/03/11/hexo-github/INFO-server.png" alt="INFO-server"><br>打开浏览器，访问<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>，就会见到你的博客了</p>
-<p><img src="/2017/03/11/hexo-github/BLOG-index.png" alt="BLOG-index"></p>
-<p><em>Remark: 在Terminal下按下<code>Ctrl+C</code>就可以取消本地服务器了</em></p>
-<h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><h2 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h2><p>刚刚我们已经看到了博客中有一篇叫 Hello World 的文章了。这篇文章具体在哪里呢？打开<code>&lt;你的博客目录&gt;/source/_post/</code>，你会发现虾米有一个”hello-world.md”文件，它就是网站上的文章对应的Markdown文件。</p>
-<p>Hexo 的所有文章都是通过Markdown书写的，我们也来写一篇自己的文章好了！</p>
-<p>打开Terminal，输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new &lt;&quot;你的文章标题&quot;&gt;</div></pre></td></tr></table></figure>
-<p>比如我们要写一篇测试文章，于是输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new &quot;My first test blog&quot;</div></pre></td></tr></table></figure>
-<p>系统会提示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INFO  Created: &lt;你的博客目录&gt;/source/_posts/My-first-test-blog.md</div></pre></td></tr></table></figure>
-<p>重新打开<code>&lt;你的博客目录&gt;/source/_posts/</code>目录，你会发现里面已经有了一个新的MD文件。这就是我们刚刚创建的新文章。</p>
-<p><img src="/2017/03/11/hexo-github/FILE-newpost.png" alt="FILE-newpost"></p>
-<h2 id="编写文章"><a href="#编写文章" class="headerlink" title="编写文章"></a>编写文章</h2><p>用任意编辑器（我一般用MacDown或者Emacs）打开”My-first-test-blog.md”，你会发现里面已经写好了一点东西了：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: My first test blog</div><div class="line">date: 2017-03-21 14:48:40</div><div class="line">tags:</div><div class="line">---</div></pre></td></tr></table></figure>
-<p>其中：</p>
-<ul>
-<li><code>title</code>是你最终的文章标题</li>
-<li><code>date</code>就是文章创建的时间，这个可以不用管</li>
-<li><code>tags</code>则是文章的标签，如何加Tags我们以后再讲</li>
-</ul>
-<p>在最下面另起一行，你就可以开始写文章了！</p>
-<p>比如你可以写如下文章：</p>
-<p><img src="/2017/03/11/hexo-github/FILE-markdown.png" alt="FILE-markdown"></p>
-<p><em>请忽略最上面几行的奇怪行为</em></p>
-<p>然后保存MD文件即可。</p>
-<h1 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h1><h2 id="发布到网站"><a href="#发布到网站" class="headerlink" title="发布到网站"></a>发布到网站</h2><p>文章写好了，要怎么发布呢？</p>
-<p>Terminal定位到<code>&lt;你的博客目录&gt;</code>，然后依次输入以下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo generate</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>第一步<code>hexo clean</code>是把之前产生的文件清除掉，然后接下来两个命令就是依次产生新的文件并启动server。再次打开<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>，我们发现我们的文章已经被po上“网”了！</p>
-<p><img src="/2017/03/11/hexo-github/BLOG-updated.png" alt="BLOG-updated"></p>
-<h2 id="删除文章"><a href="#删除文章" class="headerlink" title="删除文章"></a>删除文章</h2><p>现在有没有觉得那个<code>Hello World</code>很扎眼，我们肯定想要删除它。重新回到<code>&lt;你的博客目录&gt;/source/_posts/</code>目录，找到<code>hello-world.md</code>文件，直接将其删除即可。</p>
-<p>有人就要问了，为什么删除了我的浏览器里还是有呢？</p>
-<p>因为我们还没有更新我们的网站，再次在Terminal下运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo generate</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>再刷新网页，是不是就没有了？</p>
-<hr>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
-<li><a href="https://zhangslob.github.io/2017/02/28/%E6%95%99%E4%BD%A0%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8CHexo-Github/" target="_blank" rel="external">教你免费搭建个人博客，Hexo&amp;Github</a></li>
-<li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="external">手把手教你使用Hexo + Github Pages搭建个人独立博客</a></li>
-</ol>
-
-          
+          <p>在此整理了一下Hexo博客建立的方法，以下代码演示是基于Mac平台。Windows平台大同小异。 当然最全面的资料是在<a href="https://hexo.io/zh-cn/docs/index.html">Hexo官网</a>。这里只是做一个小小的总结：</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/11/hexo-github/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1837,7 +1259,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello, Math">
+      <meta itemprop="name" content="Division By Zero">
     </span>
 
     
@@ -1936,23 +1358,14 @@
 
       
         
-          
-            <h1 id="Definition-of-Completion"><a href="#Definition-of-Completion" class="headerlink" title="Definition of Completion"></a>Definition of Completion</h1><p>Given a ring $R$, not necessarily Noetherian, we could always define its completion $\hat{R}^I$ with respect to an ideal $I\subset R$.</p>
-<h2 id="Cauchy-Sequences"><a href="#Cauchy-Sequences" class="headerlink" title="Cauchy Sequences"></a>Cauchy Sequences</h2><p>One way to define this is using <strong>Cauchy sequence</strong>: A sequence $(r_1,r_2,\cdots,r_n,\cdots)$ is a Cauchy sequence if<br>$$<br>\forall n \ \ \exists N \ \text{  such that   } \forall i,j\geq N, r_i-r_j\in I^n<br>$$<br>while a <strong>null sequence</strong> $(r_1,r_2,\cdots,r_n,\cdots)$ is a sequence converges to $0$, that is,<br>$$<br>\forall n \ \ \exists N \ \text{  such that   } \forall i\geq N, r_i\in I^n<br>$$ </p>
-<p>The completion $\hat{R}^I$ is defined to be the ring of all Cauchy sequences modulo the ideal generated by null sequences.</p>
-<h2 id="Inverse-Limit"><a href="#Inverse-Limit" class="headerlink" title="Inverse Limit"></a>Inverse Limit</h2><p>The completion $\hat{R}^I$ could also be defined as an inverse limit of the system<br>$$<br>R/I\leftarrow R/I^2\leftarrow \cdots \leftarrow R/I^n\leftarrow<br>$$</p>
-<h1 id="Completion-amp-Localization"><a href="#Completion-amp-Localization" class="headerlink" title="Completion &amp; Localization"></a>Completion &amp; Localization</h1><h2 id="Maximal-ideals-of-hat-R-I"><a href="#Maximal-ideals-of-hat-R-I" class="headerlink" title="Maximal ideals of $\hat{R}^I$"></a>Maximal ideals of $\hat{R}^I$</h2><p>We have following theorem</p>
-<div class="theorem shadow"> <strong>Theorem</strong><br><em>The kernel of the natural map $\hat{R}^I\rightarrow R/I$ is contained in the Jacobson ideal of $\hat{R}^I$.</em><br></div>
-
-<p><strong>Proof</strong><br>We use the inverse limit construction. So each element $r$ in $\hat{R}^I$ is denoted by a sequence where $(r_1,r_2,…,r_i,…)$ such that $r_i\in R/I^i$ maps to $r_j\in R/I^j$ for any $i&gt;j$.</p>
-<p>If $r\in \hat{R}^I$ is in the kernel, then $r={0,r_2,…,r_i,…}$ where each $r_k$ is an element in $I/I^k$. Let $v=(v_1,v_2,…,v_i,…)$ be a sequence such that $v_{i}=1-r_i+r_i^2-\cdots+(-1)^i r_i^i$. Then the image of $v_n$ in $R/I^{n-1}$ is $v_{n-1}$. So $v\in\hat{R}^I$ and we have $(1+r)v=1$. So the kernel is contained in the Jacobson ideal. $\blacksquare$</p>
-<p>A direct corollary from this theorem is that we have 1-1 correspondence between maximal ideals of $\hat{R}^I$ and maximal ideals of $R/I$. In particular, if $R/I$ is quasilocal (local but not necessarily Noetherian), then $\hat{R}^I$ is quasilocal.</p>
-<h2 id="Completion-Commutes-with-Localization"><a href="#Completion-Commutes-with-Localization" class="headerlink" title="Completion Commutes with Localization"></a>Completion Commutes with Localization</h2><p>If $I=Q$ is a maximal ideal of $R$, then $\hat{R}^Q$ is a quasilocal ring. If we localize $R$ at $Q$ and then take its completion, we also get a quasilocal ring $\hat{R_Q}^Q$. In fact, these two rings are isomorphic to each other as we have following lemma</p>
-<div class="theorem shadow"> <strong>Lemma</strong><br><em>If $Q$ is a maximal ideal of $R$, then $R_Q/Q^nR_Q\simeq R/Q^n$</em><br></div>
-
-<p><strong>Proof</strong><br>The only prime ideals in $R/Q^n$ is $Q$ as $Q^n$ is $Q$-primary. So $R/Q^n$ is a quasilocal ring. Therefore the image $R-Q$ is invertible in $R/Q^n$. So we have the desired inverse for the natural map $R/Q^n\rightarrow R_Q/Q^nR_Q$. $\blacksquare$</p>
-
-          
+          <p>Here are some small remarks on completion of rings and completed rings.</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/09/remarks-on-completion-of-rings/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -2000,7 +1413,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello, Math">
+      <meta itemprop="name" content="Division By Zero">
     </span>
 
     
@@ -2099,46 +1512,14 @@
 
       
         
-          
-            <h1 id="Original-Problem"><a href="#Original-Problem" class="headerlink" title="Original Problem"></a>Original Problem</h1><p>The problem comes from an exercise (Chapter 1 Ex 3.3(c)) in Hartshorne</p>
-<blockquote>
-<p>Show that if $\varphi(X)$ is dense in $Y$, then the map $\varphi^*_P$ is injective for all $P$.</p>
-</blockquote>
-<p>Here $X$ and $Y$ are assumed to be varieties. But this could be generalized to morphisms of locally ringed spaces.</p>
-<blockquote>
-<p>If $(\varphi,\varphi^\sharp):(X,\mathscr O_X)\rightarrow (Y,\mathscr O_Y)$ is a morphism of locally ringed space, $\varphi(X)$ is dense in $Y$ and $X$ is irreducible, then $\varphi^\sharp_P$ is injective for any $P\in X$</p>
-</blockquote>
-<h1 id="Vanishing-of-Sections"><a href="#Vanishing-of-Sections" class="headerlink" title="Vanishing of Sections"></a>Vanishing of Sections</h1><p>Before prove this, let’s discuss a little bit about the definition of ‘’section vanishes’’.</p>
-<h2 id="Two-Definitions"><a href="#Two-Definitions" class="headerlink" title="Two Definitions"></a>Two Definitions</h2><p>Recall the usual definition of support of a section in a given sheaf $\mathcal F$:</p>
-<div class="theorem shadow"> <strong>Definition</strong><br><em>The support of $s\in\mathcal F(X)$ is $\text{supp}(s)={P\in X|s_P\not=0}$ where $s_P$ is the image of $s$ in the stalk $\mathcal F_P$</em><br></div>
-
-<p>The support of a section is always closed because if $P\not\in \text{supp}(s)$, then there is some open subset $U$ containing $P$ such that $s|_U=0$. Therefore $U\cap\text{supp}(s)=\emptyset$, which shows that $\text{supp}(s)$ is closed.</p>
-<p>However, recall the definition of the support of a function, it’s the preimage of $k^*$, which, in particular, is open. If we are considering the sheaf of functions here, then what’s the ‘’correct’’ definition of support of a section (which is a function) corresponding to the definition of support of a function?</p>
-<p>If you think about this, the answer seems to be immediate. A function $f$ vanishes at a point $P$ when its function value is zero at that point. Think about the definition of the stalk at that point, the image of $f$ has to lie in the maximal ideal of the local ring $\mathcal F_P$. This enlightens us to give following defintion</p>
-<div class="theorem shadow"> <strong>Definition</strong><br><em>The support of $s\in\mathcal F(X)$ as a function is $\text{fupp}(s)={P\in X|s_P\not\in m_{X,P}}$ where $m_{X,P}$ is the maximal ideal in the stalk $\mathcal F_P$</em><br></div>
-
-<h2 id="Topological-Properties"><a href="#Topological-Properties" class="headerlink" title="Topological Properties"></a>Topological Properties</h2><p>We already saw that $\text{supp}(s)$ is closed. It turns out that $\text{fupp}(s)$ is open. Because if $P\in\text{fupp}(s)$, then $s_P$ is not in the maximal ideal $m_{X,P}$, so it has an inverse $(t,U)$. That is, $st|_U=1$. So they are inverse to each other in any stalk at the points in $U$. Therefore $p\in U\in \text{fupp}(c)$.</p>
-<p>It’s also clear from the definition that $\text{fupp}(s)\subset\text{supp}(s)$. For notational reason, let’s denote the complement of $\text{supp}(s)$ (resp. $\text{fupp}(s)$) by $\text{szero}(s)$ (resp. $\text{fzero}(s)$).</p>
-<p>Then we already established</p>
-<ul>
-<li>$\text{fupp}(s)$ is open and contained in the closed subset $\text{supp}(s)$</li>
-<li>$\text{szero}(s)$ is open and contained in the closed subset $\text{fzero}(s)$</li>
-</ul>
-<p>The behaviour of the functional support and zero locus is very similar to the behaviour of functions we know. We have following theorems</p>
-<div class="theorem shadow"> <strong>Theorem</strong><br><em>If $(\varphi,\varphi^\sharp):(X,\mathscr O_X)\rightarrow (Y,\mathscr O_Y)$ is a morphism of locally ringed spaces, then</em><br>$$<br>  \varphi^{-1}(\text{fupp}(s))=\text{fupp}(\varphi^\sharp(s))<br>$$<br></div>
-
-<p>It’s immediate from the theorem that $$\varphi^{-1}(\text{fzero}(s))=\text{fzero}(\varphi^\sharp(s))$$ Meanwhile, the behaviour of section is not that good</p>
-<div class="theorem shadow"> <strong>Theorem</strong><br><em>If $(\varphi,\varphi^\sharp):(X,\mathscr O_X)\rightarrow (Y,\mathscr O_Y)$ is a morphism of locally ringed spaces, then</em><br>$$<br>  \varphi^{-1}(\text{szero}(s))\subset\text{szero}(\varphi^\sharp(s))\subset \varphi^{-1}(\text{fupp}(s))=\text{fupp}(\varphi^\sharp(s))<br>$$<br></div>
-
-<p>The proof of these two theorems comes from the commutative diagram<br>$\require{AMScd}$<br>\begin{CD}<br>   \mathscr O_Y(U) @&gt;&gt;&gt; \mathscr O_X(\varphi^{-1}(U)) @. s @&gt;&gt;&gt; \varphi^\sharp (s) \\<br>   @VVV @VVV @VVV @VVV \\<br>   \mathscr O_{Y,\varphi(P)} @&gt;&gt;&gt; \mathscr O_{X,P} @. s_{\varphi(P)} @&gt;&gt;&gt; \varphi^\sharp(s)_P<br>\end{CD}</p>
-<p>If $s_{\varphi(P)}$ is zero (resp. contained in the maximal ideal), then $\varphi^\sharp(s)$ maps to zero (resp. contained in the maximal ideal). So $P\in\text{szero}(\varphi^\sharp(s))$ (resp. $P\in\text{fzero}(\varphi^\sharp(s))$). For th converse direction, if $s_{\varphi(P)}$ is not contained in the maximal ideal), then $\varphi^\sharp(s)$ maps to a unit. So $P\in\text{fupp}(\varphi^\sharp(s))$</p>
-<h1 id="Proof-of-Original-Problem"><a href="#Proof-of-Original-Problem" class="headerlink" title="Proof of Original Problem"></a>Proof of Original Problem</h1><p>Now we have enough tools to prove our original problem</p>
-<p><strong>Proof</strong><br>For any point $P\in X$, let $(f,U)$ be a nonzero element in the stalk $\mathscr O_{Y,\varphi(P)}$. Replace $Y$ with $U$, then $f\neq 0$ means that $\varphi(P)\in\text{supp}(f)$. We want to prove that $(\varphi^\sharp(f),\varphi^{-1}(U))$ is not zero in the stalk $\mathscr O_{X,P}$. That is equivalent to $P\in\text{supp}(\varphi^\sharp(f))$</p>
-<p>Denote $\varphi^\sharp(f)$ by $g$. Assume that $g\not\in\text{supp}(g)$, then since $\text{supp}(g)$ is closed, there is some open subset $V$ such that $p\in V\subset \text{szero}(g)$.</p>
-<p>On the other hand, $\varphi(X)$ is dense in $Y$, so it’s dense in $U$. Therefore $\varphi(X)\cap \text{fupp}(f)\neq \emptyset$. So there is some point $Q$ such that $\varphi(Q)\in\text{fupp}(g)$. But $\text{fupp}(g)$ is open, so there is some open subset $V’$ such that $Q\in V’\subset \text{fupp}(g)$.</p>
-<p>Note that $X$ is irreducible, $V\cap V’\neq\emptyset$, but this is a contradiction as $\text{fupp}(g)\cap\text{fzero}(g)=\emptyset$ and $\text{szero}(g)\subset \text{fzero}(g)$. $\blacksquare$</p>
-
-          
+          <p>I mainly focused on two different ways for a section to vanish.</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/07/vanishing-of-sections/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>

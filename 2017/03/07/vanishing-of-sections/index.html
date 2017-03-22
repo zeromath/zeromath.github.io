@@ -87,28 +87,16 @@
 
 
 
-<meta name="description" content="Original ProblemThe problem comes from an exercise (Chapter 1 Ex 3.3(c)) in Hartshorne
-
-Show that if $\varphi(X)$ is dense in $Y$, then the map $\varphi^*_P$ is injective for all $P$.
-
-Here $X$ and $Y">
+<meta name="description" content="I mainly focused on two different ways for a section to vanish.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Vanishing of Sections">
 <meta property="og:url" content="http://zeromath.github.io/2017/03/07/vanishing-of-sections/index.html">
-<meta property="og:site_name" content="Hello, Math">
-<meta property="og:description" content="Original ProblemThe problem comes from an exercise (Chapter 1 Ex 3.3(c)) in Hartshorne
-
-Show that if $\varphi(X)$ is dense in $Y$, then the map $\varphi^*_P$ is injective for all $P$.
-
-Here $X$ and $Y">
-<meta property="og:updated_time" content="2017-03-22T16:02:47.000Z">
+<meta property="og:site_name" content="Division By Zero">
+<meta property="og:description" content="I mainly focused on two different ways for a section to vanish.">
+<meta property="og:updated_time" content="2017-03-22T19:14:26.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vanishing of Sections">
-<meta name="twitter:description" content="Original ProblemThe problem comes from an exercise (Chapter 1 Ex 3.3(c)) in Hartshorne
-
-Show that if $\varphi(X)$ is dense in $Y$, then the map $\varphi^*_P$ is injective for all $P$.
-
-Here $X$ and $Y">
+<meta name="twitter:description" content="I mainly focused on two different ways for a section to vanish.">
 
 
 
@@ -142,7 +130,7 @@ Here $X$ and $Y">
 
 
 
-  <title> Vanishing of Sections | Hello, Math </title>
+  <title> Vanishing of Sections | Division By Zero </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -187,7 +175,7 @@ Here $X$ and $Y">
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hello, Math</span>
+        <span class="site-title">Division By Zero</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -333,7 +321,7 @@ Here $X$ and $Y">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hello, Math">
+      <meta itemprop="name" content="Division By Zero">
     </span>
 
     
@@ -428,7 +416,9 @@ Here $X$ and $Y">
       
 
       
-        <h1 id="Original-Problem"><a href="#Original-Problem" class="headerlink" title="Original Problem"></a>Original Problem</h1><p>The problem comes from an exercise (Chapter 1 Ex 3.3(c)) in Hartshorne</p>
+        <p>I mainly focused on two different ways for a section to vanish.</p>
+<a id="more"></a>
+<h1 id="Original-Problem"><a href="#Original-Problem" class="headerlink" title="Original Problem"></a>Original Problem</h1><p>The problem comes from an exercise (Chapter 1 Ex 3.3(c)) in Hartshorne</p>
 <blockquote>
 <p>Show that if $\varphi(X)$ is dense in $Y$, then the map $\varphi^*_P$ is injective for all $P$.</p>
 </blockquote>
@@ -461,10 +451,8 @@ Here $X$ and $Y">
 <p>The proof of these two theorems comes from the commutative diagram<br>$\require{AMScd}$<br>\begin{CD}<br>   \mathscr O_Y(U) @&gt;&gt;&gt; \mathscr O_X(\varphi^{-1}(U)) @. s @&gt;&gt;&gt; \varphi^\sharp (s) \\<br>   @VVV @VVV @VVV @VVV \\<br>   \mathscr O_{Y,\varphi(P)} @&gt;&gt;&gt; \mathscr O_{X,P} @. s_{\varphi(P)} @&gt;&gt;&gt; \varphi^\sharp(s)_P<br>\end{CD}</p>
 <p>If $s_{\varphi(P)}$ is zero (resp. contained in the maximal ideal), then $\varphi^\sharp(s)$ maps to zero (resp. contained in the maximal ideal). So $P\in\text{szero}(\varphi^\sharp(s))$ (resp. $P\in\text{fzero}(\varphi^\sharp(s))$). For th converse direction, if $s_{\varphi(P)}$ is not contained in the maximal ideal), then $\varphi^\sharp(s)$ maps to a unit. So $P\in\text{fupp}(\varphi^\sharp(s))$</p>
 <h1 id="Proof-of-Original-Problem"><a href="#Proof-of-Original-Problem" class="headerlink" title="Proof of Original Problem"></a>Proof of Original Problem</h1><p>Now we have enough tools to prove our original problem</p>
-<p><strong>Proof</strong><br>For any point $P\in X$, let $(f,U)$ be a nonzero element in the stalk $\mathscr O_{Y,\varphi(P)}$. Replace $Y$ with $U$, then $f\neq 0$ means that $\varphi(P)\in\text{supp}(f)$. We want to prove that $(\varphi^\sharp(f),\varphi^{-1}(U))$ is not zero in the stalk $\mathscr O_{X,P}$. That is equivalent to $P\in\text{supp}(\varphi^\sharp(f))$</p>
-<p>Denote $\varphi^\sharp(f)$ by $g$. Assume that $g\not\in\text{supp}(g)$, then since $\text{supp}(g)$ is closed, there is some open subset $V$ such that $p\in V\subset \text{szero}(g)$.</p>
-<p>On the other hand, $\varphi(X)$ is dense in $Y$, so it’s dense in $U$. Therefore $\varphi(X)\cap \text{fupp}(f)\neq \emptyset$. So there is some point $Q$ such that $\varphi(Q)\in\text{fupp}(g)$. But $\text{fupp}(g)$ is open, so there is some open subset $V’$ such that $Q\in V’\subset \text{fupp}(g)$.</p>
-<p>Note that $X$ is irreducible, $V\cap V’\neq\emptyset$, but this is a contradiction as $\text{fupp}(g)\cap\text{fzero}(g)=\emptyset$ and $\text{szero}(g)\subset \text{fzero}(g)$. $\blacksquare$</p>
+<div class="proof"><strong>Proof</strong><br>For any point $P\in X$, let $(f,U)$ be a nonzero element in the stalk $\mathscr O_{Y,\varphi(P)}$. Replace $Y$ with $U$, then $f\neq 0$ means that $\varphi(P)\in\text{supp}(f)$. We want to prove that $(\varphi^\sharp(f),\varphi^{-1}(U))$ is not zero in the stalk $\mathscr O_{X,P}$. That is equivalent to $P\in\text{supp}(\varphi^\sharp(f))$<br><br>Denote $\varphi^\sharp(f)$ by $g$. Assume that $g\not\in\text{supp}(g)$, then since $\text{supp}(g)$ is closed, there is some open subset $V$ such that $p\in V\subset \text{szero}(g)$.<br><br>On the other hand, $\varphi(X)$ is dense in $Y$, so it’s dense in $U$. Therefore $\varphi(X)\cap \text{fupp}(f)\neq \emptyset$. So there is some point $Q$ such that $\varphi(Q)\in\text{fupp}(g)$. But $\text{fupp}(g)$ is open, so there is some open subset $V’$ such that $Q\in V’\subset \text{fupp}(g)$.<br><br>Note that $X$ is irreducible, $V\cap V’\neq\emptyset$, but this is a contradiction as $\text{fupp}(g)\cap\text{fzero}(g)=\emptyset$ and $\text{szero}(g)\subset \text{fzero}(g)$. $\blacksquare$<br></div>
+
 
       
     </div>

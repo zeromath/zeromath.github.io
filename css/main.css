@@ -1698,7 +1698,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #b8c3ff;
+  background: #b8ff93;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2545,10 +2545,16 @@ embed {
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
 }
+.proof {
+  border: 3px;
+  border-style: solid;
+  border-color: #287ec7;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 1em;
+}
 .theorem {
   border: 3px;
-/*    border-style:solid;
-    border-color:#287EC7;*/
   background: #f5f5f5;
   border-radius: 10px;
   margin: 10px;
