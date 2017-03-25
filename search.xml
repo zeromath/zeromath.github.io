@@ -3,6 +3,20 @@
   
     
     <entry>
+      <title><![CDATA[[Mac] 终极 Shell - zsh]]></title>
+      <url>%2F2017%2F03%2F25%2Fmac-zsh%2F</url>
+      <content type="text"><![CDATA[zsh 号称是Shel中最强大的一种，这里我们主要介绍一下如何开始使用zsh，内容包括： 开始使用zsh 安装oh my zsh zsh配置 zsh插件 开始使用ZSHMac 系统本身内置了很多shell，可以用如下命令查看 1cat /etc/shells 比如我的系统显示如下： 12345678910# List of acceptable shells for chpass(1).# Ftpd will not allow users to connect who are not using# one of these shells./bin/bash/bin/csh/bin/ksh/bin/sh/bin/tcsh/bin/zsh 要开始使用zsh，只要运行 1chsh -s /bin/zsh 然后输入用户名密码即可。 安装oh my zsh首先安装 git，然后运行 12git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zshcp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc 安装完成后退出当前窗口，重新打开一个终端，就可以看到如下画面： 就表示已经安装完成了。这个主题并不好看，这里推荐一下ys主题，简洁大方信息全面。要安装ys主题，打开~/.zshrc，找到ZSH_THEME字段，把这个字段改成ys即可： 1234# Set name of the theme to load. Optionally, if you set this to &quot;random&quot;# it&apos;ll load a random theme each time that oh-my-zsh is loaded.# See https://github.com/robbyrussell/oh-my-zsh/wiki/ThemesZSH_THEME=&quot;robbyrussell&quot; 改成 1234# Set name of the theme to load. Optionally, if you set this to &quot;random&quot;# it&apos;ll load a random theme each time that oh-my-zsh is loaded.# See https://github.com/robbyrussell/oh-my-zsh/wiki/ThemesZSH_THEME=&quot;ys&quot; 重新打开zsh，看到如下终端 即可 ZSH配置还是打开~/.zshrc/，这里可以修改我们的各种需求，比如可以设置别名 123alias ll=&apos;ls -al&apos;alias -s md=macdown # 在命令行直接输入后缀为 md 的文件名，会在 MacDown 中打开alias -s tex=emacs # 在命令行直接输入 TeX 文件，会在 Emacs 中打开 这里体现出zsh的强大之处：它可以针对不同的文件后缀名调用不同的程序打开，具体就是利用alias -s命令 ZSH插件oh my zsh 本身提供了很多插件，打开~/.zshrc，找到plugin字段，可以添加如下内容 1plugins=(git autojump osx) git插件当打开 git 控制的文件夹的时候，可以显示当前的git branch。并且针对git的很多命令进行了简化，比如参考 1。 autojump插件首先需要安装 autojump，可以使用 brew 安装 1brew install autojump 安装完成后，按下 j+&lt;目录&gt; 可以直接跳转到相应目录 osx插件tab增强 参考链接 终极 Shell oh my zsh 哪些主题比较好看、有特点？]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[美国行用卡简介]]></title>
+      <url>%2F2017%2F03%2F25%2Fus-credit-card%2F</url>
+      <content type="text"><![CDATA[这里简答介绍一下在美国使用信用卡的经验 Discover有了 SSN 之后必上的第一张新手卡，申请简单（在线直接申请）通过容易 申请链接：https://refer.discover.com/s/exjuw ChaseChase FreedomChase Sapphire Preferred申请链接：https://applynow.chase.com/FlexAppWeb/renderApp.do?SPID=FNLC&amp;CELL=63HL&amp;MSC=1537738826 CitiAmex]]></content>
+    </entry>
+
+    
+    <entry>
       <title><![CDATA[[Hexo]在GitHub上搭建博客(4)]]></title>
       <url>%2F2017%2F03%2F22%2Fhexo-github4%2F</url>
       <content type="text"><![CDATA[这一次，我们要让我们的博客变得更加丰富多彩，首先就是给博客文章插各种各样漂亮的图片。主要包括 如何添加图片 添加CSS支持 添加图片首先我们要启用资源文件夹，打开站点配置文件 ，找到Writing字段： 123456789101112131415# Writingnew_post_name: :title.md # File name of new postsdefault_layout: posttitlecase: false # Transform title into titlecaseexternal_link: true # Open external links in new tabfilename_case: 0render_drafts: falsepost_asset_folder: falserelative_link: falsefuture: truehighlight: enable: true line_number: true auto_detect: false tab_replace: 其中有一个参数叫做post_asset_folder，将它改为true。这样每次我们用hexo new &lt;&quot;new post&quot;&gt;的时候，它就会在_post文件夹下自动创建一个同名文件夹，所有和这篇博文相关的东西（比如图片）都可以放到哪里去，比如 1$ hexo new test 然后_post文件夹下就会出现同名的文件和文件夹 然后我们拷贝一张测试图片（test-image.png）到test文件夹里 接着在test.md中写入 1![](test/test-image.png) 效果如图 使用CSS因为Markdown本身是基于HTML的，所以我们只需要直接使用即可 内联使用比如 我是红底白字 就是通过以下代码直接生成 1&lt;span style=&quot;background-color:red;color:white&quot;&gt;我是红底白字&lt;/span&gt; 外部使用Next主题会自动加载如下文件夹下的所有CSS 1&lt;your_site&gt;/themes/next/source/css/ 我们可以修改其中的main.styl文件，加入以下代码： 123// My Css// --------------------------------------------------@import &quot;_mycss/mycss&quot;; 然后创建mycss文件夹，在里面创建mycss.css。这个CSS文件将会被自动加载。 参考链接 Hexo官方文档 - 资源文件夹 hexo博客图片问题 Hexo博客主题NexT使用自定义的CSS样式]]></content>
