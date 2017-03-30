@@ -87,22 +87,22 @@
 
 
 
-<meta name="description" content="设置页边距使用 geometry 宏包，比如
-1234\documentclass&amp;#123;article&amp;#125;\usepackage&amp;#123;geometry&amp;#125;\geometry&amp;#123;left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm&amp;#125;...
-设置页眉、页脚123456789101112\documentclass&amp;#1">
+<meta name="description" content="这里主要记录了一下如何
+
+插入图片">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LaTeX学习笔记">
+<meta property="og:title" content="LaTeX学习笔记(1) - 插入图片">
 <meta property="og:url" content="http://zeromath.github.io/2017/03/27/latex-learning/index.html">
 <meta property="og:site_name" content="Division By Zero">
-<meta property="og:description" content="设置页边距使用 geometry 宏包，比如
-1234\documentclass&amp;#123;article&amp;#125;\usepackage&amp;#123;geometry&amp;#125;\geometry&amp;#123;left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm&amp;#125;...
-设置页眉、页脚123456789101112\documentclass&amp;#1">
-<meta property="og:updated_time" content="2017-03-27T19:52:45.000Z">
+<meta property="og:description" content="这里主要记录了一下如何
+
+插入图片">
+<meta property="og:updated_time" content="2017-03-30T00:10:35.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LaTeX学习笔记">
-<meta name="twitter:description" content="设置页边距使用 geometry 宏包，比如
-1234\documentclass&amp;#123;article&amp;#125;\usepackage&amp;#123;geometry&amp;#125;\geometry&amp;#123;left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm&amp;#125;...
-设置页眉、页脚123456789101112\documentclass&amp;#1">
+<meta name="twitter:title" content="LaTeX学习笔记(1) - 插入图片">
+<meta name="twitter:description" content="这里主要记录了一下如何
+
+插入图片">
 
 
 
@@ -136,7 +136,7 @@
 
 
 
-  <title> LaTeX学习笔记 | Division By Zero </title>
+  <title> LaTeX学习笔记(1) - 插入图片 | Division By Zero </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -339,7 +339,7 @@
             
             
               
-                LaTeX学习笔记
+                LaTeX学习笔记(1) - 插入图片
               
             
           </h1>
@@ -422,16 +422,13 @@
       
 
       
-        <h1 id="设置页边距"><a href="#设置页边距" class="headerlink" title="设置页边距"></a>设置页边距</h1><p>使用 geometry 宏包，比如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">\documentclass&#123;article&#125;</div><div class="line">\usepackage&#123;geometry&#125;</div><div class="line">\geometry&#123;left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm&#125;</div><div class="line">...</div></pre></td></tr></table></figure>
-<h1 id="设置页眉、页脚"><a href="#设置页眉、页脚" class="headerlink" title="设置页眉、页脚"></a>设置页眉、页脚</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">\documentclass&#123;article&#125;</div><div class="line">\usepackage&#123;titlesec&#125;   %设置页眉页脚的宏包</div><div class="line">\begin&#123;document&#125;</div><div class="line">\newpagestyle&#123;main&#125;&#123;            </div><div class="line">    \sethead&#123;左页眉&#125;&#123;中页眉&#125;&#123;右页眉&#125;     %设置页眉</div><div class="line">    \setfoot&#123;左页脚&#125;&#123;中页脚&#125;&#123;右页脚&#125;      %设置页脚，可以在页脚添加 \thepage  显示页数</div><div class="line">    \headrule                                      % 添加页眉的下划线</div><div class="line">    \footrule                                       %添加页脚的下划线</div><div class="line">&#125;</div><div class="line">\pagestyle&#123;main&#125;    %使用该style</div><div class="line">\end&#123;document&#125;</div></pre></td></tr></table></figure>
-<h1 id="设置行首缩进、行间距"><a href="#设置行首缩进、行间距" class="headerlink" title="设置行首缩进、行间距"></a>设置行首缩进、行间距</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">\setlength&#123;\parindent&#125;&#123;0pt&#125;</div><div class="line">\setlength&#123;\parskip&#125;&#123;0.5\baselineskip&#125;</div></pre></td></tr></table></figure>
-<hr>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
-<li><a href="http://blog.sina.com.cn/s/blog_53a8a4710100kj1h.html" target="_blank" rel="external">latex设置页边距和页眉页脚</a></li>
-<li><a href="http://blog.csdn.net/xiazdong/article/details/8893369" target="_blank" rel="external">【LaTeX入门】06、设置页芯、页边距、页眉、页脚</a></li>
-<li><a href="http://blog.sina.com.cn/s/blog_5e16f1770100ns4r.html" target="_blank" rel="external">LaTeX技巧459：LaTeX中常见段落格式的设定-字间距，行间距，段间距，缩进</a></li>
-</ol>
+        <p>这里主要记录了一下如何</p>
+<ul>
+<li>插入图片</li>
+</ul>
+<a id="more"></a>
+<h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">\documentclass&#123;article&#125;</div><div class="line">\include&#123;graphicx&#125;     % 插入图片用的宏包</div><div class="line">...</div><div class="line">\begin&#123;document&#125;</div><div class="line">...</div><div class="line">\begin&#123;figure&#125;[h]</div><div class="line">  \centering</div><div class="line">  \includegraphics[height=&lt;图片高度&gt;in]&#123;&lt;图片名字.png&gt;&#125;</div><div class="line">  \caption&#123;&lt;文章中显示的标题&gt;&#125;</div><div class="line">\end&#123;figure&#125;</div><div class="line">...</div><div class="line">\end&#123;document&#125;</div></pre></td></tr></table></figure>
+<p>假如要插入的是EPS图片，需要额外添加<code>epstopdf</code>包。</p>
 
       
     </div>
@@ -477,6 +474,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/29/latex-learning2/" rel="prev" title="LaTeX学习笔记(2) - 页边距、页眉页脚等">
+                LaTeX学习笔记(2) - 页边距、页眉页脚等 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -555,7 +556,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -623,7 +624,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#设置页边距"><span class="nav-number">1.</span> <span class="nav-text">设置页边距</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置页眉、页脚"><span class="nav-number">2.</span> <span class="nav-text">设置页眉、页脚</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置行首缩进、行间距"><span class="nav-number">3.</span> <span class="nav-text">设置行首缩进、行间距</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">4.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#插入图片"><span class="nav-number">1.</span> <span class="nav-text">插入图片</span></a></li></ol></div>
             
 
           </div>
@@ -756,7 +757,7 @@
       var disqus_shortname = 'HelloMath';
       var disqus_identifier = '2017/03/27/latex-learning/';
 
-      var disqus_title = "LaTeX学习笔记";
+      var disqus_title = "LaTeX学习笔记(1) - 插入图片";
 
 
       function run_disqus_script(disqus_script) {

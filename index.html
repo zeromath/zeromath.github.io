@@ -310,6 +310,165 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2017/03/29/latex-learning2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Zhan Jiang">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Division By Zero">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/03/29/latex-learning2/" itemprop="url">
+                  LaTeX学习笔记(2) - 页边距、页眉页脚等
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-29T20:04:43-04:00">
+                2017-03-29
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/LaTeX/" itemprop="url" rel="index">
+                    <span itemprop="name">LaTeX</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/03/29/latex-learning2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/29/latex-learning2/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>这里主要记录一下如何设置</p>
+<ul>
+<li>页边距</li>
+<li>页眉、页脚</li>
+<li>首行缩进、段落间距</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/29/latex-learning2/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
     <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2017/03/27/latex-learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -333,7 +492,7 @@
               
                 
                 <a class="post-title-link" href="/2017/03/27/latex-learning/" itemprop="url">
-                  LaTeX学习笔记
+                  LaTeX学习笔记(1) - 插入图片
                 </a>
               
             
@@ -418,19 +577,17 @@
 
       
         
-          
-            <h1 id="设置页边距"><a href="#设置页边距" class="headerlink" title="设置页边距"></a>设置页边距</h1><p>使用 geometry 宏包，比如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">\documentclass&#123;article&#125;</div><div class="line">\usepackage&#123;geometry&#125;</div><div class="line">\geometry&#123;left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm&#125;</div><div class="line">...</div></pre></td></tr></table></figure>
-<h1 id="设置页眉、页脚"><a href="#设置页眉、页脚" class="headerlink" title="设置页眉、页脚"></a>设置页眉、页脚</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">\documentclass&#123;article&#125;</div><div class="line">\usepackage&#123;titlesec&#125;   %设置页眉页脚的宏包</div><div class="line">\begin&#123;document&#125;</div><div class="line">\newpagestyle&#123;main&#125;&#123;            </div><div class="line">    \sethead&#123;左页眉&#125;&#123;中页眉&#125;&#123;右页眉&#125;     %设置页眉</div><div class="line">    \setfoot&#123;左页脚&#125;&#123;中页脚&#125;&#123;右页脚&#125;      %设置页脚，可以在页脚添加 \thepage  显示页数</div><div class="line">    \headrule                                      % 添加页眉的下划线</div><div class="line">    \footrule                                       %添加页脚的下划线</div><div class="line">&#125;</div><div class="line">\pagestyle&#123;main&#125;    %使用该style</div><div class="line">\end&#123;document&#125;</div></pre></td></tr></table></figure>
-<h1 id="设置行首缩进、行间距"><a href="#设置行首缩进、行间距" class="headerlink" title="设置行首缩进、行间距"></a>设置行首缩进、行间距</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">\setlength&#123;\parindent&#125;&#123;0pt&#125;</div><div class="line">\setlength&#123;\parskip&#125;&#123;0.5\baselineskip&#125;</div></pre></td></tr></table></figure>
-<hr>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
-<li><a href="http://blog.sina.com.cn/s/blog_53a8a4710100kj1h.html" target="_blank" rel="external">latex设置页边距和页眉页脚</a></li>
-<li><a href="http://blog.csdn.net/xiazdong/article/details/8893369" target="_blank" rel="external">【LaTeX入门】06、设置页芯、页边距、页眉、页脚</a></li>
-<li><a href="http://blog.sina.com.cn/s/blog_5e16f1770100ns4r.html" target="_blank" rel="external">LaTeX技巧459：LaTeX中常见段落格式的设定-字间距，行间距，段间距，缩进</a></li>
-</ol>
-
-          
+          <p>这里主要记录了一下如何</p>
+<ul>
+<li>插入图片</li>
+</ul>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/03/27/latex-learning/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -1713,160 +1870,6 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2017/03/09/remarks-on-completion-of-rings/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Zhan Jiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Division By Zero">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2017/03/09/remarks-on-completion-of-rings/" itemprop="url">
-                  Remarks on Completion of Rings
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-09T16:50:08-05:00">
-                2017-03-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Math/" itemprop="url" rel="index">
-                    <span itemprop="name">Math</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/09/remarks-on-completion-of-rings/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/09/remarks-on-completion-of-rings/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>Here are some small remarks on completion of rings and completed rings.</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/03/09/remarks-on-completion-of-rings/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -1916,7 +1919,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
