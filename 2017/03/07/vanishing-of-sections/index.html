@@ -93,7 +93,7 @@
 <meta property="og:url" content="http://zeromath.github.io/2017/03/07/vanishing-of-sections/index.html">
 <meta property="og:site_name" content="Division By Zero">
 <meta property="og:description" content="I mainly focused on two different ways for a section to vanish.">
-<meta property="og:updated_time" content="2017-03-22T19:14:26.000Z">
+<meta property="og:updated_time" content="2017-04-03T18:43:01.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Vanishing of Sections">
 <meta name="twitter:description" content="I mainly focused on two different ways for a section to vanish.">
@@ -428,12 +428,12 @@
 </blockquote>
 <h1 id="Vanishing-of-Sections"><a href="#Vanishing-of-Sections" class="headerlink" title="Vanishing of Sections"></a>Vanishing of Sections</h1><p>Before prove this, let’s discuss a little bit about the definition of ‘’section vanishes’’.</p>
 <h2 id="Two-Definitions"><a href="#Two-Definitions" class="headerlink" title="Two Definitions"></a>Two Definitions</h2><p>Recall the usual definition of support of a section in a given sheaf $\mathcal F$:</p>
-<div class="theorem shadow"> <strong>Definition</strong><br><em>The support of $s\in\mathcal F(X)$ is $\text{supp}(s)={P\in X|s_P\not=0}$ where $s_P$ is the image of $s$ in the stalk $\mathcal F_P$</em><br></div>
+<div class="theorem shadow"> <strong>Definition</strong><br>The support of $s\in\mathcal F(X)$ is $\text{supp}(s)={P\in X|s_P\not=0}$ where $s_P$ is the image of $s$ in the stalk $\mathcal F_P$<br></div>
 
 <p>The support of a section is always closed because if $P\not\in \text{supp}(s)$, then there is some open subset $U$ containing $P$ such that $s|_U=0$. Therefore $U\cap\text{supp}(s)=\emptyset$, which shows that $\text{supp}(s)$ is closed.</p>
 <p>However, recall the definition of the support of a function, it’s the preimage of $k^*$, which, in particular, is open. If we are considering the sheaf of functions here, then what’s the ‘’correct’’ definition of support of a section (which is a function) corresponding to the definition of support of a function?</p>
 <p>If you think about this, the answer seems to be immediate. A function $f$ vanishes at a point $P$ when its function value is zero at that point. Think about the definition of the stalk at that point, the image of $f$ has to lie in the maximal ideal of the local ring $\mathcal F_P$. This enlightens us to give following defintion</p>
-<div class="theorem shadow"> <strong>Definition</strong><br><em>The support of $s\in\mathcal F(X)$ as a function is $\text{fupp}(s)={P\in X|s_P\not\in m_{X,P}}$ where $m_{X,P}$ is the maximal ideal in the stalk $\mathcal F_P$</em><br></div>
+<div class="theorem shadow"> <strong>Definition</strong><br>The support of $s\in\mathcal F(X)$ as a function is $\text{fupp}(s)={P\in X|s_P\not\in m_{X,P}}$ where $m_{X,P}$ is the maximal ideal in the stalk $\mathcal F_P$<br></div>
 
 <h2 id="Topological-Properties"><a href="#Topological-Properties" class="headerlink" title="Topological Properties"></a>Topological Properties</h2><p>We already saw that $\text{supp}(s)$ is closed. It turns out that $\text{fupp}(s)$ is open. Because if $P\in\text{fupp}(s)$, then $s_P$ is not in the maximal ideal $m_{X,P}$, so it has an inverse $(t,U)$. That is, $st|_U=1$. So they are inverse to each other in any stalk at the points in $U$. Therefore $p\in U\in \text{fupp}(c)$.</p>
 <p>It’s also clear from the definition that $\text{fupp}(s)\subset\text{supp}(s)$. For notational reason, let’s denote the complement of $\text{supp}(s)$ (resp. $\text{fupp}(s)$) by $\text{szero}(s)$ (resp. $\text{fzero}(s)$).</p>
@@ -443,10 +443,10 @@
 <li>$\text{szero}(s)$ is open and contained in the closed subset $\text{fzero}(s)$</li>
 </ul>
 <p>The behaviour of the functional support and zero locus is very similar to the behaviour of functions we know. We have following theorems</p>
-<div class="theorem shadow"> <strong>Theorem</strong><br><em>If $(\varphi,\varphi^\sharp):(X,\mathscr O_X)\rightarrow (Y,\mathscr O_Y)$ is a morphism of locally ringed spaces, then</em><br>$$<br>  \varphi^{-1}(\text{fupp}(s))=\text{fupp}(\varphi^\sharp(s))<br>$$<br></div>
+<div class="theorem shadow"> <strong>Theorem</strong><br>If $(\varphi,\varphi^\sharp):(X,\mathscr O_X)\rightarrow (Y,\mathscr O_Y)$ is a morphism of locally ringed spaces, then<br>$$<br>  \varphi^{-1}(\text{fupp}(s))=\text{fupp}(\varphi^\sharp(s))<br>$$<br></div>
 
 <p>It’s immediate from the theorem that $$\varphi^{-1}(\text{fzero}(s))=\text{fzero}(\varphi^\sharp(s))$$ Meanwhile, the behaviour of section is not that good</p>
-<div class="theorem shadow"> <strong>Theorem</strong><br><em>If $(\varphi,\varphi^\sharp):(X,\mathscr O_X)\rightarrow (Y,\mathscr O_Y)$ is a morphism of locally ringed spaces, then</em><br>$$<br>  \varphi^{-1}(\text{szero}(s))\subset\text{szero}(\varphi^\sharp(s))\subset \varphi^{-1}(\text{fupp}(s))=\text{fupp}(\varphi^\sharp(s))<br>$$<br></div>
+<div class="theorem shadow"> <strong>Theorem</strong><br>If $(\varphi,\varphi^\sharp):(X,\mathscr O_X)\rightarrow (Y,\mathscr O_Y)$ is a morphism of locally ringed spaces, then<br>$$<br>  \varphi^{-1}(\text{szero}(s))\subset\text{szero}(\varphi^\sharp(s))\subset \varphi^{-1}(\text{fupp}(s))=\text{fupp}(\varphi^\sharp(s))<br>$$<br></div>
 
 <p>The proof of these two theorems comes from the commutative diagram<br>$\require{AMScd}$<br>\begin{CD}<br>   \mathscr O_Y(U) @&gt;&gt;&gt; \mathscr O_X(\varphi^{-1}(U)) @. s @&gt;&gt;&gt; \varphi^\sharp (s) \\<br>   @VVV @VVV @VVV @VVV \\<br>   \mathscr O_{Y,\varphi(P)} @&gt;&gt;&gt; \mathscr O_{X,P} @. s_{\varphi(P)} @&gt;&gt;&gt; \varphi^\sharp(s)_P<br>\end{CD}</p>
 <p>If $s_{\varphi(P)}$ is zero (resp. contained in the maximal ideal), then $\varphi^\sharp(s)$ maps to zero (resp. contained in the maximal ideal). So $P\in\text{szero}(\varphi^\sharp(s))$ (resp. $P\in\text{fzero}(\varphi^\sharp(s))$). For th converse direction, if $s_{\varphi(P)}$ is not contained in the maximal ideal), then $\varphi^\sharp(s)$ maps to a unit. So $P\in\text{fupp}(\varphi^\sharp(s))$</p>
@@ -578,7 +578,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">13</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -600,7 +600,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
