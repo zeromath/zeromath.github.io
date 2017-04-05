@@ -3,21 +3,28 @@
   
     
     <entry>
-      <title><![CDATA[[CreditCard]美国信用卡简介4]]></title>
+      <title><![CDATA[[Kindle] 搭建 KindleEar 教程]]></title>
+      <url>%2F2017%2F04%2F05%2Fkindle-kindleear%2F</url>
+      <content type="text"><![CDATA[这里记录一下搭建 KindleEar 的方式 安装Google 账号安全设置首先我们要把 Google 账号的安全设置调成 允许不够安全的应用，点击这个链接 https://myaccount.google.com/security#connectedapps。改为如下入所示 创建Google Cloud项目点击这个链接，然后找到新建项目，如下图所示 项目名称：随意决定一个你喜欢的名字 项目 ID：可以自己修改，但是请记录下这个 ID 后面会用到 创建 GAE点击这里 https://console.cloud.google.com/home/dashboard 来到你创建的 Google Cloud 项目的 Dashboard，找到 Getting Started Tab，点击 Deploy a Hello World app 来创建 GAE 在弹出的窗口中，选择 Python ，然后创建，接着跳过 Tutorial，就创建完成了。 上传APP打开云端的 Console 输入如下代码 1234rm -f uploader.sh* &amp;&amp; \wget https://raw.githubusercontent.com/kindlefere/KindleEar-Uploader/master/uploader.sh &amp;&amp; \chmod +x uploader.sh &amp;&amp; \./uploader.sh 然后按照提示输入 Gmail 地址和 APPID 就配置完成了 推送打开 http://\&lt;你的APPID\.appspot.com&gt; 你会发现如下页面 默认的用户名和密码都是 admin 登陆后变成 就可以开始愉快的玩耍啦 参考链接 https://kindlefere.com/post/19.html dd]]></content>
+    </entry>
+
+    
+    <entry>
+      <title><![CDATA[[CreditCard] 美国信用卡简介(4)]]></title>
       <url>%2F2017%2F04%2F04%2Fus-credit-card4%2F</url>
       <content type="text"><![CDATA[CitiCiti Double Cash基本介绍这是一张简单粗暴的卡：所有消费 2% 的返现，没有点数转换，没有分季度，没有任何乱七八糟的东西。 福利 万事 2% ！ 缺点 没有开卡奖励 存在 FTF。 BoABetter Balance Rewards基本介绍这是一张没有返现的卡，但是它每季度会给你 \$25，只需要你每个月都消费并进行还款即可 福利 每季度返现 \$25 每个月的第一个周末，很多博物馆可以凭借此卡免费参观。 没有年费！ 缺点 有 FTF]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[[CreditCard]美国信用卡简介3]]></title>
+      <title><![CDATA[[CreditCard] 美国信用卡简介(3)]]></title>
       <url>%2F2017%2F04%2F04%2Fus-credit-card3%2F</url>
       <content type="text"><![CDATA[AmexED基本介绍Amex 最基本的返点卡。 福利 开卡奖励 15,000 MR 点，开卡 3 个月内消费 \$1,000 即可得到。可以使用我的Refer链接。 超市 3% 返现，被誉为超市神卡。 没有年费！ 缺点 存在 FTF。 Amex 卡接受度不高。 SPG基本介绍Amex 和 喜达屋 合作的卡。 福利 开卡奖励 25,000 StarPoints，开卡 3 个月内消费 \$3,000 即可得到。6 个月内再消费 \$2,000 可以得到 10,000 StarPoints。可以使用我的Refer链接。 没有 FTF 没有年费！ 缺点 年费 \$95 ，首年免年费。 Amex 卡接受度不高。]]></content>
     </entry>
 
     
     <entry>
-      <title><![CDATA[[CreditCard]美国信用卡简介2]]></title>
+      <title><![CDATA[[CreditCard] 美国信用卡简介(2)]]></title>
       <url>%2F2017%2F04%2F04%2Fus-credit-card2%2F</url>
       <content type="text"><![CDATA[本文主要聊聊 Chase （摩根大通）银行的信用卡。 ChaseChase Freedom基本介绍与Discover it一样，这也是一张分季度 5% 返点的卡，我当初是满了一年信用记录才拿下的。之前虽然有 Chase 的 checking account，但是不满信用记录一年真的是分分钟被拒。 福利 开卡奖励 15,000 UR 点，开卡 3 个月内消费 \$500 即可得到。可以使用我的Refer链接。 3 个月内添加一张副卡，并进行一次消费，可以额外得 2,500 MR 点。 分季度会有 5% 的 Cash Back，比如每年最后一个季度有 Amazon 购物的 5% 返现，等于是所有商品打 95 折。还是非常给力的。其余类别消费 1% 返现。 没有年费！ 缺点 存在 FTF。 每个季度 %5 返现有上限 $1500 超过这个额度后只有 %1 的返现。 Chase Freedom Unlimited基本介绍这是一张无脑 1.5% 返点的卡。 福利 开卡奖励 15,000 UR 点，开卡 3 个月内消费 \$500 即可得到。 3 个月内添加一张副卡，并进行一次消费，可以额外得 2,500 MR 点。 没有年费！ 缺点 存在 FTF。 Chase Sapphire Preferred基本介绍这张卡属于 Chase 的中端卡，它的返点 (2%) 并不是很给力，但是它的福利很好 福利 开卡奖励 50,000 UR 点，开卡 3 个月内使用 \$4000 可以得到。可以使用我的Refer链接。 3 个月内添加一张副卡，并进行一次消费，可以额外得 5,000 MR 点。 MR 点通过这张卡可以买机票，兑换价值从原来的 \$0.01 毎点 变为 \$0.018 毎点。 租车有 Primary 的租车保险：简单来说，就是你用这张卡租车，就不需要租车公司提供的 Collision/Loss and Damage Waiver 的保险了（一般都可以省下一笔不小的钱） 没有 FTF。实乃旅游神卡。 金属卡，真的很酷炫。 缺点 年费 \$95，第一年免年费]]></content>
     </entry>
@@ -52,7 +59,7 @@
 
     
     <entry>
-      <title><![CDATA[[CreditCard]美国信用卡简介]]></title>
+      <title><![CDATA[[CreditCard] 美国信用卡简介]]></title>
       <url>%2F2017%2F03%2F25%2Fus-credit-card%2F</url>
       <content type="text"><![CDATA[这里简单介绍一下在美国使用信用卡的经验，主要都是我自己申请各种卡的经历总结吧 我在国内的时候主要是用校园卡和现金，有时候请同学吃饭也会刷一下自己的银行卡。那时候对信用卡真的是一无所知，完全不了解这个领域。来了美帝发现生活实在是太枯燥，只能靠玩卡来解乏（大雾！ 在美帝完善的信用体系的加持下，发展出了一套很有意思的信用卡机制。有各种各样的返现卡（真的返现金），还有各种返点卡，得到的点数可以买机票、买GC(gift cards)、定宾馆等等。甚至还有免费送各种福利的卡。 概述发卡组织美国有四大发卡行：VISA，MasterCard, Discover 和 Amex。当然还有其他一些小的卡组织，不过一般大家打交道最多的就是这四家。其中 VISA 和 MasterCard 大家比较熟悉，其门下的接受度也非常高。Discover 和 Amex 则主要在美国本土，相对来说大家就不那么了解。 SSN在美国申请信用卡，大部分时间 都需要SSN (Society Security Number) 。也有一些卡不需要 SSN ，他们一般是针对不能办 SSN 的签证所设立，假如大家有条件的话，还是尽快能拿到 SSN。毕竟早日开始用信用卡，就能早日开始获得回报。同时也能早日开始积累信用 信用局美国有三大信用局： Exuifax, Experian 和 Transunion。一旦你申请到了 SSN，信用局就会开始记录你的信用。一般来说你的信用和你信用卡的使用有关，比较好的用卡习惯可以很快帮你建立起好的信用，从而申请到更高层次的信用卡。 申卡的基本方式卡的基本情况美国信用卡主要分为两种：返点卡和返现卡。返现卡比较好理解，直接给你按比例返还现金。返点卡则是会给你累积积分，大部分积分都可以用来购买各种 GC (Gift Card) ，有些甚至可以用来买机票、定宾馆或者租车。 一般来说返现（返点）卡，回报率都是 1% ：也就是说你每花 \$1 你可以得到 \$0.01 的现金（或者 1 点数）。而 1 点的积分基本上也就是 \$0.01 的价值。所以高于 1% 的回报率都是很值得考虑的卡。 申请大部分信用卡都支持网上在线申请，一般你都需要提供如下资料： 姓名出生年月 SSN 地址 年收入 租住的房租 个别银行也会有其他要求。你在线填写完这些材料后，系统就会提示“您的申请已经提交，我们会尽快给您答复。”之类的消息。然后过一阵子就会收到银行寄来的 Decision。假如是被拒绝了，一般都会写上拒绝的原因，比如信用记录太短等。假如通过了，则会寄来一些条款须知，并告知你的卡会在 7-10 个工作日内寄到。 银行在干啥在收到你的申请之后，银行就会调用三大信用局的某几家（一般是某一家）的信用报告，来评估是否要批准你的申请。这样一次调用报告称为一个 Hard Pull (HP) ，会留在你的记录上。假如你的记录上 HP 太多，也会影响到你的申请，所以申卡一定要三思而后行，不要把 HP 浪费在一些没有价值的卡上。 拿到卡后拿到卡后，只要拨打卡背面的电话进行激活，你就可以开始愉快的刷刷刷了。注意几个和卡相关的术语： Credit Line (CL) ： 这个就是通常说的额度，也就是你可以从银行借到的总钱数。假如你的第一张卡 CL 很低，不要担心，你可以通过边刷边还款的方式来维持你的 CL （为什么不直接刷银行卡呢？因为有返现／点啊！）假如你的 CL 很高，也要注意不要一下子花到自己还不起了，这样会很影响你的信用分数，甚至会因此而要支付银行一定的利息 Statment：每次刷卡都等于你欠银行一定的钱，那么这样欠钱要不要收利息呢？答案是要的，但却是在出了 Statement 之后。Statement 就是你一个 Billing Cycle 的消费报告，包括你在哪里，消费了多少，什么时候消费的，最后这个 Billing Cycle 一共花的钱。 Due Date： Due Date就是你还款的最后期限，假如之后没有还清，银行就要开始收利息了。 DiscoverDiscover it 基本介绍Discover it 基本上是有了 SSN 之后必上的第一张新手卡，申请简单（在线直接申请）通过容易（零信用记录就能拿下）。我当时也是零信用记录拿下。 福利 开卡奖励 \$ 50，只需要激活后使用一次即可。需要使用 Refer 链接，比如我的Refer链接。 分季度会有 5% 的 Cash Back，比如每年最后一个季度有 Amazon 购物的 5% 返现，等于是所有商品打 95 折。还是非常给力的。其余类别消费 1% 返现。 Discover 从15年起会把新办卡的人的一年内的 cash back 全部翻倍，等于是第一年分季度 10% ！ 没有 FTF：我成功的在国内刷过 Discover，但是也有好几次并不成功，而且每次都需要和收营员解释很久，其实非常费事。 没有年费！ 附记 申卡一定要三思，而且要量力而行，不要随意的把 HP 浪费在不值得申请的卡上。因为很多银行对申请卡的数量或者记录上 HP 的数量都很在意。 不要申请 CreditOne 的信用卡，那家基本上就是个骗子银行。也尽量不要申请 CapitalOne 的信用卡，虽然它本身是家大银行，但是它的信用卡性价比并不高，却会在你申请的时候 Pull 三家信用局报告，非常不划算。 参考链接 美国信用卡指南]]></content>
     </entry>
