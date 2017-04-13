@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://zeromath.github.io/2017/03/12/mac-emacs-auctex/CDLaTeX_modify.png">
 <meta property="og:image" content="http://zeromath.github.io/2017/03/12/mac-emacs-auctex/MATH_modify_ex.png">
 <meta property="og:image" content="http://zeromath.github.io/2017/03/12/mac-emacs-auctex/MATH_modify_ex2.png">
-<meta property="og:updated_time" content="2017-04-13T14:43:34.000Z">
+<meta property="og:updated_time" content="2017-04-13T14:44:56.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[Mac]在Emacs中安装AucTex">
 <meta name="twitter:description" content="这里总结一下在Emacs中安装AucTex和CDLaTeX插件的方式。">
@@ -492,7 +492,7 @@
 <li>继续按下 `或者<code>Tab</code>键，就可以进入循环翻页</li>
 </ul>
 <p>在输入时按下<code>&#39;</code>（键盘上单引号按钮）可以打开数学修饰面板<br><img src="/2017/03/12/mac-emacs-auctex/CDLaTeX_modify.png" alt="CDLaTeX_modify"></p>
-<p>注意很多命令只能在Math-mode下运行（即在<code>$</code>符号之间运行），比如我输入了一个<code>$A$</code><br><img src="/2017/03/12/mac-emacs-auctex/MATH_modify_ex.png" alt="MATH_modify"><br>想要变成<code>$\tilte{A}$</code>，只需要把光标定位到<code>A</code>之后的<code>$</code>符号上，按下<code>&#39;</code>，再按下<code>~</code>，就变成了<br><img src="/2017/03/12/mac-emacs-auctex/MATH_modify_ex2.png" alt="MATH_modify"></p>
+<p>注意很多命令只能在Math-mode下运行（即在<code>$</code>符号之间运行），比如我输入了一个<code>$A$</code><br><img src="/2017/03/12/mac-emacs-auctex/MATH_modify_ex.png" alt="MATH_modify"><br>想要变成<code>$\tilde{A}$</code>，只需要把光标定位到<code>A</code>之后的<code>$</code>符号上，按下<code>&#39;</code>，再按下<code>~</code>，就变成了<br><img src="/2017/03/12/mac-emacs-auctex/MATH_modify_ex2.png" alt="MATH_modify"></p>
 <h1 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p><em>Q1:</em> TeX不能识别</p>
 <p><em>Solution:</em> 我们需要添加下列两个到<code>PATH</code>变量中</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/Library/TeX/texbin</div><div class="line">/usr/local/bin</div></pre></td></tr></table></figure>

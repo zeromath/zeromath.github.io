@@ -99,7 +99,7 @@
 <meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/FILE-newpost.png">
 <meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/FILE-markdown.png">
 <meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/BLOG-updated.png">
-<meta property="og:updated_time" content="2017-03-25T16:35:10.000Z">
+<meta property="og:updated_time" content="2017-04-13T14:46:20.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[Hexo]在GitHub上搭建博客(1)">
 <meta name="twitter:description" content="在此整理了一下Hexo博客建立的方法，以下代码演示是基于Mac平台。Windows平台大同小异。 当然最全面的资料是在Hexo官网。这里只是做一个小小的总结：">
@@ -470,12 +470,12 @@
 <p>然后保存MD文件即可。</p>
 <h1 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h1><h2 id="发布到网站"><a href="#发布到网站" class="headerlink" title="发布到网站"></a>发布到网站</h2><p>文章写好了，要怎么发布呢？</p>
 <p>Terminal定位到<code>&lt;你的博客目录&gt;</code>，然后依次输入以下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo generate</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>第一步<code>hexo clean</code>是把之前产生的文件清除掉，然后接下来两个命令就是依次产生新的文件并启动server。再次打开<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>，我们发现我们的文章已经被po上“网”了！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>第一个命令<code>hexo generate</code>是生成新的文件，第二个命令是启动server。再次打开<a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>，我们发现我们的文章已经被po上“网”了！</p>
 <p><img src="/2017/03/11/hexo-github/BLOG-updated.png" alt="BLOG-updated"></p>
 <h2 id="删除文章"><a href="#删除文章" class="headerlink" title="删除文章"></a>删除文章</h2><p>现在有没有觉得那个<code>Hello World</code>很扎眼，我们肯定想要删除它。重新回到<code>&lt;你的博客目录&gt;/source/_posts/</code>目录，找到<code>hello-world.md</code>文件，直接将其删除即可。</p>
 <p>有人就要问了，为什么删除了我的浏览器里还是有呢？</p>
-<p>因为我们还没有更新我们的网站，再次在Terminal下运行</p>
+<p>因为我们还没有更新我们的网站，在Terminal下运行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo generate</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 <p>再刷新网页，是不是就没有了？</p>
 <hr>
