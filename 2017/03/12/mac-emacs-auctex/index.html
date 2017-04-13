@@ -93,7 +93,7 @@
 <meta property="og:url" content="http://zeromath.github.io/2017/03/12/mac-emacs-auctex/index.html">
 <meta property="og:site_name" content="Division By Zero">
 <meta property="og:description" content="这里总结一下在Emacs中安装AucTex和CDLaTeX插件的方式。">
-<meta property="og:updated_time" content="2017-03-25T16:36:15.000Z">
+<meta property="og:updated_time" content="2017-04-13T14:28:21.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[Mac]在Emacs中安装AucTex">
 <meta name="twitter:description" content="这里总结一下在Emacs中安装AucTex和CDLaTeX插件的方式。">
@@ -419,22 +419,30 @@
         <p>这里总结一下在Emacs中安装AucTex和CDLaTeX插件的方式。</p>
 <a id="more"></a>
 <h1 id="必要文件"><a href="#必要文件" class="headerlink" title="必要文件"></a>必要文件</h1><ol>
-<li>安装Emacs：直接搜索Emacs即可，或者到<a href="https://www.gnu.org/software/emacs/" target="_blank" rel="external">这里</a>下载即可。</li>
+<li>安装Emacs：直接搜索Emacs，或者到<a href="https://www.gnu.org/software/emacs/" target="_blank" rel="external">这里</a>下载。</li>
 <li>安装MacTex：到<a href="http://www.tug.org/mactex/downloading.html" target="_blank" rel="external">这里</a>下载</li>
 <li>安装AucTex：打开Emacs，执行<code>M-x list-packages</code>，然后直接搜索AucTex这个包，按<code>i</code>标记，按<code>x</code>执行，就安装完成了</li>
-<li>安装cdlatex：复制<code>cdlatex.el</code>到<code>/Applications/Emacs.app/Contents/Resources/site-lisp</code>，然后打开<code>.emacs</code>加入以下代码</li>
+<li>安装cdlatex：复制<code>cdlatex.el</code>文件内容（这里贡献一个我自己<a href="http://www-personal.umich.edu/~zoeng/files/cdlatex.el" target="_blank" rel="external">用的</a>）到<code>/Applications/Emacs.app/Contents/Resources/site-lisp/cdlatex.el</code>，然后打开<code>.emacs</code>加入以下代码</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(add-hook &apos;LaTeX-mode-hook &apos;LaTeX-math-mode)</div><div class="line">(add-to-list &apos;load-path &quot;/Applications/Emacs.app/Contents/Resources/site-lisp/&quot;)</div><div class="line">(add-hook &apos;LaTeX-mode-hook &apos;turn-on-cdlatex)</div><div class="line">(autoload &apos;cdlatex-mode &quot;cdlatex&quot; &quot;CDLaTeX Mode&quot; t)</div><div class="line">(autoload &apos;turn-on-cdlatex &quot;cdlatex&quot; &quot;CDLaTeX Mode&quot; nil)</div></pre></td></tr></table></figure>
-<h1 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q&amp;A"></a>Q&amp;A</h1><p><em>Q1:</em> TeX不能识别</p>
-<p><em>Solution:</em> 我们需要添加下列两个到<code>PATH</code>变量中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">/Library/TeX/texbin</div><div class="line">/usr/local/bin</div></pre></td></tr></table></figure>
-<p>但是图形界面的Emacs是不会全部加载bash的<code>PATH</code>的，所以直接在bash中修改<code>PATH</code>变量并没有用处，我们还需要添加如下代码到<code>.emacs</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">(setenv “PATH”</div><div class="line">(concat (getenv “PATH”) “:/Library/TeX/texbin:/usr/local/bin”))</div></pre></td></tr></table></figure>
-<p><em>Q2:</em> AucTex 预览出错，错误提示为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">PDF2DSC sentinel: Wrong type argument: arrayp, nil</div></pre></td></tr></table></figure>
-<p><em>Solution:</em> 在.emacs中加入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">(setq preview-gs-command &quot;/usr/local/bin/gs&quot;)</div></pre></td></tr></table></figure>
-<p>重新启动Emacs</p>
+<h1 id="简单使用教程"><a href="#简单使用教程" class="headerlink" title="简单使用教程"></a>简单使用教程</h1><h2 id="基础Emacs操作"><a href="#基础Emacs操作" class="headerlink" title="基础Emacs操作"></a>基础Emacs操作</h2><table>
+<thead>
+<tr>
+<th style="text-align:center">作用</th>
+<th style="text-align:center">命令</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">打开文件</td>
+<td style="text-align:center"><figure class="highlight plain"><figcaption><span>C-f``` | </span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">| 保存文件 | ```C-x C-s``` | </div><div class="line">| 退出Emacs | ```C-x C-c``` | </div><div class="line"></div><div class="line">## TeX命令</div><div class="line">| 作用 | 命令 | </div><div class="line">| :--: | :--: |</div><div class="line">| 编译TeX | ```C-c C-c``` | </div><div class="line">| 插入环境 | ```C-c C-e``` | </div><div class="line">| 改变环境 | ```C-u C-c C-e``` | </div><div class="line">| 关闭环境 | ```C-c ]``` |</div><div class="line">| 注释区域 | ```C-c ;``` |</div><div class="line">| 注释段落 | ```C-c %``` |</div><div class="line"></div><div class="line">## CDLaTeX插件</div><div class="line">在输入时按下``` ` ```（键盘 1 键左边的符号），稍等一会儿，就可以打开数学符号面板</div><div class="line">![CDLaTeX_math](mac-emacs-auctex/CDLaTeX_math.png)</div><div class="line"></div><div class="line">- 此时按下对应的字母／字符键，就可以直接输入对应的符号</div><div class="line">- 继续按下 ``` ` ```或者```Tab```键，就可以进入循环翻页</div><div class="line"></div><div class="line">在输入时按下``` &apos; ```（键盘上单引号按钮）可以打开数学修饰面板</div><div class="line">![CDLaTeX_modify](mac-emacs-auctex/CDLaTeX_modify.png)</div><div class="line"></div><div class="line">注意很多命令只能在Math-mode下运行（即在```$```符号之间运行），比如我输入了一个```$A$``` </div><div class="line">![MATH_modify](mac-emacs-auctex/MATH_modify_ex.png)</div><div class="line">想要变成```$\tilte&#123;A&#125;$```，只需要把光标定位到```A```之后的```$```符号上，按下``` &apos;```，再按下``` ~```，就变成了</div><div class="line">![MATH_modify](mac-emacs-auctex/MATH_modify_ex2.png)</div><div class="line"></div><div class="line"># Q&amp;A</div><div class="line">*Q1:* TeX不能识别</div><div class="line"></div><div class="line">*Solution:* 我们需要添加下列两个到`PATH`变量中</div></pre></td></tr></table></figure></td>
+</tr>
+</tbody>
+</table>
+<p>/Library/TeX/texbin<br>/usr/local/bin<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">但是图形界面的Emacs是不会全部加载bash的`PATH`的，所以直接在bash中修改`PATH`变量并没有用处，我们还需要添加如下代码到`.emacs`</div></pre></td></tr></table></figure></p>
+<p>(setenv “PATH”<br>(concat (getenv “PATH”) “:/Library/TeX/texbin:/usr/local/bin”))<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">*Q2:* AucTex 预览出错，错误提示为</div></pre></td></tr></table></figure></p>
+<p>PDF2DSC sentinel: Wrong type argument: arrayp, nil<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">*Solution:* 在.emacs中加入</div></pre></td></tr></table></figure></p>
+<p>(setq preview-gs-command “/usr/local/bin/gs”)<br>```<br>重新启动Emacs</p>
 <hr>
 <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
 <li><a href="http://walsvid.github.io/2016/05/14/latex-mac/" target="_blank" rel="external">Mac配置LaTeX和Emacs的编辑环境</a></li>
@@ -487,8 +495,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/15/emacs-learning/" rel="prev" title="Emacs学习笔记">
-                Emacs学习笔记 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/15/emacs-learning/" rel="prev" title="[Emacs]Emacs学习笔记">
+                [Emacs]Emacs学习笔记 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -612,6 +620,15 @@
                 </a>
               </span>
             
+              <span class="links-of-author-item">
+                <a href="http://www-personal.umich.edu/~zoeng/" target="_blank" title="Personal Webpage">
+                  
+                    <i class="fa fa-fw fa-globe"></i>
+                  
+                  Personal Webpage
+                </a>
+              </span>
+            
           
         </div>
 
@@ -636,7 +653,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#必要文件"><span class="nav-number">1.</span> <span class="nav-text">必要文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Q-amp-A"><span class="nav-number">2.</span> <span class="nav-text">Q&A</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">3.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#必要文件"><span class="nav-number">1.</span> <span class="nav-text">必要文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#简单使用教程"><span class="nav-number">2.</span> <span class="nav-text">简单使用教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#基础Emacs操作"><span class="nav-number">2.1.</span> <span class="nav-text">基础Emacs操作</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">3.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
             
 
           </div>
