@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="LaTex," />
+  <meta name="keywords" content="Tex," />
 
 
 
@@ -91,15 +91,15 @@
 
 插入图片">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LaTeX学习笔记(1) - 插入图片">
-<meta property="og:url" content="http://zeromath.github.io/2017/03/27/latex-learning/index.html">
+<meta property="og:title" content="TeX学习笔记(1) - 插入图片">
+<meta property="og:url" content="http://zeromath.github.io/2017/03/27/tex-learning/index.html">
 <meta property="og:site_name" content="Division By Zero">
 <meta property="og:description" content="这里主要记录了一下如何
 
 插入图片">
-<meta property="og:updated_time" content="2017-03-30T00:10:35.000Z">
+<meta property="og:updated_time" content="2017-04-13T15:12:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LaTeX学习笔记(1) - 插入图片">
+<meta name="twitter:title" content="TeX学习笔记(1) - 插入图片">
 <meta name="twitter:description" content="这里主要记录了一下如何
 
 插入图片">
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://zeromath.github.io/2017/03/27/latex-learning/"/>
+  <link rel="canonical" href="http://zeromath.github.io/2017/03/27/tex-learning/"/>
 
 
 
 
 
-  <title> LaTeX学习笔记(1) - 插入图片 | Division By Zero </title>
+  <title> TeX学习笔记(1) - 插入图片 | Division By Zero </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -318,7 +318,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2017/03/27/latex-learning/">
+    <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2017/03/27/tex-learning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhan Jiang">
@@ -339,7 +339,7 @@
             
             
               
-                LaTeX学习笔记(1) - 插入图片
+                TeX学习笔记(1) - 插入图片
               
             
           </h1>
@@ -377,8 +377,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/LaTeX/" itemprop="url" rel="index">
-                    <span itemprop="name">LaTeX</span>
+                  <a href="/categories/TeX/" itemprop="url" rel="index">
+                    <span itemprop="name">TeX</span>
                   </a>
                 </span>
 
@@ -395,8 +395,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/27/latex-learning/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/27/latex-learning/" itemprop="commentCount"></span>
+                <a href="/2017/03/27/tex-learning/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/27/tex-learning/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -429,6 +429,8 @@
 <a id="more"></a>
 <h1 id="插入图片"><a href="#插入图片" class="headerlink" title="插入图片"></a>插入图片</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">\documentclass&#123;article&#125;</div><div class="line">\include&#123;graphicx&#125;     % 插入图片用的宏包</div><div class="line">...</div><div class="line">\begin&#123;document&#125;</div><div class="line">...</div><div class="line">\begin&#123;figure&#125;[h]</div><div class="line">  \centering</div><div class="line">  \includegraphics[height=&lt;图片高度&gt;in]&#123;&lt;图片名字.png&gt;&#125;</div><div class="line">  \caption&#123;&lt;文章中显示的标题&gt;&#125;</div><div class="line">\end&#123;figure&#125;</div><div class="line">...</div><div class="line">\end&#123;document&#125;</div></pre></td></tr></table></figure>
 <p>假如要插入的是EPS图片，需要额外添加<code>epstopdf</code>包。</p>
+<h1 id="分栏"><a href="#分栏" class="headerlink" title="分栏"></a>分栏</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">\documentclass&#123;article&#125;</div><div class="line">\include&#123;multicol&#125;     % 分栏用的宏包</div><div class="line">...</div><div class="line">\begin&#123;document&#125;</div><div class="line">...</div><div class="line">\begin&#123;multicols&#125;&#123;n&#125; % 分成 n 栏</div><div class="line">...</div><div class="line">\end&#123;multicols&#125;</div><div class="line">...</div><div class="line">\end&#123;document&#125;</div></pre></td></tr></table></figure>
+<p>假如你想要一栏到达底部再从第二栏开始，应使用 <code>multicols*</code> 环境</p>
 
       
     </div>
@@ -452,7 +454,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/LaTex/" rel="tag"># LaTex</a>
+            <a href="/tags/Tex/" rel="tag"># Tex</a>
           
         </div>
       
@@ -475,8 +477,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/03/29/latex-learning2/" rel="prev" title="LaTeX学习笔记(2) - 页边距、页眉页脚等">
-                LaTeX学习笔记(2) - 页边距、页眉页脚等 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/03/29/tex-learning2/" rel="prev" title="TeX学习笔记(2) - 页边距、页眉页脚等">
+                TeX学习笔记(2) - 页边距、页眉页脚等 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -633,7 +635,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#插入图片"><span class="nav-number">1.</span> <span class="nav-text">插入图片</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#插入图片"><span class="nav-number">1.</span> <span class="nav-text">插入图片</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#分栏"><span class="nav-number">2.</span> <span class="nav-text">分栏</span></a></li></ol></div>
             
 
           </div>
@@ -764,9 +766,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'HelloMath';
-      var disqus_identifier = '2017/03/27/latex-learning/';
+      var disqus_identifier = '2017/03/27/tex-learning/';
 
-      var disqus_title = "LaTeX学习笔记(1) - 插入图片";
+      var disqus_title = "TeX学习笔记(1) - 插入图片";
 
 
       function run_disqus_script(disqus_script) {
