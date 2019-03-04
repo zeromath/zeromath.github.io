@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Emacs," />
+  <meta name="keywords" content="Math," />
 
 
 
@@ -87,16 +87,16 @@
 
 
 
-<meta name="description" content="主要列出了一些Emacs常用的命令以备查用">
+<meta name="description" content="数学发展的一大特征就是不断的抽象。因为当一些定理成立的时候，你可能并不知道你已经使用了超出你需要范围的东西，而抽象可以让你看清楚到底哪些条件、性质才是我们需要来证明这个定理的。拓扑学是这样的一门学科，它通过对“开集”这个概念的抽象，发展出了一套波澜壮阔的理论。在这篇文章，我想和大家谈谈拓扑，顺便聊聊如何用拓扑证明素数有无穷多个。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[Emacs]Emacs学习笔记">
-<meta property="og:url" content="http://zeromath.github.io/2017/03/15/emacs-learning/index.html">
+<meta property="og:title" content="拓扑与素数">
+<meta property="og:url" content="http://zeromath.github.io/2019/03/03/topology-prime-numbers/index.html">
 <meta property="og:site_name" content="Division By Zero">
-<meta property="og:description" content="主要列出了一些Emacs常用的命令以备查用">
-<meta property="og:updated_time" content="2017-04-13T14:10:13.000Z">
+<meta property="og:description" content="数学发展的一大特征就是不断的抽象。因为当一些定理成立的时候，你可能并不知道你已经使用了超出你需要范围的东西，而抽象可以让你看清楚到底哪些条件、性质才是我们需要来证明这个定理的。拓扑学是这样的一门学科，它通过对“开集”这个概念的抽象，发展出了一套波澜壮阔的理论。在这篇文章，我想和大家谈谈拓扑，顺便聊聊如何用拓扑证明素数有无穷多个。">
+<meta property="og:updated_time" content="2019-03-04T06:01:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[Emacs]Emacs学习笔记">
-<meta name="twitter:description" content="主要列出了一些Emacs常用的命令以备查用">
+<meta name="twitter:title" content="拓扑与素数">
+<meta name="twitter:description" content="数学发展的一大特征就是不断的抽象。因为当一些定理成立的时候，你可能并不知道你已经使用了超出你需要范围的东西，而抽象可以让你看清楚到底哪些条件、性质才是我们需要来证明这个定理的。拓扑学是这样的一门学科，它通过对“开集”这个概念的抽象，发展出了一套波澜壮阔的理论。在这篇文章，我想和大家谈谈拓扑，顺便聊聊如何用拓扑证明素数有无穷多个。">
 
 
 
@@ -124,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://zeromath.github.io/2017/03/15/emacs-learning/"/>
+  <link rel="canonical" href="http://zeromath.github.io/2019/03/03/topology-prime-numbers/"/>
 
 
 
 
 
-  <title> [Emacs]Emacs学习笔记 | Division By Zero </title>
+  <title> 拓扑与素数 | Division By Zero </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -312,7 +312,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2017/03/15/emacs-learning/">
+    <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2019/03/03/topology-prime-numbers/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhan Jiang">
@@ -333,7 +333,7 @@
             
             
               
-                [Emacs]Emacs学习笔记
+                拓扑与素数
               
             
           </h1>
@@ -348,8 +348,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-15T12:39:18-04:00">
-                2017-03-15
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-03T22:33:41-05:00">
+                2019-03-03
               </time>
             
 
@@ -371,8 +371,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Emacs/" itemprop="url" rel="index">
-                    <span itemprop="name">Emacs</span>
+                  <a href="/categories/Math/" itemprop="url" rel="index">
+                    <span itemprop="name">Math</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Math/Topology/" itemprop="url" rel="index">
+                    <span itemprop="name">Topology</span>
                   </a>
                 </span>
 
@@ -389,8 +400,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/2017/03/15/emacs-learning/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/15/emacs-learning/" itemprop="commentCount"></span>
+                <a href="/2019/03/03/topology-prime-numbers/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/03/topology-prime-numbers/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -416,420 +427,31 @@
       
 
       
-        <p>主要列出了一些Emacs常用的命令以备查用</p>
+        <p>数学发展的一大特征就是不断的抽象。因为当一些定理成立的时候，你可能并不知道你已经使用了超出你需要范围的东西，而抽象可以让你看清楚到底哪些条件、性质才是我们需要来证明这个定理的。拓扑学是这样的一门学科，它通过对“开集”这个概念的抽象，发展出了一套波澜壮阔的理论。在这篇文章，我想和大家谈谈拓扑，顺便聊聊如何用拓扑证明素数有无穷多个。</p>
 <a id="more"></a>
-<h1 id="缓冲区"><a href="#缓冲区" class="headerlink" title="缓冲区"></a>缓冲区</h1><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数名</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">保存当前缓冲区</td>
-<td style="text-align:center"><code>C-x C-s</code></td>
-<td style="text-align:center">save-buffer</td>
-</tr>
-<tr>
-<td style="text-align:center">保存所有缓冲区</td>
-<td style="text-align:center"><code>C-x s</code></td>
-<td style="text-align:center">save-some-buffers</td>
-</tr>
-<tr>
-<td style="text-align:center">列出所有缓冲区</td>
-<td style="text-align:center"><code>C-x C-b</code></td>
-<td style="text-align:center">list-buffers</td>
-</tr>
-<tr>
-<td style="text-align:center">切换缓冲区</td>
-<td style="text-align:center"><code>C-x b</code></td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:center">杀死缓冲区</td>
-<td style="text-align:center"><code>C-x k</code></td>
-<td style="text-align:center">kill-buffer</td>
-</tr>
-</tbody>
-</table>
-<h1 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h1><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数名</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">打开文件</td>
-<td style="text-align:center"><code>C-x C-f</code></td>
-</tr>
-<tr>
-<td style="text-align:center">只读方式打开</td>
-<td style="text-align:center"><code>C-x C-r</code></td>
-</tr>
-<tr>
-<td style="text-align:center">读入另外一个文件代替当前buffer的文件</td>
-<td style="text-align:center"><code>C-x C-v</code></td>
-</tr>
-</tbody>
-</table>
-<h1 id="文件编辑命令"><a href="#文件编辑命令" class="headerlink" title="文件编辑命令"></a>文件编辑命令</h1><h2 id="移动插入点"><a href="#移动插入点" class="headerlink" title="移动插入点"></a>移动插入点</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数名</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">缓冲区开始</td>
-<td style="text-align:center"><code>M-&gt;</code></td>
-<td style="text-align:center">beginning-of-buffer</td>
-</tr>
-<tr>
-<td style="text-align:center">缓冲区末尾</td>
-<td style="text-align:center"><code>M-&lt;</code></td>
-<td style="text-align:center">end-of-buffer</td>
-</tr>
-<tr>
-<td style="text-align:center">上一屏</td>
-<td style="text-align:center"><code>C-v</code></td>
-<td style="text-align:center">scroll-up</td>
-</tr>
-<tr>
-<td style="text-align:center">下一屏</td>
-<td style="text-align:center"><code>M-v</code></td>
-<td style="text-align:center">scroll-down</td>
-</tr>
-<tr>
-<td style="text-align:center">段落开头</td>
-<td style="text-align:center"><code>C-{</code></td>
-<td style="text-align:center">beginning-of-paragraph</td>
-</tr>
-<tr>
-<td style="text-align:center">段落结尾</td>
-<td style="text-align:center"><code>C-}</code></td>
-<td style="text-align:center">end-of-paragraph</td>
-</tr>
-<tr>
-<td style="text-align:center">到指定行</td>
-<td style="text-align:center"><code>M-g g</code></td>
-<td style="text-align:center">goto-line</td>
-</tr>
-<tr>
-<td style="text-align:center">行开头</td>
-<td style="text-align:center"><code>C-a</code></td>
-<td style="text-align:center">beginning-of-line</td>
-</tr>
-<tr>
-<td style="text-align:center">行结尾</td>
-<td style="text-align:center"><code>C-e</code></td>
-<td style="text-align:center">end-of-line</td>
-</tr>
-<tr>
-<td style="text-align:center">句子开头</td>
-<td style="text-align:center"><code>M-a</code></td>
-<td style="text-align:center">beginning-of-sentence</td>
-</tr>
-<tr>
-<td style="text-align:center">句子结尾</td>
-<td style="text-align:center"><code>M-e</code></td>
-<td style="text-align:center">end=of-sentence</td>
-</tr>
-<tr>
-<td style="text-align:center">上一行</td>
-<td style="text-align:center"><code>C-p</code></td>
-<td style="text-align:center">previous-line</td>
-</tr>
-<tr>
-<td style="text-align:center">下一行</td>
-<td style="text-align:center"><code>C-n</code></td>
-<td style="text-align:center">next-line</td>
-</tr>
-<tr>
-<td style="text-align:center">上一个单词</td>
-<td style="text-align:center"><code>M-b</code></td>
-<td style="text-align:center">backward-word</td>
-</tr>
-<tr>
-<td style="text-align:center">下一个单词</td>
-<td style="text-align:center"><code>M-f</code></td>
-<td style="text-align:center">forward-word</td>
-</tr>
-<tr>
-<td style="text-align:center">上一个字符</td>
-<td style="text-align:center"><code>C-b</code></td>
-<td style="text-align:center">back-char</td>
-</tr>
-<tr>
-<td style="text-align:center">下一个字符</td>
-<td style="text-align:center"><code>C-f</code></td>
-<td style="text-align:center">forward-char</td>
-</tr>
-</tbody>
-</table>
-<h2 id="引用插入、删除、撤销和重复"><a href="#引用插入、删除、撤销和重复" class="headerlink" title="引用插入、删除、撤销和重复"></a>引用插入、删除、撤销和重复</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">引用插入</td>
-<td style="text-align:center"><code>C-q &lt;字符值&gt;</code></td>
-<td style="text-align:center">quote-insert</td>
-</tr>
-<tr>
-<td style="text-align:center">删除一个字符</td>
-<td style="text-align:center"><code>C-d</code></td>
-<td style="text-align:center">delete-char</td>
-</tr>
-<tr>
-<td style="text-align:center">删除一个单词</td>
-<td style="text-align:center"><code>M-d</code></td>
-<td style="text-align:center">kill-word</td>
-</tr>
-<tr>
-<td style="text-align:center">撤销</td>
-<td style="text-align:center"><code>C-_</code> or <code>C-/</code></td>
-<td style="text-align:center">undo</td>
-</tr>
-<tr>
-<td style="text-align:center">重复</td>
-<td style="text-align:center"><code>C-u &lt;次数&gt; &lt;命令&gt;</code></td>
-<td style="text-align:center">universal-argument</td>
-</tr>
-</tbody>
-</table>
-<h2 id="标记和复制"><a href="#标记和复制" class="headerlink" title="标记和复制"></a>标记和复制</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">删除一行</td>
-<td style="text-align:center"><code>C-k</code></td>
-<td style="text-align:center">kill-line</td>
-</tr>
-<tr>
-<td style="text-align:center">设定标记</td>
-<td style="text-align:center"><code>C-Space</code> or <code>C-@</code></td>
-<td style="text-align:center">set-mark-command</td>
-</tr>
-<tr>
-<td style="text-align:center">全选</td>
-<td style="text-align:center"><code>C-x h</code></td>
-<td style="text-align:center">mark-whole-buffer</td>
-</tr>
-<tr>
-<td style="text-align:center">选取一页</td>
-<td style="text-align:center"><code>C-x C-p</code></td>
-<td style="text-align:center">mark-page</td>
-</tr>
-<tr>
-<td style="text-align:center">选取一段</td>
-<td style="text-align:center"><code>M-h</code></td>
-<td style="text-align:center">mark-paragraph</td>
-</tr>
-<tr>
-<td style="text-align:center">选取一个单词</td>
-<td style="text-align:center"><code>M-@</code></td>
-<td style="text-align:center">mark-word</td>
-</tr>
-<tr>
-<td style="text-align:center">选取一页</td>
-<td style="text-align:center"><code>C-x C-p</code></td>
-<td style="text-align:center">mark-page</td>
-</tr>
-<tr>
-<td style="text-align:center">交换标记和光标位置</td>
-<td style="text-align:center"><code>C-x C-x</code></td>
-<td style="text-align:center">exchange-point-and-mark</td>
-</tr>
-<tr>
-<td style="text-align:center">将区域中字母改为大写</td>
-<td style="text-align:center"><code>C-x C-u</code></td>
-<td style="text-align:center">upcase-region</td>
-</tr>
-<tr>
-<td style="text-align:center">删除区块</td>
-<td style="text-align:center"><code>C-w</code></td>
-<td style="text-align:center">kill-region</td>
-</tr>
-<tr>
-<td style="text-align:center">复制区块</td>
-<td style="text-align:center"><code>M-w</code></td>
-<td style="text-align:center">kill-ring-save</td>
-</tr>
-<tr>
-<td style="text-align:center">粘贴</td>
-<td style="text-align:center"><code>C-y</code></td>
-<td style="text-align:center">yank</td>
-</tr>
-</tbody>
-</table>
-<h2 id="快速复制"><a href="#快速复制" class="headerlink" title="快速复制"></a>快速复制</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">将区域中内容加入到一个buffer中</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">append-to-buffer</td>
-</tr>
-<tr>
-<td style="text-align:center">将区域中内容加入到一个buffer中，不过加入位置在该buffer的光标前</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">prepend-to-buffer</td>
-</tr>
-<tr>
-<td style="text-align:center">将区域中内容加入到一个buffer中，删除该buffer原有内容</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">copy-to-buffer</td>
-</tr>
-<tr>
-<td style="text-align:center">在该位置插入指定的buffer中所有内容</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">insert-buffer</td>
-</tr>
-<tr>
-<td style="text-align:center">将区域中内容复制到一个文件中</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">append-to-file</td>
-</tr>
-</tbody>
-</table>
-<h2 id="字符修改"><a href="#字符修改" class="headerlink" title="字符修改"></a>字符修改</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">光标处单词首字母大写</td>
-<td style="text-align:center"><code>M-c</code></td>
-</tr>
-<tr>
-<td style="text-align:center">光标处单词全部字母大写</td>
-<td style="text-align:center"><code>M-u</code></td>
-</tr>
-<tr>
-<td style="text-align:center">光标处单词全部字母小写</td>
-<td style="text-align:center"><code>M-l</code></td>
-</tr>
-<tr>
-<td style="text-align:center">补全</td>
-<td style="text-align:center"><code>M-/</code></td>
-</tr>
-<tr>
-<td style="text-align:center">交换光标处和之前的字符</td>
-<td style="text-align:center"><code>C-t</code></td>
-</tr>
-<tr>
-<td style="text-align:center">交换光标处和之前的单词</td>
-<td style="text-align:center"><code>M-t</code></td>
-</tr>
-</tbody>
-</table>
-<h2 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h2><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">从光标处往后搜索</td>
-<td style="text-align:center"><code>C-s</code></td>
-</tr>
-<tr>
-<td style="text-align:center">从光标处往前搜索</td>
-<td style="text-align:center"><code>C-r</code></td>
-</tr>
-<tr>
-<td style="text-align:center">(向下)光标位置的单词作为查找字符串</td>
-<td style="text-align:center"><code>C-s C-w</code></td>
-</tr>
-<tr>
-<td style="text-align:center">(向下)光标位置到行尾作为查找字符串</td>
-<td style="text-align:center"><code>C-r C-y</code></td>
-</tr>
-<tr>
-<td style="text-align:center">非递增查找</td>
-<td style="text-align:center"><code>C-s RET &lt;查找字符串&gt; RET</code></td>
-</tr>
-<tr>
-<td style="text-align:center">不受换行、空格、标点影响</td>
-<td style="text-align:center"><code>C-s RET C-w</code></td>
-</tr>
-<tr>
-<td style="text-align:center">正则式向下查找</td>
-<td style="text-align:center"><code>C-M-s</code></td>
-</tr>
-</tbody>
-</table>
-<p><em>用向上查找命令就将上面命令的<code>s</code>替换为<code>r</code></em></p>
-<h1 id="宏模式"><a href="#宏模式" class="headerlink" title="宏模式"></a>宏模式</h1><table>
-<thead>
-<tr>
-<th style="text-align:center">作用</th>
-<th style="text-align:center">命令</th>
-<th style="text-align:center">函数</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">开始一个宏的定义</td>
-<td style="text-align:center"><code>C-x (</code></td>
-</tr>
-<tr>
-<td style="text-align:center">结束一个宏的定义</td>
-<td style="text-align:center"><code>C-x )</code></td>
-</tr>
-<tr>
-<td style="text-align:center">执行宏</td>
-<td style="text-align:center"><code>C-x e</code></td>
-</tr>
-<tr>
-<td style="text-align:center">给最后一个宏命名</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">name-last-kbd-macro</td>
-</tr>
-<tr>
-<td style="text-align:center">在当前文件中插入一个已定义并命名过的宏</td>
-<td style="text-align:center"></td>
-<td style="text-align:center">insert-kbd-macro</td>
-</tr>
-</tbody>
-</table>
-<hr>
-<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
-<li><a href="https://www.ibm.com/developerworks/cn/education/aix/emacs1/" target="_blank" rel="external">Emacs 编辑环境，第 1 部分: 学习 Emacs 的基础知识</a></li>
-<li><a href="http://www.math.pku.edu.cn/teachers/qiuzy/progtech/scheme/emacs-commands.txt" target="_blank" rel="external">这里列出了EMACS 的一些常用命令</a></li>
-<li><a href="http://www.cnblogs.com/robertzml/archive/2010/02/15/1668592.html" target="_blank" rel="external">学习Emacs系列教程（五）：编辑（2）—— 标记</a></li>
-<li><a href="http://www.cnblogs.com/robertzml/archive/2010/02/19/1669204.html" target="_blank" rel="external">学习Emacs系列教程（六）：编辑（3）</a></li>
+<h3 id="拓扑是个啥玩意儿"><a href="#拓扑是个啥玩意儿" class="headerlink" title="拓扑是个啥玩意儿"></a>拓扑是个啥玩意儿</h3><p>说到拓扑，你或许会想到“咖啡杯”☕️和甜甜圈🍩的故事。简单的说就是这两个东西不是“同胚”的。等一下，什么是“同胚”？要认真了解这个概念，我们先得从“开集”聊起。相信大家中学的时候都学过区间的概念，特别的，我们知道开区间就是形如 $(1,2)$ 这样的集合，而闭区间则是 $[1,2]$ 这样的集合。但是，为什么前一个叫开区间，后一个叫闭区间呢？可能很多人都没有想过这个问题。其实，这里的“开”（“闭”）形容的是一些特殊的点不在（就在）里面。在这个例子里就是 $1$ 和 $2$。</p>
+<p>为了说清楚为什么这样的点很重要，我们又要放下“开集”，回过去聊聊“极限”。大家在大学里多多少少知道极限的概念，形象地说，一列点 $x_n$ 趋向于一个极限 $c$ 就是当 $n$ 越来越大的时候，$|x_n-c|$ 越来越小。假如画到数轴 $\mathbb{R}$ 上，就是一列点越来越趋于一个点。但是这个形容其实并不好，因为我们需要某种“绝对值”（度量）来说明“越来越接近”这个概念。让我们换个说法.<strong>我们说一列点 $x_n$ 越来越趋于 $c$， 假如对于 $c$ 的任意一个邻域（包含 $c$ 的一个开区间），都只有有限个 $x_n$ 不在这个开区间里。</strong>举个例子：比如 $x_n=\frac{1}{n}$，用高数知识我们知道 $\lim_\limits{n\to\infty} x_n=0$. 那么我们上面的这个说法成立吗？让我们检查一下，比如 $(-1,1)$ 就是 $0$ 的一个邻域，结果所有的 $x_n$ 都在里面！你会想，这个作者ZZ吗？取这么大一个区间？那好，让我们取一个小一点的，比如 $(-0.000001,0.000001)$ 这个邻域。那 $x_n$ 不在里面当且仅当 $x_n=\frac{1}{n} \geq 0.000001 \Rightarrow n\leq 1000000$. 这个数看着很大，但是只要 $n$ 比 $1000000$ 大，那么 $x_n$ 就必然在 $(-0.000001,0.000001)$ 这个邻域里。好了，我们已经验证了两个例子了，看起来上面的描述是对的。<em>有兴趣的读者可以对一般情形给出自己的证明。</em></p>
+<p>注意到，上面这个说法对于闭区间是不对的。因为我们可以取 $[c,c]$ 这个单点集，显然这个区间不需要包含无穷多个 $x_n$。甚至在 $x_n=\frac{1}{n}$ 这个例子里 $[0,0]$ 不包含任何一个 $x_n$。我们得到一个开区间和闭区间的区别的重要观察：<strong>闭区间可以只包含一个点，但是开区间办不到，但凡开区间包含一个数，那么它一定包含这个数周围的一些数。</strong></p>
+<p>回到我们第二段的问题：为什么一些点不在里面就是开区间，在里面就是闭区间？首先这些点有一个非常重要的名字，他们叫做<em>边界点 (boundary point)</em>。什么样的点是边界点呢？<strong>一个点是某个集合的边界点，当且仅当它的任意一个邻域都包含至少一个集合内的点和一个集合外的点。</strong>这个定义看起来很抽象，但是不要被它吓到。还是让我们回到区间的例子，比如 $1$ 是 $[1,2]$ 的边界点。我们来检查一下它是否满足定义……显然满足！😂其实这个定义真的很直观，就像国境线。假如你所处的位置附近（无论多近），既存在 A 国的领土也存在 B 国的领土。那显然你就在边境上线！所以开集就是那些不包含它们的边境线，哦不，边界点的集合。这样一来，我们知道开集里面的每一个点，都有一个邻域里面全是这个集合里面的点（这个论断的反面是不是就是边界点的定义？）。终于，我们可以给出一般的开集的定义了！<strong>一个集合 $U$ 是开集，假如它的每一个点都有一个包含在 $U$ 里面的邻域。</strong>🎉🎉🎉</p>
+<p>等一下！啥玩意儿？！邻域不是用开集定义的么！怎么就又用来定义开集了？！作者你在玩我？假如你意识到了这个问题，说明你很认真的看了前面的文字。是的，这是一个很严重的问题，我们陷入了循环定义！但是数学家是很聪明的生物，他们很快就找到了一个解决办法。既然开集和邻域总要先定义一个才能有另一个，就像鸡🐔和蛋🥚总要先有一个才能有另一个，那我们就强行定义其中一个好了。比如我们来定义开集好了：一个空间 $X$ 的开集就是这样一组数据 $\mathscr{B}$：它是 $X$ 的一部分特定子集的集合，并且满足如下性质</p>
+<ol>
+<li>整个空间和空集都在 $\mathscr{B}$ 中：$X\in \mathscr{B}$ 和 $\emptyset\in\mathscr{B}$.</li>
+<li>$\mathscr{B}$ 中任意多个元素（注意它们都是 $X$ 的子集）在 $X$ 中的并集，仍然是 $\mathscr{B}$ 中的元素</li>
+<li>$\mathscr{B}$ 中有限多个元素在 $X$ 中的交集，仍然是 $\mathscr{B}$ 中的元素</li>
+</ol>
+<p>特别的，这样的一组数据称为集合 $X$ 的一个<em>拓扑 (topology)</em>。一个集合 $X$ 配上它的拓扑 $\mathscr{B}$ 就称为一个<em>拓扑空间 (topological space)</em>。可能有人要问了，开集定义好了，那闭集呢？很简单，一个拓扑空间的集合是闭集，当且仅当它的补是开集！</p>
+<p>让我们来举几个例子。第一个例子就是一开始就提到的开区间：首先全集 $\mathbb{R}=(-\infty,\infty)$ 和空集 $\emptyset = (0,0)$ 显然是开区间；任意多个开区间的并和有限多个开区间的交还是开区间，也是不难证明的事实。所以开区间构成 $\mathbb{R}$ 的一个拓扑，一般称为<em>欧式拓扑 (Euclidean topology)</em>。接下来这个例子比较……耍赖。对于任意集合 $X$，我们取 $\mathscr{B}=\{X,\emptyset\}$。定义不是要求要有这两个元素么，那我们就只取这两个元素。读者可以自行验证这个 $\mathscr{B}$ 是 $X$ 上的一个拓扑。我们称这个拓扑为<em>平凡拓扑 (trivial topology)</em>。我们也可以取 $\mathscr{B}$ 是 $X$ 的所有子集的集合（比如 $X=\{1,2\}$，那么 $\mathscr{B}=\{\emptyset,\{1\},\{2\},\{1,2\}\}$），读者可以再次自行验证这个 $\mathscr{B}$ 是 $X$ 上的一个拓扑。我们称这个拓扑为<em>离散拓扑 (discrete topology)</em>。</p>
+<p>那有读者就要问了：有没有有意思一点的拓扑呀？在实数轴 $\mathbb{R}$ 上，我们还可以赋予另一种拓扑。定义一个 $\mathbb{R}$ 的子集是<em>余有限 (cofinite)</em>的，假如它在 $\mathbb{R}$ 中的补集是有限点集。用人话说，就是你从数轴上扣掉有限个点，剩下的就是一个余有限集合。我们定义开集为空集和所有这样的余有限的集合。这就构成了一个拓扑，一般称为<em>余有限拓扑 (cofinite topology)</em>。在数轴这个特殊的集合上，这种余有限拓扑等价于另外一个在代数几何里非常重要的拓扑<em>扎里斯基拓扑 (Zariski topology)</em>。</p>
+<h3 id="素数的无限性"><a href="#素数的无限性" class="headerlink" title="素数的无限性"></a>素数的无限性</h3><p>好了，终于要开始说标题的另一半了：素数的无限性。首先，这是一个欧几里得就已经证明的结论。欧几里得在他的著作《几何原本》中提出如下证明：反设素数只有有限个，把他们标记为 $p_1,\ldots,p_n$ 。那么我们考虑 $N=p_1\cdots p_n + 1$。这个数不被任何一个已知素数整除，所以它的因数一定包含一个未知的素数，所以素数不可能是有限的！</p>
+<p><a href="https://en.wikipedia.org/wiki/Hillel_Furstenberg" target="_blank" rel="external">Hillel Furstenberg</a> 有一个用拓扑证明素数无限的方法。这个证明是 1955 年，当 Furstenberg 还是一个本科生的时候发表的！经过上面的长篇大论，我们已经知道什么叫拓扑了。就是开集嘛。所以要用拓扑证明，很显然我们要定义开集。我们令 $S(a,b)=\{ a n+b | n\in \mathbb{Z} \}=\{a\mathbb{Z} +b\}$ 表示从 $a$ 出发，以 $b$ 为公差往两侧延伸的等差数列。比如 $S(100,1)=\mathbb{Z},S(4,2)=$所有偶数。我们定义 $\mathbb{Z}$ 上的一个拓扑 $\mathscr{B}$ 是空集和所有的等差数列 $S(a,b)$ 的并。我们来运用所学的定义，仔细的验证一下这是一个拓扑。第一条，我们要求 $\mathbb{Z}$ 和 $\emptyset$ 在 $\mathscr{B}$ 中。$\emptyset\in\mathscr{B}$ 是定义的一部分。而 $\mathbb{Z}=S(0,1)\in\mathscr{B}$ 自然也在其中。第二条，$\mathscr{B}$ 中任意多个元素的并在 $\mathscr{B}$ 中。我们定义中已经允许任意取并了，所以这一条也是显然的。第三条是验证中最困难的，我们有 $\mathscr{B}$ 中有限个元素，要验证它们的交还在 $\mathscr{B}$ 中。首先我们注意到只需要验证两个元素的交还在 $\mathscr{B}$ 中就可以了，其余的情况可以通过简单的递推得到证明。所以假设我们有两个元素 $A=\cup_i S(a_i,b_i)$ 和 $B=\cup_j S(c_j,d_j)$。对于任意 $x\in A\cap B$，我们有 $x\in A$ 和 $x\in B$ （废话！）。但是 $x\in A$ 意味着一定有一个 $i$ 使得 $x\in S(a_i,b_i)$。同样的一定有一个 $j$ 使得 $x\in S(c_j,d_j)$。所以 $x\in S(a_i,b_i)\cap S(c_j,d_j)$。从而我们有 $A\cap B = \cup_{i,j} (S(a_i,b_i)\cap S(c_j,d_j))$。 这是一个形如 $S(a_i,b_i)\cap S(c_j,d_j)$ 的集合的无穷并，假如我们能证明每个 $S(a_i,b_i)\cap S(c_j,d_j)$ 都要么是空集要么是某个 $S(e,f)$，那么我们就能断言 $A\cap B\in\mathscr{B}$。我们简化一下符号：我们要证明的就是 $S(a,b)\cap S(c,d)=\emptyset$ 或者 $S(e,f)$。假如 $S(a,b)\cap S(c,d)=\emptyset$ 那就没啥好证的了。假设$S(a,b)\cap S(c,d)\neq\emptyset$，那么存在一个 $x\in S(a,b)\cap S(c,d)$。令$D$ 是 $b$ 和 $d$ 的最小公倍数，我们声称 $S(a,b)\cap S(c,d)=S(x,D)$：显然等式右边是左边的子集（为什么？）。我们只要说明左边也包含在右边，对于任意的 $y\in S(a,b)\cap S(c,d)$。因为 $x\in S(a,b)$ 所以 $y-x$ 可以被 $b$ 整除。同理 $y-x$ 也可以被 $d$ 整除，所以 $y-x$ 一定可以被 $D$ 整除！所以 $y\in S(x,D)$。证毕。🎉🎉🎉</p>
+<p>所以我们可以放心大胆的使用这些开集了。为了证明素数有无穷多，我们需要如下观察：</p>
+<ol>
+<li>非空有限集合一定不是开集，（非全集的）余有限集合一定不是闭集：因为任何非空开集一定包含一个等差数列，所以一定是无限的集合。第二个论断是第一句话的等价说法。</li>
+<li>$S(a,b)$ 是既开又闭的集合（注意！这不是一个矛盾！）：这是因为全集是 $\mathbb{Z}=\cup_{i=0}^{b-1} S(a+i,b)$。所以 $\cup_{i=1}^{b-1} S(a+i,b)$ 是 $S(a,b)$ 的补集，这显然是个开集。所以 $S(a,b)$ 同时也是闭集。</li>
+</ol>
+<p>现在，我们观察如下等式<br>$$<br>\mathbb{Z}\setminus \{\pm 1\} = \cup_{p\text{ prime}} S(p,0)<br>$$<br>因为任何一个数要么是 $\pm 1$，要么是某个素数的倍数，所以上述集合相等。下面根据观察 1，我们知道左边的集合<strong>一定不是闭集</strong>。<em>假如素数有限</em>，右边就是一个有限的并。根据 2 我们知道这就是一个有限闭集的有限并，所以也是<strong>闭集</strong>（有限闭集的并是闭集，这是拓扑公理 3 “取补”的结论）。但是一个集合可以是既开又闭，但是不能既是闭集，又不是闭集。所以我们得到了一个矛盾！所以假设错误，素数是无限的！</p>
+<h4 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h4><ol>
+<li><a href="https://en.wikipedia.org/wiki/Furstenberg%27s_proof_of_the_infinitude_of_primes" target="_blank" rel="external">Furstenberg’s proof of the infinitude of primes</a></li>
 </ol>
 
       
@@ -854,7 +476,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Emacs/" rel="tag"># Emacs</a>
+            <a href="/tags/Math/" rel="tag"># Math</a>
           
         </div>
       
@@ -867,8 +489,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/03/12/mac-emacs-auctex/" rel="next" title="[Mac]在Emacs中安装AucTex">
-                <i class="fa fa-chevron-left"></i> [Mac]在Emacs中安装AucTex
+              <a href="/2017/04/19/mac-shortcuts/" rel="next" title="[Mac]快捷键总结">
+                <i class="fa fa-chevron-left"></i> [Mac]快捷键总结
               </a>
             
           </div>
@@ -876,10 +498,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/03/21/hexo-github2/" rel="prev" title="[Hexo]在GitHub上搭建博客(2)">
-                [Hexo]在GitHub上搭建博客(2) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -1035,7 +653,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#缓冲区"><span class="nav-number">1.</span> <span class="nav-text">缓冲区</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件"><span class="nav-number">2.</span> <span class="nav-text">文件</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#文件编辑命令"><span class="nav-number">3.</span> <span class="nav-text">文件编辑命令</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#移动插入点"><span class="nav-number">3.1.</span> <span class="nav-text">移动插入点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用插入、删除、撤销和重复"><span class="nav-number">3.2.</span> <span class="nav-text">引用插入、删除、撤销和重复</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#标记和复制"><span class="nav-number">3.3.</span> <span class="nav-text">标记和复制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速复制"><span class="nav-number">3.4.</span> <span class="nav-text">快速复制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#字符修改"><span class="nav-number">3.5.</span> <span class="nav-text">字符修改</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#搜索"><span class="nav-number">3.6.</span> <span class="nav-text">搜索</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#宏模式"><span class="nav-number">4.</span> <span class="nav-text">宏模式</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考链接"><span class="nav-number">5.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#拓扑是个啥玩意儿"><span class="nav-number">1.</span> <span class="nav-text">拓扑是个啥玩意儿</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#素数的无限性"><span class="nav-number">2.</span> <span class="nav-text">素数的无限性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文献"><span class="nav-number">2.1.</span> <span class="nav-text">参考文献</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1166,9 +784,9 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'HelloMath';
-      var disqus_identifier = '2017/03/15/emacs-learning/';
+      var disqus_identifier = '2019/03/03/topology-prime-numbers/';
 
-      var disqus_title = "[Emacs]Emacs学习笔记";
+      var disqus_title = "拓扑与素数";
 
 
       function run_disqus_script(disqus_script) {
