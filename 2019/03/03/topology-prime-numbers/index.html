@@ -93,7 +93,7 @@
 <meta property="og:url" content="http://zeromath.github.io/2019/03/03/topology-prime-numbers/index.html">
 <meta property="og:site_name" content="Division By Zero">
 <meta property="og:description" content="数学发展的一大特征就是不断的抽象。因为当一些定理成立的时候，你可能并不知道你已经使用了超出你需要范围的东西，而抽象可以让你看清楚到底哪些条件、性质才是我们需要来证明这个定理的。拓扑学是这样的一门学科，它通过对“开集”这个概念的抽象，发展出了一套波澜壮阔的理论。在这篇文章，我想和大家谈谈拓扑，顺便聊聊如何用拓扑证明素数有无穷多个。">
-<meta property="og:updated_time" content="2019-03-04T06:01:02.000Z">
+<meta property="og:updated_time" content="2019-03-04T06:11:46.292Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="拓扑与素数">
 <meta name="twitter:description" content="数学发展的一大特征就是不断的抽象。因为当一些定理成立的时候，你可能并不知道你已经使用了超出你需要范围的东西，而抽象可以让你看清楚到底哪些条件、性质才是我们需要来证明这个定理的。拓扑学是这样的一门学科，它通过对“开集”这个概念的抽象，发展出了一套波澜壮阔的理论。在这篇文章，我想和大家谈谈拓扑，顺便聊聊如何用拓扑证明素数有无穷多个。">
@@ -443,14 +443,15 @@
 <p>让我们来举几个例子。第一个例子就是一开始就提到的开区间：首先全集 $\mathbb{R}=(-\infty,\infty)$ 和空集 $\emptyset = (0,0)$ 显然是开区间；任意多个开区间的并和有限多个开区间的交还是开区间，也是不难证明的事实。所以开区间构成 $\mathbb{R}$ 的一个拓扑，一般称为<em>欧式拓扑 (Euclidean topology)</em>。接下来这个例子比较……耍赖。对于任意集合 $X$，我们取 $\mathscr{B}=\{X,\emptyset\}$。定义不是要求要有这两个元素么，那我们就只取这两个元素。读者可以自行验证这个 $\mathscr{B}$ 是 $X$ 上的一个拓扑。我们称这个拓扑为<em>平凡拓扑 (trivial topology)</em>。我们也可以取 $\mathscr{B}$ 是 $X$ 的所有子集的集合（比如 $X=\{1,2\}$，那么 $\mathscr{B}=\{\emptyset,\{1\},\{2\},\{1,2\}\}$），读者可以再次自行验证这个 $\mathscr{B}$ 是 $X$ 上的一个拓扑。我们称这个拓扑为<em>离散拓扑 (discrete topology)</em>。</p>
 <p>那有读者就要问了：有没有有意思一点的拓扑呀？在实数轴 $\mathbb{R}$ 上，我们还可以赋予另一种拓扑。定义一个 $\mathbb{R}$ 的子集是<em>余有限 (cofinite)</em>的，假如它在 $\mathbb{R}$ 中的补集是有限点集。用人话说，就是你从数轴上扣掉有限个点，剩下的就是一个余有限集合。我们定义开集为空集和所有这样的余有限的集合。这就构成了一个拓扑，一般称为<em>余有限拓扑 (cofinite topology)</em>。在数轴这个特殊的集合上，这种余有限拓扑等价于另外一个在代数几何里非常重要的拓扑<em>扎里斯基拓扑 (Zariski topology)</em>。</p>
 <h3 id="素数的无限性"><a href="#素数的无限性" class="headerlink" title="素数的无限性"></a>素数的无限性</h3><p>好了，终于要开始说标题的另一半了：素数的无限性。首先，这是一个欧几里得就已经证明的结论。欧几里得在他的著作《几何原本》中提出如下证明：反设素数只有有限个，把他们标记为 $p_1,\ldots,p_n$ 。那么我们考虑 $N=p_1\cdots p_n + 1$。这个数不被任何一个已知素数整除，所以它的因数一定包含一个未知的素数，所以素数不可能是有限的！</p>
-<p><a href="https://en.wikipedia.org/wiki/Hillel_Furstenberg" target="_blank" rel="external">Hillel Furstenberg</a> 有一个用拓扑证明素数无限的方法。这个证明是 1955 年，当 Furstenberg 还是一个本科生的时候发表的！经过上面的长篇大论，我们已经知道什么叫拓扑了。就是开集嘛。所以要用拓扑证明，很显然我们要定义开集。我们令 $S(a,b)=\{ a n+b | n\in \mathbb{Z} \}=\{a\mathbb{Z} +b\}$ 表示从 $a$ 出发，以 $b$ 为公差往两侧延伸的等差数列。比如 $S(100,1)=\mathbb{Z},S(4,2)=$所有偶数。我们定义 $\mathbb{Z}$ 上的一个拓扑 $\mathscr{B}$ 是空集和所有的等差数列 $S(a,b)$ 的并。我们来运用所学的定义，仔细的验证一下这是一个拓扑。第一条，我们要求 $\mathbb{Z}$ 和 $\emptyset$ 在 $\mathscr{B}$ 中。$\emptyset\in\mathscr{B}$ 是定义的一部分。而 $\mathbb{Z}=S(0,1)\in\mathscr{B}$ 自然也在其中。第二条，$\mathscr{B}$ 中任意多个元素的并在 $\mathscr{B}$ 中。我们定义中已经允许任意取并了，所以这一条也是显然的。第三条是验证中最困难的，我们有 $\mathscr{B}$ 中有限个元素，要验证它们的交还在 $\mathscr{B}$ 中。首先我们注意到只需要验证两个元素的交还在 $\mathscr{B}$ 中就可以了，其余的情况可以通过简单的递推得到证明。所以假设我们有两个元素 $A=\cup_i S(a_i,b_i)$ 和 $B=\cup_j S(c_j,d_j)$。对于任意 $x\in A\cap B$，我们有 $x\in A$ 和 $x\in B$ （废话！）。但是 $x\in A$ 意味着一定有一个 $i$ 使得 $x\in S(a_i,b_i)$。同样的一定有一个 $j$ 使得 $x\in S(c_j,d_j)$。所以 $x\in S(a_i,b_i)\cap S(c_j,d_j)$。从而我们有 $A\cap B = \cup_{i,j} (S(a_i,b_i)\cap S(c_j,d_j))$。 这是一个形如 $S(a_i,b_i)\cap S(c_j,d_j)$ 的集合的无穷并，假如我们能证明每个 $S(a_i,b_i)\cap S(c_j,d_j)$ 都要么是空集要么是某个 $S(e,f)$，那么我们就能断言 $A\cap B\in\mathscr{B}$。我们简化一下符号：我们要证明的就是 $S(a,b)\cap S(c,d)=\emptyset$ 或者 $S(e,f)$。假如 $S(a,b)\cap S(c,d)=\emptyset$ 那就没啥好证的了。假设$S(a,b)\cap S(c,d)\neq\emptyset$，那么存在一个 $x\in S(a,b)\cap S(c,d)$。令$D$ 是 $b$ 和 $d$ 的最小公倍数，我们声称 $S(a,b)\cap S(c,d)=S(x,D)$：显然等式右边是左边的子集（为什么？）。我们只要说明左边也包含在右边，对于任意的 $y\in S(a,b)\cap S(c,d)$。因为 $x\in S(a,b)$ 所以 $y-x$ 可以被 $b$ 整除。同理 $y-x$ 也可以被 $d$ 整除，所以 $y-x$ 一定可以被 $D$ 整除！所以 $y\in S(x,D)$。证毕。🎉🎉🎉</p>
-<p>所以我们可以放心大胆的使用这些开集了。为了证明素数有无穷多，我们需要如下观察：</p>
+<p><a href="https://en.wikipedia.org/wiki/Hillel_Furstenberg" target="_blank" rel="external">Hillel Furstenberg</a> 有一个用拓扑证明素数无限的方法。这个证明是 1955 年，当 Furstenberg 还是一个本科生的时候发表的！经过上面的长篇大论，我们已经知道什么叫拓扑了。就是开集嘛。所以要用拓扑证明，很显然我们要定义开集。我们令 $S(a,b)=\{ a n+b | n\in \mathbb{Z} \}=\{a\mathbb{Z} +b\}$ 表示从 $b$ 出发，以 $a$ 为公差往两侧延伸的等差数列。比如 $S(1,100)=\mathbb{Z},S(2,4)=$所有偶数。我们定义 $\mathbb{Z}$ 上的一个拓扑 $\mathscr{B}$ 是空集和所有的等差数列 $S(a,b)$ 的并。我们来运用所学的定义，仔细的验证一下这是一个拓扑。第一条，我们要求 $\mathbb{Z}$ 和 $\emptyset$ 在 $\mathscr{B}$ 中。$\emptyset\in\mathscr{B}$ 是定义的一部分。而 $\mathbb{Z}=S(1,0)\in\mathscr{B}$ 自然也在其中。第二条，$\mathscr{B}$ 中任意多个元素的并在 $\mathscr{B}$ 中。我们定义中已经允许任意取并了，所以这一条也是显然的。第三条是验证中最困难的，我们有 $\mathscr{B}$ 中有限个元素，要验证它们的交还在 $\mathscr{B}$ 中。首先我们注意到只需要验证两个元素的交还在 $\mathscr{B}$ 中就可以了，其余的情况可以通过简单的递推得到证明。所以假设我们有两个元素 $A=\cup_i S(a_i,b_i)$ 和 $B=\cup_j S(c_j,d_j)$。对于任意 $x\in A\cap B$，我们有 $x\in A$ 和 $x\in B$ （废话！）。但是 $x\in A$ 意味着一定有一个 $i$ 使得 $x\in S(a_i,b_i)$。同样的一定有一个 $j$ 使得 $x\in S(c_j,d_j)$。所以 $x\in S(a_i,b_i)\cap S(c_j,d_j)$。从而我们有 $A\cap B = \cup_{i,j} (S(a_i,b_i)\cap S(c_j,d_j))$。 这是一个形如 $S(a_i,b_i)\cap S(c_j,d_j)$ 的集合的无穷并，假如我们能证明每个 $S(a_i,b_i)\cap S(c_j,d_j)$ 都要么是空集要么是某个 $S(e,f)$，那么我们就能断言 $A\cap B\in\mathscr{B}$。我们简化一下符号：我们要证明的就是 $S(a,b)\cap S(c,d)=\emptyset$ 或者 $S(e,f)$。假如 $S(a,b)\cap S(c,d)=\emptyset$ 那就没啥好证的了。假设$S(a,b)\cap S(c,d)\neq\emptyset$，那么存在一个 $f\in S(a,b)\cap S(c,d)$。令$e$ 是 $a$ 和 $c$ 的最小公倍数，我们声称 $S(a,b)\cap S(c,d)=S(e,f)$：显然等式右边是左边的子集（为什么？）。我们只要说明左边也包含在右边，对于任意的 $x\in S(a,b)\cap S(c,d)$。因为 $x\in S(a,b)$ 所以 $x-f$ 可以被 $a$ 整除。同理 $x-f$ 也可以被 $c$ 整除，所以 $x-f$ 一定可以被 $e$ 整除！所以 $x\in S(e,f)$。证毕。🎉🎉🎉</p>
+<p>所以我们可以放心大胆的使用这些开集了。为了证明素数有无穷多，我们需要如下观察：在上述定义的 $\mathscr{B}$ 这个拓扑下，</p>
 <ol>
 <li>非空有限集合一定不是开集，（非全集的）余有限集合一定不是闭集：因为任何非空开集一定包含一个等差数列，所以一定是无限的集合。第二个论断是第一句话的等价说法。</li>
-<li>$S(a,b)$ 是既开又闭的集合（注意！这不是一个矛盾！）：这是因为全集是 $\mathbb{Z}=\cup_{i=0}^{b-1} S(a+i,b)$。所以 $\cup_{i=1}^{b-1} S(a+i,b)$ 是 $S(a,b)$ 的补集，这显然是个开集。所以 $S(a,b)$ 同时也是闭集。</li>
+<li>$S(a,b)$ 是既开又闭的集合（注意！这不是一个矛盾！）：这是因为全集是 $\mathbb{Z}=\cup_{i=0}^{a-1} S(a,b+i)$。所以 $\cup_{i=1}^{a-1} S(a,b+i)$ 是 $S(a,b)$ 的补集，这显然是个开集。所以 $S(a,b)$ 同时也是闭集。</li>
 </ol>
-<p>现在，我们观察如下等式<br>$$<br>\mathbb{Z}\setminus \{\pm 1\} = \cup_{p\text{ prime}} S(p,0)<br>$$<br>因为任何一个数要么是 $\pm 1$，要么是某个素数的倍数，所以上述集合相等。下面根据观察 1，我们知道左边的集合<strong>一定不是闭集</strong>。<em>假如素数有限</em>，右边就是一个有限的并。根据 2 我们知道这就是一个有限闭集的有限并，所以也是<strong>闭集</strong>（有限闭集的并是闭集，这是拓扑公理 3 “取补”的结论）。但是一个集合可以是既开又闭，但是不能既是闭集，又不是闭集。所以我们得到了一个矛盾！所以假设错误，素数是无限的！</p>
-<h4 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h4><ol>
+<p>现在，我们观察如下等式<br>$$<br>\mathbb{Z}\setminus \{\pm 1\} = \cup_{p\text{ prime}} S(p,0)<br>$$<br>因为任何一个数要么是 $\pm 1$，要么是某个素数的倍数，所以上述集合相等。根据观察 1，我们知道左边的集合<strong>一定不是闭集</strong>。现在，<em>假如素数有限</em>，右边就是一个有限的并。根据 2 我们知道这就是一个有限闭集的有限并，所以也是<strong>闭集</strong>（有限闭集的并是闭集，这是拓扑公理 3 “取补”的结论）。但是一个集合可以是既开又闭，但是不能既是闭集，又不是闭集。所以我们得到了一个矛盾！所以假设错误，素数是无限的！</p>
+<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ol>
+<li><a href="https://en.wikipedia.org/wiki/Euclid%27s_theorem" target="_blank" rel="external">Euclid’s theorem</a></li>
 <li><a href="https://en.wikipedia.org/wiki/Furstenberg%27s_proof_of_the_infinitude_of_primes" target="_blank" rel="external">Furstenberg’s proof of the infinitude of primes</a></li>
 </ol>
 
@@ -587,7 +588,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -653,7 +654,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#拓扑是个啥玩意儿"><span class="nav-number">1.</span> <span class="nav-text">拓扑是个啥玩意儿</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#素数的无限性"><span class="nav-number">2.</span> <span class="nav-text">素数的无限性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#参考文献"><span class="nav-number">2.1.</span> <span class="nav-text">参考文献</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#拓扑是个啥玩意儿"><span class="nav-number">1.</span> <span class="nav-text">拓扑是个啥玩意儿</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#素数的无限性"><span class="nav-number">2.</span> <span class="nav-text">素数的无限性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考文献"><span class="nav-number">3.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
             
 
           </div>
