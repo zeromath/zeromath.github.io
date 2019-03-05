@@ -97,7 +97,7 @@
 <meta property="og:image" content="http://zeromath.github.io/2017/03/12/mac-emacs-auctex/CDLaTeX_modify.png">
 <meta property="og:image" content="http://zeromath.github.io/2017/03/12/mac-emacs-auctex/MATH_modify_ex.png">
 <meta property="og:image" content="http://zeromath.github.io/2017/03/12/mac-emacs-auctex/MATH_modify_ex2.png">
-<meta property="og:updated_time" content="2019-03-05T17:38:00.991Z">
+<meta property="og:updated_time" content="2019-03-05T17:39:45.381Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[Mac] 在 Emacs 中安装 AucTex">
 <meta name="twitter:description" content="这里总结一下在 Emacs 中安装 AucTex 和 CDLaTeX 插件的方式。">
@@ -427,7 +427,7 @@
 <li>安装 Emacs：直接搜索 Emacs，或者到<a href="https://www.gnu.org/software/emacs/" target="_blank" rel="external">这里</a>下载。</li>
 <li>安装 MacTex：到<a href="http://www.tug.org/mactex/downloading.html" target="_blank" rel="external">这里</a>下载</li>
 <li>安装 AucTex：打开 Emacs，执行 <code>M-x list-packages</code>，然后直接搜索 AucTex 这个包，按 <code>i</code> 标记，按 <code>x</code> 执行，就安装完成了</li>
-<li>安装 cdlatex：复制 <code>cdlatex.el</code> 文件内容（这里贡献一个我自己<a href="mac-emacs-auctex/cdlatex.el">用的</a>）到 <code>/Applications/Emacs.app/Contents/Resources/site-lisp/cdlatex.el</code>，然后打开 <code>.emacs</code> 加入以下代码</li>
+<li>安装 cdlatex：复制 <code>cdlatex.el</code> 文件内容（这里贡献一个我自己<a href="./cdlatex.el">用的</a>）到 <code>/Applications/Emacs.app/Contents/Resources/site-lisp/cdlatex.el</code>，然后打开 <code>.emacs</code> 加入以下代码</li>
 </ol>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">(add-hook &apos;LaTeX-mode-hook &apos;LaTeX-math-mode)</div><div class="line">(add-to-list &apos;load-path &quot;/Applications/Emacs.app/Contents/Resources/site-lisp/&quot;)</div><div class="line">(add-hook &apos;LaTeX-mode-hook &apos;turn-on-cdlatex)</div><div class="line">(autoload &apos;cdlatex-mode &quot;cdlatex&quot; &quot;CDLaTeX Mode&quot; t)</div><div class="line">(autoload &apos;turn-on-cdlatex &quot;cdlatex&quot; &quot;CDLaTeX Mode&quot; nil)</div></pre></td></tr></table></figure>
 <h1 id="简单使用教程"><a href="#简单使用教程" class="headerlink" title="简单使用教程"></a>简单使用教程</h1><h2 id="基础-Emacs-操作"><a href="#基础-Emacs-操作" class="headerlink" title="基础 Emacs 操作"></a>基础 Emacs 操作</h2><table>
