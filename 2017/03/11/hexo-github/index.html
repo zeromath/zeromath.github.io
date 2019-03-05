@@ -80,7 +80,7 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.1.0" />
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
 
 
 
@@ -96,7 +96,7 @@
 
 Here We Go！">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[Hexo]在GitHub上搭建博客(1)">
+<meta property="og:title" content="[Hexo] 在 GitHub 上搭建博客 (1)">
 <meta property="og:url" content="http://zeromath.github.io/2017/03/11/hexo-github/index.html">
 <meta property="og:site_name" content="Division By Zero">
 <meta property="og:description" content="在此整理了一下 Hexo 博客建立的方法，以下代码演示是基于 Mac 平台。Windows 平台大同小异。 当然最全面的参考自然是在 Hexo 官网。这里只是做一个小小的总结。这篇文章将要讲述：
@@ -113,9 +113,9 @@ Here We Go！">
 <meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/FILE-newpost.png">
 <meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/FILE-markdown.png">
 <meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/BLOG-updated.png">
-<meta property="og:updated_time" content="2019-03-05T05:20:59.607Z">
+<meta property="og:updated_time" content="2019-03-05T19:53:51.349Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[Hexo]在GitHub上搭建博客(1)">
+<meta name="twitter:title" content="[Hexo] 在 GitHub 上搭建博客 (1)">
 <meta name="twitter:description" content="在此整理了一下 Hexo 博客建立的方法，以下代码演示是基于 Mac 平台。Windows 平台大同小异。 当然最全面的参考自然是在 Hexo 官网。这里只是做一个小小的总结。这篇文章将要讲述：
 
 如何安装 Hexo
@@ -133,7 +133,7 @@ Here We Go！">
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -158,7 +158,7 @@ Here We Go！">
 
 
 
-  <title> [Hexo]在GitHub上搭建博客(1) | Division By Zero </title>
+  <title> [Hexo] 在 GitHub 上搭建博客 (1) | Division By Zero </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -361,7 +361,7 @@ Here We Go！">
             
             
               
-                [Hexo]在GitHub上搭建博客(1)
+                [Hexo] 在 GitHub 上搭建博客 (1)
               
             
           </h1>
@@ -429,6 +429,36 @@ Here We Go！">
 
           
 
+          
+            <div class="post-wordcount">
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article</span>
+                
+                <span title="Words count in article">
+                  887
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time</span>
+                
+                <span title="Reading time" }}">
+                  3
+                </span>
+              
+            </div>
           
 
           
@@ -515,6 +545,39 @@ Here We Go！">
     <div>
       
         
+<div class="my_post_copyright">
+  <!-- You may change any JS cdn -->
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>Title: </span><a href="/2017/03/11/hexo-github/">[Hexo] 在 GitHub 上搭建博客 (1)</a></p>
+  <p><span>Author: </span><a href="/" title="Visit Zhan Jiang's blog ">Zhan Jiang</a></p>
+  <p><span>Published: </span>03/11/2017 - 23:57</p>
+  <p><span>Last update: </span>03/05/2019 - 14:53</p>
+  <p><span>Link: </span><span class="copy-path"  title="Click to copy the link"><i class="fa fa-clipboard" data-clipboard-text="http://zeromath.github.io/2017/03/11/hexo-github/"  aria-label="Copied!"></i></span>  <a href="/2017/03/11/hexo-github/" title="[Hexo] 在 GitHub 上搭建博客 (1)">http://zeromath.github.io/2017/03/11/hexo-github/</a>
+  </p>
+  <p><span>License: </span><i class="fa fa-creative-commons"></i>  <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">Attribution-NonCommercial-NoDerivatives 4.0 International </a></p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: 'Link Copied!',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
+      
+    </div>
+
+    <div>
+      
+        
 
       
     </div>
@@ -531,9 +594,9 @@ Here We Go！">
       
         <div class="post-tags">
           
-            <a href="/tags/GitHub/" rel="tag"># GitHub</a>
+            <a href="/tags/GitHub/" rel="tag"><i class="fa fa-tag"></i> GitHub</a>
           
-            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+            <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
           
         </div>
       
@@ -633,7 +696,7 @@ Here We Go！">
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -655,7 +718,7 @@ Here We Go！">
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">9</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
@@ -671,18 +734,9 @@ Here We Go！">
               <span class="links-of-author-item">
                 <a href="http://www.zhihu.com/people/zerojz" target="_blank" title="Zhihu">
                   
-                    <i class="fa fa-fw fa-globe"></i>
+                    <i class="fa fa-fw fa-zhihu"></i>
                   
                   Zhihu
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://www-personal.umich.edu/~zoeng/" target="_blank" title="Personal Webpage">
-                  
-                    <i class="fa fa-fw fa-globe"></i>
-                  
-                  Personal Webpage
                 </a>
               </span>
             
@@ -735,7 +789,7 @@ Here We Go！">
   &copy;  2017 - 
   <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Zhan Jiang</span>
 </div>
@@ -843,7 +897,7 @@ Here We Go！">
       var disqus_shortname = 'HelloMath';
       var disqus_identifier = '2017/03/11/hexo-github/';
 
-      var disqus_title = "[Hexo]在GitHub上搭建博客(1)";
+      var disqus_title = "[Hexo] 在 GitHub 上搭建博客 (1)";
 
 
       function run_disqus_script(disqus_script) {
