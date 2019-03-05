@@ -102,7 +102,7 @@
 <meta property="og:image" content="http://zeromath.github.io/2017/03/22/hexo-github4/FILE-image.png">
 <meta property="og:image" content="http://zeromath.github.io/2017/03/22/hexo-github4/FILE-testimage.png">
 <meta property="og:image" content="http://zeromath.github.io/2017/03/22/hexo-github4/FILE-markdown.png">
-<meta property="og:updated_time" content="2017-03-25T16:35:52.000Z">
+<meta property="og:updated_time" content="2019-03-05T05:31:12.426Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[Hexo]在GitHub上搭建博客(4)">
 <meta name="twitter:description" content="这一次，我们要让我们的博客变得更加丰富多彩，首先就是给博客文章插各种各样漂亮的图片。主要包括
@@ -435,25 +435,25 @@
 <li>添加CSS支持</li>
 </ul>
 <a id="more"></a>
-<h1 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h1><p>首先我们要启用资源文件夹，打开<span style="background-color:red;color:white">站点配置文件</span> ，找到<code>Writing</code>字段：</p>
+<h1 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h1><p>首先我们要启用资源文件夹，打开<span style="background-color:red;color:white">站点配置文件</span> ，找到 <code>Writing</code> 字段：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"># Writing</div><div class="line">new_post_name: :title.md # File name of new posts</div><div class="line">default_layout: post</div><div class="line">titlecase: false # Transform title into titlecase</div><div class="line">external_link: true # Open external links in new tab</div><div class="line">filename_case: 0</div><div class="line">render_drafts: false</div><div class="line">post_asset_folder: false</div><div class="line">relative_link: false</div><div class="line">future: true</div><div class="line">highlight:</div><div class="line">  enable: true</div><div class="line">  line_number: true</div><div class="line">  auto_detect: false</div><div class="line">  tab_replace:</div></pre></td></tr></table></figure>
-<p>其中有一个参数叫做<code>post_asset_folder</code>，将它改为<code>true</code>。这样每次我们用<code>hexo new &lt;&quot;new post&quot;&gt;</code>的时候，它就会在<code>_post</code>文件夹下自动创建一个同名文件夹，所有和这篇博文相关的东西（比如图片）都可以放到哪里去，比如</p>
+<p>其中有一个参数叫做 <code>post_asset_folder</code>，将它改为 <code>true</code>。这样每次我们用 <code>hexo new &lt;&quot;new post&quot;&gt;</code> 的时候，它就会在 “_post” 文件夹下自动创建一个同名文件夹，所有和这篇博文相关的东西（比如图片）都可以放到哪里去，比如</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new test</div></pre></td></tr></table></figure>
-<p>然后<code>_post</code>文件夹下就会出现同名的文件和文件夹</p>
+<p>然后 “_post” 文件夹下就会出现同名的文件和文件夹</p>
 <p><img src="/2017/03/22/hexo-github4/FILE-image.png" alt="FILE-image"></p>
-<p>然后我们拷贝一张测试图片（<code>test-image.png</code>）到<code>test</code>文件夹里</p>
-<p><img src="/2017/03/22/hexo-github4/FILE-testimage.png" alt="FILE-testimage"><br>接着在<code>test.md</code>中写入</p>
+<p>然后我们拷贝一张测试图片（”test-image.png”）到 “test” 文件夹里</p>
+<p><img src="/2017/03/22/hexo-github4/FILE-testimage.png" alt="FILE-testimage"><br>接着在 “test.md” 中写入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">![](test/test-image.png)</div></pre></td></tr></table></figure>
 <p>效果如图</p>
 <p><img src="/2017/03/22/hexo-github4/FILE-markdown.png" alt="FILE-markdown"></p>
-<h1 id="使用CSS"><a href="#使用CSS" class="headerlink" title="使用CSS"></a>使用CSS</h1><p>因为Markdown本身是基于HTML的，所以我们只需要直接使用即可</p>
+<h1 id="使用CSS"><a href="#使用CSS" class="headerlink" title="使用CSS"></a>使用CSS</h1><p>因为 Markdown 本身是基于 HTML 的，所以我们只需要直接使用即可</p>
 <h2 id="内联使用"><a href="#内联使用" class="headerlink" title="内联使用"></a>内联使用</h2><p>比如 <span style="background-color:red;color:white">我是红底白字</span> 就是通过以下代码直接生成</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;span style=&quot;background-color:red;color:white&quot;&gt;我是红底白字&lt;/span&gt;</div></pre></td></tr></table></figure>
 <h2 id="外部使用"><a href="#外部使用" class="headerlink" title="外部使用"></a>外部使用</h2><p>Next主题会自动加载如下文件夹下的所有CSS</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;your_site&gt;/themes/next/source/css/</div></pre></td></tr></table></figure>
-<p>我们可以修改其中的<code>main.styl</code>文件，加入以下代码：</p>
+<p>我们可以修改其中的 “main.styl” 文件，加入以下代码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">// My Css</div><div class="line">// --------------------------------------------------</div><div class="line">@import &quot;_mycss/mycss&quot;;</div></pre></td></tr></table></figure>
-<p>然后创建<code>mycss</code>文件夹，在里面创建<code>mycss.css</code>。这个CSS<br>文件将会被自动加载。</p>
+<p>然后创建 “_mycss” 文件夹，在里面创建 “mycss.styl”。这个 CSS<br>文件将会被自动加载。</p>
 <hr>
 <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
 <li><a href="https://hexo.io/zh-cn/docs/asset-folders.html" target="_blank" rel="external">Hexo官方文档 - 资源文件夹</a></li>
@@ -589,7 +589,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -600,7 +600,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -611,7 +611,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>

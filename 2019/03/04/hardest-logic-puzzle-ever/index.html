@@ -93,7 +93,7 @@
 <meta property="og:url" content="http://zeromath.github.io/2019/03/04/hardest-logic-puzzle-ever/index.html">
 <meta property="og:site_name" content="Division By Zero">
 <meta property="og:description" content="首先声明这并不是一篇标题党的文章，标题中的“世上最难”不是我说的，是 wikipedia 说的。故事的开始是苦逼的博士狗们一起赶作业，然后尘锐案突然就把这个东西搬了出来，然后大家瞬间两眼放光，纷纷抛弃了作业……当然主要的讨论都是由Y. Huang和尘锐案进行的，我只是听懂并且理解了他们的做法，不过实在是很有意思，所以记录一下.">
-<meta property="og:updated_time" content="2019-03-04T22:04:51.801Z">
+<meta property="og:updated_time" content="2019-03-05T05:16:07.165Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[4068] 闲谈世上最难的逻辑问题">
 <meta name="twitter:description" content="首先声明这并不是一篇标题党的文章，标题中的“世上最难”不是我说的，是 wikipedia 说的。故事的开始是苦逼的博士狗们一起赶作业，然后尘锐案突然就把这个东西搬了出来，然后大家瞬间两眼放光，纷纷抛弃了作业……当然主要的讨论都是由Y. Huang和尘锐案进行的，我只是听懂并且理解了他们的做法，不过实在是很有意思，所以记录一下.">
@@ -434,7 +434,7 @@
 <p>我们好像几乎做完了（因为找到了 $\mathrm{P}$ 的表达式），但是又好像什么都没做（$\text{God}^{-1}$ 是个什么鬼！）</p>
 <p>我们作如下观察：</p>
 <ol>
-<li>$\mathrm{I}$ 是我们<em>自己选择</em>的解释，所以我们可以给出自己的规定，比如：$\mathrm{I}(X)=F,\mathrm{I}(Y)=T$。也就是说，God 说 X，我们就认为它说 F；God 说 Y，我们就认为它说 T。</li>
+<li>$\mathrm{I}$ 是我们<em>自己选择</em>的解释，所以我们可以给出自己的规定，比如：$\mathrm{I}(\text{X})=\text{F},\mathrm{I}(\text{Y})=\text{T}$。也就是说，God 说 X，我们就认为它说 F；God 说 Y，我们就认为它说 T。</li>
 <li>假如 $\mathrm{I}\circ \text{God }\circ \mathrm{P}$ 把 T 映射到 T ，那么它已经是个恒等映射了。因为每一步都是双射，而一共只有两个元素，只要一个元素对，另一个元素就一定是正确的。</li>
 </ol>
 <p>所以我们只需要 $\text{God}\circ \mathrm{P}(\text{T})=\mathrm{I}^{-1}(\text{T})=\text{Y}$，下面是睁大眼睛的时刻：</p>
@@ -442,26 +442,24 @@
 <p>我们来考虑一下真值表，假设神的语言是 X 代表 T，Y 代表 F:</p>
 <ul>
 <li>假如是 True 神，那么对它来说： truth 的判断是 X。所以我们的 statement 是假的，从而它要说Y。经过我们的解释函数 $\mathrm{I}$，我们得到了回答 T。</li>
-<li>假如是 False 神，那么对它来说：truth 的判断是 Y。所以我们的 statement 是真的，从而它要说Y。经过我们的解释函数 $I$，我们得到了回答 T。<br>现在我们可以把 T 换成我们想要的任何 statement $Q$ 了。</li>
+<li>假如是 False 神，那么对它来说：truth 的判断是 Y。所以我们的 statement 是真的，从而它要说Y。经过我们的解释函数 $\mathrm{I}$，我们得到了回答 T。</li>
 </ul>
-<p>比如，$Q$ = 你是 True 神</p>
-<p>延续上面的语言设定（X for T，Y for F），那么我们问神的 statement 是：你对“你是 True 神”的判断是 Y，然后</p>
+<p>现在我们可以把 T 换成我们想要的任何 statement $Q$ 了。比如，$Q$ = 你是 True 神。延续上面的语言设定（X for T，Y for F），那么我们问神的 statement 是：你对“你是 True 神”的判断是 Y，然后</p>
 <ul>
 <li>假如是 True 神，那么 $Q=\text{T}$，根据我们上面的分析，我们可以得到 T 的回答，注意这个 T 是针对 $Q$ 的判断，所以我们知道这个神就是 True 神</li>
 <li>假如是 False 神，那么 $Q=\text{F}$，所以它对 $Q$ 的判断是 X。再看我们的 statement，发现我们的 statement 也是假的，所以它要说反话，从而给出 X 的回答，而我们的翻译（注意这里是 $\mathrm{I}$ 函数而不是上面的语言设定）说 X 代表 F，所以这个不是 True 神</li>
 <li>假如是 Random 神，那么 $Q=\text{F}$。假如它选择说假话，那么和 False 神一样的推出它的回答是 X ；假如它选择说真话，那么它对 $Q$ 的判断是 Y，从而我们的 statement 是对的，所以它会说 X。但是解释函数告诉我们，这意味着 $Q$ 是假的，所以这个也不是 True 神！<br>我们看到，只有 True 神会给出 T 的回答，其余都是 F，所以接下来我们只要一个个问就行了。</li>
 </ul>
-<div span="theorem">Remark<br>我们可以看到，我们的提问方式保证了不仅仅可以无视问的是哪位神（因为总是可以得到正确的回答），而且不依赖神的语言！即使说神互相之间的语言也可以是不一样的，比如 True 神对 T 说 X，Random 神对 F 说 X，而我们可能两个神都会问到，甚至用同一个解释函数 $\mathrm{I}$ 去解释它们的回答，我们仍然可以得到正确的答案！<br></div>
+<div class="theorem">Remark<br>我们可以看到，我们的提问方式保证了不仅仅可以无视问的是哪位神（因为总是可以得到正确的回答），而且不依赖神的语言！即使说神互相之间的语言也可以是不一样的，比如 True 神对 T 说 X，Random 神对 F 说 X，而我们可能两个神都会问到，甚至用同一个解释函数 $\mathrm{I}$ 去解释它们的回答，我们仍然可以得到正确的答案！<br></div>
 
 
 <h2 id="推广问题"><a href="#推广问题" class="headerlink" title="推广问题"></a>推广问题</h2><p>上述问题中，Random 神是在回答问题前，选择接受 True 神或者 False 神的设定，再作回答。可以看到我们的答案完全可以忽略 Random 神，因为当它抛完硬币后，它就被归到 True 神或者 False 神的情况里。所以呢，Random 神很不高心，现在它要秀一下存在感：它决定通过抛硬币来决定它的回答（而不是回答方式）！也就是说，每次 Random 神给出的判断完全就是抛硬币的结果，而和你问什么完全没有关系。它完全不给出任何信息量。现在还是三次机会问三个神，请问：你还可以找到一个方法区分这三位神吗？</p>
 <h2 id="尝试解答"><a href="#尝试解答" class="headerlink" title="尝试解答"></a>尝试解答</h2><p>在 Random 神决定再也不当它们中的任何一个后，它就彻底不提供任何信息量了。那我们该怎么办呢？<br>注意：以下所有提问，均指用 $\mathrm{P}$ 函数包装过后再提问，就是当我们说提问 $Q$ 的时候，实际上我们在问 $\mathrm{P}(Q)$。</p>
 <p>我们把三个神标注成 A、B、C，考虑问 A 神这样一个 statement：“B 是 Random 神”，会发生什么？</p>
-<p>公布答案：</p>
 <ul>
 <li>假如 A 是 True/False 神，B 不是 Random 神，那么 A 会告诉你：F</li>
-<li>假如 A是 True/False 神，B 是 Random 神，那么 A 会告诉你：T</li>
-<li>假如 A是 Random 神，那么 A 会告诉你：F 或者 T</li>
+<li>假如 A 是 True/False 神，B 是 Random 神，那么 A 会告诉你：T</li>
+<li>假如 A 是 Random 神，那么 A 会告诉你：F 或者 T</li>
 </ul>
 <p>有人说，这有啥用啊？T 和 F 都会出现，你还是啥都不知道啊？且慢，让我们仔细分析一下。假如答案是 T，那么只可能是</p>
 <ul>
@@ -473,15 +471,15 @@
 <li>谁是 Random 神</li>
 <li>你是什么神</li>
 </ol>
-<p>就可以了。（具体怎么问 大家可以思考一下）</p>
+<p>就可以了。具体怎么问，大家可以自己思考一下。</p>
 <h2 id="更变态的版本"><a href="#更变态的版本" class="headerlink" title="更变态的版本"></a>更变态的版本</h2><p>我们看到，上面的解决方案依赖两点：</p>
 <ul>
 <li>你不能只问一个神</li>
 <li>你可以问同一个神两个问题</li>
 </ul>
 <p>那就自然想到，能不能给这些东西加上限制：</p>
-<p>首先想到的限制是：能不能只提问一个神？而这个限制显然是不可能的，因为运气不好可能正好抽到只提问R神，那么无论你怎么发问都无法得出任何有效信息，此题无解。</p>
-<p>那么第二个可能的限制是：能不能强制要求依次提问三个神（也即每次必须询问不同的神）？我们几个的 naive 想法是：不行，因为第一个问题只能确定 $0.5$ 个神的身份（也即是其中一个神不是 Random 神）。接下来我们必须利用这个神不是R神这一点来拷问得到所有信息。假如必须依次提问，可能出现两种情况：</p>
+<p>首先想到的限制是：能不能只提问一个神？而这个限制显然是不可能的，因为运气不好可能正好抽到只提问 Random 神，那么无论你怎么发问都无法得出任何有效信息，此题无解。</p>
+<p>那么第二个可能的限制是：能不能强制要求依次提问三个神（也即每次必须询问不同的神）？我们几个的 naive 想法是：不行，因为第一个问题只能确定 $0.5$ 个神的身份（也即是其中一个神不是 Random 神）。接下来我们必须利用这个神不是 Random 神这一点来拷问得到所有信息。假如必须依次提问，可能出现两种情况：</p>
 <ol>
 <li>先问 Random 神，再问 True/False 神，最后问 False/True 神。</li>
 <li>先问 True/False 神，再问 False/True 神，最后问到了 Random 神。</li>
@@ -616,7 +614,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">10</span>
                 <span class="site-state-item-name">posts</span>
               </a>
             </div>
@@ -627,7 +625,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">6</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">categories</span>
               </a>
             </div>
@@ -638,7 +636,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">9</span>
                 <span class="site-state-item-name">tags</span>
               </a>
             </div>
