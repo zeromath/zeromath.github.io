@@ -1363,7 +1363,7 @@ pre .javascript .function {
   font-size: 16px;
 }
 .posts-expand .post-meta {
-  margin: 3px 0 60px 0;
+  margin: 3px 0 5px 0;
   color: #999;
   font-family: 'Monda', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 12px;
@@ -1433,7 +1433,7 @@ pre .javascript .function {
   align-self: center;
 }
 .post-button {
-  margin-top: 50px;
+  margin-top: 5px;
 }
 .post-button .btn {
   color: #fff;
@@ -1508,8 +1508,8 @@ pre .javascript .function {
 }
 .posts-expand .post-eof {
   display: block;
-  margin: 80px auto 60px;
-  width: 8%;
+  margin: 40px auto 60px;
+  width: 80%;
   height: 1px;
   background: #ccc;
   text-align: center;
@@ -1749,7 +1749,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fe8a0f;
+  background: #14ff4e;
 }
 .links-of-blogroll {
   font-size: 13px;
