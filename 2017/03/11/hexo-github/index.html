@@ -1,4 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6,15 +15,11 @@
 
 
 <html class="theme-next muse use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
 
 
 
@@ -30,48 +35,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="GitHub,Hexo," />
 
 
 
@@ -80,66 +43,45 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
 
 
 
 
 
 
-<meta name="description" content="在此整理了一下 Hexo 博客建立的方法，以下代码演示是基于 Mac 平台。Windows 平台大同小异。 当然最全面的参考自然是在 Hexo 官网。这里只是做一个小小的总结。这篇文章将要讲述：
 
-如何安装 Hexo
-如何创建文章
-如何发布文章
-如何删除文章
-
-Here We Go！">
-<meta property="og:type" content="article">
-<meta property="og:title" content="[Hexo] 在 GitHub 上搭建博客 (1)">
-<meta property="og:url" content="http://zeromath.github.io/2017/03/11/hexo-github/index.html">
-<meta property="og:site_name" content="Division By Zero">
-<meta property="og:description" content="在此整理了一下 Hexo 博客建立的方法，以下代码演示是基于 Mac 平台。Windows 平台大同小异。 当然最全面的参考自然是在 Hexo 官网。这里只是做一个小小的总结。这篇文章将要讲述：
-
-如何安装 Hexo
-如何创建文章
-如何发布文章
-如何删除文章
-
-Here We Go！">
-<meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/INFO-init.png">
-<meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/INFO-server.png">
-<meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/BLOG-index.png">
-<meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/FILE-newpost.png">
-<meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/FILE-markdown.png">
-<meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/BLOG-updated.png">
-<meta property="og:updated_time" content="2019-03-05T19:53:51.349Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[Hexo] 在 GitHub 上搭建博客 (1)">
-<meta name="twitter:description" content="在此整理了一下 Hexo 博客建立的方法，以下代码演示是基于 Mac 平台。Windows 平台大同小异。 当然最全面的参考自然是在 Hexo 官网。这里只是做一个小小的总结。这篇文章将要讲述：
-
-如何安装 Hexo
-如何创建文章
-如何发布文章
-如何删除文章
-
-Here We Go！">
-<meta name="twitter:image" content="http://zeromath.github.io/2017/03/11/hexo-github/INFO-init.png">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"hide","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -151,69 +93,115 @@ Here We Go！">
 </script>
 
 
-
-  <link rel="canonical" href="http://zeromath.github.io/2017/03/11/hexo-github/"/>
-
+  
 
 
 
 
-  <title> [Hexo] 在 GitHub 上搭建博客 (1) | Division By Zero </title>
+  <meta name="description" content="在此整理了一下 Hexo 博客建立的方法，以下代码演示是基于 Mac 平台。Windows 平台大同小异。 当然最全面的参考自然是在 Hexo 官网。这里只是做一个小小的总结。这篇文章将要讲述：  如何安装 Hexo 如何创建文章 如何发布文章 如何删除文章  Here We Go！">
+<meta name="keywords" content="GitHub,Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Hexo] 在 GitHub 上搭建博客 (1)">
+<meta property="og:url" content="http://zeromath.github.io/2017/03/11/hexo-github/index.html">
+<meta property="og:site_name" content="Division By Zero">
+<meta property="og:description" content="在此整理了一下 Hexo 博客建立的方法，以下代码演示是基于 Mac 平台。Windows 平台大同小异。 当然最全面的参考自然是在 Hexo 官网。这里只是做一个小小的总结。这篇文章将要讲述：  如何安装 Hexo 如何创建文章 如何发布文章 如何删除文章  Here We Go！">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/INFO-init.png">
+<meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/INFO-server.png">
+<meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/BLOG-index.png">
+<meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/FILE-newpost.png">
+<meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/FILE-markdown.png">
+<meta property="og:image" content="http://zeromath.github.io/2017/03/11/hexo-github/BLOG-updated.png">
+<meta property="og:updated_time" content="2019-03-05T19:53:51.349Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[Hexo] 在 GitHub 上搭建博客 (1)">
+<meta name="twitter:description" content="在此整理了一下 Hexo 博客建立的方法，以下代码演示是基于 Mac 平台。Windows 平台大同小异。 当然最全面的参考自然是在 Hexo 官网。这里只是做一个小小的总结。这篇文章将要讲述：  如何安装 Hexo 如何创建文章 如何发布文章 如何删除文章  Here We Go！">
+<meta name="twitter:image" content="http://zeromath.github.io/2017/03/11/hexo-github/INFO-init.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://zeromath.github.io/2017/03/11/hexo-github/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>[Hexo] 在 GitHub 上搭建博客 (1) | Division By Zero</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   
-
-
-
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-93269879-1', 'auto');
-  ga('send', 'pageview');
-</script>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Division By Zero</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -221,112 +209,127 @@ Here We Go！">
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            Categories
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            About
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            Search
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocapitalize="off" autocomplete="off" autocorrect="off"
-             placeholder="Searching..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -339,13 +342,19 @@ Here We Go！">
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2017/03/11/hexo-github/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhan Jiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="description" content="Math is the realization of the power of abstraction.">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -357,11 +366,8 @@ Here We Go！">
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                [Hexo] 在 GitHub 上搭建博客 (1)
+          <h1 class="post-title" itemprop="name headline">[Hexo] 在 GitHub 上搭建博客 (1)
+
               
             
           </h1>
@@ -369,6 +375,11 @@ Here We Go！">
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -376,18 +387,35 @@ Here We Go！">
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-11T23:57:47-05:00">
-                2017-03-11
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2017-03-11 23:57:47" itemprop="dateCreated datePublished" datetime="2017-03-11T23:57:47-05:00">2017-03-11</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2019-03-05 14:53:51" itemprop="dateModified" datetime="2019-03-05T14:53:51-05:00">2019-03-05</time>
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -398,11 +426,7 @@ Here We Go！">
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
 
                 
                 
@@ -412,15 +436,6 @@ Here We Go！">
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/03/11/hexo-github/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/11/hexo-github/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -430,36 +445,6 @@ Here We Go！">
           
 
           
-            <div class="post-wordcount">
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article</span>
-                
-                <span title="Words count in article">
-                  887
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time</span>
-                
-                <span title="Reading time" }}">
-                  3
-                </span>
-              
-            </div>
-          
 
           
 
@@ -467,14 +452,16 @@ Here We Go！">
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
       
 
       
-        <p>在此整理了一下 Hexo 博客建立的方法，以下代码演示是基于 Mac 平台。Windows 平台大同小异。 当然最全面的参考自然是在 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="external">Hexo 官网</a>。这里只是做一个小小的总结。这篇文章将要讲述：</p>
+        <p>在此整理了一下 Hexo 博客建立的方法，以下代码演示是基于 Mac 平台。Windows 平台大同小异。 当然最全面的参考自然是在 <a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">Hexo 官网</a>。这里只是做一个小小的总结。这篇文章将要讲述：</p>
 <ul>
 <li>如何安装 Hexo</li>
 <li>如何创建文章</li>
@@ -484,35 +471,35 @@ Here We Go！">
 <p>Here We Go！</p>
 <a id="more"></a>
 <h1 id="博客初建立"><a href="#博客初建立" class="headerlink" title="博客初建立"></a>博客初建立</h1><h2 id="需要的插件"><a href="#需要的插件" class="headerlink" title="需要的插件"></a>需要的插件</h2><ol>
-<li>安装 <a href="https://git-scm.com/downloads" target="_blank" rel="external">Git</a></li>
-<li>安装 <a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a></li>
+<li>安装 <a href="https://git-scm.com/downloads" target="_blank" rel="noopener">Git</a></li>
+<li>安装 <a href="https://nodejs.org/en/" target="_blank" rel="noopener">Node.js</a></li>
 <li>安装 Hexo：</li>
 </ol>
 <p>打开终端，输入下列命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install -g hexo-cli</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
 <h2 id="安装文件"><a href="#安装文件" class="headerlink" title="安装文件"></a>安装文件</h2><p>创建一个你喜欢的文件夹，比如 <code>~/Documents/Blog</code>，这就是你博客的大本营了。定位到该文件夹下，在根目录下运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
 <p>当你看到</p>
 <p><img src="/2017/03/11/hexo-github/INFO-init.png" alt="INFO-init"></p>
 <p>就表示命令已完成。你会发现文件夹里多了好多东西，但是博客在哪里呢？</p>
 <p>我们来试运行一下，输入命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>提示</p>
-<p><img src="/2017/03/11/hexo-github/INFO-server.png" alt="INFO-server"><br>打开浏览器，访问 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>，就会见到你的博客了</p>
+<p><img src="/2017/03/11/hexo-github/INFO-server.png" alt="INFO-server"><br>打开浏览器，访问 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>，就会见到你的博客了</p>
 <p><img src="/2017/03/11/hexo-github/BLOG-index.png" alt="BLOG-index"></p>
 <p><em>Remark: 在Terminal下按下<code>Ctrl+C</code>就可以取消本地服务器了</em></p>
 <h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><h2 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h2><p>刚刚我们已经看到了博客中有一篇叫 Hello World 的文章了。这篇文章具体在哪里呢？打开 <code>&lt;你的博客目录&gt;/source/_post/</code>，你会发现下面有一个 “hello-world.md” 文件，它就是网站上的文章对应的 Markdown 文件。</p>
 <p>Hexo 的所有文章都是通过 Markdown 书写的，我们也来写一篇自己的文章好了！</p>
 <p>打开 Terminal，输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new &lt;&quot;你的文章标题&quot;&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &lt;&quot;你的文章标题&quot;&gt;</span><br></pre></td></tr></table></figure>
 <p>比如我们要写一篇测试文章，于是输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new &quot;My first test blog&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;My first test blog&quot;</span><br></pre></td></tr></table></figure>
 <p>系统会提示</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">INFO  Created: &lt;你的博客目录&gt;/source/_posts/My-first-test-blog.md</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Created: &lt;你的博客目录&gt;/source/_posts/My-first-test-blog.md</span><br></pre></td></tr></table></figure>
 <p>重新打开 <code>&lt;你的博客目录&gt;/source/_posts/</code> 目录，你会发现里面已经有了一个新的MD文件。这就是我们刚刚创建的新文章。</p>
 <p><img src="/2017/03/11/hexo-github/FILE-newpost.png" alt="FILE-newpost"></p>
 <h2 id="编写文章"><a href="#编写文章" class="headerlink" title="编写文章"></a>编写文章</h2><p>用任意编辑器（我一般用 MacDown 或者 Emacs）打开 “My-first-test-blog.md”，你会发现里面已经写好了一点东西了：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: My first test blog</div><div class="line">date: 2017-03-21 14:48:40</div><div class="line">tags:</div><div class="line">---</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: My first test blog</span><br><span class="line">date: 2017-03-21 14:48:40</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
 <p>其中：</p>
 <ul>
 <li><code>title</code> 是你最终的文章标题</li>
@@ -526,83 +513,50 @@ Here We Go！">
 <p>然后保存 MD 文件即可。</p>
 <h1 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h1><h2 id="发布到网站"><a href="#发布到网站" class="headerlink" title="发布到网站"></a>发布到网站</h2><p>文章写好了，要怎么发布呢？</p>
 <p>Terminal 定位到<code>&lt;你的博客目录&gt;</code>，然后依次输入以下命令</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>第一个命令 <code>hexo generate</code> 是生成新的文件，第二个命令是启动 server。再次打开 <a href="http://localhost:4000" target="_blank" rel="external">http://localhost:4000</a>，我们发现我们的文章已经被放上“网”了！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>第一个命令 <code>hexo generate</code> 是生成新的文件，第二个命令是启动 server。再次打开 <a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>，我们发现我们的文章已经被放上“网”了！</p>
 <p><img src="/2017/03/11/hexo-github/BLOG-updated.png" alt="BLOG-updated"></p>
 <h2 id="删除文章"><a href="#删除文章" class="headerlink" title="删除文章"></a>删除文章</h2><p>现在有没有觉得那个 <code>Hello World</code> 很扎眼，我们肯定想要删除它。重新回到 <code>&lt;你的博客目录&gt;/source/_posts/</code> 目录，找到 <code>hello-world.md</code> 文件，直接将其删除即可。</p>
 <p>有人就要问了，为什么删除了我的浏览器里还是有呢？因为我们还没有更新我们的网站，在 Terminal 下运行</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo generate</div><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
 <p>再刷新网页，是不是就没有了？</p>
 <hr>
 <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
-<li><a href="https://zhangslob.github.io/2017/02/28/%E6%95%99%E4%BD%A0%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8CHexo-Github/" target="_blank" rel="external">教你免费搭建个人博客，Hexo&amp;Github</a></li>
-<li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="external">手把手教你使用Hexo + Github Pages搭建个人独立博客</a></li>
+<li><a href="https://zhangslob.github.io/2017/02/28/%E6%95%99%E4%BD%A0%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8CHexo-Github/" target="_blank" rel="noopener">教你免费搭建个人博客，Hexo&amp;Github</a></li>
+<li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/" target="_blank" rel="noopener">手把手教你使用Hexo + Github Pages搭建个人独立博客</a></li>
 </ol>
 
       
     </div>
 
-    <div>
-      
-        
-<div class="my_post_copyright">
-  <!-- You may change any JS cdn -->
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>Title: </span><a href="/2017/03/11/hexo-github/">[Hexo] 在 GitHub 上搭建博客 (1)</a></p>
-  <p><span>Author: </span><a href="/" title="Visit Zhan Jiang's blog ">Zhan Jiang</a></p>
-  <p><span>Published: </span>03/11/2017 - 23:57</p>
-  <p><span>Last update: </span>03/05/2019 - 14:53</p>
-  <p><span>Link: </span><span class="copy-path"  title="Click to copy the link"><i class="fa fa-clipboard" data-clipboard-text="http://zeromath.github.io/2017/03/11/hexo-github/"  aria-label="Copied!"></i></span>  <a href="/2017/03/11/hexo-github/" title="[Hexo] 在 GitHub 上搭建博客 (1)">http://zeromath.github.io/2017/03/11/hexo-github/</a>
-  </p>
-  <p><span>License: </span><i class="fa fa-creative-commons"></i>  <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">Attribution-NonCommercial-NoDerivatives 4.0 International </a></p>  
-</div>
-<script> 
-    var clipboard = new Clipboard('.fa-clipboard');
-    $(".fa-clipboard").click(function(){
-      clipboard.on('success', function(){
-        swal({   
-          title: "",   
-          text: 'Link Copied!',
-          icon: "success", 
-          showConfirmButton: true
-          });
-    });
-    });  
-</script>
+    
 
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
+    
       
-    </div>
+    
+    
 
-    <div>
-      
-        
-
-      
-    </div>
-
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/GitHub/" rel="tag"><i class="fa fa-tag"></i> GitHub</a>
+            <a href="/tags/GitHub/" rel="tag"># GitHub</a>
           
-            <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
           
         </div>
       
 
       
-        
+      
       
 
       
@@ -626,31 +580,25 @@ Here We Go！">
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
-          
+
           </div>
           
 
+  
+    <div class="comments" id="gitalk-container">
+    </div>
 
-          
-  <div class="comments" id="comments">
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
+  
+
 
 
         </div>
@@ -672,95 +620,127 @@ Here We Go！">
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             Table of Contents
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             Overview
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.jpg"
-               alt="Zhan Jiang" />
-          <p class="site-author-name" itemprop="name">Zhan Jiang</p>
-           
-              <p class="site-description motion-element" itemprop="description"></p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">12</span>
-                <span class="site-state-item-name">posts</span>
-              </a>
-            </div>
-          
-
-          
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">categories</span>
-              </a>
-            </div>
-          
+              <p class="site-author-name" itemprop="name">Zhan Jiang</p>
+              <div class="site-description motion-element" itemprop="description">Math is the realization of the power of abstraction.</div>
+          </div>
 
           
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">10</span>
-                <span class="site-state-item-name">tags</span>
-              </a>
-            </div>
-          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
 
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/zerojz" target="_blank" title="Zhihu">
+              
+                
+                
+                <div class="site-state-item site-state-categories">
                   
-                    <i class="fa fa-fw fa-zhihu"></i>
+                    
+                      <a href="/categories/">
+                    
                   
-                  Zhihu
-                </a>
-              </span>
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
             
           
+          
+
         </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
@@ -768,7 +748,7 @@ Here We Go！">
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -776,6 +756,7 @@ Here We Go！">
 
     </div>
   </aside>
+  
 
 
         
@@ -784,30 +765,39 @@ Here We Go！">
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2017 - 
-  <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Zhan Jiang</span>
+
+  
+
+  
 </div>
 
 
-<div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
-</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
-<div class="theme-info">
-  Theme -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.0.1</div>
+
+
 
 
         
+
+
+
+
+
+
+
 
         
       </div>
@@ -819,12 +809,17 @@ Here We Go！">
         
       </div>
     
+
+    
+
+    
+
     
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -838,89 +833,13 @@ Here We Go！">
 
 
 
-  
 
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
 
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-
-  
-
-    <script type="text/javascript">
-      var disqus_shortname = 'HelloMath';
-      var disqus_identifier = '2017/03/11/hexo-github/';
-
-      var disqus_title = "[Hexo] 在 GitHub 上搭建博客 (1)";
-
-
-      function run_disqus_script(disqus_script) {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
-
-      run_disqus_script('count.js');
-
-      
-        var disqus_config = function () {
-            this.page.url = disqus_url;
-            this.page.identifier = disqus_identifier;
-            this.page.title = disqus_title;
-        };
-        run_disqus_script('embed.js');
-      
-
-    </script>
-  
 
 
 
@@ -932,155 +851,96 @@ Here We Go！">
 
 
   
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
   
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length == 0) {
-      search_path = "search.xml";
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.popup').toggle();
-    }
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-      $.ajax({
-        url: path,
-        dataType: "xml",
-        async: true,
-        success: function( xmlResponse ) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = $( "entry", xmlResponse ).map(function() {
-            return {
-              title: $( "title", this ).text(),
-              content: $("content",this).text(),
-              url: $( "url" , this).text()
-            };
-          }).get();
-          var $input = document.getElementById(search_id);
-          var $resultContent = document.getElementById(content_id);
-          $input.addEventListener('input', function(){
-            var matchcounts = 0;
-            var str='<ul class=\"search-result-list\">';
-            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-            $resultContent.innerHTML = "";
-            if (this.value.trim().length > 1) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var content_index = [];
-                var data_title = data.title.trim().toLowerCase();
-                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
-                var data_url = decodeURIComponent(data.url);
-                var index_title = -1;
-                var index_content = -1;
-                var first_occur = -1;
-                // only match artiles with not empty titles and contents
-                if(data_title != '') {
-                  keywords.forEach(function(keyword, i) {
-                    index_title = data_title.indexOf(keyword);
-                    index_content = data_content.indexOf(keyword);
-                    if( index_title >= 0 || index_content >= 0 ){
-                      isMatch = true;
-                      if (i == 0) {
-                        first_occur = index_content;
-                      }
-                    }
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
-                  });
-                }
-                // show search results
-                if (isMatch) {
-                  matchcounts += 1;
-                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
-                  var content = data.content.trim().replace(/<[^>]+>/g,"");
-                  if (first_occur >= 0) {
-                    // cut out 100 characters
-                    var start = first_occur - 20;
-                    var end = first_occur + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if(start == 0){
-                      end = 50;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    var match_content = content.substring(start, end);
-                    // highlight all keywords
-                    keywords.forEach(function(keyword){
-                      var regS = new RegExp(keyword, "gi");
-                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
-                    });
 
-                    str += "<p class=\"search-result\">" + match_content +"...</p>"
-                  }
-                  str += "</li>";
-                }
-              })};
-            str += "</ul>";
-            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
-            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
-            $resultContent.innerHTML = str;
-          });
-          proceedsearch();
-        }
-      });}
+  
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched == false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
 
-    $('.popup-btn-close').click(function(e){
-      $('.popup').hide();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    });
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-  </script>
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
 
 
   
   
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '3c0d7862ecaf3793c7cd',
+    clientSecret: 'f971d4422a805fc1a0562166ad5105997ff3be2a',
+    repo: 'zeromath.github.io',
+    owner: 'zeromath',
+    admin: ['zeromath'],
+    id: md5(location.pathname),
+    
+      language: window.navigator.language || window.navigator.userLanguage,
+    
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
   
 
 
@@ -1090,6 +950,17 @@ Here We Go！">
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 

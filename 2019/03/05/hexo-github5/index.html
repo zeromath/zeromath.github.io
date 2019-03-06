@@ -1,4 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6,15 +15,11 @@
 
 
 <html class="theme-next muse use-motion" lang="en">
-<head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
 
 
 
@@ -30,48 +35,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-  
-  
-  
-  
-
-  
-    
-    
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-    
-    
-    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-  
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="GitHub,Hexo," />
 
 
 
@@ -80,64 +43,45 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.0" />
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.0.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.0.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.0.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.0.1" color="#222">
 
 
 
 
 
 
-<meta name="description" content="这里记录一些繁琐但是有趣的 next 主题修改方法
 
-修改文章底部 # 号标签
-设置网站的图标 Favicon
-实现统计字数/阅读时间功能
-在文章底部增加版权信息
-修改网页页脚的作者符号">
-<meta property="og:type" content="article">
-<meta property="og:title" content="[Hexo] 在 GitHub 上搭建博客 (5)">
-<meta property="og:url" content="http://zeromath.github.io/2019/03/05/hexo-github5/index.html">
-<meta property="og:site_name" content="Division By Zero">
-<meta property="og:description" content="这里记录一些繁琐但是有趣的 next 主题修改方法
-
-修改文章底部 # 号标签
-设置网站的图标 Favicon
-实现统计字数/阅读时间功能
-在文章底部增加版权信息
-修改网页页脚的作者符号">
-<meta property="og:image" content="http://zeromath.github.io/2019/03/05/hexo-github5/tag.png">
-<meta property="og:image" content="http://zeromath.github.io/2019/03/05/hexo-github5/favicon.png">
-<meta property="og:image" content="http://zeromath.github.io/2019/03/05/hexo-github5/wordcount.png">
-<meta property="og:image" content="http://zeromath.github.io/2019/03/05/hexo-github5/copyright.png">
-<meta property="og:image" content="http://zeromath.github.io/2019/03/05/hexo-github5/copyright-tag.png">
-<meta property="og:image" content="http://zeromath.github.io/2019/03/05/hexo-github5/copyright-temp.png">
-<meta property="og:image" content="http://zeromath.github.io/2019/03/05/hexo-github5/footer-tag.png">
-<meta property="og:updated_time" content="2019-03-05T20:49:34.968Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[Hexo] 在 GitHub 上搭建博客 (5)">
-<meta name="twitter:description" content="这里记录一些繁琐但是有趣的 next 主题修改方法
-
-修改文章底部 # 号标签
-设置网站的图标 Favicon
-实现统计字数/阅读时间功能
-在文章底部增加版权信息
-修改网页页脚的作者符号">
-<meta name="twitter:image" content="http://zeromath.github.io/2019/03/05/hexo-github5/tag.png">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
+<script id="hexo.configurations">
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
     scheme: 'Muse',
-    sidebar: {"position":"left","display":"hide","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
-    fancybox: true,
-    motion: true,
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
+    version: '7.0.1',
+    sidebar: {"position":"left","display":"hide","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -149,69 +93,116 @@
 </script>
 
 
-
-  <link rel="canonical" href="http://zeromath.github.io/2019/03/05/hexo-github5/"/>
-
+  
 
 
 
 
-  <title> [Hexo] 在 GitHub 上搭建博客 (5) | Division By Zero </title>
+  <meta name="description" content="这里记录一些繁琐但是有趣的 next 主题修改方法  修改文章底部 # 号标签 设置网站的图标 Favicon 实现统计字数/阅读时间功能 在文章底部增加版权信息 修改网页页脚的作者符号">
+<meta name="keywords" content="GitHub,Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Hexo] 在 GitHub 上搭建博客 (5)">
+<meta property="og:url" content="http://zeromath.github.io/2019/03/05/hexo-github5/index.html">
+<meta property="og:site_name" content="Division By Zero">
+<meta property="og:description" content="这里记录一些繁琐但是有趣的 next 主题修改方法  修改文章底部 # 号标签 设置网站的图标 Favicon 实现统计字数/阅读时间功能 在文章底部增加版权信息 修改网页页脚的作者符号">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="http://zeromath.github.io/2019/03/05/hexo-github5/tag.png">
+<meta property="og:image" content="http://zeromath.github.io/2019/03/05/hexo-github5/favicon.png">
+<meta property="og:image" content="http://zeromath.github.io/2019/03/05/hexo-github5/wordcount.png">
+<meta property="og:image" content="http://zeromath.github.io/2019/03/05/hexo-github5/copyright.png">
+<meta property="og:image" content="http://zeromath.github.io/2019/03/05/hexo-github5/copyright-tag.png">
+<meta property="og:image" content="http://zeromath.github.io/2019/03/05/hexo-github5/copyright-temp.png">
+<meta property="og:image" content="http://zeromath.github.io/2019/03/05/hexo-github5/footer-tag.png">
+<meta property="og:updated_time" content="2019-03-05T20:49:34.968Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[Hexo] 在 GitHub 上搭建博客 (5)">
+<meta name="twitter:description" content="这里记录一些繁琐但是有趣的 next 主题修改方法  修改文章底部 # 号标签 设置网站的图标 Favicon 实现统计字数/阅读时间功能 在文章底部增加版权信息 修改网页页脚的作者符号">
+<meta name="twitter:image" content="http://zeromath.github.io/2019/03/05/hexo-github5/tag.png">
+
+
+
+
+
+
+  <link rel="canonical" href="http://zeromath.github.io/2019/03/05/hexo-github5/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>[Hexo] 在 GitHub 上搭建博客 (5) | Division By Zero</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
 
   
-
-
-
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-93269879-1', 'auto');
-  ga('send', 'pageview');
-</script>
-
-
-
-
-
-
-
-
-
-
-
-  
   
     
   
 
-  <div class="container one-collumn sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
+  <div class="site-meta">
     
 
     <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
+      <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
         <span class="site-title">Division By Zero</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="Toggle navigation bar">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -219,112 +210,127 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
-            
-            Categories
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
-            
-            About
-          </a>
-        </li>
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
       
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
 
       
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            Search
-          </a>
-        </li>
       
     </ul>
   
 
   
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocapitalize="off" autocomplete="off" autocorrect="off"
-             placeholder="Searching..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
+    
 
+  
 
-
-    </div>
   
 </nav>
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -337,13 +343,19 @@
   
   
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://zeromath.github.io/2019/03/05/hexo-github5/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Zhan Jiang">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="description" content="Math is the realization of the power of abstraction.">
+      <meta itemprop="image" content="/images/avatar.gif">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -355,11 +367,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                [Hexo] 在 GitHub 上搭建博客 (5)
+          <h1 class="post-title" itemprop="name headline">[Hexo] 在 GitHub 上搭建博客 (5)
+
               
             
           </h1>
@@ -367,6 +376,11 @@
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -374,18 +388,23 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-05T13:22:52-05:00">
-                2019-03-05
-              </time>
+
+              
+                
+              
+
+              <time title="Created: 2019-03-05 13:22:52 / Modified: 15:49:34" itemprop="dateCreated datePublished" datetime="2019-03-05T13:22:52-05:00">2019-03-05</time>
             
 
             
+              
 
+              
             
           </span>
 
           
-            <span class="post-category" >
+            <span class="post-category">
             
               <span class="post-meta-divider">|</span>
             
@@ -396,11 +415,7 @@
                 <span class="post-meta-item-text">In</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Hexo/" itemprop="url" rel="index">
-                    <span itemprop="name">Hexo</span>
-                  </a>
-                </span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
 
                 
                 
@@ -410,15 +425,6 @@
 
           
             
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2019/03/05/hexo-github5/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/03/05/hexo-github5/" itemprop="commentCount"></span>
-                </a>
-              </span>
             
           
 
@@ -428,36 +434,6 @@
           
 
           
-            <div class="post-wordcount">
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article</span>
-                
-                <span title="Words count in article">
-                  1.2k
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time</span>
-                
-                <span title="Reading time" }}">
-                  6
-                </span>
-              
-            </div>
-          
 
           
 
@@ -465,7 +441,9 @@
       </header>
     
 
-
+    
+    
+    
     <div class="post-body" itemprop="articleBody">
 
       
@@ -485,100 +463,67 @@
 <h3 id="修改方法"><a href="#修改方法" class="headerlink" title="修改方法"></a>修改方法</h3><p>修改模板 “/themes/next/layout/_macro/post.swig”，搜索 <code>rel=&quot;tag&quot;&gt;#</code>，将 <code>#</code> 换成 <code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code></p>
 <h2 id="设置网站的图标-Favicon"><a href="#设置网站的图标-Favicon" class="headerlink" title="设置网站的图标 Favicon"></a>设置网站的图标 Favicon</h2><h3 id="实现效果-1"><a href="#实现效果-1" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="/2019/03/05/hexo-github5/favicon.png" alt="favicon"></p>
 <h3 id="修改方法-1"><a href="#修改方法-1" class="headerlink" title="修改方法"></a>修改方法</h3><p>找一张 32*32 的 ico 图标，并将图标名称改为 “favicon.ico”，然后把图标放在 “/themes/next/source/images” 里，并且修改<span style="background-color:blue;color:white">主题配置文件</span>为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># Put your favicon.ico into `hexo-site/source/` directory.</div><div class="line">favicon: images/favicon.ico</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Put your favicon.ico into `hexo-site/source/` directory.</span><br><span class="line">favicon: images/favicon.ico</span><br></pre></td></tr></table></figure>
 <h2 id="实现统计字数-阅读时间功能"><a href="#实现统计字数-阅读时间功能" class="headerlink" title="实现统计字数/阅读时间功能"></a>实现统计字数/阅读时间功能</h2><h3 id="实现效果-2"><a href="#实现效果-2" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="/2019/03/05/hexo-github5/wordcount.png" alt="wordcount"></p>
-<h3 id="修改方法-2"><a href="#修改方法-2" class="headerlink" title="修改方法"></a>修改方法</h3><p>在根目录下安装 “hexo-wordcount”，运行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-wordcount --save</div></pre></td></tr></table></figure></p>
+<h3 id="修改方法-2"><a href="#修改方法-2" class="headerlink" title="修改方法"></a>修改方法</h3><p>在根目录下安装 “hexo-wordcount”，运行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure></p>
 <p>然后在<span style="background-color:blue;color:white">主题配置文件</span>中，配置如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"># Post wordcount display settings</div><div class="line"># Dependencies: https://github.com/willin/hexo-wordcount</div><div class="line">post_wordcount:</div><div class="line">  item_text: true</div><div class="line">  wordcount: true</div><div class="line">  min2read: true</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Post wordcount display settings</span><br><span class="line"># Dependencies: https://github.com/willin/hexo-wordcount</span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true</span><br><span class="line">  min2read: true</span><br></pre></td></tr></table></figure>
 <h2 id="在文章底部增加版权信息"><a href="#在文章底部增加版权信息" class="headerlink" title="在文章底部增加版权信息"></a>在文章底部增加版权信息</h2><h3 id="实现效果-3"><a href="#实现效果-3" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="/2019/03/05/hexo-github5/copyright.png" alt="copyright"></p>
 <h3 id="修改方法-3"><a href="#修改方法-3" class="headerlink" title="修改方法"></a>修改方法</h3><p><strong>Step 1:</strong> 在目录 “next/layout/_macro/“ 下新建 “my-copyright.swig”</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line">&#123;% if page.copyright %&#125;</div><div class="line">&lt;div class=&quot;my_post_copyright&quot;&gt;</div><div class="line">  &lt;!-- You may change any JS cdn --&gt;</div><div class="line">  &lt;script src=&quot;//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;script src=&quot;https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;script src=&quot;https://unpkg.com/sweetalert/dist/sweetalert.min.js&quot;&gt;&lt;/script&gt;</div><div class="line">  &lt;p&gt;&lt;span&gt;Title: &lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot;&gt;&#123;&#123; page.title &#125;&#125;&lt;/a&gt;&lt;/p&gt;</div><div class="line">  &lt;p&gt;&lt;span&gt;Author: &lt;/span&gt;&lt;a href=&quot;/&quot; title=&quot;Visit &#123;&#123; theme.author &#125;&#125;&apos;s blog &quot;&gt;&#123;&#123; theme.author &#125;&#125;&lt;/a&gt;&lt;/p&gt;</div><div class="line">  &lt;p&gt;&lt;span&gt;Published: &lt;/span&gt;&#123;&#123; page.date.format(&quot;MM/DD/YYYY - HH:mm&quot;) &#125;&#125;&lt;/p&gt;</div><div class="line">  &lt;p&gt;&lt;span&gt;Last update: &lt;/span&gt;&#123;&#123; page.updated.format(&quot;MM/DD/YYYY - HH:mm&quot;) &#125;&#125;&lt;/p&gt;</div><div class="line">  &lt;p&gt;&lt;span&gt;Link: &lt;/span&gt;&lt;span class=&quot;copy-path&quot;  title=&quot;Click to copy the link&quot;&gt;&lt;i class=&quot;fa fa-clipboard&quot; data-clipboard-text=&quot;&#123;&#123; page.permalink &#125;&#125;&quot;  aria-label=&quot;Copied!&quot;&gt;&lt;/i&gt;&lt;/span&gt;  &lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot; title=&quot;&#123;&#123; page.title &#125;&#125;&quot;&gt;&#123;&#123; page.permalink &#125;&#125;&lt;/a&gt;</div><div class="line">  &lt;/p&gt;</div><div class="line">  &lt;p&gt;&lt;span&gt;License: &lt;/span&gt;&lt;i class=&quot;fa fa-creative-commons&quot;&gt;&lt;/i&gt;  &lt;a rel=&quot;license&quot; href=&quot;https://creativecommons.org/licenses/by-nc-nd/4.0/&quot; target=&quot;_blank&quot; title=&quot;Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)&quot;&gt;Attribution-NonCommercial-NoDerivatives 4.0 International &lt;/a&gt;&lt;/p&gt;  </div><div class="line">&lt;/div&gt;</div><div class="line">&lt;script&gt; </div><div class="line">    var clipboard = new Clipboard(&apos;.fa-clipboard&apos;);</div><div class="line">    $(&quot;.fa-clipboard&quot;).click(function()&#123;</div><div class="line">      clipboard.on(&apos;success&apos;, function()&#123;</div><div class="line">        swal(&#123;   </div><div class="line">          title: &quot;&quot;,   </div><div class="line">          text: &apos;Link Copied!&apos;,</div><div class="line">          icon: &quot;success&quot;, </div><div class="line">          showConfirmButton: true</div><div class="line">          &#125;);</div><div class="line">    &#125;);</div><div class="line">    &#125;);  </div><div class="line">&lt;/script&gt;</div><div class="line">&#123;% endif %&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if page.copyright %&#125;</span><br><span class="line">&lt;div class=&quot;my_post_copyright&quot;&gt;</span><br><span class="line">  &lt;!-- You may change any JS cdn --&gt;</span><br><span class="line">  &lt;script src=&quot;//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;script src=&quot;https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;script src=&quot;https://unpkg.com/sweetalert/dist/sweetalert.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;Title: &lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot;&gt;&#123;&#123; page.title &#125;&#125;&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;Author: &lt;/span&gt;&lt;a href=&quot;/&quot; title=&quot;Visit &#123;&#123; theme.author &#125;&#125;&apos;s blog &quot;&gt;&#123;&#123; theme.author &#125;&#125;&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;Published: &lt;/span&gt;&#123;&#123; page.date.format(&quot;MM/DD/YYYY - HH:mm&quot;) &#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;Last update: &lt;/span&gt;&#123;&#123; page.updated.format(&quot;MM/DD/YYYY - HH:mm&quot;) &#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;Link: &lt;/span&gt;&lt;span class=&quot;copy-path&quot;  title=&quot;Click to copy the link&quot;&gt;&lt;i class=&quot;fa fa-clipboard&quot; data-clipboard-text=&quot;&#123;&#123; page.permalink &#125;&#125;&quot;  aria-label=&quot;Copied!&quot;&gt;&lt;/i&gt;&lt;/span&gt;  &lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot; title=&quot;&#123;&#123; page.title &#125;&#125;&quot;&gt;&#123;&#123; page.permalink &#125;&#125;&lt;/a&gt;</span><br><span class="line">  &lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;License: &lt;/span&gt;&lt;i class=&quot;fa fa-creative-commons&quot;&gt;&lt;/i&gt;  &lt;a rel=&quot;license&quot; href=&quot;https://creativecommons.org/licenses/by-nc-nd/4.0/&quot; target=&quot;_blank&quot; title=&quot;Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)&quot;&gt;Attribution-NonCommercial-NoDerivatives 4.0 International &lt;/a&gt;&lt;/p&gt;  </span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script&gt; </span><br><span class="line">    var clipboard = new Clipboard(&apos;.fa-clipboard&apos;);</span><br><span class="line">    $(&quot;.fa-clipboard&quot;).click(function()&#123;</span><br><span class="line">      clipboard.on(&apos;success&apos;, function()&#123;</span><br><span class="line">        swal(&#123;   </span><br><span class="line">          title: &quot;&quot;,   </span><br><span class="line">          text: &apos;Link Copied!&apos;,</span><br><span class="line">          icon: &quot;success&quot;, </span><br><span class="line">          showConfirmButton: true</span><br><span class="line">          &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">    &#125;);  </span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>Step 2:</strong> 修改 “next/layout/_macro/post.swig”，在代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">      &#123;% if not is_index %&#125;</div><div class="line">        &#123;% include &apos;wechat-subscriber.swig&apos; %&#125;</div><div class="line">      &#123;% endif %&#125;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">      &#123;% if not is_index %&#125;</span><br><span class="line">        &#123;% include &apos;wechat-subscriber.swig&apos; %&#125;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 <p>之前添加增加如下代码：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&lt;div&gt;</div><div class="line">      &#123;% if not is_index %&#125;</div><div class="line">        &#123;% include &apos;my-copyright.swig&apos; %&#125;</div><div class="line">      &#123;% endif %&#125;</div><div class="line">&lt;/div&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">      &#123;% if not is_index %&#125;</span><br><span class="line">        &#123;% include &apos;my-copyright.swig&apos; %&#125;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
 <p><strong>Step 3:</strong> 在目录 “next/source/css/_common/components/post/“ 下添加 “my-post-copyright.styl”</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div></pre></td><td class="code"><pre><div class="line">.my_post_copyright &#123;</div><div class="line">  width: 90%;</div><div class="line">  max-width: 45em;</div><div class="line">  margin: 2.8em auto 0;</div><div class="line">  padding: 0.5em 1.0em;</div><div class="line">  border: 1px solid #d3d3d3;</div><div class="line">  font-size: 0.93rem;</div><div class="line">  line-height: 1.6em;</div><div class="line">  word-break: break-all;</div><div class="line">  background: rgba(255,255,255,0.4);</div><div class="line">&#125;</div><div class="line">.my_post_copyright p&#123;margin:0;&#125;</div><div class="line">.my_post_copyright span &#123;</div><div class="line">  display: inline-block;</div><div class="line">  width: 7em;</div><div class="line">  color: #b5b5b5;</div><div class="line">  font-weight: bold;</div><div class="line">&#125;</div><div class="line">.my_post_copyright .raw &#123;</div><div class="line">  margin-left: 1em;</div><div class="line">  width: 5em;</div><div class="line">&#125;</div><div class="line">.my_post_copyright a &#123;</div><div class="line">  color: #808080;</div><div class="line">  border-bottom:0;</div><div class="line">&#125;</div><div class="line">.my_post_copyright a:hover &#123;</div><div class="line">  color: #a3d2a3;</div><div class="line">  text-decoration: underline;</div><div class="line">&#125;</div><div class="line">.my_post_copyright:hover .fa-clipboard &#123;</div><div class="line">  color: #000;</div><div class="line">&#125;</div><div class="line">.my_post_copyright .post-url:hover &#123;</div><div class="line">  font-weight: normal;</div><div class="line">&#125;</div><div class="line">.my_post_copyright .copy-path &#123;</div><div class="line">  margin-left: 0em;</div><div class="line">  width: 1em;</div><div class="line">  +mobile()&#123;display:none;&#125;</div><div class="line">&#125;</div><div class="line">.my_post_copyright .copy-path:hover &#123;</div><div class="line">  color: #808080;</div><div class="line">  cursor: pointer;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><strong>Step 4:</strong> 修改 “next/source/css/_common/components/post/post.styl” 文件，在最后一行增加代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@import &quot;my-post-copyright&quot;;</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">.my_post_copyright &#123;</span><br><span class="line">  width: 90%;</span><br><span class="line">  max-width: 45em;</span><br><span class="line">  margin: 2.8em auto 0;</span><br><span class="line">  padding: 0.5em 1.0em;</span><br><span class="line">  border: 1px solid #d3d3d3;</span><br><span class="line">  font-size: 0.93rem;</span><br><span class="line">  line-height: 1.6em;</span><br><span class="line">  word-break: break-all;</span><br><span class="line">  background: rgba(255,255,255,0.4);</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright p&#123;margin:0;&#125;</span><br><span class="line">.my_post_copyright span &#123;</span><br><span class="line">  display: inline-block;</span><br><span class="line">  width: 7em;</span><br><span class="line">  color: #b5b5b5;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright .raw &#123;</span><br><span class="line">  margin-left: 1em;</span><br><span class="line">  width: 5em;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright a &#123;</span><br><span class="line">  color: #808080;</span><br><span class="line">  border-bottom:0;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright a:hover &#123;</span><br><span class="line">  color: #a3d2a3;</span><br><span class="line">  text-decoration: underline;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright:hover .fa-clipboard &#123;</span><br><span class="line">  color: #000;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright .post-url:hover &#123;</span><br><span class="line">  font-weight: normal;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright .copy-path &#123;</span><br><span class="line">  margin-left: 0em;</span><br><span class="line">  width: 1em;</span><br><span class="line">  +mobile()&#123;display:none;&#125;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright .copy-path:hover &#123;</span><br><span class="line">  color: #808080;</span><br><span class="line">  cursor: pointer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Step 4:</strong> 修改 “next/source/css/_common/components/post/post.styl” 文件，在最后一行增加代码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;my-post-copyright&quot;;</span><br></pre></td></tr></table></figure></p>
 <p>如果要在某篇博文下面增加版权信息的显示，需要在 markdown 文件中增加 <code>copyright: true</code> 的设置，比如：<br><img src="/2019/03/05/hexo-github5/copyright-tag.png" alt="copyright-tag"></p>
 <p><strong>Step 5:</strong> 最后，假如你觉得每次都要输入 <code>copyright: true</code> 很麻烦的话，那你可以在 “/scaffolds/post.md” 文件中添加：<br><img src="/2019/03/05/hexo-github5/copyright-temp.png" alt="copyright-temp"></p>
 <p>这样每次新建一个文章 (<code>hexo new</code>) 之后，生成的 markdown 文件会自动把 <code>copyright: true</code> 加到里面去。</p>
 <h2 id="修改网页页脚的作者符号"><a href="#修改网页页脚的作者符号" class="headerlink" title="修改网页页脚的作者符号"></a>修改网页页脚的作者符号</h2><h3 id="实现效果-4"><a href="#实现效果-4" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="/2019/03/05/hexo-github5/footer-tag.png" alt="footer-tag"></p>
 <h3 id="修改方法-4"><a href="#修改方法-4" class="headerlink" title="修改方法"></a>修改方法</h3><p>打开<span style="background-color:blue;color:white">主题配置文件</span>，找到：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"># icon between year and author @Footer</div><div class="line">authoricon: heart</div></pre></td></tr></table></figure>
-<p>这里 <code>heart</code> 代表的是 <code>fa fa-heart</code>。在 <a href="https://fontawesome.com/icons?from=io" target="_blank" rel="external">Fontawesome</a> 中找到你自己喜欢的图标，然后修改 <code>heart</code> 的部分就可以了。比如上述效果就是改成 <code>user</code>。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># icon between year and author @Footer</span><br><span class="line">authoricon: heart</span><br></pre></td></tr></table></figure>
+<p>这里 <code>heart</code> 代表的是 <code>fa fa-heart</code>。在 <a href="https://fontawesome.com/icons?from=io" target="_blank" rel="noopener">Fontawesome</a> 中找到你自己喜欢的图标，然后修改 <code>heart</code> 的部分就可以了。比如上述效果就是改成 <code>user</code>。</p>
 <p><em>Remark: 这部分代码在 “themes/next/layout/_partials/footer.swig” 中被如下方式使用:</em></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;span class=&quot;with-love&quot;&gt;</div><div class="line">	&lt;i class=&quot;fa fa-&#123;&#123; theme.authoricon &#125;&#125;&quot;&gt;&lt;/i&gt;</div><div class="line">&lt;/span&gt;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;span class=&quot;with-love&quot;&gt;</span><br><span class="line">	&lt;i class=&quot;fa fa-&#123;&#123; theme.authoricon &#125;&#125;&quot;&gt;&lt;/i&gt;</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
 <p><em>假如想要使用一些 <code>fab/fas</code> 开头的图标，可以直接在这里修改。</em></p>
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
-<li><a href="https://segmentfault.com/a/1190000009544924" target="_blank" rel="external">hexo的next主题个性化配置教程</a></li>
-<li><a href="https://stackoverflow.com/questions/30291588/add-favicon-to-hexo-blog" target="_blank" rel="external">Add Favicon to Hexo Blog</a></li>
+<li><a href="https://segmentfault.com/a/1190000009544924" target="_blank" rel="noopener">hexo的next主题个性化配置教程</a></li>
+<li><a href="https://stackoverflow.com/questions/30291588/add-favicon-to-hexo-blog" target="_blank" rel="noopener">Add Favicon to Hexo Blog</a></li>
 </ol>
 
       
     </div>
 
-    <div>
-      
-        
-<div class="my_post_copyright">
-  <!-- You may change any JS cdn -->
-  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-  <p><span>Title: </span><a href="/2019/03/05/hexo-github5/">[Hexo] 在 GitHub 上搭建博客 (5)</a></p>
-  <p><span>Author: </span><a href="/" title="Visit Zhan Jiang's blog ">Zhan Jiang</a></p>
-  <p><span>Published: </span>03/05/2019 - 13:22</p>
-  <p><span>Last update: </span>03/05/2019 - 15:49</p>
-  <p><span>Link: </span><span class="copy-path"  title="Click to copy the link"><i class="fa fa-clipboard" data-clipboard-text="http://zeromath.github.io/2019/03/05/hexo-github5/"  aria-label="Copied!"></i></span>  <a href="/2019/03/05/hexo-github5/" title="[Hexo] 在 GitHub 上搭建博客 (5)">http://zeromath.github.io/2019/03/05/hexo-github5/</a>
-  </p>
-  <p><span>License: </span><i class="fa fa-creative-commons"></i>  <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">Attribution-NonCommercial-NoDerivatives 4.0 International </a></p>  
-</div>
-<script> 
-    var clipboard = new Clipboard('.fa-clipboard');
-    $(".fa-clipboard").click(function(){
-      clipboard.on('success', function(){
-        swal({   
-          title: "",   
-          text: 'Link Copied!',
-          icon: "success", 
-          showConfirmButton: true
-          });
-    });
-    });  
-</script>
+    
 
-      
-    </div>
+    
+    
+    
 
-    <div>
-      
-        
+    
 
+    
       
-    </div>
+    
+    
 
-    <div>
-      
-        
-
-      
-    </div>
-
+    
 
     <footer class="post-footer">
       
         <div class="post-tags">
           
-            <a href="/tags/GitHub/" rel="tag"><i class="fa fa-tag"></i> GitHub</a>
+            <a href="/tags/GitHub/" rel="tag"># GitHub</a>
           
-            <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
           
         </div>
       
 
       
-        
+      
       
 
       
@@ -606,31 +551,25 @@
       
       
     </footer>
+  </div>
+  
+  
+  
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
-          
+
           </div>
           
 
+  
+    <div class="comments" id="gitalk-container">
+    </div>
 
-          
-  <div class="comments" id="comments">
-    
-      <div id="disqus_thread">
-        <noscript>
-          Please enable JavaScript to view the
-          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
-        </noscript>
-      </div>
-    
-  </div>
+  
+
 
 
         </div>
@@ -652,95 +591,127 @@
 
       
         <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
             Table of Contents
           </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
             Overview
           </li>
         </ul>
       
 
-      <section class="site-overview sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" itemprop="image"
-               src="/images/avatar.jpg"
-               alt="Zhan Jiang" />
-          <p class="site-author-name" itemprop="name">Zhan Jiang</p>
-           
-              <p class="site-description motion-element" itemprop="description"></p>
-          
-        </div>
-        <nav class="site-state motion-element">
-
-          
-            <div class="site-state-item site-state-posts">
-              <a href="/archives">
-                <span class="site-state-item-count">12</span>
-                <span class="site-state-item-name">posts</span>
-              </a>
-            </div>
-          
-
-          
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-            
-            <div class="site-state-item site-state-categories">
-              <a href="/categories/index.html">
-                <span class="site-state-item-count">5</span>
-                <span class="site-state-item-name">categories</span>
-              </a>
-            </div>
-          
+              <p class="site-author-name" itemprop="name">Zhan Jiang</p>
+              <div class="site-description motion-element" itemprop="description">Math is the realization of the power of abstraction.</div>
+          </div>
 
           
-            
-            
-            <div class="site-state-item site-state-tags">
-              <a href="/tags/index.html">
-                <span class="site-state-item-count">10</span>
-                <span class="site-state-item-name">tags</span>
-              </a>
-            </div>
-          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">12</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
 
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="http://www.zhihu.com/people/zerojz" target="_blank" title="Zhihu">
+              
+                
+                
+                <div class="site-state-item site-state-categories">
                   
-                    <i class="fa fa-fw fa-zhihu"></i>
+                    
+                      <a href="/categories/">
+                    
                   
-                  Zhihu
-                </a>
-              </span>
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">5</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
             
           
+          
+
         </div>
-
-        
-        
-
-        
-        
-
-        
-
-
-      </section>
+      </div>
 
       
       <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
           <div class="post-toc">
 
             
-              
+            
+            
             
 
             
@@ -748,7 +719,7 @@
             
 
           </div>
-        </section>
+        </div>
       <!--/noindex-->
       
 
@@ -756,6 +727,7 @@
 
     </div>
   </aside>
+  
 
 
         
@@ -764,30 +736,39 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright" >
-  
-  &copy;  2017 - 
-  <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Zhan Jiang</span>
+
+  
+
+  
 </div>
 
 
-<div class="powered-by">
-  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
-</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
-<div class="theme-info">
-  Theme -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT.Muse
-  </a>
-</div>
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.0.1</div>
+
+
 
 
         
+
+
+
+
+
+
+
 
         
       </div>
@@ -799,12 +780,17 @@
         
       </div>
     
+
+    
+
+    
+
     
   </div>
 
   
 
-<script type="text/javascript">
+<script>
   if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
     window.Promise = null;
   }
@@ -818,89 +804,13 @@
 
 
 
-  
 
 
 
 
-  
-  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-
-  
-  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-
-  
-  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-
-  
-  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.0"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.0"></script>
 
 
 
-  
-  
-
-  
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
-
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.0"></script>
-
-
-
-  
-
-
-
-  
-
-    <script type="text/javascript">
-      var disqus_shortname = 'HelloMath';
-      var disqus_identifier = '2019/03/05/hexo-github5/';
-
-      var disqus_title = "[Hexo] 在 GitHub 上搭建博客 (5)";
-
-
-      function run_disqus_script(disqus_script) {
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
-
-      run_disqus_script('count.js');
-
-      
-        var disqus_config = function () {
-            this.page.url = disqus_url;
-            this.page.identifier = disqus_identifier;
-            this.page.title = disqus_title;
-        };
-        run_disqus_script('embed.js');
-      
-
-    </script>
-  
 
 
 
@@ -912,155 +822,96 @@
 
 
   
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
   
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length == 0) {
-      search_path = "search.xml";
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
 
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.popup').toggle();
-    }
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-      $.ajax({
-        url: path,
-        dataType: "xml",
-        async: true,
-        success: function( xmlResponse ) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = $( "entry", xmlResponse ).map(function() {
-            return {
-              title: $( "title", this ).text(),
-              content: $("content",this).text(),
-              url: $( "url" , this).text()
-            };
-          }).get();
-          var $input = document.getElementById(search_id);
-          var $resultContent = document.getElementById(content_id);
-          $input.addEventListener('input', function(){
-            var matchcounts = 0;
-            var str='<ul class=\"search-result-list\">';
-            var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
-            $resultContent.innerHTML = "";
-            if (this.value.trim().length > 1) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var content_index = [];
-                var data_title = data.title.trim().toLowerCase();
-                var data_content = data.content.trim().replace(/<[^>]+>/g,"").toLowerCase();
-                var data_url = decodeURIComponent(data.url);
-                var index_title = -1;
-                var index_content = -1;
-                var first_occur = -1;
-                // only match artiles with not empty titles and contents
-                if(data_title != '') {
-                  keywords.forEach(function(keyword, i) {
-                    index_title = data_title.indexOf(keyword);
-                    index_content = data_content.indexOf(keyword);
-                    if( index_title >= 0 || index_content >= 0 ){
-                      isMatch = true;
-                      if (i == 0) {
-                        first_occur = index_content;
-                      }
-                    }
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
 
-                  });
-                }
-                // show search results
-                if (isMatch) {
-                  matchcounts += 1;
-                  str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
-                  var content = data.content.trim().replace(/<[^>]+>/g,"");
-                  if (first_occur >= 0) {
-                    // cut out 100 characters
-                    var start = first_occur - 20;
-                    var end = first_occur + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if(start == 0){
-                      end = 50;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    var match_content = content.substring(start, end);
-                    // highlight all keywords
-                    keywords.forEach(function(keyword){
-                      var regS = new RegExp(keyword, "gi");
-                      match_content = match_content.replace(regS, "<b class=\"search-keyword\">"+keyword+"</b>");
-                    });
 
-                    str += "<p class=\"search-result\">" + match_content +"...</p>"
-                  }
-                  str += "</li>";
-                }
-              })};
-            str += "</ul>";
-            if (matchcounts == 0) { str = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>' }
-            if (keywords == "") { str = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>' }
-            $resultContent.innerHTML = str;
-          });
-          proceedsearch();
-        }
-      });}
+  
 
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched == false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
-    });
 
-    $('.popup-btn-close').click(function(e){
-      $('.popup').hide();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    });
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-  </script>
+  <script src="/js/src/utils.js?v=7.0.1"></script>
+
+  <script src="/js/src/motion.js?v=7.0.1"></script>
+
 
 
   
   
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
 
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+  <script src="/js/src/schemes/muse.js?v=7.0.1"></script>
+
+
+
+  
+  <script src="/js/src/scrollspy.js?v=7.0.1"></script>
+<script src="/js/src/post-details.js?v=7.0.1"></script>
+
+
+
+  
+
+
+  <script src="/js/src/next-boot.js?v=7.0.1"></script>
+
+
+  
+
+  
+
+
+  
+    
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+
+
+<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+
+<script>
+  var gitalk = new Gitalk({
+    clientID: '3c0d7862ecaf3793c7cd',
+    clientSecret: 'f971d4422a805fc1a0562166ad5105997ff3be2a',
+    repo: 'zeromath.github.io',
+    owner: 'zeromath',
+    admin: ['zeromath'],
+    id: md5(location.pathname),
+    
+      language: window.navigator.language || window.navigator.userLanguage,
+    
+    distractionFreeMode: 'true'
+  });
+  gitalk.render('gitalk-container');
+</script>
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
   
 
 
@@ -1070,6 +921,17 @@
 
   
 
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
   
 
