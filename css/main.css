@@ -1905,7 +1905,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #fffffb;
+  background: #2eed0f;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2659,4 +2659,64 @@ embed {
 }
 .links-of-blogroll-inline .links-of-blogroll-item {
   display: inline-block;
+}
+.proof {
+  border: 3px;
+  border-style: solid;
+  border-color: #287ec7;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 1em;
+}
+.theorem {
+  border: 3px;
+  background: #f5f5f5;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 1em;
+}
+.shadow {
+  position: relative;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.3), 0px 0px 20px rgba(0,0,0,0.1) inset;
+}
+.shadow::before,
+.shadow::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+}
+.shadow::before,
+.shadow::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  height: 20%;
+}
+.shadow::before,
+.shadow::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 15px;
+  left: 10px;
+  width: 50%;
+  height: 20%;
+  box-shadow: 0 15px 10px rgba(0,0,0,0.7);
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+  -ms-transform: rotate(-3deg);
+  -o-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+}
+.shadow::after {
+  right: 10px;
+  left: auto;
+  -webkit-transform: rotate(3deg);
+  -moz-transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  -o-transform: rotate(3deg);
+  transform: rotate(3deg);
 }
