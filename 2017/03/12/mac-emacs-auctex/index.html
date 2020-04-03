@@ -103,14 +103,14 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Mac] 在 Emacs 中安装 AucTex">
 <meta property="og:url" content="http://zeromath.github.io/2017/03/12/mac-emacs-auctex/index.html">
-<meta property="og:site_name" content="Division By Zero">
+<meta property="og:site_name" content="Wenfinity">
 <meta property="og:description" content="这里总结一下在 Emacs 中安装 AucTex 和 CDLaTeX 插件的方式。">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://zeromath.github.io/2017/03/12/mac-emacs-auctex/CDLaTeX_math.png">
 <meta property="og:image" content="http://zeromath.github.io/2017/03/12/mac-emacs-auctex/CDLaTeX_modify.png">
 <meta property="og:image" content="http://zeromath.github.io/2017/03/12/mac-emacs-auctex/MATH_modify_ex.png">
 <meta property="og:image" content="http://zeromath.github.io/2017/03/12/mac-emacs-auctex/MATH_modify_ex2.png">
-<meta property="og:updated_time" content="2019-03-05T19:54:19.504Z">
+<meta property="og:updated_time" content="2020-02-26T20:48:20.607Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[Mac] 在 Emacs 中安装 AucTex">
 <meta name="twitter:description" content="这里总结一下在 Emacs 中安装 AucTex 和 CDLaTeX 插件的方式。">
@@ -118,7 +118,7 @@
 
 
 
-  <link rel="alternate" href="/atom.xml" title="Division By Zero" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Wenfinity" type="application/atom+xml">
 
 
 
@@ -133,7 +133,7 @@
   };
 </script>
 
-  <title>[Mac] 在 Emacs 中安装 AucTex | Division By Zero</title>
+  <title>[Mac] 在 Emacs 中安装 AucTex | Wenfinity</title>
   
 
 
@@ -192,7 +192,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Division By Zero</span>
+        <span class="site-title">Wenfinity</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -387,7 +387,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Division By Zero">
+      <meta itemprop="name" content="Wenfinity">
     </span>
 
     
@@ -438,7 +438,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2019-03-05 14:54:19" itemprop="dateModified" datetime="2019-03-05T14:54:19-05:00">2019-03-05</time>
+                <time title="Modified: 2020-02-26 15:48:20" itemprop="dateModified" datetime="2020-02-26T15:48:20-05:00">2020-02-26</time>
               
             
           </span>
@@ -465,6 +465,19 @@
 
           
             
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">Comments: </span>
+                <a href="/2017/03/12/mac-emacs-auctex/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/03/12/mac-emacs-auctex/" itemprop="commentCount"></span>
+                </a>
+              </span>
             
           
 
@@ -498,7 +511,7 @@
 <li>安装 AucTex：打开 Emacs，执行 <code>M-x list-packages</code>，然后直接搜索 AucTex 这个包，按 <code>i</code> 标记，按 <code>x</code> 执行，就安装完成了</li>
 <li>安装 cdlatex：复制 <code>cdlatex.el</code> 文件内容（这里贡献一个我自己<a href="./cdlatex.el">用的</a>）到 <code>/Applications/Emacs.app/Contents/Resources/site-lisp/cdlatex.el</code>，然后打开 <code>.emacs</code> 加入以下代码</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(add-hook &apos;LaTeX-mode-hook &apos;LaTeX-math-mode)</span><br><span class="line">(add-to-list &apos;load-path &quot;/Applications/Emacs.app/Contents/Resources/site-lisp/&quot;)</span><br><span class="line">(add-hook &apos;LaTeX-mode-hook &apos;turn-on-cdlatex)</span><br><span class="line">(autoload &apos;cdlatex-mode &quot;cdlatex&quot; &quot;CDLaTeX Mode&quot; t)</span><br><span class="line">(autoload &apos;turn-on-cdlatex &quot;cdlatex&quot; &quot;CDLaTeX Mode&quot; nil)</span><br></pre></td></tr></table></figure>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">add-hook</span> 'LaTeX-mode-hook 'LaTeX-math-mode)</span><br><span class="line">(<span class="name">add-to-list</span> 'load-path <span class="string">"/Applications/Emacs.app/Contents/Resources/site-lisp/"</span>)</span><br><span class="line">(<span class="name">add-hook</span> 'LaTeX-mode-hook 'turn-on-cdlatex)</span><br><span class="line">(<span class="name">autoload</span> 'cdlatex-mode <span class="string">"cdlatex"</span> <span class="string">"CDLaTeX Mode"</span> <span class="literal">t</span>)</span><br><span class="line">(<span class="name">autoload</span> 'turn-on-cdlatex <span class="string">"cdlatex"</span> <span class="string">"CDLaTeX Mode"</span> <span class="literal">nil</span>)</span><br></pre></td></tr></table></figure>
 <h1 id="简单使用教程"><a href="#简单使用教程" class="headerlink" title="简单使用教程"></a>简单使用教程</h1><h2 id="基础-Emacs-操作"><a href="#基础-Emacs-操作" class="headerlink" title="基础 Emacs 操作"></a>基础 Emacs 操作</h2><table>
 <thead>
 <tr>
@@ -564,13 +577,13 @@
 <p>注意很多命令只能在 Math-mode 下运行（即在 <code>$</code> 符号之间运行），比如我输入了一个 <code>$A$</code><br><img src="/2017/03/12/mac-emacs-auctex/MATH_modify_ex.png" alt="MATH_modify"><br>想要变成 <code>$\tilde{A}$</code>，只需要把光标定位到 <code>A</code> 之后的 <code>$</code> 符号上，按下 <code>&#39;</code>，再按下 <code>~</code> ，就变成了<br><img src="/2017/03/12/mac-emacs-auctex/MATH_modify_ex2.png" alt="MATH_modify"></p>
 <h1 id="Q-amp-A"><a href="#Q-amp-A" class="headerlink" title="Q &amp; A"></a>Q &amp; A</h1><p><em>Q1:</em> TeX 不能识别</p>
 <p><em>Solution:</em> 我们需要添加下列两个到 <code>PATH</code> 变量中</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/Library/TeX/texbin</span><br><span class="line">/usr/local/bin</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/Library/TeX/texbin</span><br><span class="line">/usr/<span class="built_in">local</span>/bin</span><br></pre></td></tr></table></figure>
 <p>但是图形界面的 Emacs 是不会全部加载 bash 的 <code>PATH</code> 的，所以直接在 bash 中修改 <code>PATH</code> 变量并没有用处，我们还需要添加如下代码到 “.emacs”</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(setenv “PATH”</span><br><span class="line">(concat (getenv “PATH”) “:/Library/TeX/texbin:/usr/local/bin”))</span><br></pre></td></tr></table></figure>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">setenv</span> <span class="string">"PATH"</span></span><br><span class="line">(<span class="name">concat</span> (<span class="name">getenv</span> <span class="string">"PATH"</span>) <span class="string">":/Library/TeX/texbin:/usr/local/bin"</span>))</span><br></pre></td></tr></table></figure>
 <p><em>Q2:</em> AucTex 预览出错，错误提示为</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PDF2DSC sentinel: Wrong type argument: arrayp, nil</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PDF2DSC sentinel: Wrong <span class="built_in">type</span> argument: arrayp, nil</span><br></pre></td></tr></table></figure>
 <p><em>Solution:</em> 在 “.emacs” 中加入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(setq preview-gs-command &quot;/usr/local/bin/gs&quot;)</span><br></pre></td></tr></table></figure>
+<figure class="highlight lisp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="name">setq</span> preview-gs-command <span class="string">"/usr/local/bin/gs"</span>)</span><br></pre></td></tr></table></figure>
 <p>重新启动 Emacs</p>
 <hr>
 <h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
@@ -675,7 +688,10 @@
           
 
   
-    <div class="comments" id="gitalk-container">
+    <div class="comments" id="comments">
+      <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+      </div>
     </div>
 
   
@@ -725,7 +741,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">13</span>
+                    <span class="site-state-item-count">14</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -752,7 +768,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
@@ -799,7 +817,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">11</span>
+                      
+                    
+                    <span class="site-state-item-count">12</span>
                     <span class="site-state-item-name">tags</span>
                   </a>
                 </div>
@@ -863,7 +883,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -990,36 +1010,30 @@
   
 
   
-
-
   
-    
+  <script id="dsq-count-scr" src="https://hellomath.disqus.com/count.js" async></script>
 
-<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-
-
-
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
-
-
-
-<script src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
 
 <script>
-  var gitalk = new Gitalk({
-    clientID: '3c0d7862ecaf3793c7cd',
-    clientSecret: 'f971d4422a805fc1a0562166ad5105997ff3be2a',
-    repo: 'zeromath.github.io',
-    owner: 'zeromath',
-    admin: ['zeromath'],
-    id: md5(location.pathname),
-    
-      language: window.navigator.language || window.navigator.userLanguage,
-    
-    distractionFreeMode: 'true'
-  });
-  gitalk.render('gitalk-container');
+  var disqus_config = function() {
+    this.page.url = "http://zeromath.github.io/2017/03/12/mac-emacs-auctex/";
+    this.page.identifier = "2017/03/12/mac-emacs-auctex/";
+    this.page.title = '[Mac] 在 Emacs 中安装 AucTex';
+    };
+  function loadComments() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://hellomath.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', '' + +new Date());
+    (d.head || d.body).appendChild(s);
+  }
+  
+    loadComments();
+  
 </script>
+
+
+
+
 
   
 
