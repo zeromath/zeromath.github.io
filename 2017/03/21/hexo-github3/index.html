@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>[Hexo] 在 GitHub 上搭建博客 (3) | ZeroMath</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="我们的博客已经基本成型了，这里主要是一些细节性的工作。包括  添加 Gitalk 评论支持 添加 Google 统计 添加搜索服务 添加数学公式支持 使用 Tags 和 Categories">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Hexo] 在 GitHub 上搭建博客 (3)">
+<meta property="og:url" content="http://example.com/2017/03/21/hexo-github3/index.html">
+<meta property="og:site_name" content="ZeroMath">
+<meta property="og:description" content="我们的博客已经基本成型了，这里主要是一些细节性的工作。包括  添加 Gitalk 评论支持 添加 Google 统计 添加搜索服务 添加数学公式支持 使用 Tags 和 Categories">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/hexo-github3/github-sidebar.png">
+<meta property="og:image" content="http://example.com/hexo-github3/github-OAuth.png">
+<meta property="og:image" content="http://example.com/hexo-github3/github-OAuth-key.png">
+<meta property="og:image" content="http://example.com/hexo-github3/gitalk.png">
+<meta property="og:image" content="http://example.com/hexo-github3/FILE-tags.png">
+<meta property="og:image" content="http://example.com/hexo-github3/FILE-cat.png">
+<meta property="article:published_time" content="2017-03-21T23:53:32.000Z">
+<meta property="article:modified_time" content="2019-03-06T19:24:08.000Z">
+<meta property="article:author" content="ZERO">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/hexo-github3/github-sidebar.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ZeroMath" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZeroMath</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="Feed RSS"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Cerca"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Cerca"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-hexo-github3" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2017/03/21/hexo-github3/" class="article-date">
+  <time class="dt-published" datetime="2017-03-21T23:53:32.000Z" itemprop="datePublished">2017-03-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      [Hexo] 在 GitHub 上搭建博客 (3)
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>我们的博客已经基本成型了，这里主要是一些细节性的工作。包括</p>
+<ul>
+<li>添加 Gitalk 评论支持</li>
+<li>添加 Google 统计</li>
+<li>添加搜索服务</li>
+<li>添加数学公式支持</li>
+<li>使用 Tags 和 Categories</li>
+</ul>
+<span id="more"></span>
+
+<p>注意到下文中我们会频繁修改两个配置文件，一个是<span style="background-color:red;color:white">站点配置文件</span> ，其路径为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;your_site&gt;/_config.yml</span><br></pre></td></tr></table></figure>
+<p>另一个是<span style="background-color:blue;color:white">主题配置文件</span>，其路径为</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;your_site&gt;/themes/next/_config.yml</span><br></pre></td></tr></table></figure>
+
+<h1 id="Next主题"><a href="#Next主题" class="headerlink" title="Next主题"></a>Next主题</h1><p>为什么上文我要推荐Next主题呢，因为里面已经集成了很多插件我们可以直接使用，比如</p>
+<h2 id="添加评论支持"><a href="#添加评论支持" class="headerlink" title="添加评论支持"></a>添加评论支持</h2><p>一个好的博客怎么可以没有评论区，我们可以用 <a target="_blank" rel="noopener" href="https://github.com/gitalk/gitalk">Gitalk</a> 提供的评论服务。这是一个基于 GitHub issue 系统的评论服务。好处是不用像 Disqus 一样科学上网。我们首先要去 GitHub 申请一个 Application OAuth，打开 Settings, 找到 Developer settings</p>
+<p><img src="/hexo-github3/github-sidebar.png" alt="sidebar"></p>
+<p>然后点开，申请 Application OAuth。依次填好以下信息</p>
+<p><img src="/hexo-github3/github-OAuth.png" alt="OAuth"><br>你就会被跳转到</p>
+<p><img src="/hexo-github3/github-OAuth-key.png" alt="Keys"><br>这个页面。记下 Client ID&#x2F;Secret，然后打开<span style="background-color:blue;color:white">主题配置文件</span>，找到 gitalk 的部分，改成如下形式（以我的博客为例子）</p>
+<p><img src="/hexo-github3/gitalk.png" alt="gitalk"></p>
+<p>最后，每篇博客的评论系统是需要作者手工初始化的。当然你也可以网上自行寻找脚本来完成。</p>
+<h2 id="添加-Google-统计"><a href="#添加-Google-统计" class="headerlink" title="添加 Google 统计"></a>添加 Google 统计</h2><p>一个好的博客怎么可以没有统计，我们可以用 Google 提供的统计工具 <a target="_blank" rel="noopener" href="https://analytics.google.com/">Google Analytics</a>，注册账号，然后取得 Google 追踪 ID（Google 追踪 ID 总是以 <code>UA</code> 开头）。打开<span style="background-color:blue;color:white">主题配置文件</span>，修改 <code>google_analytics</code> 字段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">google_analytics: UA&lt;%%%%%%%%&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加搜索服务"><a href="#添加搜索服务" class="headerlink" title="添加搜索服务"></a>添加搜索服务</h2><p>一个好的博客怎么可以没有搜索服务：</p>
+<p>首先安装 <code>hexo-generator-searchdb</code>，在站点根目录下运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>然后编辑<span style="background-color:red;color:white">站点配置文件</span> ，添加以下内容到任意区域</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+
+<p>最后编辑<span style="background-color:blue;color:white">主题配置文件</span>，修改<code>Local search</code>字段：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"># Local search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加数学公式支持"><a href="#添加数学公式支持" class="headerlink" title="添加数学公式支持"></a>添加数学公式支持</h2><p>一个好的博客怎么可以不是数学相关的！开启 MathJax 支持异常简单，修改<span class="theme">主题配置文件</span>中的 <code>MathJax Support</code> 字段即可</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># MathJax Support</span><br><span class="line">mathjax: true</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Tags-Categories"><a href="#Tags-Categories" class="headerlink" title="Tags &amp; Categories"></a>Tags &amp; Categories</h1><h2 id="添加-Tags"><a href="#添加-Tags" class="headerlink" title="添加 Tags"></a>添加 Tags</h2><p>假如你只有一个标签，只需要在文章的最顶部的 <code>tags</code> 标签下加上你要加的 <code>tag</code> 即可:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: %%%%%%%</span><br><span class="line">date: %%%%%%%</span><br><span class="line">tags: &lt;Your_tag&gt;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>假如你有多于一个标签，你可以用两种方式：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tags:</span><br><span class="line">- tag1</span><br><span class="line">- tag2</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tags: [tag1, tag2]</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加-Tags-页面"><a href="#添加-Tags-页面" class="headerlink" title="添加 Tags 页面"></a>添加 Tags 页面</h2><p>当你给你的文章加上 Tags 之后，你会发现博客上的 Tags 链接并不能用。点击之后会提示无法找到页面，这是因为我们还没有创建 Tags 页面。</p>
+<p>打开终端输入以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
+
+<p>然后在 <code>&lt;your_site&gt;/sources/tags/</code> 下找到 “index.md”，打开它，在 <code>date</code> 下面加入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type: &quot;tags&quot;</span><br><span class="line">comment: false #关闭标签页面的评论区域</span><br></pre></td></tr></table></figure>
+<p>效果如图</p>
+<p><img src="/hexo-github3/FILE-tags.png" alt="FILE-tags"></p>
+<p>最后打开<span style="background-color:blue;color:white">主题配置文件</span>，找到 <code>menu</code> 字段，添加 <code>tags</code> 标签</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  ...</span><br><span class="line">  tags: /tags</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加-Categories"><a href="#添加-Categories" class="headerlink" title="添加 Categories"></a>添加 Categories</h2><p>在博文的最上方，tags 标签下新起一行，假如 categories 标签，如下所示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: %%%%%%%</span><br><span class="line">date: %%%%%%%</span><br><span class="line">tags:</span><br><span class="line">categories: &lt;Your_category&gt;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加-Categories-页面"><a href="#添加-Categories-页面" class="headerlink" title="添加 Categories 页面"></a>添加 Categories 页面</h2><p>同样的我们还没有创建 Categories 页面。</p>
+<p>打开终端输入以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<p>然后在 <code>&lt;your_site&gt;/sources/categories/</code> 下找到 “index.md”，打开它，在 <code>date</code> 下面加入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">type: &quot;categories&quot;</span><br><span class="line">comment: false #关闭标签页面的评论区域</span><br></pre></td></tr></table></figure>
+<p>效果如图</p>
+<p><img src="/hexo-github3/FILE-cat.png" alt="FILE-cat"></p>
+<p>最后打开<span style="background-color:blue;color:white">主题配置文件</span>，找到 <code>menu</code> 字段，添加 <code>categories</code> 标签</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  ...</span><br><span class="line">  categories: /categories</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
+<li><a target="_blank" rel="noopener" href="http://www.coldcrack.me/2018/07/18/Next_Gittalk/">Hexo Next主题集成Gittalk</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues/320">多个 Tags 怎么分割？</a></li>
+<li><a target="_blank" rel="noopener" href="http://ijiaober.github.io/2014/08/05/hexo/hexo-04/">Hexo使用攻略：（四）Hexo的分类和标签设置</a></li>
+<li><a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/">Next主题</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2017/03/21/hexo-github3/" data-id="cm3lzkdu3000r0xu61vtzch79" data-title="[Hexo] 在 GitHub 上搭建博客 (3)" class="article-share-link"><span class="fa fa-share">Condividi</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/03/22/hexo-github4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Nuovi</strong>
+      <div class="article-nav-title">
+        
+          [Hexo] 在 GitHub 上搭建博客 (4)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/21/hexo-github2/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Vecchi</strong>
+      <div class="article-nav-title">[Hexo] 在 GitHub 上搭建博客 (2)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categorie</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Math/">Math</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algebraic-Geometry/" rel="tag">Algebraic Geometry</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Logic/" rel="tag">Logic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Topology/" rel="tag">Topology</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algebraic-Geometry/" style="font-size: 10px;">Algebraic Geometry</a> <a href="/tags/GitHub/" style="font-size: 20px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Logic/" style="font-size: 10px;">Logic</a> <a href="/tags/Math/" style="font-size: 15px;">Math</a> <a href="/tags/Topology/" style="font-size: 10px;">Topology</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archivio</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1969/12/">December 1969</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Post Recenti</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/05/bezout-theorem-and-pascal-theorem/">贝祖定理和帕斯卡定理</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/05/hexo-github5/">[Hexo] 在 GitHub 上搭建博客 (5)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/04/hardest-logic-puzzle-ever/">[4068] 闲谈世上最难的逻辑问题</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/03/topology-prime-numbers/">拓扑与素数</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/22/hexo-github4/">[Hexo] 在 GitHub 上搭建博客 (4)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 ZERO<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>[Hexo] 在 GitHub 上搭建博客 (1) | ZeroMath</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="在此整理了一下 Hexo 博客建立的方法，以下代码演示是基于 Mac 平台。Windows 平台大同小异。 当然最全面的参考自然是在 Hexo 官网。这里只是做一个小小的总结。这篇文章将要讲述：  如何安装 Hexo 如何创建文章 如何发布文章 如何删除文章  Here We Go！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Hexo] 在 GitHub 上搭建博客 (1)">
+<meta property="og:url" content="http://example.com/2017/03/11/hexo-github/index.html">
+<meta property="og:site_name" content="ZeroMath">
+<meta property="og:description" content="在此整理了一下 Hexo 博客建立的方法，以下代码演示是基于 Mac 平台。Windows 平台大同小异。 当然最全面的参考自然是在 Hexo 官网。这里只是做一个小小的总结。这篇文章将要讲述：  如何安装 Hexo 如何创建文章 如何发布文章 如何删除文章  Here We Go！">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/hexo-github/INFO-init.png">
+<meta property="og:image" content="http://example.com/hexo-github/INFO-server.png">
+<meta property="og:image" content="http://example.com/hexo-github/BLOG-index.png">
+<meta property="og:image" content="http://example.com/hexo-github/FILE-newpost.png">
+<meta property="og:image" content="http://example.com/hexo-github/FILE-markdown.png">
+<meta property="og:image" content="http://example.com/hexo-github/BLOG-updated.png">
+<meta property="article:published_time" content="2017-03-12T07:57:47.000Z">
+<meta property="article:modified_time" content="2019-08-05T16:17:14.000Z">
+<meta property="article:author" content="ZERO">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/hexo-github/INFO-init.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ZeroMath" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZeroMath</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="Feed RSS"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Cerca"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Cerca"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-hexo-github" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2017/03/11/hexo-github/" class="article-date">
+  <time class="dt-published" datetime="2017-03-12T07:57:47.000Z" itemprop="datePublished">2017-03-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      [Hexo] 在 GitHub 上搭建博客 (1)
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在此整理了一下 Hexo 博客建立的方法，以下代码演示是基于 Mac 平台。Windows 平台大同小异。 当然最全面的参考自然是在 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/index.html">Hexo 官网</a>。这里只是做一个小小的总结。这篇文章将要讲述：</p>
+<ul>
+<li>如何安装 Hexo</li>
+<li>如何创建文章</li>
+<li>如何发布文章</li>
+<li>如何删除文章</li>
+</ul>
+<p>Here We Go！</p>
+<span id="more"></span>
+
+<h1 id="博客初建立"><a href="#博客初建立" class="headerlink" title="博客初建立"></a>博客初建立</h1><h2 id="需要的插件"><a href="#需要的插件" class="headerlink" title="需要的插件"></a>需要的插件</h2><ol>
+<li>安装 <a target="_blank" rel="noopener" href="https://git-scm.com/downloads">Git</a></li>
+<li>安装 <a target="_blank" rel="noopener" href="https://nodejs.org/en/">Node.js</a></li>
+<li>安装 Hexo：</li>
+</ol>
+<p>打开终端，输入下列命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="安装文件"><a href="#安装文件" class="headerlink" title="安装文件"></a>安装文件</h2><p>创建一个你喜欢的文件夹，比如 <code>~/Documents/Blog</code>，这就是你博客的大本营了。定位到该文件夹下，在根目录下运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+<p>当你看到</p>
+<p><img src="/hexo-github/INFO-init.png" alt="INFO-init"></p>
+<p>就表示命令已完成。你会发现文件夹里多了好多东西，但是博客在哪里呢？</p>
+<p>我们来试运行一下，输入命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>提示</p>
+<p><img src="/hexo-github/INFO-server.png" alt="INFO-server"><br>打开浏览器，访问 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a>，就会见到你的博客了</p>
+<p><img src="/hexo-github/BLOG-index.png" alt="BLOG-index"></p>
+<p><em>Remark: 在Terminal下按下<code>Ctrl+C</code>就可以取消本地服务器了</em></p>
+<h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><h2 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h2><p>刚刚我们已经看到了博客中有一篇叫 Hello World 的文章了。这篇文章具体在哪里呢？打开 <code>&lt;你的博客目录&gt;/source/_post/</code>，你会发现下面有一个 “hello-world.md” 文件，它就是网站上的文章对应的 Markdown 文件。</p>
+<p>Hexo 的所有文章都是通过 Markdown 书写的，我们也来写一篇自己的文章好了！</p>
+<p>打开 Terminal，输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &lt;&quot;你的文章标题&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>比如我们要写一篇测试文章，于是输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;My first test blog&quot;</span><br></pre></td></tr></table></figure>
+
+<p>系统会提示</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">INFO  Created: &lt;你的博客目录&gt;/source/_posts/My-first-test-blog.md</span><br></pre></td></tr></table></figure>
+
+<p>重新打开 <code>&lt;你的博客目录&gt;/source/_posts/</code> 目录，你会发现里面已经有了一个新的MD文件。这就是我们刚刚创建的新文章。</p>
+<p><img src="/hexo-github/FILE-newpost.png" alt="FILE-newpost"></p>
+<h2 id="编写文章"><a href="#编写文章" class="headerlink" title="编写文章"></a>编写文章</h2><p>用任意编辑器（我一般用 MacDown 或者 Emacs）打开 “My-first-test-blog.md”，你会发现里面已经写好了一点东西了：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line">title: My first test blog</span><br><span class="line">date: 2017-03-21 14:48:40</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>其中：</p>
+<ul>
+<li><code>title</code> 是你最终的文章标题</li>
+<li><code>date</code> 就是文章创建的时间，这个可以不用管</li>
+<li><code>tags</code> 则是文章的标签，如何加 Tags 我们以后再讲</li>
+</ul>
+<p>在最下面另起一行，你就可以开始写文章了！</p>
+<p>比如你可以写如下文章：</p>
+<p><img src="/hexo-github/FILE-markdown.png" alt="FILE-markdown"></p>
+<p><em>请忽略最上面几行的奇怪行为</em></p>
+<p>然后保存 MD 文件即可。</p>
+<h1 id="草稿功能"><a href="#草稿功能" class="headerlink" title="草稿功能"></a>草稿功能</h1><h2 id="创建草稿"><a href="#创建草稿" class="headerlink" title="创建草稿"></a>创建草稿</h2><p>有时候一些文章的创作需要的时间很长，为此我们可以用利用 Hexo 的草稿功能，创建草稿的命令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new draft &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<p>就是简单的在创建文章的命令里加入 <code>draft</code> 参数。创建的文件会被保存到 <code>&lt;你的博客目录&gt;/source/_drafts</code> 这个文件夹。</p>
+<h2 id="预览草稿"><a href="#预览草稿" class="headerlink" title="预览草稿"></a>预览草稿</h2><p>草稿文件默认不会显示在页面中，但是我们可以用以下命令预览草稿。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server --draft</span><br></pre></td></tr></table></figure>
+<p>也就是在启动服务器的时候带上 <code>--draft</code> 参数。</p>
+<h2 id="发布草稿"><a href="#发布草稿" class="headerlink" title="发布草稿"></a>发布草稿</h2><p>可以使用 <code>publish</code> 命令将草稿移动到 <code>&lt;你的博客目录&gt;/source/_posts</code> 文件夹中，草稿发布后 <code>_drafts</code> 目录下的草稿会同时删除。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish &lt;&quot;你的文章标题&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h1><h2 id="发布到网站"><a href="#发布到网站" class="headerlink" title="发布到网站"></a>发布到网站</h2><p>文章写好了，要怎么发布呢？</p>
+<p>Terminal 定位到<code>&lt;你的博客目录&gt;</code>，然后依次输入以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>第一个命令 <code>hexo generate</code> 是生成新的文件，第二个命令是启动 server。再次打开 <a target="_blank" rel="noopener" href="http://localhost:4000/">http://localhost:4000</a>，我们发现我们的文章已经被放上“网”了！</p>
+<p><img src="/hexo-github/BLOG-updated.png" alt="BLOG-updated"></p>
+<h2 id="删除文章"><a href="#删除文章" class="headerlink" title="删除文章"></a>删除文章</h2><p>现在有没有觉得那个 <code>Hello World</code> 很扎眼，我们肯定想要删除它。重新回到 <code>&lt;你的博客目录&gt;/source/_posts/</code> 目录，找到 <code>hello-world.md</code> 文件，直接将其删除即可。</p>
+<p>有人就要问了，为什么删除了我的浏览器里还是有呢？因为我们还没有更新我们的网站，在 Terminal 下运行</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>再刷新网页，是不是就没有了？</p>
+<hr>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://zhangslob.github.io/2017/02/28/%E6%95%99%E4%BD%A0%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8CHexo-Github/">教你免费搭建个人博客，Hexo&amp;Github</a></li>
+<li><a target="_blank" rel="noopener" href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/">手把手教你使用Hexo + Github Pages搭建个人独立博客</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2017/03/11/hexo-github/" data-id="cm3lzkdt300040xu661xacmot" data-title="[Hexo] 在 GitHub 上搭建博客 (1)" class="article-share-link"><span class="fa fa-share">Condividi</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/03/21/hexo-github2/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Nuovi</strong>
+      <div class="article-nav-title">
+        
+          [Hexo] 在 GitHub 上搭建博客 (2)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/1969/12/31/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Vecchi</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categorie</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Math/">Math</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algebraic-Geometry/" rel="tag">Algebraic Geometry</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Logic/" rel="tag">Logic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Topology/" rel="tag">Topology</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algebraic-Geometry/" style="font-size: 10px;">Algebraic Geometry</a> <a href="/tags/GitHub/" style="font-size: 20px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Logic/" style="font-size: 10px;">Logic</a> <a href="/tags/Math/" style="font-size: 15px;">Math</a> <a href="/tags/Topology/" style="font-size: 10px;">Topology</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archivio</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1969/12/">December 1969</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Post Recenti</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/05/bezout-theorem-and-pascal-theorem/">贝祖定理和帕斯卡定理</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/05/hexo-github5/">[Hexo] 在 GitHub 上搭建博客 (5)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/04/hardest-logic-puzzle-ever/">[4068] 闲谈世上最难的逻辑问题</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/03/topology-prime-numbers/">拓扑与素数</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/22/hexo-github4/">[Hexo] 在 GitHub 上搭建博客 (4)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 ZERO<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

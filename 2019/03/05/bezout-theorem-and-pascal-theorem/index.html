@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>贝祖定理和帕斯卡定理 | ZeroMath</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="在这篇文章里，我想要介绍一下代数几何里一个很经典的定理——贝祖定理 (Bézout’s theorem) 和它的一个有趣的推论——帕斯卡定理 (Pascal’s theorem)。让我们一起来欣赏一下抽象的力量——这是一个不需要画图也可以证明平面几何定理的过程！">
+<meta property="og:type" content="article">
+<meta property="og:title" content="贝祖定理和帕斯卡定理">
+<meta property="og:url" content="http://example.com/2019/03/05/bezout-theorem-and-pascal-theorem/index.html">
+<meta property="og:site_name" content="ZeroMath">
+<meta property="og:description" content="在这篇文章里，我想要介绍一下代数几何里一个很经典的定理——贝祖定理 (Bézout’s theorem) 和它的一个有趣的推论——帕斯卡定理 (Pascal’s theorem)。让我们一起来欣赏一下抽象的力量——这是一个不需要画图也可以证明平面几何定理的过程！">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/bezout-theorem-and-pascal-theorem/pascal.png">
+<meta property="og:image" content="http://example.com/bezout-theorem-and-pascal-theorem/pappus.png">
+<meta property="og:image" content="http://example.com/bezout-theorem-and-pascal-theorem/middle-AG.JPG">
+<meta property="og:image" content="http://example.com/bezout-theorem-and-pascal-theorem/pascal-proof.png">
+<meta property="article:published_time" content="2019-03-05T23:51:51.000Z">
+<meta property="article:modified_time" content="2019-09-16T00:38:20.000Z">
+<meta property="article:author" content="ZERO">
+<meta property="article:tag" content="Math">
+<meta property="article:tag" content="Algebraic Geometry">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/bezout-theorem-and-pascal-theorem/pascal.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ZeroMath" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZeroMath</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="Feed RSS"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Cerca"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Cerca"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-bezout-theorem-and-pascal-theorem" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2019/03/05/bezout-theorem-and-pascal-theorem/" class="article-date">
+  <time class="dt-published" datetime="2019-03-05T23:51:51.000Z" itemprop="datePublished">2019-03-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Math/">Math</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      贝祖定理和帕斯卡定理
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>在这篇文章里，我想要介绍一下代数几何里一个很经典的定理——贝祖定理 (Bézout’s theorem) 和它的一个有趣的推论——帕斯卡定理 (Pascal’s theorem)。让我们一起来欣赏一下抽象的力量——这是一个不需要画图也可以证明平面几何定理的过程！</p>
+<span id="more"></span>
+
+<h2 id="帕斯卡定理"><a href="#帕斯卡定理" class="headerlink" title="帕斯卡定理"></a>帕斯卡定理</h2><p>帕斯卡定理，是指圆锥曲线的内接六边形其三条对边的交点共线。在圆锥曲线是圆的时候，如下面这个（丑到爆炸的）图所示<br><img src="/bezout-theorem-and-pascal-theorem/pascal.png" alt="Pascal&#39;s theorem"><br>这个定理有很多证明，比如我们可以用梅涅劳斯定理来证明圆的情形，参见<a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E5%B8%95%E6%96%AF%E5%8D%A1%E5%AE%9A%E7%90%86">帕斯卡定理
+</a>。搞竞赛的小伙伴说不定还自己证明过。对于的任意圆锥曲线，它们可以投影变换成圆，所以这个命题对任意圆锥曲线都成立。</p>
+<p>当这个圆锥曲线退化成两条相交直线的时候，帕斯卡定理就退化成了帕普斯（六边形）定理 (Pappus’s hexagon theorem)。<br><img src="/bezout-theorem-and-pascal-theorem/pappus.png" alt="Pappus&#39;s theorem"><br>这个定理也是有各种经典的证明。单单算我在博士期间上过的组合课，就看到好几种不同的证明了。最近学到的一种是用 Grassmann-Cayley 代数证的（这也是一个不错的 topic，以后可以聊聊）。上图也是我那门课我自己记的笔记的截图。</p>
+<p>而这篇文章主要想要探讨的，不是用这些“硬算”的办法来证明这（两）个定理。我即将介绍的，是一种抽象的数学技术证明的方法。我们将再一次见证数学的抽象的力量！</p>
+<h2 id="代数几何"><a href="#代数几何" class="headerlink" title="代数几何"></a>代数几何</h2><p>大家可能多多少少听说过代数几何是如今数学研究的热门学科。但是代数几何到底是个啥？和我们上的那门叫“代数与几何”的课又有什么区别？<br><img src="/bezout-theorem-and-pascal-theorem/middle-AG.JPG" alt="middle-AG"></p>
+<p>笼统的说，代数几何就是研究多项式的零点。一个多项式的所有零点构成的集合，称为一个代数簇 (algebraic variety)。一个简单的例子就是任意一个数轴 $\mathbb{R}$ 上的点，都是一个代数簇——比如 $x&#x3D;1$ 就是 $x-1&#x3D;0$ 的零点。同样的，任意有限多个点也是代数簇，比如我们有 5 个点 $0,1,2,3,4$，那这个集合是 $x(x-1)(x-2)(x-3)(x-4)$ 这个多项式的零点。我们上面提到的圆，也是一个代数簇。回忆一下，单位圆在二维平面 $\mathbb{R}^2$ 上对应的方程是 $x^2+y^2&#x3D;1$。所以单位圆就是多项式 $x^2+y^2-1$ 的零点。当然二维平面上任意一条直线也是一个代数簇。特别的，类比一维的有限个点的情形，我们知道任意有限个直线的并集也是代数簇！它是这些直线对应的多项式的乘积多项式的零点。当然，这个操作看起来很无聊，就是把有限的一些东西摆在一起（取并集）。确实，它和前面一条线、一个圆有着本质的区别。数学家们管这种区别叫（不）可约性 (irreducibility)。简单的说，一条线、一个圆这样的，看起来就是一整块，没法分解成（有限的）更小的代数簇的东西，叫做*不可约 (irreducible)<em>代数簇。而后面那个把一堆不可约代数簇并起来的，就是</em>可约 (reducible)*代数簇。</p>
+<p>还有一个很重要的特点，就是代数簇的次数 (degree)。粗略的说，既然一的代数簇是一个多项式的零点，那么这个多项式一定是某些次数的多项式，我们定义这个代数簇的次数就是这个多项式的次数。次数为什么重要呢？比如一维的情形，多项式的次数基本就决定了你的代数簇的点数。这里有一个小问题，那就是有重根怎么办？比如 $(x-1)^2$ 是一个二次多项式，但是它只有“一个”零点 $x&#x3D;1$。这里我们就要发挥一下中文的“博大精深”：这里的次数不仅仅释作次数 (degree)，可以释作重数 (multiplicity)。比如说上面这个例子里，虽然 $x&#x3D;1$ 是唯一的一个零点，但是它却出现了两<strong>次</strong>！假如带上重数，那么这些多项式的次数就是点的个数。到了二维就不太一样了，随便一次还是二次甚至一百次的多项式，它们往往都有无穷多的点。但是我们还是有一些观察：比如二维情形下，一次多项式（对应的代数簇）只能是直线；你想要曲线，至少需要二次。</p>
+<p>拼图的最后一块🧩，就是全空间的选取了。注意到 $x-1$ 在一维空间 $\mathbb{R}$ 中是一个点；但是同一个多项式 $x-1$ 放到二维空间 $\mathbb{R}^2$ 中看，就是一条线了！所以我们到底在哪个空间里考虑这些多项式，是很重要的事情。事实上，我们既不在 $\mathbb{R}$ 也不在 $\mathbb{R}^2$ 中考虑！不在 $\mathbb{R}$ 中考虑好理解，因为我们最终要证明一个平面几何的定理，一维的平面几何——有兴趣的读者可以自己研究😂。那为什么也不在 $\mathbb{R}^2$ 中呢？可能有些人知道一个名词，叫做“射影空间”。它的想法很简单：我们知道二维欧氏空间中，任何两条直线要么平行要么香蕉🍌，哦不，相交。但其实还可以换一个说法：“欧氏平面”里的任意两条直线总相交！那平行的怎么办？没关系，我们把他们相交的无穷远点补上就好了！所谓的射影空间 $\mathbb{P}^2$ 就是在 $\mathbb{R}^2$ 的基础上补上所有的无穷远点的集合。上面提到的帕斯卡定理、帕普斯定理，其实都是在射影空间中成立的定理。特别是帕普斯定理，它要求两条相交的直线，但其实两条平行直线也是可以的——它们在射影空间中相交于无穷远点！</p>
+<h2 id="贝祖定理"><a href="#贝祖定理" class="headerlink" title="贝祖定理"></a>贝祖定理</h2><p>我们终于可以开始介绍（疯狂简化后的）贝祖定理了。</p>
+<div class="theorem">Theorem
+假如 $X$ 是射影空间的一个代数簇（这样的代数簇也称为射影簇）。我们用 $\deg(X)$ 表示它的次数。$Y$ 是另外一个由齐次多项式 $f$ 定义的一个射影簇，自然我们有 $\deg(Y)=\deg(f)$。我们还需要额外假设：没有 $X$ 的某个不可约子集（比如 $X$ 中的一条线）完全包含在 $Y$ 中，那么贝祖定理说
+$$
+\deg(X\cap Y) = \deg(X)\cdot \deg(Y) = \deg(X)\cdot \deg(f)
+$$
+</div>
+<div class="proof">Proof:
+证明是不可能证明的，这篇文章里不可能证明的。解释证明又不会做，就是只能解释解释推论，才能维持得了生活这样子。做数学一个人很无聊，都没有朋友玩 ，瞎写文章发现大家个个都是人才，说话又好听，我超喜欢瞎写东西的！😂
+</div>
+好了，说正经的，这个证明用到了基本的代数几何知识：代数簇/射影簇（不是我上面的超级简化版本的），坐标环/齐次环，希尔伯特多项式，正合列……所以我们还是聊聊它的推论吧！也就是从标题开始就画的饼🍪：帕斯卡定理
+<div class="theorem">Corollary
+假如 $X\subset \mathbb{P}^2$ 是一个二次曲线（圆、椭圆、双曲线、两条直线……）。我们知道它的次数一定是 2: $\deg(X)=2$。在 $X$ 上依次序选六个不同的点 $A,B,C,D,E,F$ 使得 $ABCDEF$ 正好构成一个六边形（如下图）。这个六边形的三组对边分别交于三个点: $P=\overline{AB}\cap \overline{DE},Q=\overline{BC}\cap \overline{EF},R=\overline{CD}\cap \overline{FA}$（平行的对边交于无穷远点，注意我们在 $\mathbb{P}^2$ 中，无穷远点是存在的），那么这三个点 $P,Q,R$ 共线。
+</div>
+
+<p><img src="/bezout-theorem-and-pascal-theorem/pascal-proof.png" alt="the proof of Pascal&#39;s theorem"></p>
+<div class="proof">Proof:
+这次要真的证明了！考虑两个“三次”曲线：$X\_1=\overline{AB}\cup\overline{CD}\cup \overline{EF}$ 和 $X\_2=\overline{BC}\cup\overline{DE}\cup \overline{FA}$。反应快的人可能已经意识到了：这不就是三条直线摆一起嘛？！回忆一下，这样的集合对应的多项式是每条直线对应的多项式（一次多项式）的乘积：三个一次多项式的乘积，正好就是一个三次多项式。所以这两个确实是三次“曲”线。我们把 $X\_1$ 对应的乘出来的三次多项式叫 $f\_1$，另一个叫 $f\_2$。
+
+<p>首先，这六条线没有哪条线包含了另一条线，所以我们可以应用贝祖定理（令 $X&#x3D;X_1$ 和 $Y&#x3D;X_2$），我们知道它们的交是一个次数为 $\deg(X_1)\cdot\deg(X_2)&#x3D;3\times 3&#x3D;9$ 的代数簇。刚刚我们说过没有两条直线互相包含，那么几条直线交出来的是什么？当然是点了！所以我们得到一个次数为 9 的一维代数簇。回忆我们之前讨论过，一维的情形下，次数 &#x3D; 点的个数。所以 $X_1$ 和 $X_2$ 交于 9 个点！其实我们已经知道这 9 个点了——就是 $A,B,C,D,E,F,P,Q,R$ 。所以我们得到一个小结论：$f_1$ 和 $f_2$ 在这九个点上都等于 0。</p>
+<p>下面我们考虑 $X$ 上的任意一个不是上面提到的 $A,B,C,D,E,F$ 这 6 个点的点 $S$。我们声称：存在一个点 $S\in X$ 和两个不全为 0 的数 $a,b$ 使得 $a\cdot f_1(S)+b\cdot f_2(S)&#x3D; 0$。假如存在一个 $S$ 使得 $f_1(S)&#x3D;f_2(S)&#x3D;0$ 那我们取 $a&#x3D;b&#x3D;1$ 就可以了。反之则总有 $f_1(S)\neq 0$ 或者 $f_2(S)\neq 0$，那么取 $b&#x3D;-f_1(S)$ 和 $a&#x3D;f_2(S)$，则 $a\cdot f_1(S)+b\cdot f_2(S) &#x3D; f_2(S)\cdot f_1(S)-f_1(S)\cdot f_2(S) &#x3D; 0$。所以这样的数 $a,b$ 和点 $S$ 总存在。</p>
+<p>下面令 $X’$ 是多项式 $af_1+bf_2$ 的零点集。我们知道 $A,B,C,D,E,F$ 都是 $f_1$ 和 $f_2$ 的零点，自然也是 $af_1+bf_2$ 的零点。所以 $X’\cap X&#x3D;\{A,B,C,D,E,F,S\}$ 交于 7 个点！但是我们知道 $\deg(X’)&#x3D;\deg(af_1+bf_2)&#x3D;3$，所以 $\deg(X’\cap X)&#x3D;\deg(X’)\cdot \deg(X) &#x3D; 3\times 2&#x3D;6$ （$X$ 是一个<em>二次</em>曲线）。所以这个结论违反了贝祖定理！完了，数学大厦崩塌了！【皮这一下很开心😂】</p>
+<p>且慢，我们说这个结论违反贝祖定理，起码它得可以应用贝祖定理呀！结论不成立告诉我们，这里面一定有不满足贝祖定理的条件的地方。返回去看看贝祖定理的条件，哪里有可能不满足？自然是我们的<em>额外假设：没有 $X$ 的某个不可约子集（比如 $X$ 中的一条线）完全包含在 $Y$ 中</em>！所以 $X$ 一定有一个不可约的子集完全包含在 $X’$ 中。而我们已经知道 $A,B,C,D,E,F$ 这 6 个“墙头草”既在 $X$ 中也在 $X’$ 中。所以唯一可能就是 $X$ 整个都在 $X’$ 中！所以我们可以写成 $X’&#x3D;X\cup L$， 其中 $L$ 是某个我们还不咋了解的代数簇。 </p>
+<p>根据我们的观察，假如一个代数簇分解成了两个代数簇的并，那么它的次数应该是这两个代数簇的次数的和（例如几条直线的并）。现在由于 $X’&#x3D;X\cup L$ 而 $\deg(X’)&#x3D;3,\deg(X)&#x3D;2$，根据小学知识，我们知道 $\deg(L)&#x3D;3-2&#x3D;1$。我们前面聊过，次数为 1 的只能是直线！所以 $L$ 是一条直线。</p>
+<p>最后，注意到 $P,Q,R$ 都是 $f_1$ 和 $f_2$ 的零点，所以它们都是 $af_1+bf_2$ 的零点，从而它们都在 $X’$ 中。我们又知道这三个点不在 $X$ 中，所以！它们只能在 $L$ 中！所以，换个说法，这三个点在同一条直线 $L$ 上！🎉🎉🎉 $\blacksquare$</p>
+</div>
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>以上证明来自于 <a target="_blank" rel="noopener" href="https://www.mathematik.uni-kl.de/en/agag/people/head/prof-dr-andreas-gathmann/">Andreas Gathmann</a> 的<a target="_blank" rel="noopener" href="https://www.mathematik.uni-kl.de/~gathmann/class/alggeom-2002/alggeom-2002.pdf">代数几何讲义</a>中的定理 6.2.5。我第一次学到它的时候真的被震惊了——从来没想到过抽象的代数几何可以给出如此经典且具体的平面几何的定理的漂亮的证明！从那儿以后就一直想着有一天想要写出来分享给大家，今天算是了却了一桩心愿。感谢你读到这里🙏。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Pascal%27s_theorem">Pascal’s theorem</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Pappus%27s_hexagon_theorem">Pappus’s hexagon theorem</a></li>
+<li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/B%C3%A9zout%27s_theorem">Bézout’s theorem</a></li>
+<li><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E8%B2%9D%E7%A5%96%E5%AE%9A%E7%90%86">贝祖定理</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.mathematik.uni-kl.de/~gathmann/class/alggeom-2002/alggeom-2002.pdf">Andreas Gathmann 的代数几何讲义</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2019/03/05/bezout-theorem-and-pascal-theorem/" data-id="cm3lzkdtq000f0xu6d585c8rh" data-title="贝祖定理和帕斯卡定理" class="article-share-link"><span class="fa fa-share">Condividi</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Algebraic-Geometry/" rel="tag">Algebraic Geometry</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/" rel="tag">Math</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2019/03/05/hexo-github5/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Vecchi</strong>
+      <div class="article-nav-title">[Hexo] 在 GitHub 上搭建博客 (5)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categorie</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Math/">Math</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algebraic-Geometry/" rel="tag">Algebraic Geometry</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Logic/" rel="tag">Logic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Topology/" rel="tag">Topology</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algebraic-Geometry/" style="font-size: 10px;">Algebraic Geometry</a> <a href="/tags/GitHub/" style="font-size: 20px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Logic/" style="font-size: 10px;">Logic</a> <a href="/tags/Math/" style="font-size: 15px;">Math</a> <a href="/tags/Topology/" style="font-size: 10px;">Topology</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archivio</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1969/12/">December 1969</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Post Recenti</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/05/bezout-theorem-and-pascal-theorem/">贝祖定理和帕斯卡定理</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/05/hexo-github5/">[Hexo] 在 GitHub 上搭建博客 (5)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/04/hardest-logic-puzzle-ever/">[4068] 闲谈世上最难的逻辑问题</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/03/topology-prime-numbers/">拓扑与素数</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/22/hexo-github4/">[Hexo] 在 GitHub 上搭建博客 (4)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 ZERO<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

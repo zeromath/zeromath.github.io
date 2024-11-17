@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>[Hexo] 在 GitHub 上搭建博客 (2) | ZeroMath</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="上次我们介绍了如何建立博客、撰写文章，这次我们来聊聊如何修改博客的一些基本属性。本期主要包括：  修改博客的信息 修改主题样式 发布到GitHub">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[Hexo] 在 GitHub 上搭建博客 (2)">
+<meta property="og:url" content="http://example.com/2017/03/21/hexo-github2/index.html">
+<meta property="og:site_name" content="ZeroMath">
+<meta property="og:description" content="上次我们介绍了如何建立博客、撰写文章，这次我们来聊聊如何修改博客的一些基本属性。本期主要包括：  修改博客的信息 修改主题样式 发布到GitHub">
+<meta property="og:locale">
+<meta property="og:image" content="http://example.com/hexo-github2/BLOG-site.png">
+<meta property="og:image" content="http://example.com/hexo-github2/SSH-key.png">
+<meta property="article:published_time" content="2017-03-21T21:42:00.000Z">
+<meta property="article:modified_time" content="2019-03-05T19:53:56.000Z">
+<meta property="article:author" content="ZERO">
+<meta property="article:tag" content="GitHub">
+<meta property="article:tag" content="Hexo">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/hexo-github2/BLOG-site.png">
+  
+    <link rel="alternate" href="/atom.xml" title="ZeroMath" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">ZeroMath</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/atom.xml" title="Feed RSS"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Cerca"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Cerca"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-hexo-github2" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2017/03/21/hexo-github2/" class="article-date">
+  <time class="dt-published" datetime="2017-03-21T21:42:00.000Z" itemprop="datePublished">2017-03-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      [Hexo] 在 GitHub 上搭建博客 (2)
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>上次我们介绍了如何建立博客、撰写文章，这次我们来聊聊如何修改博客的一些基本属性。本期主要包括：</p>
+<ul>
+<li>修改博客的信息</li>
+<li>修改主题样式</li>
+<li>发布到GitHub</li>
+</ul>
+<span id="more"></span>
+
+<h1 id="博客的设定"><a href="#博客的设定" class="headerlink" title="博客的设定"></a>博客的设定</h1><h2 id="修改博客的基本属性"><a href="#修改博客的基本属性" class="headerlink" title="修改博客的基本属性"></a>修改博客的基本属性</h2><p>打开 <code>&lt;你的博客目录&gt;</code> 目录下的 <code>_config.yml</code> ，这里我们可以修改各种参数信息：</p>
+<p>比如 <code>Site</code> 字段是设置站点信息的</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Hexo</span><br><span class="line">subtitle:</span><br><span class="line">description:</span><br><span class="line">author: John Doe</span><br><span class="line">language:</span><br><span class="line">timezone:</span><br></pre></td></tr></table></figure>
+<p>其中：</p>
+<ul>
+<li><code>title</code> 就是博客的名称</li>
+<li><code>author</code> 就是博客作者</li>
+</ul>
+<p>我们可以改成我们想要的，比如说</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Test Blog</span><br><span class="line">subtitle:</span><br><span class="line">description:</span><br><span class="line">author: Zero</span><br><span class="line">language:</span><br><span class="line">timezone:</span><br></pre></td></tr></table></figure>
+<p><em>Remark: 所有参数的冒号后面都要加上一个空格</em></p>
+<p>重新把网站发布，就变成了如下的样子</p>
+<p><img src="/hexo-github2/BLOG-site.png" alt="BLOG-site"></p>
+<h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><p>这里我要推荐一个非常简洁耐用的主题 <a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/getting-started.html">Next</a>。安装方式如下：</p>
+<p>运行命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<p>打开 <code>_config.yml</code> 文件，定位到 <code>Themes</code> 字段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: landscape</span><br></pre></td></tr></table></figure>
+
+<p>把其中的 <code>landscape</code> 改成 <code>next</code> 即可！</p>
+<h1 id="发布上网"><a href="#发布上网" class="headerlink" title="发布上网"></a>发布上网</h1><h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><p>首先你要注册一个 <a target="_blank" rel="noopener" href="https://github.com/">GitHub</a> 账号，我们发布的原理是 GitHub 提供一个叫 GitHub Page 的网页，它对应的网址是 <code>https://&lt;user_name&gt;.github.io</code>。而它对应的仓库是 <code>&lt;user_name&gt;.github.io</code>。所以你的用户名非常重要，注册的时候请谨慎选取</p>
+<p>比如我的 GitHub 账号就是 zeromath，所以对应的主页就是 <a target="_blank" rel="noopener" href="https://zeromath.github.com/">https://zeromath.github.com</a>.</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="添加部署信息"><a href="#添加部署信息" class="headerlink" title="添加部署信息"></a>添加部署信息</h3><p>打开 “_config.yml”，找到 <code>Deployment</code> 字段</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type:</span><br></pre></td></tr></table></figure>
+<p>在 <code>type</code> 中填入 <code>git</code>，然后在 <code>repo</code> 里写入<strong>你的仓库地址</strong>，最后 <code>branch</code> 里写上 <code>master</code>。最后效果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:&lt;user_name&gt;/&lt;user_name&gt;.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="添加SSH-KEY"><a href="#添加SSH-KEY" class="headerlink" title="添加SSH KEY"></a>添加SSH KEY</h3><p>为了不用每次 push 都输入密码，我们采用 SSH 的方式进行 push，这就需要将你的 SSH KEY 添加到 GitHub 的信任列表里</p>
+<p>打开终端，运行如下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>然后一路 <code>Enter</code> 即可，不用管其他参数。完成后打开 <code>~/.ssh/id_rsa.pub</code> 文件，将里面的所有内容拷贝出来</p>
+<p>打开 <code>https://github.com/settings/keys</code>（你可能需要登陆），点击右上角的 <code>New SSH key</code> 按钮。把刚才拷贝出来的内容拷贝到 <code>Key</code> 里，然后 <code>Title</code> 就写上你的电脑名称即可。</p>
+<p><img src="/hexo-github2/SSH-key.png"></p>
+<h3 id="部署上网"><a href="#部署上网" class="headerlink" title="部署上网"></a>部署上网</h3><p>首先我们要安装一个 <code>git</code> 部署器，运行如下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>然后就可以愉快的一键部署了！输入</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>然后你的网站就刷刷刷的传到 GitHub 上啦！打开 <code>https://&lt;user_name&gt;.github.io</code>	就可以看到你的网站了。</p>
+<p><em>Remark: 有时候部署完了还需要等一会儿 GitHub 的网页才能更新</em></p>
+<hr>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
+<li><a target="_blank" rel="noopener" href="https://hexo.io/docs/deployment.html">Hexo官方文档 - 部署</a></li>
+<li><a target="_blank" rel="noopener" href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">GitHub Help - SSH</a></li>
+<li><a target="_blank" rel="noopener" href="http://theme-next.iissnan.com/getting-started.html">Next 主题</a></li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2017/03/21/hexo-github2/" data-id="cm3lzkdu7000v0xu6eo7oepi7" data-title="[Hexo] 在 GitHub 上搭建博客 (2)" class="article-share-link"><span class="fa fa-share">Condividi</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/03/21/hexo-github3/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Nuovi</strong>
+      <div class="article-nav-title">
+        
+          [Hexo] 在 GitHub 上搭建博客 (3)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/03/11/hexo-github/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Vecchi</strong>
+      <div class="article-nav-title">[Hexo] 在 GitHub 上搭建博客 (1)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categorie</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Math/">Math</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algebraic-Geometry/" rel="tag">Algebraic Geometry</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Logic/" rel="tag">Logic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Topology/" rel="tag">Topology</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Algebraic-Geometry/" style="font-size: 10px;">Algebraic Geometry</a> <a href="/tags/GitHub/" style="font-size: 20px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Logic/" style="font-size: 10px;">Logic</a> <a href="/tags/Math/" style="font-size: 15px;">Math</a> <a href="/tags/Topology/" style="font-size: 10px;">Topology</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archivio</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1969/12/">December 1969</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Post Recenti</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/03/05/bezout-theorem-and-pascal-theorem/">贝祖定理和帕斯卡定理</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/05/hexo-github5/">[Hexo] 在 GitHub 上搭建博客 (5)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/04/hardest-logic-puzzle-ever/">[4068] 闲谈世上最难的逻辑问题</a>
+          </li>
+        
+          <li>
+            <a href="/2019/03/03/topology-prime-numbers/">拓扑与素数</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/22/hexo-github4/">[Hexo] 在 GitHub 上搭建博客 (4)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 ZERO<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
