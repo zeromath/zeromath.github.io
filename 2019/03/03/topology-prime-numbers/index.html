@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>拓扑与素数 | ZeroMath</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
   <meta name="description" content="数学发展的一大特征就是不断的抽象。因为当一些定理成立的时候，你可能并不知道你已经使用了超出你需要范围的东西，而抽象可以让你看清楚到底哪些条件、性质才是我们需要来证明这个定理的。拓扑学是这样的一门学科，它通过对“开集”这个概念的抽象，发展出了一套波澜壮阔的理论。在这篇文章，我想和大家谈谈拓扑，顺便聊聊如何用拓扑证明素数有无穷多个。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="拓扑与素数">
@@ -14,90 +28,210 @@
 <meta property="og:description" content="数学发展的一大特征就是不断的抽象。因为当一些定理成立的时候，你可能并不知道你已经使用了超出你需要范围的东西，而抽象可以让你看清楚到底哪些条件、性质才是我们需要来证明这个定理的。拓扑学是这样的一门学科，它通过对“开集”这个概念的抽象，发展出了一套波澜壮阔的理论。在这篇文章，我想和大家谈谈拓扑，顺便聊聊如何用拓扑证明素数有无穷多个。">
 <meta property="og:locale">
 <meta property="article:published_time" content="2019-03-04T06:33:41.000Z">
-<meta property="article:modified_time" content="2019-03-16T18:32:40.000Z">
+<meta property="article:modified_time" content="2024-11-17T22:00:55.780Z">
 <meta property="article:author" content="ZERO">
 <meta property="article:tag" content="Math">
 <meta property="article:tag" content="Topology">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="ZeroMath" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+<link rel="canonical" href="http://example.com/2019/03/03/topology-prime-numbers/">
 
-  
-  
-<meta name="generator" content="Hexo 7.3.0"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">ZeroMath</a>
-      </h1>
-      
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh'
+  };
+</script>
+
+  <title>拓扑与素数 | ZeroMath</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="Feed RSS"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Cerca"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Cerca"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ZeroMath</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
-</header>
+</div>
 
-      <div class="outer">
-        <section id="main"><article id="post-topology-prime-numbers" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/03/03/topology-prime-numbers/" class="article-date">
-  <time class="dt-published" datetime="2019-03-04T06:33:41.000Z" itemprop="datePublished">2019-03-03</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Math/">Math</a>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
   </div>
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      拓扑与素数
-    </h1>
-  
+</div>
+    </header>
 
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/03/03/topology-prime-numbers/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ZERO">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZeroMath">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          拓扑与素数
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-03 22:33:41" itemprop="dateCreated datePublished" datetime="2019-03-03T22:33:41-08:00">2019-03-03</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-11-17 14:00:55" itemprop="dateModified" datetime="2024-11-17T14:00:55-08:00">2024-11-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Math/" itemprop="url" rel="index"><span itemprop="name">Math</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
         <p>数学发展的一大特征就是不断的抽象。因为当一些定理成立的时候，你可能并不知道你已经使用了超出你需要范围的东西，而抽象可以让你看清楚到底哪些条件、性质才是我们需要来证明这个定理的。拓扑学是这样的一门学科，它通过对“开集”这个概念的抽象，发展出了一套波澜壮阔的理论。在这篇文章，我想和大家谈谈拓扑，顺便聊聊如何用拓扑证明素数有无穷多个。</p>
 <span id="more"></span>
@@ -105,15 +239,17 @@
 <h2 id="开集和邻域"><a href="#开集和邻域" class="headerlink" title="开集和邻域"></a>开集和邻域</h2><p>前面说到，拓扑是对“开集”这个概念的抽象。那么，什么是开集呢？相信大家中学的时候都学过区间的概念，特别的，我们知道开区间就是形如 $(1,2)$ 这样的集合，而闭区间则是 $[1,2]$ 这样的集合。事实上，数轴 $\mathbb{R}$ 上的所有开集就是任意的开区间的并构成的集合。这就是所有的开集了吗？我们为什么要研究这个概念呢？为了说清楚这个问题，我们需要聊聊另外一个概念：邻域。</p>
 <p>简单的说，我们有如下定义</p>
 <div class="theorem">Definition
-我们称包含了这个点的一个开集为这个点的一个*邻域*。
-</div>
-比如 $(0,1)$ 就是 $0.5$ 的一个邻域，又比如 $(-\infty,\infty)$ 是任何一个点的邻域。当然后一个例子里的“邻域”看起来不怎么靠近。但是*只要满足定义*，它就是一个邻域！邻域这个概念正如它的名字所暗示的，它刻画了点和点之间的“邻里”关系。假如两个点 $A$ 和 $B$ 足够接近（它们是“邻居”），那么 $A$ 应该有许多邻域都包含 $B$；相反假如它们足够远离，那么 $A$ 应该有（和前一种比）更少的邻域包含 $B$。当然在数轴上，包含两个点的开区间总是有无穷多个，我们是很难直接比较多和少的（事实上它们总是一样多——等势的）。但是抛开严谨性，我们还是会觉得包含 $0$ 和 $1$ 的（连通的）开区间比包含 $0$ 和 $0.5$ 的（连通的）开区间要少——因为前者一定都在后者里面。通俗地讲，你可以把邻域理解成一个关系网，假如张三和李四认识，那么他们俩的关系网里重叠的人就会更多（有更多的“邻域”互相包含对方），反之就应该更少。
 
-<p>让我们回去看看开区间和闭区间的例子：比如 $(1,2)$ 和 $[1,2]$。它们最大的区别，就是 $1$ 和 $2$ 在后一个里面，却不在前一个里面。事实上，这两个点有一个非常重要的名字，他们叫做*边界点 (boundary point)*。什么样的点是边界点呢？</p>
+<p>我们称包含了这个点的一个开集为这个点的一个<em>邻域</em>。</p>
+</div>
+
+<p>比如 $(0,1)$ 就是 $0.5$ 的一个邻域，又比如 $(-\infty,\infty)$ 是任何一个点的邻域。当然后一个例子里的“邻域”看起来不怎么靠近。但是<em>只要满足定义</em>，它就是一个邻域！邻域这个概念正如它的名字所暗示的，它刻画了点和点之间的“邻里”关系。假如两个点 $A$ 和 $B$ 足够接近（它们是“邻居”），那么 $A$ 应该有许多邻域都包含 $B$；相反假如它们足够远离，那么 $A$ 应该有（和前一种比）更少的邻域包含 $B$。当然在数轴上，包含两个点的开区间总是有无穷多个，我们是很难直接比较多和少的（事实上它们总是一样多——等势的）。但是抛开严谨性，我们还是会觉得包含 $0$ 和 $1$ 的（连通的）开区间比包含 $0$ 和 $0.5$ 的（连通的）开区间要少——因为前者一定都在后者里面。通俗地讲，你可以把邻域理解成一个关系网，假如张三和李四认识，那么他们俩的关系网里重叠的人就会更多（有更多的“邻域”互相包含对方），反之就应该更少。</p>
+<p>让我们回去看看开区间和闭区间的例子：比如 $(1,2)$ 和 $[1,2]$。它们最大的区别，就是 $1$ 和 $2$ 在后一个里面，却不在前一个里面。事实上，这两个点有一个非常重要的名字，他们叫做*边界点(boundary point)*。什么样的点是边界点呢？</p>
 <div class="theorem">Definition
 一个点是某个集合的边界点，当且仅当它的任意一个邻域都包含至少一个集合内的点和一个集合外的点。
-</div>这个定义看起来很抽象，但是不要被它吓到。还是让我们回到刚刚的例子，比如 $1$ 是 $[1,2]$ 的边界点。我们来检查一下它是否满足定义：任意包含 $1$  的开集，它一定包含一个小于 $1$ 的数，这个数显然在 $[1,2]$ 外面，同时它一定包含 $1\in [1,2]$。所以满足定义！仔细思考了一下，这个定义除了有点拗口，还是很直观的。就像小时候同桌画的三八线。是不是在那根线的周围，既存在你的势力范围也存在他/她的势力范围？而不在那根线附近的话，你就总可以画一个圈使得这个圈完全是你的势力范围了！
+</div>
 
+<p>这个定义看起来很抽象，但是不要被它吓到。还是让我们回到刚刚的例子，比如 $1$ 是 $[1,2]$ 的边界点。我们来检查一下它是否满足定义：任意包含 $1$  的开集，它一定包含一个小于 $1$ 的数，这个数显然在 $[1,2]$ 外面，同时它一定包含 $1\in [1,2]$。所以满足定义！仔细思考了一下，这个定义除了有点拗口，还是很直观的。就像小时候同桌画的三八线。是不是在那根线的周围，既存在你的势力范围也存在他&#x2F;她的势力范围？而不在那根线附近的话，你就总可以画一个圈使得这个圈完全是你的势力范围了！</p>
 <p>开集就是那些不包含它们边界点的集合。假如一个点 $x$ 在集合 $U$ 中，而又不是 $U$ 的边界点，那么它的邻域满足什么样的条件呢？这个条件就是边界点邻域满足的条件的反面：存在一个 $x$ 的邻域，这个邻域完全包含在 $U$ 中！终于，我们可以给出（一般的）开集的定义了！🎉🎉🎉</p>
 <div class="theorem">Definition
 一个集合 $U$ 是开集，假如它的每一个点都有一个包含在 $U$ 里面的邻域。
@@ -133,16 +269,17 @@
 <p>等一下，全空间（和空集）不是开集么，怎么它又成了闭集了？因为我们直觉上觉得开区间就不能是闭区间。事实上，（有限非空）开区间确实不能是闭区间。但是这个性质是这种“开区间”拓扑所特有的。对于一般的拓扑空间，这一点是非必要的！完全可以存在即开又闭的集合！<strong>注意</strong>：开和闭并不是相反的概念！“闭”并不是“不开”（回忆定义：“闭”是指它的补集是“开”的）。一个集合是既开又闭的，最多说明它的补集也是既开又闭的（比如全集和空集）。真正<em>矛盾</em>的说法是：一个集合既是闭集，又不是闭集！</p>
 <h2 id="拓扑空间的例子"><a href="#拓扑空间的例子" class="headerlink" title="拓扑空间的例子"></a>拓扑空间的例子</h2><p>让我们来举几个例子。第一个例子就是一开始就提到的开区间。这里的开集是定义成<em>任意多个开区间的并或者空集</em>。让我们来检查一下定义：首先全集 $\mathbb{R}&#x3D;(-\infty,\infty)$ 和空集 $\emptyset$ 显然在里面；由于每个开集是任意多个开区间的并，任意多个开集的并就是任意多个任意多个开区间的并，根据定义也在里面；对于有限多个开集的交，我们需要运用如下集合论的知识：</p>
 <div class="theorem">Lemma
-对于集合族 $\\{A\_i\\}$ 和 $\\{B\_j\\}$，我们有 $(\cup\_i A\_i)\cap (\cup\_j B\_j)=\cup\_{i,j} (A\_i\cap B\_j)$
+对于集合族 $\{A_i\}$ 和 $\{B_j\}$，我们有 $(\cup_i A_i)\cap (\cup_j B_j)=\cup_{i,j} (A_i\cap B_j)$
 </div>
-<div class="proof">证明：显然右边包含在左边里面。为了说明左边也包含在右边。考虑 $x$ 为左边的一个元素，那么 $x\in \cup\_i A\_i$ 意味着有个下标 $i\_0$ 使得 $x\in A\_{i\_0}$。同样也有一个下标 $j\_0$ 使得 $x\in B\_{j\_0}$。所以 $x\in A\_{i\_0}\cap B\_{j\_0}\subseteq$右边。$\blacksquare$
+
+<div class="proof">证明：显然右边包含在左边里面。为了说明左边也包含在右边。考虑 $x$ 为左边的一个元素，那么 $x\in \cup_i A_i$ 意味着有个下标 $i_0$ 使得 $x\in A_{i_0}$。同样也有一个下标 $j_0$ 使得 $x\in B_{j_0}$。所以 $x\in A_{i_0}\cap B_{j_0}\subseteq$右边。$\blacksquare$
 </div>
 
 <p>我们知道两个开区间的交一定是开区间（一个直接的分类讨论即可）。所以根据上述引理，我们知道任意两个开集的交也是开集。接下来一个简单的归纳就可以说明任意有限个开集的交还是开集。所以这样的开集构成 $\mathbb{R}$ 的一个拓扑，一般称为*欧氏拓扑 (Euclidean topology)*。</p>
-<p>接下来这个例子有点……耍赖。对于任意集合 $X$，我们取 $\mathscr{B}&#x3D;\{X,\emptyset\}$。定义不是要求要有这两个元素么，那我们就只取这两个元素。读者可以自行验证这个 $\mathscr{B}$ 是 $X$ 上的一个拓扑。我们称这个拓扑为*平凡拓扑 (trivial topology)<em>。我们也可以取 $\mathscr{B}$ 是 $X$ 的所有子集的集合（比如 $X&#x3D;\{1,2\}$，那么 $\mathscr{B}&#x3D;\{\emptyset,\{1\},\{2\},\{1,2\}\}$），读者可以再次自行验证这个 $\mathscr{B}$ 是 $X$ 上的一个拓扑。我们称这个拓扑为</em>离散拓扑 (discrete topology)*。在离散拓扑下，任何一个子集都是既开又闭的（上面说到，这并不引起任何矛盾）！</p>
-<p>那有读者就要问了：有没有有意思一点的拓扑呀？有！在实数轴 $\mathbb{R}$ 上，我们还可以赋予另一种拓扑。定义一个 $\mathbb{R}$ 的子集是*余有限 (cofinite)<em>的，假如它在 $\mathbb{R}$ 中的补集是有限点集。用人话说，就是你从数轴上扣掉有限个点，剩下的就是一个余有限集合。我们定义开集为空集和所有这样的余有限的集合。这就构成了一个拓扑，一般称为</em>余有限拓扑 (cofinite topology)<em>。在数轴这个特殊的集合上，这种拓扑等价于另外一个在代数几何里非常重要的拓扑——</em>扎里斯基拓扑 (Zariski topology)*。这种拓扑的特殊之处在于闭集等于有限集（为什么？）。所以任何一个无限集合一定不是闭集！</p>
+<p>接下来这个例子有点……耍赖。对于任意集合 $X$，我们取 $\mathscr{B}&#x3D;{X,\emptyset}$。定义不是要求要有这两个元素么，那我们就只取这两个元素。读者可以自行验证这个 $\mathscr{B}$ 是 $X$ 上的一个拓扑。我们称这个拓扑为 *平凡拓扑 (trivial topology)*。我们也可以取 $\mathscr{B}$ 是 $X$ 的所有子集的集合（比如 $X&#x3D;{1,2}$，那么 $\mathscr{B}&#x3D;{\emptyset,\{1\},\{2\},\{1,2\}}$），读者可以再次自行验证这个 $\mathscr{B}$ 是 $X$ 上的一个拓扑。我们称这个拓扑为 _离散拓扑 (discrete topology)_。在离散拓扑下，任何一个子集都是既开又闭的（上面说到，这并不引起任何矛盾）！</p>
+<p>那有读者就要问了：有没有有意思一点的拓扑呀？有！在实数轴 $\mathbb{R}$ 上，我们还可以赋予另一种拓扑。定义一个 $\mathbb{R}$ 的子集是*余有限 (cofinite)*的，假如它在 $\mathbb{R}$ 中的补集是有限点集。用人话说，就是你从数轴上扣掉有限个点，剩下的就是一个余有限集合。我们定义开集为空集和所有这样的余有限的集合。这就构成了一个拓扑，一般称为 * 余有限拓扑 (cofinite topology)<em>。在数轴这个特殊的集合上，这种拓扑等价于另外一个在代数几何里非常重要的拓扑——</em>扎里斯基拓扑 (Zariski topology)*。这种拓扑的特殊之处在于闭集等于有限集（为什么？）。所以任何一个无限集合一定不是闭集！</p>
 <h2 id="素数的无限性"><a href="#素数的无限性" class="headerlink" title="素数的无限性"></a>素数的无限性</h2><p>好了，终于要开始说标题的另一半了：素数的无限性。首先，这是一个欧几里得就已经证明的结论。欧几里得在他的著作《几何原本》中提出如下证明：反设素数只有有限个，把他们标记为 $p_1,\ldots,p_n$ 。那么我们考虑 $N&#x3D;p_1\cdots p_n + 1$。这个数不被任何一个已知素数整除，所以它的因数一定包含一个未知的素数，所以素数不可能是有限的！</p>
-<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Hillel_Furstenberg">Hillel Furstenberg</a> 在1955年（当他还是一个本科生的时候！）提出了一个用拓扑证明素数无限的方法。用拓扑证明，很显然就是要定义开集。经过上面的长篇大论，我们已经知道什么叫开集了。那让我们来定义它们：首先令 $S(a,b)&#x3D;\{ a n+b | n\in \mathbb{Z} \}&#x3D;\{a\mathbb{Z} +b\}$ 表示从 $b$ 出发，以 $a$ 为公差往<em>两侧延伸</em>的等差数列。比如 $S(1,100)&#x3D;\mathbb{Z},S(2,4)&#x3D;$所有偶数。我们定义 $\mathbb{Z}$ 上的一个拓扑 $\mathscr{B}$ 是空集和所有的等差数列 $S(a,b)$ 的并。我们来运用所学的定义，仔细的验证一下这是一个拓扑：</p>
+<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Hillel_Furstenberg">Hillel Furstenberg</a> 在1955年（当他还是一个本科生的时候！）提出了一个用拓扑证明素数无限的方法。用拓扑证明，很显然就是要定义开集。经过上面的长篇大论，我们已经知道什么叫开集了。那让我们来定义它们：首先令 $S(a,b)&#x3D;{ a n+b | n\in \mathbb{Z} }&#x3D;{a\mathbb{Z} +b}$ 表示从 $b$ 出发，以 $a$ 为公差往<em>两侧延伸</em>的等差数列。比如 $S(1,100)&#x3D;\mathbb{Z},S(2,4)&#x3D;$所有偶数。我们定义 $\mathbb{Z}$ 上的一个拓扑 $\mathscr{B}$ 是空集和所有的等差数列 $S(a,b)$ 的并。我们来运用所学的定义，仔细的验证一下这是一个拓扑：</p>
 <ol>
 <li>定义第一条，我们要求 $\mathbb{Z}$ 和 $\emptyset$ 在 $\mathscr{B}$ 中。$\emptyset\in\mathscr{B}$ 是定义的一部分。而 $\mathbb{Z}&#x3D;S(1,0)\in\mathscr{B}$ 自然也在其中。</li>
 <li>定义第二条，$\mathscr{B}$ 中任意多个元素的并在 $\mathscr{B}$ 中。我们定义中已经允许任意取并了，所以这一条也是显然的。</li>
@@ -157,163 +294,263 @@
 <li>非空有限集合一定不是开集，（非全集的）余有限集合一定不是闭集：因为任何非空开集一定包含一个等差数列，所以一定是无限的集合。第二个论断是第一句话的等价说法。</li>
 <li>$S(a,b)$ 是既开又闭的集合（注意：上面我们讨论过，这不是一个矛盾的说法！）：这是因为全集是 $\mathbb{Z}&#x3D;\cup_{i&#x3D;0}^{a-1} S(a,b+i)$。所以 $\cup_{i&#x3D;1}^{a-1} S(a,b+i)$ 是 $S(a,b)$ 的补集。又因为 $\cup_{i&#x3D;1}^{a-1} S(a,b+i)$ 显然是个开集，所以 $S(a,b)$ 同时也是闭集。</li>
 </ol>
-<p>Here comes the punchline! 我们观察如下等式<br>$$<br>\mathbb{Z}\setminus \{\pm 1\} &#x3D; \cup_{p\text{ prime}} S(p,0)<br>$$<br>因为任何一个数要么是 $\pm 1$，要么是某个素数的倍数，所以上述集合相等。根据观察 1，我们知道左边的集合<strong>一定不是闭集</strong>。现在，<em>假如素数有限</em>，右边就是一个有限的并。根据第二条观察，我们知道这就是一个有限闭集的有限并，所以也是<strong>闭集</strong>。正如我们前面所说，一个集合可以是既开又闭，但是不能既是闭集，又不是闭集。所以我们得到了一个矛盾！从而假设错误，素数是无限的！</p>
+<p>Here comes the punchline! 我们观察如下等式<br>$$<br>\mathbb{Z}\setminus {\pm 1} &#x3D; \cup_{p\text{ prime}} S(p,0)<br>$$<br>因为任何一个数要么是 $\pm 1$，要么是某个素数的倍数，所以上述集合相等。根据观察 1，我们知道左边的集合<strong>一定不是闭集</strong>。现在，<em>假如素数有限</em>，右边就是一个有限的并。根据第二条观察，我们知道这就是一个有限闭集的有限并，所以也是<strong>闭集</strong>。正如我们前面所说，一个集合可以是既开又闭，但是不能既是闭集，又不是闭集。所以我们得到了一个矛盾！从而假设错误，素数是无限的！</p>
 <h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
 <li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Euclid%27s_theorem">Euclid’s theorem</a></li>
 <li><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Furstenberg%27s_proof_of_the_infinitude_of_primes">Furstenberg’s proof of the infinitude of primes</a></li>
 </ol>
 
-      
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/03/03/topology-prime-numbers/" data-id="cm3lzkdtw000l0xu6cnnngdrq" data-title="拓扑与素数" class="article-share-link"><span class="fa fa-share">Condividi</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Topology/" rel="tag">Topology</a></li></ul>
 
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Math/" rel="tag"># Math</a>
+              <a href="/tags/Topology/" rel="tag"># Topology</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2017/03/22/hexo-github4/" rel="prev" title="[Hexo] 在 GitHub 上搭建博客 (4)">
+      <i class="fa fa-chevron-left"></i> [Hexo] 在 GitHub 上搭建博客 (4)
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/03/04/hardest-logic-puzzle-ever/" rel="next" title="[4068] 闲谈世上最难的逻辑问题">
+      [4068] 闲谈世上最难的逻辑问题 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%BC%80%E9%9B%86%E5%92%8C%E9%82%BB%E5%9F%9F"><span class="nav-number">1.</span> <span class="nav-text">开集和邻域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%8B%93%E6%89%91%E7%A9%BA%E9%97%B4%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="nav-number">2.</span> <span class="nav-text">拓扑空间的例子</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%B4%A0%E6%95%B0%E7%9A%84%E6%97%A0%E9%99%90%E6%80%A7"><span class="nav-number">3.</span> <span class="nav-text">素数的无限性</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E6%96%87%E7%8C%AE"><span class="nav-number">4.</span> <span class="nav-text">参考文献</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ZERO</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZERO</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
     </footer>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2019/03/04/hardest-logic-puzzle-ever/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Nuovi</strong>
-      <div class="article-nav-title">
-        
-          [4068] 闲谈世上最难的逻辑问题
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/03/22/hexo-github4/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Vecchi</strong>
-      <div class="article-nav-title">[Hexo] 在 GitHub 上搭建博客 (4)</div>
-    </a>
-  
-</nav>
 
   
-</article>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categorie</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Math/">Math</a></li></ul>
-    </div>
-  </div>
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
 
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algebraic-Geometry/" rel="tag">Algebraic Geometry</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Logic/" rel="tag">Logic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Topology/" rel="tag">Topology</a></li></ul>
-    </div>
-  </div>
+
+
 
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Algebraic-Geometry/" style="font-size: 10px;">Algebraic Geometry</a> <a href="/tags/GitHub/" style="font-size: 20px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Logic/" style="font-size: 10px;">Logic</a> <a href="/tags/Math/" style="font-size: 15px;">Math</a> <a href="/tags/Topology/" style="font-size: 10px;">Topology</a>
-    </div>
-  </div>
+<script src="/js/local-search.js"></script>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archivio</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1969/12/">December 1969</a></li></ul>
-    </div>
-  </div>
+
+
+
+
+
+
+
+
+
+
 
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Post Recenti</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/03/05/bezout-theorem-and-pascal-theorem/">贝祖定理和帕斯卡定理</a>
-          </li>
-        
-          <li>
-            <a href="/2019/03/05/hexo-github5/">[Hexo] 在 GitHub 上搭建博客 (5)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/03/04/hardest-logic-puzzle-ever/">[4068] 闲谈世上最难的逻辑问题</a>
-          </li>
-        
-          <li>
-            <a href="/2019/03/03/topology-prime-numbers/">拓扑与素数</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/22/hexo-github4/">[Hexo] 在 GitHub 上搭建博客 (4)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 
   
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
       
-      &copy; 2024 ZERO<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
 
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
     
 
-
-<script src="/js/jquery-3.6.4.min.js"></script>
-
-
-
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
 
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-
-  </div>
 </body>
 </html>

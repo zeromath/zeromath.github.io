@@ -1,11 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-  <meta charset="utf-8">
-  
-  
-  <title>[Hexo] 在 GitHub 上搭建博客 (5) | ZeroMath</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 7.3.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
   <meta name="description" content="这里记录一些繁琐但是有趣的 next 主题修改方法  修改文章底部 # 号标签 设置网站的图标 Favicon 实现统计字数&#x2F;阅读时间功能 在文章底部增加版权信息 修改网页页脚的作者符号">
 <meta property="og:type" content="article">
 <meta property="og:title" content="[Hexo] 在 GitHub 上搭建博客 (5)">
@@ -13,99 +27,219 @@
 <meta property="og:site_name" content="ZeroMath">
 <meta property="og:description" content="这里记录一些繁琐但是有趣的 next 主题修改方法  修改文章底部 # 号标签 设置网站的图标 Favicon 实现统计字数&#x2F;阅读时间功能 在文章底部增加版权信息 修改网页页脚的作者符号">
 <meta property="og:locale">
-<meta property="og:image" content="http://example.com/hexo-github5/tag.png">
-<meta property="og:image" content="http://example.com/hexo-github5/favicon.png">
-<meta property="og:image" content="http://example.com/hexo-github5/wordcount.png">
-<meta property="og:image" content="http://example.com/hexo-github5/copyright.png">
-<meta property="og:image" content="http://example.com/hexo-github5/copyright-tag.png">
-<meta property="og:image" content="http://example.com/hexo-github5/copyright-temp.png">
-<meta property="og:image" content="http://example.com/hexo-github5/footer-tag.png">
+<meta property="og:image" content="http://example.com/2019/03/05/hexo-github5/tag.png">
+<meta property="og:image" content="http://example.com/2019/03/05/hexo-github5/favicon.png">
+<meta property="og:image" content="http://example.com/2019/03/05/hexo-github5/wordcount.png">
+<meta property="og:image" content="http://example.com/2019/03/05/hexo-github5/copyright.png">
+<meta property="og:image" content="http://example.com/2019/03/05/hexo-github5/copyright-tag.png">
+<meta property="og:image" content="http://example.com/2019/03/05/hexo-github5/copyright-temp.png">
+<meta property="og:image" content="http://example.com/2019/03/05/hexo-github5/footer-tag.png">
 <meta property="article:published_time" content="2019-03-05T21:22:52.000Z">
-<meta property="article:modified_time" content="2019-03-05T20:49:34.000Z">
+<meta property="article:modified_time" content="2024-11-17T21:27:08.700Z">
 <meta property="article:author" content="ZERO">
 <meta property="article:tag" content="GitHub">
 <meta property="article:tag" content="Hexo">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://example.com/hexo-github5/tag.png">
-  
-    <link rel="alternate" href="/atom.xml" title="ZeroMath" type="application/atom+xml">
-  
-  
-    <link rel="shortcut icon" href="/favicon.png">
-  
-  
-  
-<link rel="stylesheet" href="/css/style.css">
+<meta name="twitter:image" content="http://example.com/2019/03/05/hexo-github5/tag.png">
 
-  
-    
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+<link rel="canonical" href="http://example.com/2019/03/05/hexo-github5/">
 
-  
-  
-<meta name="generator" content="Hexo 7.3.0"></head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">ZeroMath</a>
-      </h1>
-      
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh'
+  };
+</script>
+
+  <title>[Hexo] 在 GitHub 上搭建博客 (5) | ZeroMath</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-        
-          <a class="nav-icon" href="/atom.xml" title="Feed RSS"><span class="fa fa-rss"></span></a>
-        
-        <a class="nav-icon nav-search-btn" title="Cerca"><span class="fa fa-search"></span></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Cerca"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
-      </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">ZeroMath</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
     </div>
   </div>
-</header>
+</div>
 
-      <div class="outer">
-        <section id="main"><article id="post-hexo-github5" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/2019/03/05/hexo-github5/" class="article-date">
-  <time class="dt-published" datetime="2019-03-05T21:22:52.000Z" itemprop="datePublished">2019-03-05</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>Search
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="Searching..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
   </div>
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="p-name article-title" itemprop="headline name">
-      [Hexo] 在 GitHub 上搭建博客 (5)
-    </h1>
-  
+</div>
+    </header>
 
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2019/03/05/hexo-github5/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="ZERO">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ZeroMath">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          [Hexo] 在 GitHub 上搭建博客 (5)
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2019-03-05 13:22:52" itemprop="dateCreated datePublished" datetime="2019-03-05T13:22:52-08:00">2019-03-05</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2024-11-17 13:27:08" itemprop="dateModified" datetime="2024-11-17T13:27:08-08:00">2024-11-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="e-content article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
         <p>这里记录一些繁琐但是有趣的 next 主题修改方法</p>
 <ul>
@@ -117,19 +251,23 @@
 </ul>
 <span id="more"></span>
 
-<h2 id="修改文章底部-号标签"><a href="#修改文章底部-号标签" class="headerlink" title="修改文章底部 # 号标签"></a>修改文章底部 # 号标签</h2><h3 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="/hexo-github5/tag.png" alt="tag"></p>
+<h2 id="修改文章底部-号标签"><a href="#修改文章底部-号标签" class="headerlink" title="修改文章底部 # 号标签"></a>修改文章底部 # 号标签</h2><h3 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h3><img src="/2019/03/05/hexo-github5/tag.png" class="" title="tag">
+
 <h3 id="修改方法"><a href="#修改方法" class="headerlink" title="修改方法"></a>修改方法</h3><p>修改模板 “&#x2F;themes&#x2F;next&#x2F;layout&#x2F;_macro&#x2F;post.swig”，搜索 <code>rel=&quot;tag&quot;&gt;#</code>，将 <code>#</code> 换成 <code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code></p>
-<h2 id="设置网站的图标-Favicon"><a href="#设置网站的图标-Favicon" class="headerlink" title="设置网站的图标 Favicon"></a>设置网站的图标 Favicon</h2><h3 id="实现效果-1"><a href="#实现效果-1" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="/hexo-github5/favicon.png" alt="favicon"></p>
+<h2 id="设置网站的图标-Favicon"><a href="#设置网站的图标-Favicon" class="headerlink" title="设置网站的图标 Favicon"></a>设置网站的图标 Favicon</h2><h3 id="实现效果-1"><a href="#实现效果-1" class="headerlink" title="实现效果"></a>实现效果</h3><img src="/2019/03/05/hexo-github5/favicon.png" class="" title="favicon">
+
 <h3 id="修改方法-1"><a href="#修改方法-1" class="headerlink" title="修改方法"></a>修改方法</h3><p>找一张 32*32 的 ico 图标，并将图标名称改为 “favicon.ico”，然后把图标放在 “&#x2F;themes&#x2F;next&#x2F;source&#x2F;images” 里，并且修改<span style="background-color:blue;color:white">主题配置文件</span>为</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># Put your favicon.ico into `hexo-site/source/` directory.</span><br><span class="line">favicon: images/favicon.ico</span><br></pre></td></tr></table></figure>
 
-<h2 id="实现统计字数-阅读时间功能"><a href="#实现统计字数-阅读时间功能" class="headerlink" title="实现统计字数&#x2F;阅读时间功能"></a>实现统计字数&#x2F;阅读时间功能</h2><h3 id="实现效果-2"><a href="#实现效果-2" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="/hexo-github5/wordcount.png" alt="wordcount"></p>
+<h2 id="实现统计字数-阅读时间功能"><a href="#实现统计字数-阅读时间功能" class="headerlink" title="实现统计字数&#x2F;阅读时间功能"></a>实现统计字数&#x2F;阅读时间功能</h2><h3 id="实现效果-2"><a href="#实现效果-2" class="headerlink" title="实现效果"></a>实现效果</h3><img src="/2019/03/05/hexo-github5/wordcount.png" class="" title="wordcount">
+
 <h3 id="修改方法-2"><a href="#修改方法-2" class="headerlink" title="修改方法"></a>修改方法</h3><p>在根目录下安装 “hexo-wordcount”，运行：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
 <p>然后在<span style="background-color:blue;color:white">主题配置文件</span>中，配置如下：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Post wordcount display settings</span><br><span class="line"># Dependencies: https://github.com/willin/hexo-wordcount</span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true</span><br><span class="line">  min2read: true</span><br></pre></td></tr></table></figure>
 
-<h2 id="在文章底部增加版权信息"><a href="#在文章底部增加版权信息" class="headerlink" title="在文章底部增加版权信息"></a>在文章底部增加版权信息</h2><h3 id="实现效果-3"><a href="#实现效果-3" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="/hexo-github5/copyright.png" alt="copyright"></p>
+<h2 id="在文章底部增加版权信息"><a href="#在文章底部增加版权信息" class="headerlink" title="在文章底部增加版权信息"></a>在文章底部增加版权信息</h2><h3 id="实现效果-3"><a href="#实现效果-3" class="headerlink" title="实现效果"></a>实现效果</h3><img src="/2019/03/05/hexo-github5/copyright.png" class="" title="copyright">
+
 <h3 id="修改方法-3"><a href="#修改方法-3" class="headerlink" title="修改方法"></a>修改方法</h3><p><strong>Step 1:</strong> 在目录 “next&#x2F;layout&#x2F;_macro&#x2F;“ 下新建 “my-copyright.swig”</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&#123;% if page.copyright %&#125;</span><br><span class="line">&lt;div class=&quot;my_post_copyright&quot;&gt;</span><br><span class="line">  &lt;!-- You may change any JS cdn --&gt;</span><br><span class="line">  &lt;script src=&quot;//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;script src=&quot;https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;script src=&quot;https://unpkg.com/sweetalert/dist/sweetalert.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;Title: &lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot;&gt;&#123;&#123; page.title &#125;&#125;&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;Author: &lt;/span&gt;&lt;a href=&quot;/&quot; title=&quot;Visit &#123;&#123; theme.author &#125;&#125;&#x27;s blog &quot;&gt;&#123;&#123; theme.author &#125;&#125;&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;Published: &lt;/span&gt;&#123;&#123; page.date.format(&quot;MM/DD/YYYY - HH:mm&quot;) &#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;Last update: &lt;/span&gt;&#123;&#123; page.updated.format(&quot;MM/DD/YYYY - HH:mm&quot;) &#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;Link: &lt;/span&gt;&lt;span class=&quot;copy-path&quot;  title=&quot;Click to copy the link&quot;&gt;&lt;i class=&quot;fa fa-clipboard&quot; data-clipboard-text=&quot;&#123;&#123; page.permalink &#125;&#125;&quot;  aria-label=&quot;Copied!&quot;&gt;&lt;/i&gt;&lt;/span&gt;  &lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot; title=&quot;&#123;&#123; page.title &#125;&#125;&quot;&gt;&#123;&#123; page.permalink &#125;&#125;&lt;/a&gt;</span><br><span class="line">  &lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;License: &lt;/span&gt;&lt;i class=&quot;fa fa-creative-commons&quot;&gt;&lt;/i&gt;  &lt;a rel=&quot;license&quot; href=&quot;https://creativecommons.org/licenses/by-nc-nd/4.0/&quot; target=&quot;_blank&quot; title=&quot;Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)&quot;&gt;Attribution-NonCommercial-NoDerivatives 4.0 International &lt;/a&gt;&lt;/p&gt;  </span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script&gt; </span><br><span class="line">    var clipboard = new Clipboard(&#x27;.fa-clipboard&#x27;);</span><br><span class="line">    $(&quot;.fa-clipboard&quot;).click(function()&#123;</span><br><span class="line">      clipboard.on(&#x27;success&#x27;, function()&#123;</span><br><span class="line">        swal(&#123;   </span><br><span class="line">          title: &quot;&quot;,   </span><br><span class="line">          text: &#x27;Link Copied!&#x27;,</span><br><span class="line">          icon: &quot;success&quot;, </span><br><span class="line">          showConfirmButton: true</span><br><span class="line">          &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">    &#125;);  </span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
 <p><strong>Step 2:</strong> 修改 “next&#x2F;layout&#x2F;_macro&#x2F;post.swig”，在代码</p>
@@ -143,10 +281,14 @@
 <p><strong>Step 4:</strong> 修改 “next&#x2F;source&#x2F;css&#x2F;_common&#x2F;components&#x2F;post&#x2F;post.styl” 文件，在最后一行增加代码：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@import &quot;my-post-copyright&quot;;</span><br></pre></td></tr></table></figure>
 
-<p>如果要在某篇博文下面增加版权信息的显示，需要在 markdown 文件中增加 <code>copyright: true</code> 的设置，比如：<br><img src="/hexo-github5/copyright-tag.png" alt="copyright-tag"></p>
-<p><strong>Step 5:</strong> 最后，假如你觉得每次都要输入 <code>copyright: true</code> 很麻烦的话，那你可以在 “&#x2F;scaffolds&#x2F;post.md” 文件中添加：<br><img src="/hexo-github5/copyright-temp.png" alt="copyright-temp"></p>
+<p>如果要在某篇博文下面增加版权信息的显示，需要在 markdown 文件中增加 <code>copyright: true</code> 的设置，比如：</p>
+<img src="/2019/03/05/hexo-github5/copyright-tag.png" class="" title="copyright-tag">
+
+<p><strong>Step 5:</strong> 最后，假如你觉得每次都要输入 <code>copyright: true</code> 很麻烦的话，那你可以在 “&#x2F;scaffolds&#x2F;post.md” 文件中添加：</p>
+<img src="/2019/03/05/hexo-github5/copyright-temp.png" class="" title="copyright-temp">
+
 <p>这样每次新建一个文章 (<code>hexo new</code>) 之后，生成的 markdown 文件会自动把 <code>copyright: true</code> 加到里面去。</p>
-<h2 id="修改网页页脚的作者符号"><a href="#修改网页页脚的作者符号" class="headerlink" title="修改网页页脚的作者符号"></a>修改网页页脚的作者符号</h2><h3 id="实现效果-4"><a href="#实现效果-4" class="headerlink" title="实现效果"></a>实现效果</h3><p><img src="/hexo-github5/footer-tag.png" alt="footer-tag"></p>
+<h2 id="修改网页页脚的作者符号"><a href="#修改网页页脚的作者符号" class="headerlink" title="修改网页页脚的作者符号"></a>修改网页页脚的作者符号</h2><h3 id="实现效果-4"><a href="#实现效果-4" class="headerlink" title="实现效果"></a>实现效果</h3><img src="/2019/03/05/hexo-github5/footer-tag.png" class="" title="footer-tag">
 <h3 id="修改方法-4"><a href="#修改方法-4" class="headerlink" title="修改方法"></a>修改方法</h3><p>打开<span style="background-color:blue;color:white">主题配置文件</span>，找到：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># icon between year and author @Footer</span><br><span class="line">authoricon: heart</span><br></pre></td></tr></table></figure>
 <p>这里 <code>heart</code> 代表的是 <code>fa fa-heart</code>。在 <a target="_blank" rel="noopener" href="https://fontawesome.com/icons?from=io">Fontawesome</a> 中找到你自己喜欢的图标，然后修改 <code>heart</code> 的部分就可以了。比如上述效果就是改成 <code>user</code>。</p>
@@ -158,157 +300,204 @@
 <li><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/30291588/add-favicon-to-hexo-blog">Add Favicon to Hexo Blog</a></li>
 </ol>
 
-      
     </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2019/03/05/hexo-github5/" data-id="cm3lzkdtl000c0xu6dn4kfatp" data-title="[Hexo] 在 GitHub 上搭建博客 (5)" class="article-share-link"><span class="fa fa-share">Condividi</span></a>
-      
-      
-      
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
 
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/GitHub/" rel="tag"># GitHub</a>
+              <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2019/03/04/hardest-logic-puzzle-ever/" rel="prev" title="[4068] 闲谈世上最难的逻辑问题">
+      <i class="fa fa-chevron-left"></i> [4068] 闲谈世上最难的逻辑问题
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2019/03/05/bezout-theorem-and-pascal-theorem/" rel="next" title="贝祖定理和帕斯卡定理">
+      贝祖定理和帕斯卡定理 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%96%87%E7%AB%A0%E5%BA%95%E9%83%A8-%E5%8F%B7%E6%A0%87%E7%AD%BE"><span class="nav-number">1.</span> <span class="nav-text">修改文章底部 # 号标签</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C"><span class="nav-number">1.1.</span> <span class="nav-text">实现效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%96%B9%E6%B3%95"><span class="nav-number">1.2.</span> <span class="nav-text">修改方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%BE%E7%BD%AE%E7%BD%91%E7%AB%99%E7%9A%84%E5%9B%BE%E6%A0%87-Favicon"><span class="nav-number">2.</span> <span class="nav-text">设置网站的图标 Favicon</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C-1"><span class="nav-number">2.1.</span> <span class="nav-text">实现效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%96%B9%E6%B3%95-1"><span class="nav-number">2.2.</span> <span class="nav-text">修改方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E7%BB%9F%E8%AE%A1%E5%AD%97%E6%95%B0-%E9%98%85%E8%AF%BB%E6%97%B6%E9%97%B4%E5%8A%9F%E8%83%BD"><span class="nav-number">3.</span> <span class="nav-text">实现统计字数&#x2F;阅读时间功能</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C-2"><span class="nav-number">3.1.</span> <span class="nav-text">实现效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%96%B9%E6%B3%95-2"><span class="nav-number">3.2.</span> <span class="nav-text">修改方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9C%A8%E6%96%87%E7%AB%A0%E5%BA%95%E9%83%A8%E5%A2%9E%E5%8A%A0%E7%89%88%E6%9D%83%E4%BF%A1%E6%81%AF"><span class="nav-number">4.</span> <span class="nav-text">在文章底部增加版权信息</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C-3"><span class="nav-number">4.1.</span> <span class="nav-text">实现效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%96%B9%E6%B3%95-3"><span class="nav-number">4.2.</span> <span class="nav-text">修改方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E7%BD%91%E9%A1%B5%E9%A1%B5%E8%84%9A%E7%9A%84%E4%BD%9C%E8%80%85%E7%AC%A6%E5%8F%B7"><span class="nav-number">5.</span> <span class="nav-text">修改网页页脚的作者符号</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AE%9E%E7%8E%B0%E6%95%88%E6%9E%9C-4"><span class="nav-number">5.1.</span> <span class="nav-text">实现效果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E6%96%B9%E6%B3%95-4"><span class="nav-number">5.2.</span> <span class="nav-text">修改方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8F%82%E8%80%83%E9%93%BE%E6%8E%A5"><span class="nav-number">6.</span> <span class="nav-text">参考链接</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">ZERO</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">8</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2024</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ZERO</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
     </footer>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2019/03/05/bezout-theorem-and-pascal-theorem/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Nuovi</strong>
-      <div class="article-nav-title">
-        
-          贝祖定理和帕斯卡定理
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2019/03/04/hardest-logic-puzzle-ever/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Vecchi</strong>
-      <div class="article-nav-title">[4068] 闲谈世上最难的逻辑问题</div>
-    </a>
-  
-</nav>
 
   
-</article>
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categorie</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Math/">Math</a></li></ul>
-    </div>
-  </div>
+<script src="/js/schemes/muse.js"></script>
 
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag</h3>
-    <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Algebraic-Geometry/" rel="tag">Algebraic Geometry</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/GitHub/" rel="tag">GitHub</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Logic/" rel="tag">Logic</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Math/" rel="tag">Math</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Topology/" rel="tag">Topology</a></li></ul>
-    </div>
-  </div>
+<script src="/js/next-boot.js"></script>
 
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Algebraic-Geometry/" style="font-size: 10px;">Algebraic Geometry</a> <a href="/tags/GitHub/" style="font-size: 20px;">GitHub</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Logic/" style="font-size: 10px;">Logic</a> <a href="/tags/Math/" style="font-size: 15px;">Math</a> <a href="/tags/Topology/" style="font-size: 10px;">Topology</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archivio</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/1969/12/">December 1969</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Post Recenti</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2019/03/05/bezout-theorem-and-pascal-theorem/">贝祖定理和帕斯卡定理</a>
-          </li>
-        
-          <li>
-            <a href="/2019/03/05/hexo-github5/">[Hexo] 在 GitHub 上搭建博客 (5)</a>
-          </li>
-        
-          <li>
-            <a href="/2019/03/04/hardest-logic-puzzle-ever/">[4068] 闲谈世上最难的逻辑问题</a>
-          </li>
-        
-          <li>
-            <a href="/2019/03/03/topology-prime-numbers/">拓扑与素数</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/22/hexo-github4/">[Hexo] 在 GitHub 上搭建博客 (4)</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      
-      &copy; 2024 ZERO<br>
-      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-
-<script src="/js/jquery-3.6.4.min.js"></script>
 
 
 
   
-<script src="/fancybox/jquery.fancybox.min.js"></script>
 
 
 
 
-<script src="/js/script.js"></script>
+  
+<script src="/js/local-search.js"></script>
 
 
 
 
 
-  </div>
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
 </body>
 </html>

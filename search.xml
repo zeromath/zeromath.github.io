@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title>[Hexo] 在 GitHub 上搭建博客 (1)</title>
+    <url>/2017/03/11/hexo-github/</url>
+    <content><![CDATA[<p>在此整理了一下 Hexo 博客建立的方法，以下代码演示是基于 Mac 平台。Windows 平台大同小异。 当然最全面的参考自然是在 <a href="https://hexo.io/zh-cn/docs/index.html">Hexo 官网</a>。这里只是做一个小小的总结。这篇文章将要讲述：</p>
+<ul>
+<li>如何安装 Hexo</li>
+<li>如何创建文章</li>
+<li>如何发布文章</li>
+<li>如何删除文章</li>
+</ul>
+<p>Here We Go！</p>
+<span id="more"></span>
+
+<h1 id="博客初建立"><a href="#博客初建立" class="headerlink" title="博客初建立"></a>博客初建立</h1><h2 id="需要的插件"><a href="#需要的插件" class="headerlink" title="需要的插件"></a>需要的插件</h2><ol>
+<li>安装 <a href="https://git-scm.com/downloads">Git</a></li>
+<li>安装 <a href="https://nodejs.org/en/">Node.js</a></li>
+<li>安装 Hexo：</li>
+</ol>
+<p>打开终端，输入下列命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="安装文件"><a href="#安装文件" class="headerlink" title="安装文件"></a>安装文件</h2><p>创建一个你喜欢的文件夹，比如 <code>~/Documents/Blog</code>，这就是你博客的大本营了。定位到该文件夹下，在根目录下运行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+<p>当你看到</p>
+<img src="/2017/03/11/hexo-github/INFO-init.png" class="" title="INFO-init">
+
+<p>就表示命令已完成。你会发现文件夹里多了好多东西，但是博客在哪里呢？</p>
+<p>我们来试运行一下，输入命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>提示</p>
+<img src="/2017/03/11/hexo-github/INFO-server.png" class="" title="INFO-server">
+<p>打开浏览器，访问 <a href="http://localhost:4000/">http://localhost:4000</a>，就会见到你的博客了</p>
+<img src="/2017/03/11/hexo-github/BLOG-index.png" class="" title="BLOG-index">
+
+<p><em>Remark: 在Terminal下按下<code>Ctrl+C</code>就可以取消本地服务器了</em></p>
+<h1 id="第一篇博客"><a href="#第一篇博客" class="headerlink" title="第一篇博客"></a>第一篇博客</h1><h2 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h2><p>刚刚我们已经看到了博客中有一篇叫 Hello World 的文章了。这篇文章具体在哪里呢？打开 <code>&lt;你的博客目录&gt;/source/_post/</code>，你会发现下面有一个 “hello-world.md” 文件，它就是网站上的文章对应的 Markdown 文件。</p>
+<p>Hexo 的所有文章都是通过 Markdown 书写的，我们也来写一篇自己的文章好了！</p>
+<p>打开 Terminal，输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo new &lt;&quot;你的文章标题&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<p>比如我们要写一篇测试文章，于是输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo new &quot;My first test blog&quot;</span><br></pre></td></tr></table></figure>
+
+<p>系统会提示</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">INFO  Created: &lt;你的博客目录&gt;/source/_posts/My-first-test-blog.md</span><br></pre></td></tr></table></figure>
+
+<p>重新打开 <code>&lt;你的博客目录&gt;/source/_posts/</code> 目录，你会发现里面已经有了一个新的MD文件。这就是我们刚刚创建的新文章。</p>
+<img src="/2017/03/11/hexo-github/FILE-newpost.png" class="" title="FILE-newpost">
+
+<h2 id="编写文章"><a href="#编写文章" class="headerlink" title="编写文章"></a>编写文章</h2><p>用任意编辑器（我一般用 MacDown 或者 Emacs）打开 “My-first-test-blog.md”，你会发现里面已经写好了一点东西了：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: My first test blog</span><br><span class="line">date: 2017-03-21 14:48:40</span><br><span class="line">tags:</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+<p>其中：</p>
+<ul>
+<li><code>title</code> 是你最终的文章标题</li>
+<li><code>date</code> 就是文章创建的时间，这个可以不用管</li>
+<li><code>tags</code> 则是文章的标签，如何加 Tags 我们以后再讲</li>
+</ul>
+<p>在最下面另起一行，你就可以开始写文章了！</p>
+<p>比如你可以写如下文章：</p>
+<img src="/2017/03/11/hexo-github/FILE-markdown.png" class="" title="FILE-markdown">
+
+<p><em>请忽略最上面几行的奇怪行为</em></p>
+<p>然后保存 MD 文件即可。</p>
+<h1 id="草稿功能"><a href="#草稿功能" class="headerlink" title="草稿功能"></a>草稿功能</h1><h2 id="创建草稿"><a href="#创建草稿" class="headerlink" title="创建草稿"></a>创建草稿</h2><p>有时候一些文章的创作需要的时间很长，为此我们可以用利用 Hexo 的草稿功能，创建草稿的命令如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo new draft &lt;title&gt;</span><br></pre></td></tr></table></figure>
+
+<p>就是简单的在创建文章的命令里加入 <code>draft</code> 参数。创建的文件会被保存到 <code>&lt;你的博客目录&gt;/source/_drafts</code> 这个文件夹。</p>
+<h2 id="预览草稿"><a href="#预览草稿" class="headerlink" title="预览草稿"></a>预览草稿</h2><p>草稿文件默认不会显示在页面中，但是我们可以用以下命令预览草稿。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo server --draft</span><br></pre></td></tr></table></figure>
+<p>也就是在启动服务器的时候带上 <code>--draft</code> 参数。</p>
+<h2 id="发布草稿"><a href="#发布草稿" class="headerlink" title="发布草稿"></a>发布草稿</h2><p>可以使用 <code>publish</code> 命令将草稿移动到 <code>&lt;你的博客目录&gt;/source/_posts</code> 文件夹中，草稿发布后 <code>_drafts</code> 目录下的草稿会同时删除。</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo publish &lt;&quot;你的文章标题&quot;&gt;</span><br></pre></td></tr></table></figure>
+
+<h1 id="发布文章"><a href="#发布文章" class="headerlink" title="发布文章"></a>发布文章</h1><h2 id="发布到网站"><a href="#发布到网站" class="headerlink" title="发布到网站"></a>发布到网站</h2><p>文章写好了，要怎么发布呢？</p>
+<p>Terminal 定位到<code>&lt;你的博客目录&gt;</code>，然后依次输入以下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>第一个命令 <code>hexo generate</code> 是生成新的文件，第二个命令是启动 server。再次打开 <a href="http://localhost:4000/">http://localhost:4000</a>，我们发现我们的文章已经被放上“网”了！</p>
+<img src="/2017/03/11/hexo-github/BLOG-updated.png" class="" title="BLOG-updated">
+
+
+<h2 id="删除文章"><a href="#删除文章" class="headerlink" title="删除文章"></a>删除文章</h2><p>现在有没有觉得那个 <code>Hello World</code> 很扎眼，我们肯定想要删除它。重新回到 <code>&lt;你的博客目录&gt;/source/_posts/</code> 目录，找到 <code>hello-world.md</code> 文件，直接将其删除即可。</p>
+<p>有人就要问了，为什么删除了我的浏览器里还是有呢？因为我们还没有更新我们的网站，在 Terminal 下运行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo generate</span><br><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>再刷新网页，是不是就没有了？</p>
+<hr>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
+<li><a href="https://zhangslob.github.io/2017/02/28/%E6%95%99%E4%BD%A0%E5%85%8D%E8%B4%B9%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%EF%BC%8CHexo-Github/">教你免费搭建个人博客，Hexo&amp;Github</a></li>
+<li><a href="https://linghucong.js.org/2016/04/15/2016-04-15-hexo-github-pages-blog/">手把手教你使用Hexo + Github Pages搭建个人独立博客</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Hexo] 在 GitHub 上搭建博客 (4)</title>
+    <url>/2017/03/22/hexo-github4/</url>
+    <content><![CDATA[<p>这一次，我们要让我们的博客变得更加丰富多彩，首先就是给博客文章插各种各样漂亮的图片。主要包括</p>
+<ul>
+<li>如何添加图片</li>
+<li>添加CSS支持</li>
+</ul>
+<span id="more"></span>
+
+<h1 id="添加图片"><a href="#添加图片" class="headerlink" title="添加图片"></a>添加图片</h1><p>首先我们要启用资源文件夹，打开<span style="background-color:red;color:white">站点配置文件</span> ，找到 <code>Writing</code> 字段：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Writing</span><br><span class="line">new_post_name: :title.md # File name of new posts</span><br><span class="line">default_layout: post</span><br><span class="line">titlecase: false # Transform title into titlecase</span><br><span class="line">external_link: true # Open external links in new tab</span><br><span class="line">filename_case: 0</span><br><span class="line">render_drafts: false</span><br><span class="line">post_asset_folder: false</span><br><span class="line">relative_link: false</span><br><span class="line">future: true</span><br><span class="line">highlight:</span><br><span class="line">  enable: true</span><br><span class="line">  line_number: true</span><br><span class="line">  auto_detect: false</span><br><span class="line">  tab_replace:</span><br></pre></td></tr></table></figure>
+<p>其中有一个参数叫做 <code>post_asset_folder</code>，将它改为 <code>true</code>。这样每次我们用 <code>hexo new &lt;&quot;new post&quot;&gt;</code> 的时候，它就会在 “_post” 文件夹下自动创建一个同名文件夹，所有和这篇博文相关的东西（比如图片）都可以放到哪里去，比如</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo new test</span><br></pre></td></tr></table></figure>
+<p>然后 “_post” 文件夹下就会出现同名的文件和文件夹</p>
+<img src="/2017/03/22/hexo-github4/FILE-image.png" class="" title="FILE-image">
+
+<p>然后我们拷贝一张测试图片（”test-image.png”）到 “test” 文件夹里</p>
+<img src="/2017/03/22/hexo-github4/FILE-testimage.png" class="" title="FILE-testimage">
+<p>接着在 “test.md” 中写入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% asset_img test-image.png &quot;test-image&quot; %&#125;</span><br></pre></td></tr></table></figure>
+<p>效果如图</p>
+<img src="/2017/03/22/hexo-github4/FILE-markdown.png" class="" title="FILE-markdown">
+
+<h1 id="使用CSS"><a href="#使用CSS" class="headerlink" title="使用CSS"></a>使用CSS</h1><p>因为 Markdown 本身是基于 HTML 的，所以我们只需要直接使用即可</p>
+<h2 id="内联使用"><a href="#内联使用" class="headerlink" title="内联使用"></a>内联使用</h2><p>比如 <span style="background-color:red;color:white">我是红底白字</span> 就是通过以下代码直接生成</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;span style=&quot;background-color:red;color:white&quot;&gt;我是红底白字&lt;/span&gt; </span><br></pre></td></tr></table></figure>
+
+<h2 id="外部使用"><a href="#外部使用" class="headerlink" title="外部使用"></a>外部使用</h2><p>Next主题会自动加载如下文件夹下的所有CSS</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;your_site&gt;/themes/next/source/css/</span><br></pre></td></tr></table></figure>
+
+<p>我们可以修改其中的 “main.styl” 文件，加入以下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// My Css</span><br><span class="line">// --------------------------------------------------</span><br><span class="line">@import &quot;_mycss/mycss&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>然后创建 “_mycss” 文件夹，在里面创建 “mycss.styl”。这个 CSS<br>文件将会被自动加载。</p>
+<hr>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
+<li><a href="https://hexo.io/zh-cn/docs/asset-folders.html">Hexo官方文档 - 资源文件夹</a></li>
+<li><a href="http://www.jianshu.com/p/c2ba9533088a">hexo博客图片问题</a></li>
+<li><a href="https://segmentfault.com/a/1190000003846777">Hexo博客主题NexT使用自定义的CSS样式</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Hexo] 在 GitHub 上搭建博客 (3)</title>
+    <url>/2017/03/21/hexo-github3/</url>
+    <content><![CDATA[<p>我们的博客已经基本成型了，这里主要是一些细节性的工作。包括</p>
+<ul>
+<li>添加 Gitalk 评论支持</li>
+<li>添加 Google 统计</li>
+<li>添加搜索服务</li>
+<li>添加数学公式支持</li>
+<li>使用 Tags 和 Categories</li>
+</ul>
+<span id="more"></span>
+
+<p>注意到下文中我们会频繁修改两个配置文件，一个是<span style="background-color:red;color:white">站点配置文件</span> ，其路径为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;your_site&gt;/_config.yml</span><br></pre></td></tr></table></figure>
+<p>另一个是<span style="background-color:blue;color:white">主题配置文件</span>，其路径为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;your_site&gt;/themes/next/_config.yml</span><br></pre></td></tr></table></figure>
+
+<h1 id="Next主题"><a href="#Next主题" class="headerlink" title="Next主题"></a>Next主题</h1><p>为什么上文我要推荐Next主题呢，因为里面已经集成了很多插件我们可以直接使用，比如</p>
+<h2 id="添加评论支持"><a href="#添加评论支持" class="headerlink" title="添加评论支持"></a>添加评论支持</h2><p>一个好的博客怎么可以没有评论区，我们可以用 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 提供的评论服务。这是一个基于 GitHub issue 系统的评论服务。好处是不用像 Disqus 一样科学上网。我们首先要去 GitHub 申请一个 Application OAuth，打开 Settings, 找到 Developer settings</p>
+<img src="/2017/03/21/hexo-github3/github-sidebar.png" class="" title="sidebar">
+
+<p>然后点开，申请 Application OAuth。依次填好以下信息</p>
+<img src="/2017/03/21/hexo-github3/github-OAuth.png" class="" title="OAuth">
+<p>你就会被跳转到</p>
+<img src="/2017/03/21/hexo-github3/github-OAuth-key.png" class="" title="Keys">
+<p>这个页面。记下 Client ID&#x2F;Secret，然后打开<span style="background-color:blue;color:white">主题配置文件</span>，找到 gitalk 的部分，改成如下形式（以我的博客为例子）</p>
+<img src="/2017/03/21/hexo-github3/gitalk.png" class="" title="gitalk">
+
+<p>最后，每篇博客的评论系统是需要作者手工初始化的。当然你也可以网上自行寻找脚本来完成。</p>
+<h2 id="添加-Google-统计"><a href="#添加-Google-统计" class="headerlink" title="添加 Google 统计"></a>添加 Google 统计</h2><p>一个好的博客怎么可以没有统计，我们可以用 Google 提供的统计工具 <a href="https://analytics.google.com/">Google Analytics</a>，注册账号，然后取得 Google 追踪 ID（Google 追踪 ID 总是以 <code>UA</code> 开头）。打开<span style="background-color:blue;color:white">主题配置文件</span>，修改 <code>google_analytics</code> 字段</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">google_analytics: UA&lt;%%%%%%%%&gt;</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加搜索服务"><a href="#添加搜索服务" class="headerlink" title="添加搜索服务"></a>添加搜索服务</h2><p>一个好的博客怎么可以没有搜索服务：</p>
+<p>首先安装 <code>hexo-generator-searchdb</code>，在站点根目录下运行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-generator-searchdb --save</span><br></pre></td></tr></table></figure>
+
+<p>然后编辑<span style="background-color:red;color:white">站点配置文件</span> ，添加以下内容到任意区域</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">search:</span><br><span class="line">  path: search.xml</span><br><span class="line">  field: post</span><br><span class="line">  format: html</span><br><span class="line">  limit: 10000</span><br></pre></td></tr></table></figure>
+
+<p>最后编辑<span style="background-color:blue;color:white">主题配置文件</span>，修改<code>Local search</code>字段：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Local search</span><br><span class="line">local_search:</span><br><span class="line">  enable: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加数学公式支持"><a href="#添加数学公式支持" class="headerlink" title="添加数学公式支持"></a>添加数学公式支持</h2><p>一个好的博客怎么可以不是数学相关的！开启 MathJax 支持异常简单，修改<span class="theme">主题配置文件</span>中的 <code>MathJax Support</code> 字段即可</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># MathJax Support</span><br><span class="line">mathjax: true</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="Tags-Categories"><a href="#Tags-Categories" class="headerlink" title="Tags &amp; Categories"></a>Tags &amp; Categories</h1><h2 id="添加-Tags"><a href="#添加-Tags" class="headerlink" title="添加 Tags"></a>添加 Tags</h2><p>假如你只有一个标签，只需要在文章的最顶部的 <code>tags</code> 标签下加上你要加的 <code>tag</code> 即可:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: %%%%%%%</span><br><span class="line">date: %%%%%%%</span><br><span class="line">tags: &lt;Your_tag&gt;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<p>假如你有多于一个标签，你可以用两种方式：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tags:</span><br><span class="line">- tag1</span><br><span class="line">- tag2</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">tags: [tag1, tag2]</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加-Tags-页面"><a href="#添加-Tags-页面" class="headerlink" title="添加 Tags 页面"></a>添加 Tags 页面</h2><p>当你给你的文章加上 Tags 之后，你会发现博客上的 Tags 链接并不能用。点击之后会提示无法找到页面，这是因为我们还没有创建 Tags 页面。</p>
+<p>打开终端输入以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
+
+<p>然后在 <code>&lt;your_site&gt;/sources/tags/</code> 下找到 “index.md”，打开它，在 <code>date</code> 下面加入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">type: &quot;tags&quot;</span><br><span class="line">comment: false #关闭标签页面的评论区域</span><br></pre></td></tr></table></figure>
+<p>效果如图</p>
+<img src="/2017/03/21/hexo-github3/FILE-tags.png" class="" title="FILE-tags">
+
+<p>最后打开<span style="background-color:blue;color:white">主题配置文件</span>，找到 <code>menu</code> 字段，添加 <code>tags</code> 标签</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  ...</span><br><span class="line">  tags: /tags</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加-Categories"><a href="#添加-Categories" class="headerlink" title="添加 Categories"></a>添加 Categories</h2><p>在博文的最上方，tags 标签下新起一行，假如 categories 标签，如下所示</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">---</span><br><span class="line">title: %%%%%%%</span><br><span class="line">date: %%%%%%%</span><br><span class="line">tags:</span><br><span class="line">categories: &lt;Your_category&gt;</span><br><span class="line">---</span><br></pre></td></tr></table></figure>
+
+<h2 id="添加-Categories-页面"><a href="#添加-Categories-页面" class="headerlink" title="添加 Categories 页面"></a>添加 Categories 页面</h2><p>同样的我们还没有创建 Categories 页面。</p>
+<p>打开终端输入以下代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure>
+
+<p>然后在 <code>&lt;your_site&gt;/sources/categories/</code> 下找到 “index.md”，打开它，在 <code>date</code> 下面加入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">type: &quot;categories&quot;</span><br><span class="line">comment: false #关闭标签页面的评论区域</span><br></pre></td></tr></table></figure>
+<p>效果如图</p>
+<img src="/2017/03/21/hexo-github3/FILE-cat.png" class="" title="FILE-cat">
+
+<p>最后打开<span style="background-color:blue;color:white">主题配置文件</span>，找到 <code>menu</code> 字段，添加 <code>categories</code> 标签</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">menu:</span><br><span class="line">  home: /</span><br><span class="line">  archives: /archives</span><br><span class="line">  ...</span><br><span class="line">  categories: /categories</span><br></pre></td></tr></table></figure>
+
+
+
+<hr>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
+<li><a href="http://www.coldcrack.me/2018/07/18/Next_Gittalk/">Hexo Next主题集成Gittalk</a></li>
+<li><a href="https://github.com/hexojs/hexo/issues/320">多个 Tags 怎么分割？</a></li>
+<li><a href="http://ijiaober.github.io/2014/08/05/hexo/hexo-04/">Hexo使用攻略：（四）Hexo的分类和标签设置</a></li>
+<li><a href="http://theme-next.iissnan.com/">Next主题</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Hexo] 在 GitHub 上搭建博客 (5)</title>
+    <url>/2019/03/05/hexo-github5/</url>
+    <content><![CDATA[<p>这里记录一些繁琐但是有趣的 next 主题修改方法</p>
+<ul>
+<li>修改文章底部 # 号标签</li>
+<li>设置网站的图标 Favicon</li>
+<li>实现统计字数&#x2F;阅读时间功能</li>
+<li>在文章底部增加版权信息</li>
+<li>修改网页页脚的作者符号</li>
+</ul>
+<span id="more"></span>
+
+<h2 id="修改文章底部-号标签"><a href="#修改文章底部-号标签" class="headerlink" title="修改文章底部 # 号标签"></a>修改文章底部 # 号标签</h2><h3 id="实现效果"><a href="#实现效果" class="headerlink" title="实现效果"></a>实现效果</h3><img src="/2019/03/05/hexo-github5/tag.png" class="" title="tag">
+
+<h3 id="修改方法"><a href="#修改方法" class="headerlink" title="修改方法"></a>修改方法</h3><p>修改模板 “&#x2F;themes&#x2F;next&#x2F;layout&#x2F;_macro&#x2F;post.swig”，搜索 <code>rel=&quot;tag&quot;&gt;#</code>，将 <code>#</code> 换成 <code>&lt;i class=&quot;fa fa-tag&quot;&gt;&lt;/i&gt;</code></p>
+<h2 id="设置网站的图标-Favicon"><a href="#设置网站的图标-Favicon" class="headerlink" title="设置网站的图标 Favicon"></a>设置网站的图标 Favicon</h2><h3 id="实现效果-1"><a href="#实现效果-1" class="headerlink" title="实现效果"></a>实现效果</h3><img src="/2019/03/05/hexo-github5/favicon.png" class="" title="favicon">
+
+<h3 id="修改方法-1"><a href="#修改方法-1" class="headerlink" title="修改方法"></a>修改方法</h3><p>找一张 32*32 的 ico 图标，并将图标名称改为 “favicon.ico”，然后把图标放在 “&#x2F;themes&#x2F;next&#x2F;source&#x2F;images” 里，并且修改<span style="background-color:blue;color:white">主题配置文件</span>为</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Put your favicon.ico into `hexo-site/source/` directory.</span><br><span class="line">favicon: images/favicon.ico</span><br></pre></td></tr></table></figure>
+
+<h2 id="实现统计字数-阅读时间功能"><a href="#实现统计字数-阅读时间功能" class="headerlink" title="实现统计字数&#x2F;阅读时间功能"></a>实现统计字数&#x2F;阅读时间功能</h2><h3 id="实现效果-2"><a href="#实现效果-2" class="headerlink" title="实现效果"></a>实现效果</h3><img src="/2019/03/05/hexo-github5/wordcount.png" class="" title="wordcount">
+
+<h3 id="修改方法-2"><a href="#修改方法-2" class="headerlink" title="修改方法"></a>修改方法</h3><p>在根目录下安装 “hexo-wordcount”，运行：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-wordcount --save</span><br></pre></td></tr></table></figure>
+<p>然后在<span style="background-color:blue;color:white">主题配置文件</span>中，配置如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Post wordcount display settings</span><br><span class="line"># Dependencies: https://github.com/willin/hexo-wordcount</span><br><span class="line">post_wordcount:</span><br><span class="line">  item_text: true</span><br><span class="line">  wordcount: true</span><br><span class="line">  min2read: true</span><br></pre></td></tr></table></figure>
+
+<h2 id="在文章底部增加版权信息"><a href="#在文章底部增加版权信息" class="headerlink" title="在文章底部增加版权信息"></a>在文章底部增加版权信息</h2><h3 id="实现效果-3"><a href="#实现效果-3" class="headerlink" title="实现效果"></a>实现效果</h3><img src="/2019/03/05/hexo-github5/copyright.png" class="" title="copyright">
+
+<h3 id="修改方法-3"><a href="#修改方法-3" class="headerlink" title="修改方法"></a>修改方法</h3><p><strong>Step 1:</strong> 在目录 “next&#x2F;layout&#x2F;_macro&#x2F;“ 下新建 “my-copyright.swig”</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&#123;% if page.copyright %&#125;</span><br><span class="line">&lt;div class=&quot;my_post_copyright&quot;&gt;</span><br><span class="line">  &lt;!-- You may change any JS cdn --&gt;</span><br><span class="line">  &lt;script src=&quot;//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;script src=&quot;https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;script src=&quot;https://unpkg.com/sweetalert/dist/sweetalert.min.js&quot;&gt;&lt;/script&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;Title: &lt;/span&gt;&lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot;&gt;&#123;&#123; page.title &#125;&#125;&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;Author: &lt;/span&gt;&lt;a href=&quot;/&quot; title=&quot;Visit &#123;&#123; theme.author &#125;&#125;&#x27;s blog &quot;&gt;&#123;&#123; theme.author &#125;&#125;&lt;/a&gt;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;Published: &lt;/span&gt;&#123;&#123; page.date.format(&quot;MM/DD/YYYY - HH:mm&quot;) &#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;Last update: &lt;/span&gt;&#123;&#123; page.updated.format(&quot;MM/DD/YYYY - HH:mm&quot;) &#125;&#125;&lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;Link: &lt;/span&gt;&lt;span class=&quot;copy-path&quot;  title=&quot;Click to copy the link&quot;&gt;&lt;i class=&quot;fa fa-clipboard&quot; data-clipboard-text=&quot;&#123;&#123; page.permalink &#125;&#125;&quot;  aria-label=&quot;Copied!&quot;&gt;&lt;/i&gt;&lt;/span&gt;  &lt;a href=&quot;&#123;&#123; url_for(page.path) &#125;&#125;&quot; title=&quot;&#123;&#123; page.title &#125;&#125;&quot;&gt;&#123;&#123; page.permalink &#125;&#125;&lt;/a&gt;</span><br><span class="line">  &lt;/p&gt;</span><br><span class="line">  &lt;p&gt;&lt;span&gt;License: &lt;/span&gt;&lt;i class=&quot;fa fa-creative-commons&quot;&gt;&lt;/i&gt;  &lt;a rel=&quot;license&quot; href=&quot;https://creativecommons.org/licenses/by-nc-nd/4.0/&quot; target=&quot;_blank&quot; title=&quot;Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)&quot;&gt;Attribution-NonCommercial-NoDerivatives 4.0 International &lt;/a&gt;&lt;/p&gt;  </span><br><span class="line">&lt;/div&gt;</span><br><span class="line">&lt;script&gt; </span><br><span class="line">    var clipboard = new Clipboard(&#x27;.fa-clipboard&#x27;);</span><br><span class="line">    $(&quot;.fa-clipboard&quot;).click(function()&#123;</span><br><span class="line">      clipboard.on(&#x27;success&#x27;, function()&#123;</span><br><span class="line">        swal(&#123;   </span><br><span class="line">          title: &quot;&quot;,   </span><br><span class="line">          text: &#x27;Link Copied!&#x27;,</span><br><span class="line">          icon: &quot;success&quot;, </span><br><span class="line">          showConfirmButton: true</span><br><span class="line">          &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">    &#125;);  </span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&#123;% endif %&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>Step 2:</strong> 修改 “next&#x2F;layout&#x2F;_macro&#x2F;post.swig”，在代码</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">      &#123;% if not is_index %&#125;</span><br><span class="line">        &#123;% include &#x27;wechat-subscriber.swig&#x27; %&#125;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>之前添加增加如下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">      &#123;% if not is_index %&#125;</span><br><span class="line">        &#123;% include &#x27;my-copyright.swig&#x27; %&#125;</span><br><span class="line">      &#123;% endif %&#125;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Step 3:</strong> 在目录 “next&#x2F;source&#x2F;css&#x2F;_common&#x2F;components&#x2F;post&#x2F;“ 下添加 “my-post-copyright.styl”</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">.my_post_copyright &#123;</span><br><span class="line">  width: 90%;</span><br><span class="line">  max-width: 45em;</span><br><span class="line">  margin: 2.8em auto 0;</span><br><span class="line">  padding: 0.5em 1.0em;</span><br><span class="line">  border: 1px solid #d3d3d3;</span><br><span class="line">  font-size: 0.93rem;</span><br><span class="line">  line-height: 1.6em;</span><br><span class="line">  word-break: break-all;</span><br><span class="line">  background: rgba(255,255,255,0.4);</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright p&#123;margin:0;&#125;</span><br><span class="line">.my_post_copyright span &#123;</span><br><span class="line">  display: inline-block;</span><br><span class="line">  width: 7em;</span><br><span class="line">  color: #b5b5b5;</span><br><span class="line">  font-weight: bold;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright .raw &#123;</span><br><span class="line">  margin-left: 1em;</span><br><span class="line">  width: 5em;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright a &#123;</span><br><span class="line">  color: #808080;</span><br><span class="line">  border-bottom:0;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright a:hover &#123;</span><br><span class="line">  color: #a3d2a3;</span><br><span class="line">  text-decoration: underline;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright:hover .fa-clipboard &#123;</span><br><span class="line">  color: #000;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright .post-url:hover &#123;</span><br><span class="line">  font-weight: normal;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright .copy-path &#123;</span><br><span class="line">  margin-left: 0em;</span><br><span class="line">  width: 1em;</span><br><span class="line">  +mobile()&#123;display:none;&#125;</span><br><span class="line">&#125;</span><br><span class="line">.my_post_copyright .copy-path:hover &#123;</span><br><span class="line">  color: #808080;</span><br><span class="line">  cursor: pointer;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>Step 4:</strong> 修改 “next&#x2F;source&#x2F;css&#x2F;_common&#x2F;components&#x2F;post&#x2F;post.styl” 文件，在最后一行增加代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">@import &quot;my-post-copyright&quot;;</span><br></pre></td></tr></table></figure>
+
+<p>如果要在某篇博文下面增加版权信息的显示，需要在 markdown 文件中增加 <code>copyright: true</code> 的设置，比如：</p>
+<img src="/2019/03/05/hexo-github5/copyright-tag.png" class="" title="copyright-tag">
+
+<p><strong>Step 5:</strong> 最后，假如你觉得每次都要输入 <code>copyright: true</code> 很麻烦的话，那你可以在 “&#x2F;scaffolds&#x2F;post.md” 文件中添加：</p>
+<img src="/2019/03/05/hexo-github5/copyright-temp.png" class="" title="copyright-temp">
+
+<p>这样每次新建一个文章 (<code>hexo new</code>) 之后，生成的 markdown 文件会自动把 <code>copyright: true</code> 加到里面去。</p>
+<h2 id="修改网页页脚的作者符号"><a href="#修改网页页脚的作者符号" class="headerlink" title="修改网页页脚的作者符号"></a>修改网页页脚的作者符号</h2><h3 id="实现效果-4"><a href="#实现效果-4" class="headerlink" title="实现效果"></a>实现效果</h3><img src="/2019/03/05/hexo-github5/footer-tag.png" class="" title="footer-tag">
+<h3 id="修改方法-4"><a href="#修改方法-4" class="headerlink" title="修改方法"></a>修改方法</h3><p>打开<span style="background-color:blue;color:white">主题配置文件</span>，找到：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># icon between year and author @Footer</span><br><span class="line">authoricon: heart</span><br></pre></td></tr></table></figure>
+<p>这里 <code>heart</code> 代表的是 <code>fa fa-heart</code>。在 <a href="https://fontawesome.com/icons?from=io">Fontawesome</a> 中找到你自己喜欢的图标，然后修改 <code>heart</code> 的部分就可以了。比如上述效果就是改成 <code>user</code>。</p>
+<p><em>Remark: 这部分代码在 “themes&#x2F;next&#x2F;layout&#x2F;_partials&#x2F;footer.swig” 中被如下方式使用:</em></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;span class=&quot;with-love&quot;&gt;</span><br><span class="line">	&lt;i class=&quot;fa fa-&#123;&#123; theme.authoricon &#125;&#125;&quot;&gt;&lt;/i&gt;</span><br><span class="line">&lt;/span&gt;</span><br></pre></td></tr></table></figure>
+<p><em>假如想要使用一些 <code>fab/fas</code> 开头的图标，可以直接在这里修改。</em></p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><ol>
+<li><a href="https://segmentfault.com/a/1190000009544924">hexo的next主题个性化配置教程</a></li>
+<li><a href="https://stackoverflow.com/questions/30291588/add-favicon-to-hexo-blog">Add Favicon to Hexo Blog</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[Hexo] 在 GitHub 上搭建博客 (2)</title>
+    <url>/2017/03/21/hexo-github2/</url>
+    <content><![CDATA[<p>上次我们介绍了如何建立博客、撰写文章，这次我们来聊聊如何修改博客的一些基本属性。本期主要包括：</p>
+<ul>
+<li>修改博客的信息</li>
+<li>修改主题样式</li>
+<li>发布到GitHub</li>
+</ul>
+<span id="more"></span>
+
+<h1 id="博客的设定"><a href="#博客的设定" class="headerlink" title="博客的设定"></a>博客的设定</h1><h2 id="修改博客的基本属性"><a href="#修改博客的基本属性" class="headerlink" title="修改博客的基本属性"></a>修改博客的基本属性</h2><p>打开 <code>&lt;你的博客目录&gt;</code> 目录下的 <code>_config.yml</code> ，这里我们可以修改各种参数信息：</p>
+<p>比如 <code>Site</code> 字段是设置站点信息的</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Hexo</span><br><span class="line">subtitle:</span><br><span class="line">description:</span><br><span class="line">author: John Doe</span><br><span class="line">language:</span><br><span class="line">timezone:</span><br></pre></td></tr></table></figure>
+<p>其中：</p>
+<ul>
+<li><code>title</code> 就是博客的名称</li>
+<li><code>author</code> 就是博客作者</li>
+</ul>
+<p>我们可以改成我们想要的，比如说</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Site</span><br><span class="line">title: Test Blog</span><br><span class="line">subtitle:</span><br><span class="line">description:</span><br><span class="line">author: Zero</span><br><span class="line">language:</span><br><span class="line">timezone:</span><br></pre></td></tr></table></figure>
+<p><em>Remark: 所有参数的冒号后面都要加上一个空格</em></p>
+<p>重新把网站发布，就变成了如下的样子</p>
+<img src="/2017/03/21/hexo-github2/BLOG-site.png" class="" title="BLOG-site">
+<h2 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h2><p>这里我要推荐一个非常简洁耐用的主题 <a href="http://theme-next.iissnan.com/getting-started.html">Next</a>。安装方式如下：</p>
+<p>运行命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+
+<p>打开 <code>_config.yml</code> 文件，定位到 <code>Themes</code> 字段</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">## Themes: https://hexo.io/themes/</span><br><span class="line">theme: landscape</span><br></pre></td></tr></table></figure>
+
+<p>把其中的 <code>landscape</code> 改成 <code>next</code> 即可！</p>
+<h1 id="发布上网"><a href="#发布上网" class="headerlink" title="发布上网"></a>发布上网</h1><h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><p>首先你要注册一个 <a href="https://github.com/">GitHub</a> 账号，我们发布的原理是 GitHub 提供一个叫 GitHub Page 的网页，它对应的网址是 <code>https://&lt;user_name&gt;.github.io</code>。而它对应的仓库是 <code>&lt;user_name&gt;.github.io</code>。所以你的用户名非常重要，注册的时候请谨慎选取</p>
+<p>比如我的 GitHub 账号就是 zeromath，所以对应的主页就是 <a href="https://zeromath.github.com/">https://zeromath.github.com</a>.</p>
+<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><h3 id="添加部署信息"><a href="#添加部署信息" class="headerlink" title="添加部署信息"></a>添加部署信息</h3><p>打开 “_config.yml”，找到 <code>Deployment</code> 字段</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type:</span><br></pre></td></tr></table></figure>
+<p>在 <code>type</code> 中填入 <code>git</code>，然后在 <code>repo</code> 里写入<strong>你的仓库地址</strong>，最后 <code>branch</code> 里写上 <code>master</code>。最后效果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># Deployment</span><br><span class="line">## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: git@github.com:&lt;user_name&gt;/&lt;user_name&gt;.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="添加SSH-KEY"><a href="#添加SSH-KEY" class="headerlink" title="添加SSH KEY"></a>添加SSH KEY</h3><p>为了不用每次 push 都输入密码，我们采用 SSH 的方式进行 push，这就需要将你的 SSH KEY 添加到 GitHub 的信任列表里</p>
+<p>打开终端，运行如下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;</span><br></pre></td></tr></table></figure>
+<p>然后一路 <code>Enter</code> 即可，不用管其他参数。完成后打开 <code>~/.ssh/id_rsa.pub</code> 文件，将里面的所有内容拷贝出来</p>
+<p>打开 <code>https://github.com/settings/keys</code>（你可能需要登陆），点击右上角的 <code>New SSH key</code> 按钮。把刚才拷贝出来的内容拷贝到 <code>Key</code> 里，然后 <code>Title</code> 就写上你的电脑名称即可。</p>
+<img src="/2017/03/21/hexo-github2/SSH-key.png" class="" title="SSH-key">
+
+<h3 id="部署上网"><a href="#部署上网" class="headerlink" title="部署上网"></a>部署上网</h3><p>首先我们要安装一个 <code>git</code> 部署器，运行如下命令</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<p>然后就可以愉快的一键部署了！输入</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>然后你的网站就刷刷刷的传到 GitHub 上啦！打开 <code>https://&lt;user_name&gt;.github.io</code>	就可以看到你的网站了。</p>
+<p><em>Remark: 有时候部署完了还需要等一会儿 GitHub 的网页才能更新</em></p>
+<hr>
+<h1 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h1><ol>
+<li><a href="https://hexo.io/docs/deployment.html">Hexo官方文档 - 部署</a></li>
+<li><a href="https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/">GitHub Help - SSH</a></li>
+<li><a href="http://theme-next.iissnan.com/getting-started.html">Next 主题</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Hexo</category>
+      </categories>
+      <tags>
+        <tag>GitHub</tag>
+        <tag>Hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>贝祖定理和帕斯卡定理</title>
+    <url>/2019/03/05/bezout-theorem-and-pascal-theorem/</url>
+    <content><![CDATA[<p>在这篇文章里，我想要介绍一下代数几何里一个很经典的定理——贝祖定理 (Bézout’s theorem) 和它的一个有趣的推论——帕斯卡定理 (Pascal’s theorem)。让我们一起来欣赏一下抽象的力量——这是一个不需要画图也可以证明平面几何定理的过程！</p>
+<span id="more"></span>
+
+<h2 id="帕斯卡定理"><a href="#帕斯卡定理" class="headerlink" title="帕斯卡定理"></a>帕斯卡定理</h2><p>帕斯卡定理，是指圆锥曲线的内接六边形其三条对边的交点共线。在圆锥曲线是圆的时候，如下面这个（丑到爆炸的）图所示</p>
+<img src="/2019/03/05/bezout-theorem-and-pascal-theorem/pascal.png" class="" title="Pascal" alt="s theorem">
+<p>这个定理有很多证明，比如我们可以用梅涅劳斯定理来证明圆的情形，参见<a href="https://zh.wikipedia.org/wiki/%E5%B8%95%E6%96%AF%E5%8D%A1%E5%AE%9A%E7%90%86">帕斯卡定理
+</a>。搞竞赛的小伙伴说不定还自己证明过。对于的任意圆锥曲线，它们可以投影变换成圆，所以这个命题对任意圆锥曲线都成立。</p>
+<p>当这个圆锥曲线退化成两条相交直线的时候，帕斯卡定理就退化成了帕普斯（六边形）定理 (Pappus’s hexagon theorem)。</p>
+<img src="/2019/03/05/bezout-theorem-and-pascal-theorem/pappus.png" class="" title="Pappus" alt="s theorem">
+<p>这个定理也是有各种经典的证明。单单算我在博士期间上过的组合课，就看到好几种不同的证明了。最近学到的一种是用 Grassmann-Cayley 代数证的（这也是一个不错的 topic，以后可以聊聊）。上图也是我那门课我自己记的笔记的截图。</p>
+<p>而这篇文章主要想要探讨的，不是用这些“硬算”的办法来证明这（两）个定理。我即将介绍的，是一种抽象的数学技术证明的方法。我们将再一次见证数学的抽象的力量！</p>
+<h2 id="代数几何"><a href="#代数几何" class="headerlink" title="代数几何"></a>代数几何</h2><p>大家可能多多少少听说过代数几何是如今数学研究的热门学科。但是代数几何到底是个啥？和我们上的那门叫“代数与几何”的课又有什么区别？</p>
+<img src="/2019/03/05/bezout-theorem-and-pascal-theorem/middle-AG.JPG" class="" title="middle-AG">
+
+<p>笼统的说，代数几何就是研究多项式的零点。一个多项式的所有零点构成的集合，称为一个代数簇 (algebraic variety)。一个简单的例子就是任意一个数轴 $\mathbb{R}$ 上的点，都是一个代数簇——比如 $x&#x3D;1$ 就是 $x-1&#x3D;0$ 的零点。同样的，任意有限多个点也是代数簇，比如我们有 5 个点 $0,1,2,3,4$，那这个集合是 $x(x-1)(x-2)(x-3)(x-4)$ 这个多项式的零点。我们上面提到的圆，也是一个代数簇。回忆一下，单位圆在二维平面 $\mathbb{R}^2$ 上对应的方程是 $x^2+y^2&#x3D;1$。所以单位圆就是多项式 $x^2+y^2-1$ 的零点。当然二维平面上任意一条直线也是一个代数簇。特别的，类比一维的有限个点的情形，我们知道任意有限个直线的并集也是代数簇！它是这些直线对应的多项式的乘积多项式的零点。当然，这个操作看起来很无聊，就是把有限的一些东西摆在一起（取并集）。确实，它和前面一条线、一个圆有着本质的区别。数学家们管这种区别叫（不）可约性 (irreducibility)。简单的说，一条线、一个圆这样的，看起来就是一整块，没法分解成（有限的）更小的代数簇的东西，叫做*不可约 (irreducible)<em>代数簇。而后面那个把一堆不可约代数簇并起来的，就是</em>可约 (reducible)*代数簇。</p>
+<p>还有一个很重要的特点，就是代数簇的次数 (degree)。粗略的说，既然一的代数簇是一个多项式的零点，那么这个多项式一定是某些次数的多项式，我们定义这个代数簇的次数就是这个多项式的次数。次数为什么重要呢？比如一维的情形，多项式的次数基本就决定了你的代数簇的点数。这里有一个小问题，那就是有重根怎么办？比如 $(x-1)^2$ 是一个二次多项式，但是它只有“一个”零点 $x&#x3D;1$。这里我们就要发挥一下中文的“博大精深”：这里的次数不仅仅释作次数 (degree)，可以释作重数 (multiplicity)。比如说上面这个例子里，虽然 $x&#x3D;1$ 是唯一的一个零点，但是它却出现了两<strong>次</strong>！假如带上重数，那么这些多项式的次数就是点的个数。到了二维就不太一样了，随便一次还是二次甚至一百次的多项式，它们往往都有无穷多的点。但是我们还是有一些观察：比如二维情形下，一次多项式（对应的代数簇）只能是直线；你想要曲线，至少需要二次。</p>
+<p>拼图的最后一块🧩，就是全空间的选取了。注意到 $x-1$ 在一维空间 $\mathbb{R}$ 中是一个点；但是同一个多项式 $x-1$ 放到二维空间 $\mathbb{R}^2$ 中看，就是一条线了！所以我们到底在哪个空间里考虑这些多项式，是很重要的事情。事实上，我们既不在 $\mathbb{R}$ 也不在 $\mathbb{R}^2$ 中考虑！不在 $\mathbb{R}$ 中考虑好理解，因为我们最终要证明一个平面几何的定理，一维的平面几何——有兴趣的读者可以自己研究😂。那为什么也不在 $\mathbb{R}^2$ 中呢？可能有些人知道一个名词，叫做“射影空间”。它的想法很简单：我们知道二维欧氏空间中，任何两条直线要么平行要么香蕉🍌，哦不，相交。但其实还可以换一个说法：“欧氏平面”里的任意两条直线总相交！那平行的怎么办？没关系，我们把他们相交的无穷远点补上就好了！所谓的射影空间 $\mathbb{P}^2$ 就是在 $\mathbb{R}^2$ 的基础上补上所有的无穷远点的集合。上面提到的帕斯卡定理、帕普斯定理，其实都是在射影空间中成立的定理。特别是帕普斯定理，它要求两条相交的直线，但其实两条平行直线也是可以的——它们在射影空间中相交于无穷远点！</p>
+<h2 id="贝祖定理"><a href="#贝祖定理" class="headerlink" title="贝祖定理"></a>贝祖定理</h2><p>我们终于可以开始介绍（疯狂简化后的）贝祖定理了。</p>
+<div class="theorem">Theorem
+假如 $X$ 是射影空间的一个代数簇（这样的代数簇也称为射影簇）。我们用 $\deg(X)$ 表示它的次数。$Y$ 是另外一个由齐次多项式 $f$ 定义的一个射影簇，自然我们有 $\deg(Y)=\deg(f)$。我们还需要额外假设：没有 $X$ 的某个不可约子集（比如 $X$ 中的一条线）完全包含在 $Y$ 中，那么贝祖定理说
+$$
+\deg(X\cap Y) = \deg(X)\cdot \deg(Y) = \deg(X)\cdot \deg(f)
+$$
+</div>
+<div class="proof">Proof:
+证明是不可能证明的，这篇文章里不可能证明的。解释证明又不会做，就是只能解释解释推论，才能维持得了生活这样子。做数学一个人很无聊，都没有朋友玩 ，瞎写文章发现大家个个都是人才，说话又好听，我超喜欢瞎写东西的！😂
+</div>
+好了，说正经的，这个证明用到了基本的代数几何知识：代数簇/射影簇（不是我上面的超级简化版本的），坐标环/齐次环，希尔伯特多项式，正合列……所以我们还是聊聊它的推论吧！也就是从标题开始就画的饼🍪：帕斯卡定理
+<div class="theorem">Corollary
+假如 $X\subset \mathbb{P}^2$ 是一个二次曲线（圆、椭圆、双曲线、两条直线……）。我们知道它的次数一定是 2: $\deg(X)=2$。在 $X$ 上依次序选六个不同的点 $A,B,C,D,E,F$ 使得 $ABCDEF$ 正好构成一个六边形（如下图）。这个六边形的三组对边分别交于三个点: $P=\overline{AB}\cap \overline{DE},Q=\overline{BC}\cap \overline{EF},R=\overline{CD}\cap \overline{FA}$（平行的对边交于无穷远点，注意我们在 $\mathbb{P}^2$ 中，无穷远点是存在的），那么这三个点 $P,Q,R$ 共线。
+</div>
+
+<img src="/2019/03/05/bezout-theorem-and-pascal-theorem/pascal-proof.png" class="" title="the proof of Pascal" alt="s theorem">
+
+<div class="proof">Proof:
+这次要真的证明了！考虑两个“三次”曲线：$X\_1=\overline{AB}\cup\overline{CD}\cup \overline{EF}$ 和 $X\_2=\overline{BC}\cup\overline{DE}\cup \overline{FA}$。反应快的人可能已经意识到了：这不就是三条直线摆一起嘛？！回忆一下，这样的集合对应的多项式是每条直线对应的多项式（一次多项式）的乘积：三个一次多项式的乘积，正好就是一个三次多项式。所以这两个确实是三次“曲”线。我们把 $X\_1$ 对应的乘出来的三次多项式叫 $f\_1$，另一个叫 $f\_2$。
+
+<p>首先，这六条线没有哪条线包含了另一条线，所以我们可以应用贝祖定理（令 $X&#x3D;X_1$ 和 $Y&#x3D;X_2$），我们知道它们的交是一个次数为 $\deg(X_1)\cdot\deg(X_2)&#x3D;3\times 3&#x3D;9$ 的代数簇。刚刚我们说过没有两条直线互相包含，那么几条直线交出来的是什么？当然是点了！所以我们得到一个次数为 9 的一维代数簇。回忆我们之前讨论过，一维的情形下，次数 &#x3D; 点的个数。所以 $X_1$ 和 $X_2$ 交于 9 个点！其实我们已经知道这 9 个点了——就是 $A,B,C,D,E,F,P,Q,R$ 。所以我们得到一个小结论：$f_1$ 和 $f_2$ 在这九个点上都等于 0。</p>
+<p>下面我们考虑 $X$ 上的任意一个不是上面提到的 $A,B,C,D,E,F$ 这 6 个点的点 $S$。我们声称：存在一个点 $S\in X$ 和两个不全为 0 的数 $a,b$ 使得 $a\cdot f_1(S)+b\cdot f_2(S)&#x3D; 0$。假如存在一个 $S$ 使得 $f_1(S)&#x3D;f_2(S)&#x3D;0$ 那我们取 $a&#x3D;b&#x3D;1$ 就可以了。反之则总有 $f_1(S)\neq 0$ 或者 $f_2(S)\neq 0$，那么取 $b&#x3D;-f_1(S)$ 和 $a&#x3D;f_2(S)$，则 $a\cdot f_1(S)+b\cdot f_2(S) &#x3D; f_2(S)\cdot f_1(S)-f_1(S)\cdot f_2(S) &#x3D; 0$。所以这样的数 $a,b$ 和点 $S$ 总存在。</p>
+<p>下面令 $X’$ 是多项式 $af_1+bf_2$ 的零点集。我们知道 $A,B,C,D,E,F$ 都是 $f_1$ 和 $f_2$ 的零点，自然也是 $af_1+bf_2$ 的零点。所以 $X’\cap X&#x3D;\{A,B,C,D,E,F,S\}$ 交于 7 个点！但是我们知道 $\deg(X’)&#x3D;\deg(af_1+bf_2)&#x3D;3$，所以 $\deg(X’\cap X)&#x3D;\deg(X’)\cdot \deg(X) &#x3D; 3\times 2&#x3D;6$ （$X$ 是一个<em>二次</em>曲线）。所以这个结论违反了贝祖定理！完了，数学大厦崩塌了！【皮这一下很开心😂】</p>
+<p>且慢，我们说这个结论违反贝祖定理，起码它得可以应用贝祖定理呀！结论不成立告诉我们，这里面一定有不满足贝祖定理的条件的地方。返回去看看贝祖定理的条件，哪里有可能不满足？自然是我们的<em>额外假设：没有 $X$ 的某个不可约子集（比如 $X$ 中的一条线）完全包含在 $Y$ 中</em>！所以 $X$ 一定有一个不可约的子集完全包含在 $X’$ 中。而我们已经知道 $A,B,C,D,E,F$ 这 6 个“墙头草”既在 $X$ 中也在 $X’$ 中。所以唯一可能就是 $X$ 整个都在 $X’$ 中！所以我们可以写成 $X’&#x3D;X\cup L$， 其中 $L$ 是某个我们还不咋了解的代数簇。 </p>
+<p>根据我们的观察，假如一个代数簇分解成了两个代数簇的并，那么它的次数应该是这两个代数簇的次数的和（例如几条直线的并）。现在由于 $X’&#x3D;X\cup L$ 而 $\deg(X’)&#x3D;3,\deg(X)&#x3D;2$，根据小学知识，我们知道 $\deg(L)&#x3D;3-2&#x3D;1$。我们前面聊过，次数为 1 的只能是直线！所以 $L$ 是一条直线。</p>
+<p>最后，注意到 $P,Q,R$ 都是 $f_1$ 和 $f_2$ 的零点，所以它们都是 $af_1+bf_2$ 的零点，从而它们都在 $X’$ 中。我们又知道这三个点不在 $X$ 中，所以！它们只能在 $L$ 中！所以，换个说法，这三个点在同一条直线 $L$ 上！🎉🎉🎉 $\blacksquare$</p>
+</div>
+
+<h2 id="后记"><a href="#后记" class="headerlink" title="后记"></a>后记</h2><p>以上证明来自于 <a href="https://www.mathematik.uni-kl.de/en/agag/people/head/prof-dr-andreas-gathmann/">Andreas Gathmann</a> 的<a href="https://www.mathematik.uni-kl.de/~gathmann/class/alggeom-2002/alggeom-2002.pdf">代数几何讲义</a>中的定理 6.2.5。我第一次学到它的时候真的被震惊了——从来没想到过抽象的代数几何可以给出如此经典且具体的平面几何的定理的漂亮的证明！从那儿以后就一直想着有一天想要写出来分享给大家，今天算是了却了一桩心愿。感谢你读到这里🙏。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><a href="https://en.wikipedia.org/wiki/Pascal%27s_theorem">Pascal’s theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Pappus%27s_hexagon_theorem">Pappus’s hexagon theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/B%C3%A9zout%27s_theorem">Bézout’s theorem</a></li>
+<li><a href="https://zh.wikipedia.org/wiki/%E8%B2%9D%E7%A5%96%E5%AE%9A%E7%90%86">贝祖定理</a></li>
+<li><a href="https://www.mathematik.uni-kl.de/~gathmann/class/alggeom-2002/alggeom-2002.pdf">Andreas Gathmann 的代数几何讲义</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Math</category>
+      </categories>
+      <tags>
+        <tag>Math</tag>
+        <tag>Algebraic Geometry</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拓扑与素数</title>
+    <url>/2019/03/03/topology-prime-numbers/</url>
+    <content><![CDATA[<p>数学发展的一大特征就是不断的抽象。因为当一些定理成立的时候，你可能并不知道你已经使用了超出你需要范围的东西，而抽象可以让你看清楚到底哪些条件、性质才是我们需要来证明这个定理的。拓扑学是这样的一门学科，它通过对“开集”这个概念的抽象，发展出了一套波澜壮阔的理论。在这篇文章，我想和大家谈谈拓扑，顺便聊聊如何用拓扑证明素数有无穷多个。</p>
+<span id="more"></span>
+
+<h2 id="开集和邻域"><a href="#开集和邻域" class="headerlink" title="开集和邻域"></a>开集和邻域</h2><p>前面说到，拓扑是对“开集”这个概念的抽象。那么，什么是开集呢？相信大家中学的时候都学过区间的概念，特别的，我们知道开区间就是形如 $(1,2)$ 这样的集合，而闭区间则是 $[1,2]$ 这样的集合。事实上，数轴 $\mathbb{R}$ 上的所有开集就是任意的开区间的并构成的集合。这就是所有的开集了吗？我们为什么要研究这个概念呢？为了说清楚这个问题，我们需要聊聊另外一个概念：邻域。</p>
+<p>简单的说，我们有如下定义</p>
+<div class="theorem">Definition
+
+<p>我们称包含了这个点的一个开集为这个点的一个<em>邻域</em>。</p>
+</div>
+
+<p>比如 $(0,1)$ 就是 $0.5$ 的一个邻域，又比如 $(-\infty,\infty)$ 是任何一个点的邻域。当然后一个例子里的“邻域”看起来不怎么靠近。但是<em>只要满足定义</em>，它就是一个邻域！邻域这个概念正如它的名字所暗示的，它刻画了点和点之间的“邻里”关系。假如两个点 $A$ 和 $B$ 足够接近（它们是“邻居”），那么 $A$ 应该有许多邻域都包含 $B$；相反假如它们足够远离，那么 $A$ 应该有（和前一种比）更少的邻域包含 $B$。当然在数轴上，包含两个点的开区间总是有无穷多个，我们是很难直接比较多和少的（事实上它们总是一样多——等势的）。但是抛开严谨性，我们还是会觉得包含 $0$ 和 $1$ 的（连通的）开区间比包含 $0$ 和 $0.5$ 的（连通的）开区间要少——因为前者一定都在后者里面。通俗地讲，你可以把邻域理解成一个关系网，假如张三和李四认识，那么他们俩的关系网里重叠的人就会更多（有更多的“邻域”互相包含对方），反之就应该更少。</p>
+<p>让我们回去看看开区间和闭区间的例子：比如 $(1,2)$ 和 $[1,2]$。它们最大的区别，就是 $1$ 和 $2$ 在后一个里面，却不在前一个里面。事实上，这两个点有一个非常重要的名字，他们叫做*边界点(boundary point)*。什么样的点是边界点呢？</p>
+<div class="theorem">Definition
+一个点是某个集合的边界点，当且仅当它的任意一个邻域都包含至少一个集合内的点和一个集合外的点。
+</div>
+
+<p>这个定义看起来很抽象，但是不要被它吓到。还是让我们回到刚刚的例子，比如 $1$ 是 $[1,2]$ 的边界点。我们来检查一下它是否满足定义：任意包含 $1$  的开集，它一定包含一个小于 $1$ 的数，这个数显然在 $[1,2]$ 外面，同时它一定包含 $1\in [1,2]$。所以满足定义！仔细思考了一下，这个定义除了有点拗口，还是很直观的。就像小时候同桌画的三八线。是不是在那根线的周围，既存在你的势力范围也存在他&#x2F;她的势力范围？而不在那根线附近的话，你就总可以画一个圈使得这个圈完全是你的势力范围了！</p>
+<p>开集就是那些不包含它们边界点的集合。假如一个点 $x$ 在集合 $U$ 中，而又不是 $U$ 的边界点，那么它的邻域满足什么样的条件呢？这个条件就是边界点邻域满足的条件的反面：存在一个 $x$ 的邻域，这个邻域完全包含在 $U$ 中！终于，我们可以给出（一般的）开集的定义了！🎉🎉🎉</p>
+<div class="theorem">Definition
+一个集合 $U$ 是开集，假如它的每一个点都有一个包含在 $U$ 里面的邻域。
+</div>
+
+<p>等一下！啥玩意儿？！邻域不是用开集定义的么！怎么就又用来定义开集了？！作者你在玩我？假如你意识到了这个问题，说明你很认真的理解了前半部分的文章。是的，这是一个很严重的问题，我们陷入了循环定义！就像鸡🐔和蛋🥚，总要先有一个才能有另一个，但是到底现有哪个呢？数学家是很聪明的，他们很快就找到了一个解决办法：既然开集和邻域总要先定义一个才能有另一个，那我们就强行定义其中一个好了，比如我们来定义开集好了。怎么强行定义？就把所有的开集给你一个个列出来！你可以把下面提到的 $\mathscr{B}$ 想像成一个数据库，里面清晰的记录了所有的开集。你想知道一个集合是不是开集，只要把这个集合丢进 SQL 语言里查询一下就行了！但是，一个这样的“数据库”里的元素不能是任意的子集，它们还必须满足一定的条件：</p>
+<div class="theorem">Definition
+一个空间 $X$ 的开集就是这样一组数据 $\mathscr{B}$：它是 $X$ 的一部分特定子集的集合，并且满足如下性质:
+
+<ol>
+<li>整个空间和空集都在 $\mathscr{B}$ 中：$X\in \mathscr{B}$ 和 $\emptyset\in\mathscr{B}$.</li>
+<li>$\mathscr{B}$ 中任意多个元素（注意它们都是 $X$ 的子集）在 $X$ 中的并集，仍然是 $\mathscr{B}$ 中的元素</li>
+<li>$\mathscr{B}$ 中有限多个元素在 $X$ 中的交集，仍然是 $\mathscr{B}$ 中的元素<br>特别的，这样的一组数据称为集合 $X$ 的一个*拓扑 (topology)<em>。一个集合 $X$ 配上它的拓扑 $\mathscr{B}$ 就称为一个</em>拓扑空间 (topological space)*。</div></li>
+</ol>
+<p>这个定义看起来很吓人，怎么一会儿要无穷并，一会儿又要有限交。我们慢慢来解释：第一条是某种边界条件，我们不细聊；我们想要第二条，是因为刚刚我们说过，一个开集就是它每个点都有一个包含在它里面的邻域，所以这个开集实际上是可以写成这样的邻域的并的。很显然这是一个无穷并，而我们又说过邻域就是（包含某个特定点的）开集，所以我们自然希望开集的无穷并还是开集！事实上因为（我们总是要求）开集有这个性质，在我们给出一个拓扑 $\mathscr{B}$ 的时候，我们甚至不会描述所有开集，而只是描述 $\mathscr{B}$ 的一个对于有限交封闭的子集，然后令开集就是这个子集的任意元素的并。我们通常称这样的子集<em>生成了一个拓扑</em>；来看第三条，为什么我们不要求无穷交是一个开集呢？因为在区间的情况下，开区间的无穷交就不见得是开集，比如 $\cap_n (-\frac{1}{n},1+\frac{1}{n})&#x3D;[0,1]$。我们在最一开始就说到，拓扑是对开集这个概念的抽象，所以假如我们现有的开集的例子不满足某个性质，自然我们就不应该去要求。</p>
+<p>可能有人要问了，开集定义好了，那闭集呢？很简单，一个拓扑空间的集合是闭集，假如它的补集是开集。根据这个定义和上面拓扑的描述，我们很快就得到了一个等价的关于闭集的刻画：全空间和空集都是闭集；无穷多个闭集的交是闭集；有限多个闭集的并是闭集。</p>
+<p>等一下，全空间（和空集）不是开集么，怎么它又成了闭集了？因为我们直觉上觉得开区间就不能是闭区间。事实上，（有限非空）开区间确实不能是闭区间。但是这个性质是这种“开区间”拓扑所特有的。对于一般的拓扑空间，这一点是非必要的！完全可以存在即开又闭的集合！<strong>注意</strong>：开和闭并不是相反的概念！“闭”并不是“不开”（回忆定义：“闭”是指它的补集是“开”的）。一个集合是既开又闭的，最多说明它的补集也是既开又闭的（比如全集和空集）。真正<em>矛盾</em>的说法是：一个集合既是闭集，又不是闭集！</p>
+<h2 id="拓扑空间的例子"><a href="#拓扑空间的例子" class="headerlink" title="拓扑空间的例子"></a>拓扑空间的例子</h2><p>让我们来举几个例子。第一个例子就是一开始就提到的开区间。这里的开集是定义成<em>任意多个开区间的并或者空集</em>。让我们来检查一下定义：首先全集 $\mathbb{R}&#x3D;(-\infty,\infty)$ 和空集 $\emptyset$ 显然在里面；由于每个开集是任意多个开区间的并，任意多个开集的并就是任意多个任意多个开区间的并，根据定义也在里面；对于有限多个开集的交，我们需要运用如下集合论的知识：</p>
+<div class="theorem">Lemma
+对于集合族 $\{A_i\}$ 和 $\{B_j\}$，我们有 $(\cup_i A_i)\cap (\cup_j B_j)=\cup_{i,j} (A_i\cap B_j)$
+</div>
+
+<div class="proof">证明：显然右边包含在左边里面。为了说明左边也包含在右边。考虑 $x$ 为左边的一个元素，那么 $x\in \cup_i A_i$ 意味着有个下标 $i_0$ 使得 $x\in A_{i_0}$。同样也有一个下标 $j_0$ 使得 $x\in B_{j_0}$。所以 $x\in A_{i_0}\cap B_{j_0}\subseteq$右边。$\blacksquare$
+</div>
+
+<p>我们知道两个开区间的交一定是开区间（一个直接的分类讨论即可）。所以根据上述引理，我们知道任意两个开集的交也是开集。接下来一个简单的归纳就可以说明任意有限个开集的交还是开集。所以这样的开集构成 $\mathbb{R}$ 的一个拓扑，一般称为*欧氏拓扑 (Euclidean topology)*。</p>
+<p>接下来这个例子有点……耍赖。对于任意集合 $X$，我们取 $\mathscr{B}&#x3D;{X,\emptyset}$。定义不是要求要有这两个元素么，那我们就只取这两个元素。读者可以自行验证这个 $\mathscr{B}$ 是 $X$ 上的一个拓扑。我们称这个拓扑为 *平凡拓扑 (trivial topology)*。我们也可以取 $\mathscr{B}$ 是 $X$ 的所有子集的集合（比如 $X&#x3D;{1,2}$，那么 $\mathscr{B}&#x3D;{\emptyset,\{1\},\{2\},\{1,2\}}$），读者可以再次自行验证这个 $\mathscr{B}$ 是 $X$ 上的一个拓扑。我们称这个拓扑为 _离散拓扑 (discrete topology)_。在离散拓扑下，任何一个子集都是既开又闭的（上面说到，这并不引起任何矛盾）！</p>
+<p>那有读者就要问了：有没有有意思一点的拓扑呀？有！在实数轴 $\mathbb{R}$ 上，我们还可以赋予另一种拓扑。定义一个 $\mathbb{R}$ 的子集是*余有限 (cofinite)*的，假如它在 $\mathbb{R}$ 中的补集是有限点集。用人话说，就是你从数轴上扣掉有限个点，剩下的就是一个余有限集合。我们定义开集为空集和所有这样的余有限的集合。这就构成了一个拓扑，一般称为 * 余有限拓扑 (cofinite topology)<em>。在数轴这个特殊的集合上，这种拓扑等价于另外一个在代数几何里非常重要的拓扑——</em>扎里斯基拓扑 (Zariski topology)*。这种拓扑的特殊之处在于闭集等于有限集（为什么？）。所以任何一个无限集合一定不是闭集！</p>
+<h2 id="素数的无限性"><a href="#素数的无限性" class="headerlink" title="素数的无限性"></a>素数的无限性</h2><p>好了，终于要开始说标题的另一半了：素数的无限性。首先，这是一个欧几里得就已经证明的结论。欧几里得在他的著作《几何原本》中提出如下证明：反设素数只有有限个，把他们标记为 $p_1,\ldots,p_n$ 。那么我们考虑 $N&#x3D;p_1\cdots p_n + 1$。这个数不被任何一个已知素数整除，所以它的因数一定包含一个未知的素数，所以素数不可能是有限的！</p>
+<p><a href="https://en.wikipedia.org/wiki/Hillel_Furstenberg">Hillel Furstenberg</a> 在1955年（当他还是一个本科生的时候！）提出了一个用拓扑证明素数无限的方法。用拓扑证明，很显然就是要定义开集。经过上面的长篇大论，我们已经知道什么叫开集了。那让我们来定义它们：首先令 $S(a,b)&#x3D;{ a n+b | n\in \mathbb{Z} }&#x3D;{a\mathbb{Z} +b}$ 表示从 $b$ 出发，以 $a$ 为公差往<em>两侧延伸</em>的等差数列。比如 $S(1,100)&#x3D;\mathbb{Z},S(2,4)&#x3D;$所有偶数。我们定义 $\mathbb{Z}$ 上的一个拓扑 $\mathscr{B}$ 是空集和所有的等差数列 $S(a,b)$ 的并。我们来运用所学的定义，仔细的验证一下这是一个拓扑：</p>
+<ol>
+<li>定义第一条，我们要求 $\mathbb{Z}$ 和 $\emptyset$ 在 $\mathscr{B}$ 中。$\emptyset\in\mathscr{B}$ 是定义的一部分。而 $\mathbb{Z}&#x3D;S(1,0)\in\mathscr{B}$ 自然也在其中。</li>
+<li>定义第二条，$\mathscr{B}$ 中任意多个元素的并在 $\mathscr{B}$ 中。我们定义中已经允许任意取并了，所以这一条也是显然的。</li>
+<li>定义第三条是验证中最困难的，我们有 $\mathscr{B}$ 中有限个元素，要验证它们的交还在 $\mathscr{B}$ 中。根据归纳法我们注意到，只需要验证两个元素的交还在 $\mathscr{B}$ 中就可以了。所以假设我们有两个元素 $A&#x3D;\cup_i S(a_i,b_i)$ 和 $B&#x3D;\cup_j S(c_j,d_j)$。运用上面的引理，我们有 $A\cap B &#x3D; \cup_{i,j} (S(a_i,b_i)\cap S(c_j,d_j))$。 这是一个形如 $S(a_i,b_i)\cap S(c_j,d_j)$ 的集合的无穷并，假如我们能证明每个 $S(a_i,b_i)\cap S(c_j,d_j)$ 都要么是空集要么是某个 $S(e,f)$，那么我们就能断言 $A\cap B\in\mathscr{B}$ （是不是和欧氏拓扑里的证明很像？）。我们简化一下符号：我们要证明的就是<div class="theorem">Lemma
+ $S(a,b)\cap S(c,d)=\emptyset$ 或者 $S(e,f)$。
+</div>
+<div class="proof">证明：假如 $S(a,b)\cap S(c,d)=\emptyset$ 那就没啥好证的了。假设$S(a,b)\cap S(c,d)\neq\emptyset$，那么存在一个 $f\in S(a,b)\cap S(c,d)$。令$e$ 是 $a$ 和 $c$ 的最小公倍数，我们声称 $S(a,b)\cap S(c,d)=S(e,f)$：显然等式右边是左边的子集（为什么？）。我们只要说明左边也包含在右边，对于任意的 $x\in S(a,b)\cap S(c,d)$。因为 $x\in S(a,b)$ 所以 $x-f$ 可以被 $a$ 整除。同理 $x-f$ 也可以被 $c$ 整除，所以 $x-f$ 一定可以被 $e$ 整除！所以 $x\in S(e,f)$。证毕。🎉🎉🎉 $\blacksquare$
+</div></li>
+</ol>
+<p>现在，我们可以放心大胆的声称这样的集合（族）定义了一个拓扑，并开始使用这个拓扑了。为了证明素数有无穷多，我们需要如下观察：在上述定义的 $\mathscr{B}$ 这个拓扑下，</p>
+<ol>
+<li>非空有限集合一定不是开集，（非全集的）余有限集合一定不是闭集：因为任何非空开集一定包含一个等差数列，所以一定是无限的集合。第二个论断是第一句话的等价说法。</li>
+<li>$S(a,b)$ 是既开又闭的集合（注意：上面我们讨论过，这不是一个矛盾的说法！）：这是因为全集是 $\mathbb{Z}&#x3D;\cup_{i&#x3D;0}^{a-1} S(a,b+i)$。所以 $\cup_{i&#x3D;1}^{a-1} S(a,b+i)$ 是 $S(a,b)$ 的补集。又因为 $\cup_{i&#x3D;1}^{a-1} S(a,b+i)$ 显然是个开集，所以 $S(a,b)$ 同时也是闭集。</li>
+</ol>
+<p>Here comes the punchline! 我们观察如下等式<br>$$<br>\mathbb{Z}\setminus {\pm 1} &#x3D; \cup_{p\text{ prime}} S(p,0)<br>$$<br>因为任何一个数要么是 $\pm 1$，要么是某个素数的倍数，所以上述集合相等。根据观察 1，我们知道左边的集合<strong>一定不是闭集</strong>。现在，<em>假如素数有限</em>，右边就是一个有限的并。根据第二条观察，我们知道这就是一个有限闭集的有限并，所以也是<strong>闭集</strong>。正如我们前面所说，一个集合可以是既开又闭，但是不能既是闭集，又不是闭集。所以我们得到了一个矛盾！从而假设错误，素数是无限的！</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><a href="https://en.wikipedia.org/wiki/Euclid%27s_theorem">Euclid’s theorem</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Furstenberg%27s_proof_of_the_infinitude_of_primes">Furstenberg’s proof of the infinitude of primes</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Math</category>
+      </categories>
+      <tags>
+        <tag>Math</tag>
+        <tag>Topology</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>[4068] 闲谈世上最难的逻辑问题</title>
+    <url>/2019/03/04/hardest-logic-puzzle-ever/</url>
+    <content><![CDATA[<p>首先声明这并不是一篇标题党的文章，标题中的“世上最难”不是我说的，是 <a href="https://en.wikipedia.org/wiki/The_Hardest_Logic_Puzzle_Ever">wikipedia</a> 说的。故事的开始是苦逼的博士狗们一起赶作业，然后<a href="https://www.zhihu.com/people/SFLiana/activities">尘锐案</a>突然就把这个东西搬了出来，然后大家瞬间两眼放光，纷纷抛弃了作业……当然主要的讨论都是由<a href="https://www.zhihu.com/people/y-huang-97/activities">Y. Huang</a>和<a href="https://www.zhihu.com/people/SFLiana/activities">尘锐案</a>进行的，我只是听懂并且理解了他们的做法，不过实在是很有意思，所以记录一下.</p>
+ <span id="more"></span>
+
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>世上存在三个神，分别是 True 神，False 神和 Random 神。其中</p>
+<ul>
+<li>True 神只说真话</li>
+<li>False 神只说假话</li>
+<li>Random 神每次在听完问题后，抛一枚硬币来决定说真话还是说假话</li>
+</ul>
+<p>它们现在就在你面前，但是你不知道哪个神是哪个神。你有三次机会来试探，每次机会你可以说出一个 statement，并找其中一位神来给出判断 (T&#x2F;F)。 神总是能听懂你的语言，并给出按照它设定的回答，但是它会用自己的语言来回答，它会回答 X 或 Y 。你知道其中一个代表 T，另一个代表 F，但是并不知道哪个代表哪个。</p>
+<p><strong>问题来了：你能在用完三次机会后，判断出三位神各自的身份吗？</strong></p>
+<h2 id="答案"><a href="#答案" class="headerlink" title="答案"></a>答案</h2><p>答案是：可以。</p>
+<p>甚至我们可以做到更强：每次都可以随机问一个神（特别的，可以做到每次都问同一个神，或者依次问完所有神）。事实上，我们有如下定理</p>
+<div class="theorem">Theorem
+对于任意一个 statement $Q$，存在一个 statement $\mathrm{P}(Q)$，使得任意一位神对 $\mathrm{P}(Q)$ 给出的判断，在我们自己给定的翻译下，都是对 $Q$ 正确的判断。
+</div>
+
+<p>而这个 $\mathrm{P}(Q)$ 的存在性，是我们反推出来的。当时的情况是：<a href="https://www.zhihu.com/people/y-huang-97/activities">Y. Huang</a>不知道从哪里知道了有这个定理，于是<ruby>我<rt>ta</rt></ruby><ruby>们<rt>yi</rt></ruby><ruby>一<rt>ge</rt></ruby><ruby>起<rt>ren</rt></ruby>把这个 $\mathrm{P}(Q)$ 推导了出来。事实上，考虑这样一个图：$Q\rightarrow \mathrm{P}(Q)\overset{\text{God}}{\rightarrow} \{\text{X,Y}\}\overset{\mathrm{I}}{\rightarrow} \{\text{T,F}\}$。这里，God 箭头表示神给出了判断，$\mathrm{I}$ 是我们自己对神的语言的解释，我们希望最后这个复合函数给出了 $Q$ 的判断，也就是说，我们希望如下的复合是一个恒等映射<br>$$\{\text{T,F}\}\overset{\mathrm{P}}{\rightarrow} \{\text{T,F}\}\overset{\text{God}}{\rightarrow} \{\text{X,Y}\}\overset{\mathrm{I}}{\rightarrow} \{\text{T,F}\}$$<br>所以我们有 $\mathrm{I}\circ \text{God }\circ \mathrm{P} &#x3D;\mathrm{id}$，我们对 God 函数唯一知道的事情是：它是一个双射。也就是说，它一定会把 T 映射到 X,Y 中的一个，然后把 F 映射到另一个。所以我们可以写下如下等式：$\mathrm{P}&#x3D;\text{God}^{-1}\circ \mathrm{I}^{-1}$</p>
+<p>我们好像几乎做完了（因为找到了 $\mathrm{P}$ 的表达式），但是又好像什么都没做（$\text{God}^{-1}$ 是个什么鬼！）</p>
+<p>我们作如下观察：</p>
+<ol>
+<li>$\mathrm{I}$ 是我们<em>自己选择</em>的解释，所以我们可以给出自己的规定，比如：$\mathrm{I}(\text{X})&#x3D;\text{F},\mathrm{I}(\text{Y})&#x3D;\text{T}$。也就是说，God 说 X，我们就认为它说 F；God 说 Y，我们就认为它说 T。</li>
+<li>假如 $\mathrm{I}\circ \text{God }\circ \mathrm{P}$ 把 T 映射到 T ，那么它已经是个恒等映射了。因为每一步都是双射，而一共只有两个元素，只要一个元素对，另一个元素就一定是正确的。</li>
+</ol>
+<p>所以我们只需要 $\text{God}\circ \mathrm{P}(\text{T})&#x3D;\mathrm{I}^{-1}(\text{T})&#x3D;\text{Y}$，下面是睁大眼睛的时刻：</p>
+<p>假如 $\mathrm{P}(\text{T})$ 是 true statement， 也即 $\mathrm{P}(\text{T})&#x3D;\text{T}$，我们有如下等价<br>$$\mathrm{P}(\text{T})\Leftrightarrow \mathrm{P}(\text{T})&#x3D;\text{T} \Leftrightarrow \text{God}(\mathrm{P}(\text{T}))&#x3D;\text{God}(\text{T}) \Leftrightarrow \text{Y}&#x3D;\text{God}(\text{T})$$<br>所以！$\mathrm{P}(\text{T})$ 这个 statement 就是在说 $\text{God}(\text{T})&#x3D;\text{Y}$，翻译一下就是：你对 truth 的判断是 Y。</p>
+<p>我们来考虑一下真值表，假设神的语言是 X 代表 T，Y 代表 F:</p>
+<ul>
+<li>假如是 True 神，那么对它来说： truth 的判断是 X。所以我们的 statement 是假的，从而它要说Y。经过我们的解释函数 $\mathrm{I}$，我们得到了回答 T。</li>
+<li>假如是 False 神，那么对它来说：truth 的判断是 Y。所以我们的 statement 是真的，从而它要说Y。经过我们的解释函数 $\mathrm{I}$，我们得到了回答 T。</li>
+</ul>
+<p>现在我们可以把 T 换成我们想要的任何 statement $Q$ 了。比如，$Q$ &#x3D; 你是 True 神。延续上面的语言设定（X for T，Y for F），那么我们问神的 statement 是：你对“你是 True 神”的判断是 Y，然后</p>
+<ul>
+<li>假如是 True 神，那么 $Q&#x3D;\text{T}$，根据我们上面的分析，我们可以得到 T 的回答，注意这个 T 是针对 $Q$ 的判断，所以我们知道这个神就是 True 神</li>
+<li>假如是 False 神，那么 $Q&#x3D;\text{F}$，所以它对 $Q$ 的判断是 X。再看我们的 statement，发现我们的 statement 也是假的，所以它要说反话，从而给出 X 的回答，而我们的翻译（注意这里是 $\mathrm{I}$ 函数而不是上面的语言设定）说 X 代表 F，所以这个不是 True 神</li>
+<li>假如是 Random 神，那么 $Q&#x3D;\text{F}$。假如它选择说假话，那么和 False 神一样的推出它的回答是 X ；假如它选择说真话，那么它对 $Q$ 的判断是 Y，从而我们的 statement 是对的，所以它会说 X。但是解释函数告诉我们，这意味着 $Q$ 是假的，所以这个也不是 True 神！<br>我们看到，只有 True 神会给出 T 的回答，其余都是 F，所以接下来我们只要一个个问就行了。</li>
+</ul>
+<div class="theorem">Remark
+我们可以看到，我们的提问方式保证了不仅仅可以无视问的是哪位神（因为总是可以得到正确的回答），而且不依赖神的语言！即使说神互相之间的语言也可以是不一样的，比如 True 神对 T 说 X，Random 神对 F 说 X，而我们可能两个神都会问到，甚至用同一个解释函数 $\mathrm{I}$ 去解释它们的回答，我们仍然可以得到正确的答案！
+</div>
+
+
+<h2 id="推广问题"><a href="#推广问题" class="headerlink" title="推广问题"></a>推广问题</h2><p>上述问题中，Random 神是在回答问题前，选择接受 True 神或者 False 神的设定，再作回答。可以看到我们的答案完全可以忽略 Random 神，因为当它抛完硬币后，它就被归到 True 神或者 False 神的情况里。所以呢，Random 神很不高兴，现在它要秀一下存在感：它决定通过抛硬币来决定它的回答（而不是回答方式）！也就是说，每次 Random 神给出的判断完全就是抛硬币的结果，而和你问什么完全没有关系。它完全不给出任何信息量。现在还是三次机会问三个神，请问：你还可以找到一个方法区分这三位神吗？</p>
+<h2 id="尝试解答"><a href="#尝试解答" class="headerlink" title="尝试解答"></a>尝试解答</h2><p>在 Random 神决定再也不当它们中的任何一个后，它就彻底不提供任何信息量了。那我们该怎么办呢？<br>注意：以下所有提问，均指用 $\mathrm{P}$ 函数包装过后再提问，就是当我们说提问 $Q$ 的时候，实际上我们在问 $\mathrm{P}(Q)$。</p>
+<p>我们把三个神标注成 A、B、C，考虑问 A 神这样一个 statement：“B 是 Random 神”，会发生什么？</p>
+<ul>
+<li>假如 A 是 True&#x2F;False 神，B 不是 Random 神，那么 A 会告诉你：F</li>
+<li>假如 A 是 True&#x2F;False 神，B 是 Random 神，那么 A 会告诉你：T</li>
+<li>假如 A 是 Random 神，那么 A 会告诉你：F 或者 T</li>
+</ul>
+<p>有人说，这有啥用啊？T 和 F 都会出现，你还是啥都不知道啊？且慢，让我们仔细分析一下。假如答案是 T，那么只可能是</p>
+<ul>
+<li>A 是 Random 神</li>
+<li>A 是 True&#x2F;False 神，B 是 Random 神</li>
+</ul>
+<p>无论哪种情况下，C 神都不是 Random 神！同理假如答案是 F，那么可以得出 B 神一定不是 Random 神！所以无论怎样，你都可以确定某一位不是 Random 神，接下来，只要对那位不是 Random 神的神问两问题：</p>
+<ol>
+<li>谁是 Random 神</li>
+<li>你是什么神</li>
+</ol>
+<p>就可以了。具体怎么问，大家可以自己思考一下。</p>
+<h2 id="更变态的版本"><a href="#更变态的版本" class="headerlink" title="更变态的版本"></a>更变态的版本</h2><p>我们看到，上面的解决方案依赖两点：</p>
+<ul>
+<li>你不能只问一个神</li>
+<li>你可以问同一个神两个问题</li>
+</ul>
+<p>那就自然想到，能不能给这些东西加上限制：</p>
+<p>首先想到的限制是：能不能只提问一个神？而这个限制显然是不可能的，因为运气不好可能正好抽到只提问 Random 神，那么无论你怎么发问都无法得出任何有效信息，此题无解。</p>
+<p>那么第二个可能的限制是：能不能强制要求依次提问三个神（也即每次必须询问不同的神）？我们几个的 naive 想法是：不行，因为第一个问题只能确定 $0.5$ 个神的身份（也即是其中一个神不是 Random 神）。接下来我们必须利用这个神不是 Random 神这一点来拷问得到所有信息。假如必须依次提问，可能出现两种情况：</p>
+<ol>
+<li>先问 Random 神，再问 True&#x2F;False 神，最后问 False&#x2F;True 神。</li>
+<li>先问 True&#x2F;False 神，再问 False&#x2F;True 神，最后问到了 Random 神。</li>
+</ol>
+<p>第一种情况自然皆大欢喜，你从一个本来不能获得任何信息的 Random 神那里获得了信息，所以绝对是可以完成任务的。但是第二种情况就有点无解了，最后一个问题没有办法给出更多的信息了。</p>
+<p>一个具体的情形如：A 是 True 神，B 是 False 神，C 是 Random 神。我们先问了 A：B 是 Random 神吗？得到 F 回答，于是确定 B 不是 Random 神，接下来问 B：C 是 Random 神吗？（或者 A 是 Random 神吗？），得到回答可以让我们确定 C 是 Random 神，A 和 B 是 True&#x2F;False 神。但是最后一个问题要问 C，而这种情况下我们是没有办法获得对 A 和 B 的信息的。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ol>
+<li><a href="https://en.wikipedia.org/wiki/The_Hardest_Logic_Puzzle_Ever">The Hardest Logic Puzzle Ever</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Math</category>
+      </categories>
+      <tags>
+        <tag>Math</tag>
+        <tag>Logic</tag>
+      </tags>
+  </entry>
+</search>
